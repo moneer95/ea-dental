@@ -1,11 +1,12 @@
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
+import logo from "../assets/images/Untitled design (1).png"
 
 export default function Header() {
     const activeStyles = {
         fontWeight: "bold",
-        textDecoration: "underline",
-        color: "#161616"
+        backgroundColor: '#FF914D',
+        color: 'whitesmoke',
     }
     
     function fakeLogOut() {
@@ -13,26 +14,31 @@ export default function Header() {
     }
     
     return (
-        <header>
-            <Link className="site-logo" to="/">#VanLife</Link>
+        <header className="header">
+            <Link  to="/">
+                <img className="site-logo" src={logo} alt="logo"  />
+            </Link>
             <nav>
                 <NavLink 
                     to="host"
+                    className="nav-link"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
                     Host
                 </NavLink>
                 <NavLink 
                     to="about"
+                    className="nav-link"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
                     About
                 </NavLink>
                 <NavLink 
-                    to="vans"
+                    to="categories"
+                    className="nav-link"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
-                    Vans
+                    Courses
                 </NavLink>
                 <Link to="login" className="login-link">
                     <img 

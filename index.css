@@ -5,13 +5,50 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #F8F8F8;
+    background-color: #e2f1fc41;
     font-family: "Inter", sans-serif;
 }
 
+.text-gradient{
+    font-size: 55px;
+    background: linear-gradient(90deg, #787ECF, #FF914D, #787ECF, #FF914D, #FF914D );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fs-2{
+    font-size: 1.4rem;
+}
+
+/* ###################### header ###################### */
+
+
+.header{
+    background-color: #E2F1FC;
+}
+
+.nav-link{
+    background-color: #FCC3B6;
+    color: rgb(77, 77, 77);
+    margin-inline: 13px;
+    padding-inline: 25px;
+    padding-block: 8px;
+    border-radius: 5px;
+}
+
+
+
+
+/* ********************* Categories page ************************** */
+
+.categos-list-container {
+    padding-inline: 25px;
+}
+
 .catego-figure{
-    width: 50%;
     font-weight: 600;
+    margin: 9px;
+    padding: 0;
 }
 
 .catego-figure > img{
@@ -20,12 +57,56 @@ html, body {
 }
 
 .catego-caption{
-    border: 1px solid #E2F1FC;
+    border: 1px solid #ffffff8e;
     border-top: 0;
     border-radius: 0px 0px 5px 5px;
-    background-color: whitesmoke;
+    background-color: rgb(243, 243, 243);
     padding: 15px 10px;
-    /* color: white; */
+    color: rgb(77, 77, 77);
+}
+
+.catego-container{
+    min-width: 100%;
+}
+
+
+@media (min-width: 35em) {
+    .categos-list{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 39.111em) and (max-width: 69.999em) {
+    .categos-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:20px;
+    }
+}
+
+@media (min-width: 70em) {
+    .categos-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* *******************catego details ********************** */
+
+.catego-detail-container{
+    border-bottom: 2px solid #4D4D4D;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.warning{
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.831)
+}
+
+.main-question{
+    color: blue;
 }
 
 a {
@@ -52,15 +133,12 @@ header {
     height: 110px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-block: 10px;
 }
 
 header .site-logo {
-    color: black;
-    margin-right: auto;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 25px;
+    width: 30%;
 }
 
 header a {
@@ -221,9 +299,7 @@ footer {
 
 
 /*** VAN PAGES ***/
-.van-list-container {
-    padding-inline: 23px
-}
+
 
 .van-list-filter-buttons {
     display: flex;

@@ -2,27 +2,34 @@ import oreSvg from "../../assets/images/ore.svg"
 import revisionsSvg from "../../assets/images/revisions.svg"
 import ldsSvg from "../../assets/images/lds.svg"
 import mocksSvg from "../../assets/images/mocks.svg"
+import productsSvd from "../../assets/images/products.svg"
+
 
 const categoriesArr = [
     {
-        id: 1,
+        collection: 'ore',
         svg: oreSvg,
         caption: 'Explore our 16 ORE Courses'
     },
     {
-        id: 2,
+        collection: 'lds',
         svg: ldsSvg,
         caption: 'Explore our 14 lds Courses'
     },
     {
-        id: 3,
+        collection: 'revisions',
         svg: revisionsSvg,
         caption: 'Explore our revision sessions'
     },
     {
-        id: 4,
+        collection: 'mocks',
         svg: mocksSvg,
         caption: 'Explore Available Mock Exams Now!'
+    },
+    {
+        collection: 'products',
+        svg: productsSvd,
+        caption: 'Explore Our Products!'
     }
 ];
 

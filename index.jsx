@@ -39,13 +39,13 @@ const router = createBrowserRouter(createRoutesFromElements(
       action={loginAction}
     />
     <Route
-      path="vans"
+      path="/categories"
       element={<Categories />}
       errorElement={<Error />}
       loader={CategoriesLoader}
     />
     <Route 
-      path="vans/:id" 
+      path="categories/:catego" 
       element={<VanDetail />} 
       errorElement={<Error />}
       loader={vanDetailLoader}

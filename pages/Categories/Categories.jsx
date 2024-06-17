@@ -22,28 +22,28 @@ export default function Categories() {
     function renderCategories(categos) {
 
         const categoElements = categoriesArr.map(catego => (
-            <div key={catego.id} className="van-tile">
+            <div key={catego.collection} className="catego-container">
                 <Link
-                    to={catego.id}
+                    to={`${catego.collection}`}
                 >
                     <figure className="catego-figure">
                         <img src={catego.svg} alt="illustrating image"/>
-                        <figcaption className="catego-caption">{catego.caption}</figcaption>
+                        <figcaption className="catego-caption fs-2">{catego.caption}</figcaption>
                     </figure>
 
                 </Link>
             </div>
         ))
         return (
-            <div className="van-list">
+            <div className="categos-list">
                 {categoElements}
             </div>
         )
     }
 
     return (
-        <div className="van-list-container">
-            <h1>Explore our van options</h1>
+        <div className="categos-list-container">
+            <h1 className="text-gradient">Explore our Courses, Products And Services</h1>
 
 
             <React.Suspense fallback={<h2>Loading vans...</h2>}>

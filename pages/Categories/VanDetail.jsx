@@ -2,36 +2,63 @@ import React from "react"
 import { Link, useParams, useLocation, useLoaderData } from "react-router-dom"
 import { getVan } from "../../api"
 
-export function loader({ params }) {
-    return getVan(params.id)
+
+export function loader({ request }) {
+    const pathSegments = request.url.split('/')
+    const collectionName = pathSegments[pathSegments.length - 1]
+    return getVan(collectionName)
 }
 
 export default function VanDetail() {
-    const location = useLocation()
-    const van = useLoaderData()
+    const colloecData = useLoaderData()
 
-    const search = location.state?.search || "";
-    const type = location.state?.type || "all";
+    const itemsList = colloecData.map(item => (
+        <div key={item.id}>
+            <div>
+                <h2>{item.name}</h2>
+            </div>
+
+            {subItem(item)}
+        </div>
+    ))
 
     return (
-        <div className="van-detail-container">
+        <div className="catego-detail-container">
             <Link
-                to={`..${search}`}
+                to={`..`}
                 relative="path"
                 className="back-button"
-            >&larr; <span>Back to {type} vans</span></Link>
+            >&larr; <span>Back to all categories</span></Link>
 
-            <div className="van-detail">
-                <img src={van.imageUrl} />
-                <i className={`van-type ${van.type} selected`}>
-                    {van.type}
-                </i>
-                <h2>{van.name}</h2>
-                <p className="van-price"><span>${van.price}</span>/day</p>
-                <p>{van.description}</p>
-                <button className="link-button">Rent this van</button>
-            </div>
+            {itemsList}
 
         </div>
     )
+
+    function subItem(item){
+        const intro = item.intro.map(line => (
+                <h3 className={line.className}>{line.introText}</h3>
+            ))
+        
+        const main = item.shoppingOptions && 
+        <div>
+            {item.shoppingOptions.map(option => (
+                <div>
+                    <h2 key={option.name}>
+                        {option.name}
+                    </h2>
+                    <h3>
+                        {option.descrip} <span className="main-question">ADD TO CART</span>
+                    </h3>
+                </div>
+            ))}
+        </div>
+
+        return (
+            <>
+                {intro}
+                {main}
+            </>
+        )
+    }
 }
