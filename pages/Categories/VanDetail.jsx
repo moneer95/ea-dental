@@ -14,7 +14,7 @@ export default function VanDetail() {
 
     const itemsList = colloecData.map(item => (
         <div key={item.id}>
-            <div>
+            <div className="item-slice">
                 <h2>{item.name}</h2>
             </div>
 
@@ -37,7 +37,7 @@ export default function VanDetail() {
 
     function subItem(item){
         const intro = item.intro.map(line => (
-                <h3 className={line.className}>{line.introText}</h3>
+                <p className={line.className}>{line.introText}</p>
             ))
         
         const main = item.shoppingOptions && 
@@ -47,9 +47,9 @@ export default function VanDetail() {
                     <h2 key={option.name}>
                         {option.name}
                     </h2>
-                    <h3>
+                    <p>
                         {option.descrip} <span className="main-question">ADD TO CART</span>
-                    </h3>
+                    </p>
                 </div>
             ))}
         </div>
