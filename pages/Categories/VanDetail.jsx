@@ -12,18 +12,41 @@ export function loader({ request }) {
 export default function VanDetail() {
     const colloecData = useLoaderData()
 
-    const itemsList = colloecData.map(item => (
-        <div key={item.id}>
-            <div className="item-slice">
-                <h2>{item.name}</h2>
-            </div>
+    const [openItems, setOpenItems] = React.useState({});
 
-            {subItem(item)}
-        </div>
-    ))
+    const toggleItem = (index) => {
+        setOpenItems((prevOpenItems) => ({
+          ...prevOpenItems,
+          [index]: !prevOpenItems[index],
+        }));
+      };
+
+    const [openOption, setOption] = React.useState({});
+
+    const toggleOption = (index) => {
+        setOption((prevOpenOption) => ({
+          ...prevOpenOption,
+          [index]: !prevOpenOption[index],
+        }));
+      };
+    
+    const itemsList = colloecData.map((item, idx) => {
+        
+        return <div key={idx} className="item-slice">
+                  <div onClick={() => toggleItem(idx)} style={{cursor: 'pointer',}}>
+                      <h2>{item.name}</h2>                  
+                  </div>
+               { openItems[idx] && 
+                  <div>
+                      { subItem(item) }
+                  </div>}
+               </div>
+})
+
 
     return (
         <div className="catego-detail-container">
+
             <Link
                 to={`..`}
                 relative="path"
@@ -37,19 +60,21 @@ export default function VanDetail() {
 
     function subItem(item){
         const intro = item.intro.map(line => (
-                <p className={line.className}>{line.introText}</p>
+                <p className={line.className}>
+                    {line.introText}
+                </p>
             ))
         
-        const main = item.shoppingOptions && 
+        const shoppingOptions = item.shoppingOptions && 
         <div>
-            {item.shoppingOptions.map(option => (
-                <div>
-                    <h2 key={option.name}>
+            {item.shoppingOptions.map((option, idx) => (
+                <div className="option-card" onClick={() => toggleOption(idx)} style={{cursor: 'pointer',}}>
+                    <h2 key={idx}>
                         {option.name}
                     </h2>
-                    <p>
+            { openOption[idx] &&  <p>
                         {option.descrip} <span className="main-question">ADD TO CART</span>
-                    </p>
+                    </p>}
                 </div>
             ))}
         </div>
@@ -57,7 +82,7 @@ export default function VanDetail() {
         return (
             <>
                 {intro}
-                {main}
+                {shoppingOptions}
             </>
         )
     }
