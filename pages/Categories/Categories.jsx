@@ -28,7 +28,7 @@ export default function Categories() {
                 >
                     <figure className="catego-figure">
                         <img src={catego.svg} alt="illustrating image"/>
-                        <figcaption className="catego-caption fs-2">{catego.caption}</figcaption>
+                        <figcaption className="catego-caption fs-6">{catego.caption}</figcaption>
                     </figure>
 
                 </Link>
