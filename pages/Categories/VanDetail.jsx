@@ -58,6 +58,8 @@ export default function VanDetail() {
         </div>
     )
 
+
+
     function subItem(item){
         const intro = item.intro.map(line => (
                 <p className={line.className}>
@@ -69,11 +71,14 @@ export default function VanDetail() {
         <div>
             {item.shoppingOptions.map((option, idx) => (
                 <div className="option-card" onClick={() => toggleOption(idx)} style={{cursor: 'pointer',}}>
-                    <h2 key={idx}>
-                        {option.name}
-                    </h2>
+                    <div key={idx} className="card-title-add">
+                        <h2>
+                            {option.name}
+                        </h2>
+                        <button onClick={()=> console.log('koooooooom')} className="main-question">ADD TO CART</button>
+                    </div>
             { openOption[idx] &&  <p>
-                        {option.descrip} <span className="main-question">ADD TO CART</span>
+                        {option.descrip}
                     </p>}
                 </div>
             ))}
