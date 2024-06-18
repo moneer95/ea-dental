@@ -13,7 +13,7 @@ html, body {
 .text-gradient{
     font-size: 60px;
     background: linear-gradient(90deg, #787ECF, #FF914D, #787ECF, #FF914D, #FF914D );
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -507,10 +507,6 @@ i[class*='van-type-'] {
 .van-detail-container .back-button {
     color: black;
     text-decoration: none;
-}
-
-.van-detail-container .back-button:visited {
-    
 }
 
 .van-detail-container .back-button span {
