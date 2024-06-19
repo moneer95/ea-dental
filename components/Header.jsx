@@ -15,8 +15,9 @@ export default function Header() {
     
     return (
         <header className="header">
-            <Link  to="/">
-                <img className="site-logo" src={logo} alt="logo"  />
+            <Link  to="/" className="logo-div">
+                <img className="logo" src={logo} alt="logo"/>
+                <span className="fs-3">EA-DENTAL</span>
             </Link>
             <nav>
                 <NavLink 
