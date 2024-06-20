@@ -27,26 +27,7 @@ html, body {
     color: #787ECF;
     font-weight: 500;
 }
-
-.fs-3{
-    font-size: 2rem;
-}
-
-.fs-4{
-    font-size: 1.8rem;
-}
-
-.fs-5{
-    font-size: 1.6rem;
-}
-
-.fs-6{
-    font-size: 1.4rem;
-}
-
-.fs-7{
-    font-size: 1.2rem;
-}
+ 
 
 .mi-3{
     margin-inline: 30px;
@@ -73,6 +54,75 @@ html, body {
 }
 
 
+
+@media (min-width: 35em) {
+    .fs-3{
+        font-size: 1.6rem;
+    }
+    
+    .fs-4{
+        font-size: 1.4rem;
+    }
+    
+    .fs-5{
+        font-size: 1.2rem;
+    }
+    
+    .fs-6{
+        font-size: 1rem;
+    }
+    
+    .fs-7{
+        font-size: .8rem;
+    }
+}
+
+@media (min-width: 39.111em) and (max-width: 69.999em) {
+    .fs-3{
+        font-size: 1.8rem;
+    }
+    
+    .fs-4{
+        font-size: 1.6rem;
+    }
+    
+    .fs-5{
+        font-size: 1.4rem;
+    }
+    
+    .fs-6{
+        font-size: 1.2rem;
+    }
+    
+    .fs-7{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 70em) {
+    .fs-3{
+        font-size: 2rem;
+    }
+    
+    .fs-4{
+        font-size: 1.8rem;
+    }
+    
+    .fs-5{
+        font-size: 1.6rem;
+    }
+    
+    .fs-6{
+        font-size: 1.4rem;
+    }
+    
+    .fs-7{
+        font-size: 1.2rem;
+    }
+}
+
+
+
 /* ###################### header ###################### */
 
 
@@ -94,6 +144,15 @@ html, body {
     padding-inline: 25px;
     padding-block: 8px;
     border-radius: 5px;
+}
+
+@media (max-width: 35em) {
+    nav > a{
+        width: 0;  
+        font-size: 0;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .logo-div{
@@ -207,7 +266,7 @@ nav {
     border-radius: 25px;
     padding: 1px 20px;
     background-color: #fafbff;
-    transition: height .6s ease;
+    transition: .7s ease;
     overflow: hidden;
 }
 
@@ -216,16 +275,38 @@ nav {
     border-radius: 25px;
     margin: 10px 20px;
     padding: 0 2rem;
-    transition: max-height .7s ease;
+    transition: .7s ease;
     overflow: hidden;
 }
 
 .expanded-option {
-    max-height: 500px; /* Set this to a value that fits your content when expanded */
+    max-height: 30vh; /* Set this to a value that fits your content when expanded */
 }
 
 .collapsed-option {
-    max-height: 100px;
+    max-height: 1vh;
+    min-height: 70px;
+}
+
+@media (min-width: 35em) {
+
+
+    .option-card{
+        margin: 0;
+         
+    }
+}
+
+@media (min-width: 39.111em) and (max-width: 69.999em) {
+    .option-card{
+        margin: 0;    
+    }
+}
+
+@media (min-width: 70em) {
+    .option-card{
+        margin: 0;
+    }
 }
 
 .card-title-add{
