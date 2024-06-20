@@ -68,7 +68,7 @@ export default function VanDetail() {
             {
                 openItems[idx] 
                 ? <div style={{
-                    padding: '20px',
+                    padding: '20px 0',
                     background: 'linear-gradient(to right, #dee2e6 45%, transparent 55%) top / 100% 1px no-repeat',
                     }}
                 >
@@ -124,12 +124,13 @@ export default function VanDetail() {
                         <h2 onClick={() => toggleOption(idx)} style={{cursor: 'pointer',}} className="fs-7">
                             {option.name}
                         </h2>
-                        <button onClick={()=> addToCart(option)} className="fs-6">ADD TO CART <i><FaShoppingCart/></i> </button> 
+                        <button onClick={()=> addToCart(option)} className="add-cart-button fs-6">ADD TO CART <i>+<FaShoppingCart/></i> </button> 
                     </div>
                     {
-                    <p className="fs-7 ls-5">
-                        {option.descrip}
-                    </p>
+                     
+                     <p className="fs-7 ls-5">
+                         {option.descrip}
+                     </p>
                     }
                 </div>
             ))}

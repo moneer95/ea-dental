@@ -146,12 +146,29 @@ html, body {
     border-radius: 5px;
 }
 
+nav {
+    display: flex;
+    backdrop-filter: blur(10rem);
+
+}
+
 @media (max-width: 35em) {
-    nav > a{
-        width: 0;  
-        font-size: 0;
-        padding: 0;
+    nav {
+        position: fixed;
+        z-index: 1000;
+        background-color: #cccbcb37;
+        backdrop-filter: blur(1rem);
+        inset: 0 0 0 20%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
         margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+
+    nav > *{
+        margin-block: min(1rem, 3vh);
     }
 }
 
@@ -189,9 +206,7 @@ header .login-link {
     align-items: center;
 }
 
-nav {
-    display: flex;
-}
+
 
 
 
@@ -275,39 +290,47 @@ nav {
     border-radius: 25px;
     margin: 10px 20px;
     padding: 0 2rem;
-    transition: .7s ease;
+    transition: 1.3s ease;
     overflow: hidden;
 }
 
 .expanded-option {
-    max-height: 30vh; /* Set this to a value that fits your content when expanded */
+    max-height: 60vh; /* Set this to a value that fits your content when expanded */
 }
 
 .collapsed-option {
-    max-height: 1vh;
+    max-height: 5vh;
     min-height: 70px;
 }
 
-@media (min-width: 35em) {
-
-
+@media (max-width: 35em) {
     .option-card{
-        margin: 0;
-         
+        margin: .7rem 0;
+        padding: 0;
+    }
+
+    .option-card h2{
+        overflow: hidden; /* Ensure this is included */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .arrow-span{
+        padding: 0 !important;
+        height: 0 !important;
+        width: 10px  !important;
+    }
+
+    .add-cart-button {
+        font-size: 0;
+        width: 40px !important;
+    }
+
+    .add-cart-button > i{
+        font-size: 15px;
     }
 }
 
-@media (min-width: 39.111em) and (max-width: 69.999em) {
-    .option-card{
-        margin: 0;    
-    }
-}
-
-@media (min-width: 70em) {
-    .option-card{
-        margin: 0;
-    }
-}
 
 .card-title-add{
     display: flex;
