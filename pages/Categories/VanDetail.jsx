@@ -1,16 +1,16 @@
 import React from "react"
-import { Link, useParams, useLocation, useLoaderData } from "react-router-dom"
+import { Link, useNavigate, useParams, useLocation, useLoaderData } from "react-router-dom"
 import { getVan } from "../../api"
 import CartContext from "../../contexts/cartContext";
 
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
+import toast, { Toaster } from 'react-hot-toast';
 
-
-
+let collectionName = ''
 export function loader({ request }) {
     const pathSegments = request.url.split('/')
-    const collectionName = pathSegments[pathSegments.length - 1]
+    collectionName = pathSegments[pathSegments.length - 1]
     return getVan(collectionName)
 }
 
@@ -20,9 +20,8 @@ export default function VanDetail() {
     const [openItems, setOpenItems] = React.useState({});
     const [openOption, setOption] = React.useState({});
 
-
     const { cartItems, setCartItems } = React.useContext(CartContext)
-
+    const navigate = useNavigate()
 
     const toggleItem = (index) => {
         setOpenItems((prevOpenItems) => ({
@@ -49,8 +48,8 @@ export default function VanDetail() {
                  overflow: 'scroll',
                 } 
                 : {
-                    height: '1vh',
-                    minHeight: '76px',
+                    height: '5vh',
+                    minHeight: '4.8rem',
                   }
                 }
         >
@@ -75,7 +74,6 @@ export default function VanDetail() {
                     {subItem(item)}</div>
                 : null
             }
-            
         </div>
     ))
 
@@ -125,10 +123,13 @@ export default function VanDetail() {
                             {option.name}
                         </h2>
                         <button onClick={()=> addToCart(option)} className="add-cart-button fs-6">ADD TO CART <i>+<FaShoppingCart/></i> </button> 
+                        <Toaster
+                            position="top-right"
+                        />
                     </div>
                     {
                      
-                     <p className="fs-7 ls-5">
+                     <p className="fs-7 ls-5 mi-3">
                          {option.descrip}
                      </p>
                     }
@@ -144,7 +145,61 @@ export default function VanDetail() {
         )
     }
 
-    function addToCart(option){
-        console.log(option)
-    }
+        function addToCart(option){
+            setCartItems( prevItems =>
+                cleanAddToCart(prevItems, option)
+            )
+        }
+
+
+        function cleanAddToCart(prevItems, option){
+            console.log(prevItems)
+            const existingItems = prevItems?.filter(item => item.optionName == option.name)
+            console.log(existingItems)
+            if(!existingItems.length){
+                toast.success(`${option.name} added to cart`)
+                return [...prevItems,
+                        {    
+                            optionName: option.name,
+                            collectionName
+                        }
+                    ]
+            }
+            else{
+                toast((t) => (
+                    <span 
+                        style={{
+                            textAlign: 'center'
+                        }}
+                    >
+                    This Item is already in cart 🛒
+                    <button 
+                        onClick={() => navigate('/cart')}
+                        style={{
+                            backgroundColor: '#FF914D',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '5px',
+                            cursor: 'pointer',
+                            padding: '8px 22px',
+                            margin: '5px 0 0 0px',
+                            fontFamily: 'Varela Round, sans-serif',
+                            width: '100%',
+                        }}
+                    >
+                        Check Out
+                    </button>
+                    </span>
+                ));
+                return prevItems
+            }
+            }
+
+
+
 }
+
+
+
+
+    

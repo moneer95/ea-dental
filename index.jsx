@@ -27,6 +27,7 @@ import Error from "./components/Error"
 import { requireAuth } from "./utils"
 
 import "./server"
+import Cart from './pages/Cart';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
@@ -49,6 +50,12 @@ const router = createBrowserRouter(createRoutesFromElements(
       element={<VanDetail />} 
       errorElement={<Error />}
       loader={vanDetailLoader}
+    />
+
+    <Route
+      path='cart'
+      element={<Cart />}
+      errorElement={<Error />}
     />
 
     <Route path="host" element={<HostLayout />}>
@@ -108,4 +115,8 @@ function App() {
 
 ReactDOM
   .createRoot(document.getElementById('root'))
-  .render(<App />);
+  .render(
+    <React.StrictMode>
+      <App />
+   </React.StrictMode>
+  );
