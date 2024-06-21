@@ -30,11 +30,11 @@ html, body {
  
 
 .mi-3{
-    margin-inline: 30px;
+    margin-inline: 1.6rem;
 }
 
 .mi-4{
-    margin-inline: 20px;
+    margin-inline: 1.2px;
 }
 
 .mb-4{
@@ -295,13 +295,20 @@ header .login-link {
 }
 
 .expanded-option {
-    max-height: 60vh; /* Set this to a value that fits your content when expanded */
+    max-height: 40vh; /* Set this to a value that fits your content when expanded */
 }
 
 .collapsed-option {
     max-height: 5vh;
-    min-height: 70px;
+    min-height: 4.2rem;
 }
+
+.collapsed-option h2{
+    overflow: hidden; /* Ensure this is included */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 
 @media (max-width: 35em) {
     .option-card{
@@ -309,11 +316,9 @@ header .login-link {
         padding: 0;
     }
 
-    .option-card h2{
-        overflow: hidden; /* Ensure this is included */
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+    .expanded-option {
+        max-height: 300vh; /* Set this to a value that fits your content when expanded */
+    }    
 
     .arrow-span{
         padding: 0 !important;
@@ -367,7 +372,8 @@ header .login-link {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    color: #787ECF;
+    color: white;
+    background-color: #787ecf88;
 }
 
 a {
@@ -425,7 +431,7 @@ footer {
 
 .back-button {
     display: block;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-left: 26px;
 }

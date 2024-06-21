@@ -4,9 +4,10 @@ import logo from "../assets/images/Untitled design (1).png"
 
 export default function Header() {
     const activeStyles = {
-        fontWeight: "bold",
         backgroundColor: '#FF914D',
-        color: 'whitesmoke',
+        textDecoration: 'underline',
+
+        // color: 'whitesmoke',
     }
     
     function fakeLogOut() {
@@ -40,6 +41,13 @@ export default function Header() {
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
                     Courses
+                </NavLink>
+                <NavLink 
+                    to="cart"
+                    className="nav-link"
+                    style={({isActive}) => isActive ? activeStyles : null}
+                >
+                    Cart
                 </NavLink>
                 <Link to="login" className="login-link">
                     <img 
