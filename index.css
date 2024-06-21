@@ -300,7 +300,7 @@ header .login-link {
 
 .collapsed-option {
     max-height: 5vh;
-    min-height: 70px;
+    min-height: min(70px, 10vh);
 }
 
 @media (max-width: 35em) {
