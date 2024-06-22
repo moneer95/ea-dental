@@ -187,7 +187,7 @@ nav {
     max-width: 29%;
 }
 
-header a:hover {
+nav a:hover {
     /* color: #161616; */
     background-color: #5ea5d5;
     /* text-decoration: underline; */
@@ -385,8 +385,43 @@ header .login-link {
     background-color: #5ea5d5;
 }
 
+/* ++++++++++++++++++++++ CART +++++++++++++++++++++++++ */
+.cart-container{
+    padding: '20px';
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0.5rem;
+}
 
+.cart-item{
+    background-color: #ffffff;
+    padding: 15px 2rem;
+    margin: 2rem 0px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
+    display: grid;
+    grid-template-areas: 
+        '  title title delete '
+        '  catego . choices'
+        '  . . price ';
+}
+
+.cart-item-title{
+    color: #FF914D;
+    grid-area: title;
+}
+
+.cart-item-catego{
+    grid-area: catego;
+}
+
+.mo{
+    grid-area: price;
+    text-align: center;
+}
 
 a {
     text-decoration: unset;
