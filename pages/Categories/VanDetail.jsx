@@ -102,7 +102,7 @@ export default function VanDetail() {
             ))
         
         const shoppingOptions = item.shoppingOptions && 
-        <div>
+        <div className="options-container">
             {item.shoppingOptions.map((option, idx) => (
                 <div 
                     className={`option-card ${openOption[idx] ? 'expanded-option' : 'collapsed-option'}`}>
@@ -122,7 +122,7 @@ export default function VanDetail() {
                         <h2 onClick={() => toggleOption(idx)} style={{cursor: 'pointer',}} className="fs-7">
                             {option.name}
                         </h2>
-                        <button onClick={()=> addToCart(option)} className="add-cart-button fs-6">ADD TO CART <i>+<FaShoppingCart/></i> </button> 
+                        <button onClick={()=> addToCart(option)} className="add-cart-button fs-6"> <i>Add To Cart + <FaShoppingCart/></i> </button> 
                         <Toaster
                             position="top-right"
                         />

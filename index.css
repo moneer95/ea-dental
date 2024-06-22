@@ -138,8 +138,8 @@ html, body {
 }
 
 .nav-link{
-    background-color: #787ecf88;
-    color: rgb(77, 77, 77);
+    background-color: #77b4de;
+    color: white;
     margin-inline: 13px;
     padding-inline: 25px;
     padding-block: 8px;
@@ -188,8 +188,9 @@ nav {
 }
 
 header a:hover {
-    color: #161616;
-    text-decoration: underline;
+    /* color: #161616; */
+    background-color: #5ea5d5;
+    /* text-decoration: underline; */
 }
 
 header button {
@@ -283,6 +284,7 @@ header .login-link {
     background-color: #fafbff;
     transition: .7s ease;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .option-card {
@@ -292,6 +294,8 @@ header .login-link {
     padding: 0 2rem;
     transition: 1.3s ease;
     overflow: hidden;
+    /* width: 90%; */
+
 }
 
 .expanded-option {
@@ -328,10 +332,10 @@ header .login-link {
 
     .add-cart-button {
         font-size: 0;
-        width: 40px !important;
+        /* width: 40px !important; */
     }
 
-    .add-cart-button > i{
+    .add-cart-button  i{
         font-size: 15px;
     }
 }
@@ -365,16 +369,24 @@ header .login-link {
     color: #787ECF;
 }
 
-.card-title-add > button{
-    width: 20rem;
+.add-cart-button{
+    width: 40vh;
     height: 3rem;
     margin: .6rem;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     color: white;
-    background-color: #787ecf88;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #77b4de;
 }
+
+.add-cart-button:hover{
+    background-color: #5ea5d5;
+}
+
+
+
 
 a {
     text-decoration: unset;

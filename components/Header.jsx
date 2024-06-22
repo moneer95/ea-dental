@@ -5,7 +5,7 @@ import logo from "../assets/images/Untitled design (1).png"
 export default function Header() {
     const activeStyles = {
         backgroundColor: '#FF914D',
-        textDecoration: 'underline',
+        // textDecoration: 'underline',
 
         // color: 'whitesmoke',
     }
