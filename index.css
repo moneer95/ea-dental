@@ -404,7 +404,7 @@ header .login-link {
 
     display: grid;
     grid-template-areas: 
-        '  title title delete '
+        '  title . delete '
         '  catego . choices'
         '  . . price ';
 }
@@ -418,9 +418,18 @@ header .login-link {
     grid-area: catego;
 }
 
-.mo{
-    grid-area: price;
+.cart-delete-button{
+    grid-area: delete;
     text-align: center;
+    justify-items: end;
+}
+
+.cart-choices{
+    grid-area: choices;
+}
+
+.cart-item-price{
+    grid-area: price;
 }
 
 a {
