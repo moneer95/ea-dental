@@ -153,15 +153,16 @@ export default function VanDetail() {
 
 
         function cleanAddToCart(prevItems, option){
-            console.log(prevItems)
+           
             const existingItems = prevItems?.filter(item => item.optionName == option.name)
-            console.log(existingItems)
+
             if(!existingItems.length){
                 toast.success(`${option.name} added to cart`)
                 return [...prevItems,
                         {    
                             optionName: option.name,
-                            collectionName
+                            collectionName,
+                            choices: option.prices,
                         }
                     ]
             }

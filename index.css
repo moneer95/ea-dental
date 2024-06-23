@@ -391,14 +391,14 @@ header .login-link {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 2rem 0.5rem;
+    margin: 2rem 6rem;
 }
 
 .cart-item{
     background-color: #ffffff;
     padding: 15px 2rem;
     margin: 2rem 0px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
@@ -421,15 +421,19 @@ header .login-link {
 .cart-delete-button{
     grid-area: delete;
     text-align: center;
-    justify-items: end;
+    justify-self: end; /* Aligns to the left */
 }
 
 .cart-choices{
     grid-area: choices;
+    width: 100%;
+    justify-self: end; /* Aligns to the left */
 }
 
 .cart-item-price{
     grid-area: price;
+    justify-self: end; /* Aligns to the left */
+
 }
 
 a {

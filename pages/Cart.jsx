@@ -18,8 +18,13 @@ function Cart() {
             <p className='cart-item-catego'>Category: {item.collectionName}</p>
             <h3 className='cart-delete-button'><FaTrash/></h3>
             <select className='cart-choices'>
-              <option value='12months'>12 months</option>
-              <option value='3months'>3 months</option>
+              {Object.keys(item.choices).length
+               ? Object.keys(item.choices).map(choice => (
+                <option value={choice.name}>{choice.name}</option>
+               )               
+               )
+               : null
+              }
             </select>
             <h4 className='cart-item-price'>price: 1250$</h4>
           </div>
