@@ -6,6 +6,7 @@ import CartContext from "../../contexts/cartContext";
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast';
+import { FaZ } from "react-icons/fa6";
 
 let collectionName = ''
 export function loader({ request }) {
@@ -104,10 +105,10 @@ export default function VanDetail() {
         const shoppingOptions = item.shoppingOptions && 
         <div className="options-container">
             {item.shoppingOptions.map((option, idx) => (
-                <div 
+                <div
+                    key={option.name} 
                     className={`option-card ${openOption[idx] ? 'expanded-option' : 'collapsed-option'}`}>
                     <div 
-                        key={idx} 
                         className='card-title-add'
                         style={ openOption[idx] ?
                             { background: 'linear-gradient(to right, #dee2e6 45%, transparent 55%) bottom / 100% 1px no-repeat'
@@ -163,6 +164,7 @@ export default function VanDetail() {
                             optionName: option.name,
                             collectionName,
                             choices: option.prices,
+                            choiceId: Object.keys(option.prices)[0]
                         }
                     ]
             }
