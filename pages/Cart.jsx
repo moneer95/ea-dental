@@ -41,7 +41,7 @@ function Cart() {
 
                : null
               }
-            {/* <h4 className='cart-item-price'>price: {item.choices[selectedChoice]}</h4> */}
+            <h4 className='cart-item-price'>price: {item.choices[cartItems[iIndex].choiceId].price}</h4>
           </div>
         ))
       ) : (

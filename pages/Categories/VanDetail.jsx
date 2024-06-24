@@ -97,7 +97,7 @@ export default function VanDetail() {
 
     function subItem(item){
         const intro = item.intro.map(line => (
-                <p className={`${line.className}`}>
+                <p key={line.introText} className={`${line.className}`}>
                     {line.introText}
                 </p>
             ))
@@ -169,7 +169,7 @@ export default function VanDetail() {
                     ]
             }
             else{
-                toast((t) => (
+                toast(() => (
                     <span 
                         style={{
                             textAlign: 'center'
