@@ -11,7 +11,6 @@ html, body {
 }
 
 .text-gradient{
-    font-size: 60px;
     background: linear-gradient(90deg, #787ECF, #FF914D, #787ECF, #FF914D, #FF914D );
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -55,7 +54,12 @@ html, body {
 
 
 
-@media (min-width: 35em) {
+@media (max-width: 39em) {
+    
+    h1{
+        font-size: 1.5rem !important;
+    }
+    
     .fs-3{
         font-size: 1.6rem;
     }
@@ -75,9 +79,18 @@ html, body {
     .fs-7{
         font-size: .8rem;
     }
+
+    .fs-8{
+        font-size: .6rem;
+    }
 }
 
 @media (min-width: 39.111em) and (max-width: 69.999em) {
+    
+    h1{
+        font-size: 2rem !important;
+    }
+    
     .fs-3{
         font-size: 1.8rem;
     }
@@ -97,9 +110,18 @@ html, body {
     .fs-7{
         font-size: 1rem;
     }
+
+    .fs-8{
+        font-size: .8rem;
+    }
 }
 
 @media (min-width: 70em) {
+
+    h1{
+        font-size: 3rem !important;
+    }
+
     .fs-3{
         font-size: 2rem;
     }
@@ -118,6 +140,10 @@ html, body {
     
     .fs-7{
         font-size: 1.2rem;
+    }
+
+    .fs-8{
+        font-size: 1rem;
     }
 }
 
@@ -247,7 +273,7 @@ header .login-link {
 }
 
 
-@media (min-width: 35em) {
+@media (max-width: 39em) {
     .categos-list{
         display: grid;
         grid-template-columns: 1fr;
@@ -299,7 +325,8 @@ header .login-link {
 }
 
 .expanded-option {
-    max-height: 40vh; /* Set this to a value that fits your content when expanded */
+    max-height: 100vh; /* Set this to a value that fits your content when expanded */
+    overflow: scroll;
 }
 
 .collapsed-option {
@@ -405,7 +432,7 @@ header .login-link {
     display: grid;
     grid-template-areas: 
         '  title . delete '
-        '  catego . choices'
+        '  catego choices1 choices0'
         '  . . price ';
 }
 
@@ -424,16 +451,31 @@ header .login-link {
     justify-self: end; /* Aligns to the left */
 }
 
-.cart-choices{
-    grid-area: choices;
-    width: 100%;
-    justify-self: end; /* Aligns to the left */
+.cart-choices0{
+    grid-area: choices0;
+    width: 95%;
+    justify-self: end;
+    border-radius: 5px; 
+}
+
+
+.cart-choices1{
+    grid-area: choices1;
+    width: 95%;
+    justify-self: center; 
+}
+
+.cart-choices0 > option{
+    font-size: 1.2rem;
+}
+
+.cart-choices1 > option{
+    font-size: 1.2rem;
 }
 
 .cart-item-price{
     grid-area: price;
     justify-self: end; /* Aligns to the left */
-
 }
 
 a {
@@ -506,24 +548,21 @@ footer {
 
 /*** HOME PAGE ***/
 .home-container {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/images/home-hero.png") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 350px;
-    color: white;
-    padding: 45px 23px;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/images/home-hero.png") no-repeat center center; */
+    text-align: center;
 }
 
+
 .home-container h1 {
-    font-weight: 700;
-    font-size: 2.25rem;
+    font-weight: 900;
     line-height: 42px;
+    padding-inline: 2rem;
+
 }
 
 .home-container p {
     line-height: 24px;
+    padding-inline: 2rem;
 }
 
 .home-container a {
@@ -532,9 +571,10 @@ footer {
     text-decoration: none;
     background-color: #FF8C38;
     border: none;
-    width: 100%;
+    width: 89%;
     margin-top: 27px;
     padding-block: .75rem;
+    /* margin-inline: 2rem; */
     color: white;
     font-weight: 700;
     border-radius: 5px;

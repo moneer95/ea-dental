@@ -130,9 +130,7 @@ export default function VanDetail() {
                     </div>
                     {
                      
-                     <p className="fs-7 ls-5 mi-3">
-                         {option.descrip}
-                     </p>
+                     <p className="fs-7 ls-5 mi-3" dangerouslySetInnerHTML={{ __html: option.descrip }}/>
                     }
                 </div>
             ))}
@@ -163,8 +161,11 @@ export default function VanDetail() {
                         {    
                             optionName: option.name,
                             collectionName,
-                            choices: option.prices,
-                            choiceId: Object.keys(option.prices)[0]
+                            choices: option.choices,
+                            choiceId: [
+                                Object.keys(option.choices[0])[0],
+                                option.choices.length > 1 ? Object.keys(option.choices[1])[0] : null
+                        ]
                         }
                     ]
             }

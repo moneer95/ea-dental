@@ -10,10 +10,14 @@ function Cart() {
   const { cartItems, setCartItems } = React.useContext(CartContext);
 
 
-  function handleChoiceChange(event, iIndex){
+  function handleChoiceChange(event, iIndex, cIndex){
     setCartItems(prevItems => {
       let updatedItems =  [...prevItems];
-      updatedItems[iIndex] = { ...updatedItems[iIndex], choiceId: event.target.value };
+
+      let updatedChoiceId = [...updatedItems[iIndex].choiceId];
+      updatedChoiceId[cIndex] = event.target.value;
+      
+      updatedItems[iIndex] = { ...updatedItems[iIndex], choiceId: updatedChoiceId };
       return updatedItems
     } )
   }
@@ -26,22 +30,25 @@ function Cart() {
             <h2 className='cart-item-title'>{item.optionName}</h2>
             <p className='cart-item-catego'>Category: {item.collectionName}</p>
             <h3 className='cart-delete-button'><FaTrash/></h3>
-              {Object.keys(item.choices).length > 1
-               ? <select value={cartItems[iIndex].choiceId} onChange={(event) => handleChoiceChange(event, iIndex)} className='cart-choices'>
-                {Object.keys(item.choices).map((choice, cIndex)  => {
+
+              { Object.keys(item.choices[0]).length > 1 &&
+              item.choices.map( (choice, cIndex) => {
+              return <select value={cartItems[iIndex].choiceId[cIndex]} onChange={(event) => handleChoiceChange(event, iIndex, cIndex)} className={`fs-8 cart-choices${cIndex}`}>
+                  {Object.entries(choice).map( (option, oIndex)  => {
                 return <option
-                        key={Object.keys(item.choices)[cIndex]}
-                        value={Object.keys(item.choices)[cIndex]}
+                        key={oIndex}
+                        value={oIndex}
                        >
-                        {item.choices[choice].name}
+                        {option[1].name}
                        </option>
                }               
                )}
               </select>
 
-               : null
+              } )
+
               }
-            <h4 className='cart-item-price'>price: {item.choices[cartItems[iIndex].choiceId].price}</h4>
+            <h4 className='cart-item-price'>price: {item.choices[0][cartItems[iIndex].choiceId[0]].price}$</h4>
           </div>
         ))
       ) : (
