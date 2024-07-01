@@ -6,7 +6,6 @@ export default function Header() {
     const activeStyles = {
         backgroundColor: '#FF914D',
         // textDecoration: 'underline',
-
         // color: 'whitesmoke',
     }
     

@@ -419,6 +419,8 @@ header .login-link {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-item{
@@ -437,7 +439,7 @@ header .login-link {
 }
 
 .cart-item-title{
-    color: #FF914D;
+    color: #77b4de;
     grid-area: title;
 }
 
@@ -476,6 +478,20 @@ header .login-link {
 .cart-item-price{
     grid-area: price;
     justify-self: end; /* Aligns to the left */
+}
+
+/* ------------------------ checkout ------------------------- */
+
+.checkout-button{
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem;
+    align-self: center;
+    background-color: #FF914D;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    border: none;
+    border-radius: 10px;
 }
 
 a {

@@ -3,11 +3,13 @@ import CartContext from '../contexts/cartContext';
 
 import { FaTrash } from 'react-icons/fa'; // Font Awesome
 import { MdDelete } from 'react-icons/md'; // Material Design
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Cart() {
   const { cartItems, setCartItems } = React.useContext(CartContext);
+  const navigate = useNavigate();
 
 
   function handleChoiceChange(event, iIndex, cIndex){
@@ -54,6 +56,8 @@ function Cart() {
       ) : (
         <p>Your cart is empty.</p>
       )}
+
+      <button className='checkout-button fs-7' onClick={() => navigate('/checkout')}>Check Out</button>
     </div>
   );
 }

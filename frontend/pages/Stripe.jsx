@@ -1,12 +1,9 @@
 import React, { useCallback, useState, useEffect } from "react";
 import {loadStripe} from '@stripe/stripe-js';
-import {
-  EmbeddedCheckoutProvider,
-  EmbeddedCheckout
-} from '@stripe/react-stripe-js';
-import {
-  Navigate
-} from "react-router-dom";
+import { EmbeddedCheckoutProvider, EmbeddedCheckout } from '@stripe/react-stripe-js';
+import { Navigate } from "react-router-dom";
+import CartContext from '../contexts/cartContext';
+
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -14,10 +11,18 @@ import {
 const stripePromise = loadStripe("pk_test_51PVRD2K1xhAcvKUPeT1r8QlJpG8hrUXsClTWtFoymbO8ih5AVaZUbO0Vk8hZMeNjJc8Z4D37cD8JcNC3ol6tB2BE00iVv3cBYB");
 
 export const CheckoutForm = () => {
+
+  const { cartItems } = React.useContext(CartContext);
+  
+
   const fetchClientSecret = useCallback(() => {
     // Create a Checkout Session
     return fetch("http://localhost:4242/create-checkout-session", {
       method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartItems),
     })
       .then((res) => res.json())
       .then((data) => data.clientSecret);
