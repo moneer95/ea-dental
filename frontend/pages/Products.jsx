@@ -21,9 +21,14 @@ export default function Products(){
             <div className='products-list'>
                 { categozedProducts(catego).map(product => (
                     <Card 
+                        id = {product.id}
                         name = {product.name}
                         image = {product.image_path}
-                        price = {product.price}
+                        price = {product.choices[0][0].price}
+                        descrip = {product.description}
+                        category = {product.catego} //to pass to cart through card
+                        choices = {product.choices}
+                        // choiceId = {product.choiceId}
                     />
                 )) }
             </div>
@@ -46,6 +51,7 @@ export default function Products(){
 const categos = [
     "Instruments",
     "Endodontics",
+    "Restorative",
     "Burs",
     "Surgical",
     "Accessories",
@@ -53,5 +59,6 @@ const categos = [
     "Equipment",
     "Handpieces",
     "Impression Materials",
-    "Kits"
+    "Kits",
+    "Infection Control"
 ]

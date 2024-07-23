@@ -163,6 +163,10 @@ a{
 }
 
 
+.capital{
+    text-transform: uppercase;
+}
+
 
 /* ###################### header ###################### */
 
@@ -187,7 +191,7 @@ a{
 
 .sub-hero{
     margin-top: -15.6%;
-    margin-bottom: -20%;
+    margin-bottom: -18%;
     clip-path: polygon(0 25%, 100% 25%, 100% 70%, 0 70%);
     width: 100%;
 
@@ -363,6 +367,11 @@ header .login-link {
 
 }
 
+.option-card p{
+    max-height: calc(80vh - 120px); /* Ensure content area is below the sticky header */
+
+}
+
 .expanded-option {
     max-height: 100vh; /* Set this to a value that fits your content when expanded */
     overflow: scroll;
@@ -411,7 +420,13 @@ header .login-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky; /* Make it sticky */
+    top: 0; /* Distance from the top when sticking */
+    z-index: 9999; 
+    background-color: #fafbff !important;
 }
+
+
 
 .card-title-add > h2{
     flex-grow: 1;
@@ -492,7 +507,13 @@ header .login-link {
 .cart-delete-button{
     grid-area: delete;
     text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
     justify-self: end; /* Aligns to the left */
+    align-self: center;
 }
 
 .cart-choices0{
@@ -558,7 +579,7 @@ header .login-link {
 }
 
 
-.expanded-option{
+.products-hero-div h2{
     position: absolute;
     width: 90%;
     padding: .7rem;
@@ -670,7 +691,7 @@ header .login-link {
 @media (min-width: 70em) {
     .products-list{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .products-hero-div h2{
@@ -688,6 +709,91 @@ header .login-link {
     padding: 2rem;
     border-radius: 10px;
     /* margin-bottom: -.1rem; */
+}
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%5 product detail %%%%%%%%%%%%%%%%%%%%%%%%% */
+.product-detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.product-detail-img-div{
+    text-align: center;
+    padding: 1rem;
+    margin: .4rem 2rem;
+    border: 2px solid whitesmoke;
+}
+
+.product-detail-img-div > img{
+    max-width: 500px;
+}
+
+.product-detail-button-choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.add-cart-product-button{
+    width: 40vh;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #77b4de;
+    font-family: 'Gotham', sans-serif;
+}
+
+.product-detail-button-choices-title-div{
+    text-align: start;
+}
+
+.product-detail-quan{
+    display: flex;
+}
+
+.product-detail-quan > div{
+    padding: .7rem 1rem;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.product-detail-quan >button{
+    padding: 0 1rem;
+}
+
+
+.product-detail-description{
+    padding: 20px;
+    margin: .1rem 2rem;
+    text-align: start;
+    grid-column: span 2;
+}
+
+/* ======================success page =============================*/
+.success-page{
+    text-align: center;
+} 
+
+.moodle-login{
+    padding: .5rem 4rem;
+    font-size: 1.171875rem;
+    line-height: 1.5;
+    border-radius: .6rem;
+    color: #fff;
+    background-color: #0f6cbf;
+    border-color: #0f6cbf;
+    cursor: pointer;
+}
+
+.success-page a{
+    color: #0f6cbf;
 }
 
 /* $$$$$$$$$$$$$$$$$$$$$$ end $$$$$$$$$$$$$$$$$$$$$$$$$$ */
@@ -851,7 +957,7 @@ footer {
 .van-list-filter-buttons {
     display: flex;
     flex-wrap: wrap;
-    margin: 2rem;
+    margin: 1rem 2rem;
 }
 
 .van-list-filter-buttons > a {

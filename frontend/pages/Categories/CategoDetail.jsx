@@ -149,60 +149,60 @@ export default function CategoDetail() {
         )
     }
 
-        function addToCart(option){
-            setCartItems( prevItems =>
-                cleanAddToCart(prevItems, option)
-            )
-        }
+    function addToCart(option){
+        setCartItems( prevItems =>
+            cleanAddToCart(prevItems, option)
+        )
+    }
 
 
-        function cleanAddToCart(prevItems, option){
-           
-            const existingItems = prevItems?.filter(item => item.optionName == option.name)
+    function cleanAddToCart(prevItems, option){
+        
+        const existingItems = prevItems?.filter(item => item.optionName == option.name)
 
-            if(!existingItems.length){
-                toast.success(`${option.name} added to cart`)
-                return [...prevItems,
-                        {    
-                            optionName: option.name,
-                            collectionName,
-                            choices: option.choices,
-                            choiceId: [
-                                Object.keys(option.choices[0])[0],
-                                option.choices.length > 1 ? Object.keys(option.choices[1])[0] : null
-                        ]
-                        }
+        if(!existingItems.length){
+            toast.success(`${option.name} added to cart`)
+            return [...prevItems,
+                    {    
+                        optionName: option.name,
+                        category: collectionName,
+                        choices: option.choices,
+                        choiceId: [
+                            Object.keys(option.choices[0])[0],
+                            option.choices.length > 1 ? Object.keys(option.choices[1])[0] : null
                     ]
-            }
-            else{
-                toast(() => (
-                    <span 
-                        style={{
-                            textAlign: 'center'
-                        }}
-                    >
-                    This Item is already in cart 🛒
-                    <button 
-                        onClick={() => navigate('/cart')}
-                        style={{
-                            backgroundColor: '#FF914D',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '5px',
-                            cursor: 'pointer',
-                            padding: '8px 22px',
-                            margin: '5px 0 0 0px',
-                            fontFamily: 'Varela Round, sans-serif',
-                            width: '100%',
-                        }}
-                    >
-                        Check Out
-                    </button>
-                    </span>
-                ));
-                return prevItems
-            }
-            }
+                    }
+                ]
+        }
+        else{
+            toast(() => (
+                <span 
+                    style={{
+                        textAlign: 'center'
+                    }}
+                >
+                This Item is already in cart 🛒
+                <button 
+                    onClick={() => navigate('/cart')}
+                    style={{
+                        backgroundColor: '#FF914D',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        padding: '8px 22px',
+                        margin: '5px 0 0 0px',
+                        fontFamily: 'Varela Round, sans-serif',
+                        width: '100%',
+                    }}
+                >
+                    Check Out
+                </button>
+                </span>
+            ));
+            return prevItems
+        }
+        }
 
 
 

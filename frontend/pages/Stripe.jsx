@@ -49,6 +49,8 @@ export const Return = () => {
   const [status, setStatus] = useState(null);
   const [customerEmail, setCustomerEmail] = useState('');
 
+
+
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -70,12 +72,24 @@ export const Return = () => {
 
   if (status === 'complete') {
     return (
-      <section id="success">
-        <p>
-          We appreciate your business! A confirmation email will be sent to {customerEmail}.
-
-          If you have any questions, please email <a href="mailto:orders@example.com">orders@example.com</a>.
-        </p>
+      <section className="success-page" id="success">
+        <h2>
+          Payment Successful!
+        </h2>
+        <h3>
+          Thank you for your order! We are processing your request and will reach out soon with further details (for products, and tickets) .
+        </h3>
+        <div>
+          <h3>
+            for online courses students, you can login into your account on our moodle learning platform.
+          </h3>
+          <button className="moodle-login" onClick={() => window.location.href = 'http://54.147.16.59/moodle/my/'}>
+            login
+          </button>
+        </div>
+        <h3>
+          If you have any questions, please email <a href="mailto:info@ea-dental.com">info@ea-dental.com</a>.
+        </h3>
       </section>
     )
   }

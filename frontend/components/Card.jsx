@@ -9,10 +9,10 @@ const Card = (props) => {
   return (
     <div key={props.name}>
       <Link
-          to={`${props.name}`}
-          // state={{
-          //     type: typeFilter
-          // }}
+          to={`${props.id}`}
+          state={{
+              props: props
+          }}
       >
           <figure className="product-figure">
             <img src={getImageUrl(props.image)} alt="" />

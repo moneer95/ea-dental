@@ -12,6 +12,7 @@ import About from "./pages/About"
 import Categories, { loader as CategoriesLoader } from "./pages/Categories/Categories"
 import CategoDetail, { loader as categoDetailLoader } from "./pages/Categories/CategoDetail"
 import Products, { loader as productsLoader } from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 import NotFound from "./pages/NotFound"
 import Login, { loader as loginLoader, action as loginAction } from "./pages/Login"
 import Layout from "./components/Layout"
@@ -58,12 +59,12 @@ const router = createBrowserRouter(createRoutesFromElements(
       errorElement={<Error />}
     />
 
-    {/* <Route
-      path='prodocts/:prodId'
+    <Route
+      path='products/:prodId'
       element={<ProductDetail />}
       loader={productsLoader}
       errorElement={<Error />}
-    /> */}
+    />
 
     <Route
       path='checkout'

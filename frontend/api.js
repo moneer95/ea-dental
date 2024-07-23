@@ -48,7 +48,7 @@ export async function getDetail(collectionName) {
 export async function getProducts(){
     const collecRef = collection(db, 'products')
     const querySnapshot = await getDocs(collecRef)
-
+    
     const dataArr = querySnapshot.docs.map(doc => ({
         ...doc.data(),
         id: doc.id

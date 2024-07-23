@@ -24,14 +24,24 @@ function Cart() {
     } )
   }
 
+  function deleteItem(iIndex){
+    console.log(iIndex)
+    setCartItems(prevItems => {
+      let updatedItems = [...prevItems]
+      updatedItems.splice(iIndex, 1)
+
+      return updatedItems
+    })
+  }
+
   return (
     <div className='cart-container'>
       {cartItems.length ? (
         cartItems.map((item, iIndex) => (
           <div key={iIndex} className='cart-item'>
             <h2 className='cart-item-title'>{item.optionName}</h2>
-            <p className='cart-item-catego'>Category: {item.collectionName}</p>
-            <h3 className='cart-delete-button'><FaTrash/></h3>
+            <p className='cart-item-catego'>Category: <span className='capital'>{item.category}</span> </p>
+            <button onClick={() => deleteItem(iIndex)} className='cart-delete-button fs-7'> <i><FaTrash/></i> </button>
 
               { Object.keys(item.choices[0]).length > 1 &&
               item.choices.map( (choice, cIndex) => {
@@ -50,7 +60,7 @@ function Cart() {
               } )
 
               }
-            <h4 className='cart-item-price'>price: {item.choices[0][cartItems[iIndex].choiceId[0]].price}£</h4>
+            <h4 className='cart-item-price'>price: £{item.choices[0][cartItems[iIndex].choiceId[0]].price}</h4>
           </div>
         ))
       ) : (
