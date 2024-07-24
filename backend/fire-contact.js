@@ -2474,7 +2474,7 @@ const arr = [
 ]
 
 const firebaseAdmin = require('firebase-admin');
-const serviceAccount = '/Users/apple/ea-dental/frontend/assets/ea-dental-36bd1-firebase-adminsdk-janpv-8ab0822521.json';
+const serviceAccount = '/Users/monirskaik/Desktop/ea-dental-36bd1-firebase-adminsdk-janpv-cc74a5db82.json';
 const firebaseUrl = 'https://ea-dental-36bd1.firebaseio.com';
 
 firebaseAdmin.initializeApp({

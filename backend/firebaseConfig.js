@@ -2,7 +2,7 @@
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
 
-const serviceAccount = require('/Users/apple/Desktop/ea-dental-36bd1-firebase-adminsdk-janpv-8ab0822521-1.json');
+const serviceAccount = require('/Users/monirskaik/Desktop/ea-dental-36bd1-firebase-adminsdk-janpv-cc74a5db82.json');
 
 initializeApp({
   credential: cert(serviceAccount)
@@ -36,8 +36,6 @@ async function updateStockValue(id, quantity, choiceId) {
     }
   }
   
-  updateStockValue('78', 29, 1)
-
 module.exports = updateStockValue
   
   
