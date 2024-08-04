@@ -15,7 +15,7 @@ const Card = (props) => {
           }}
       >
           <figure className="product-figure">
-            <img src={getImageUrl(props.image)} alt="" />
+            <img src={getImageUrl(props.images[0])} alt="" />
             <figcaption className="product-caption fs-6">
               <div className='product-title-price'>
                 <div> { props.name } </div>

@@ -19,6 +19,7 @@ app.use(bodyParser.json()); // Middleware to parse JSON bodies
 
 const YOUR_DOMAIN = 'http://localhost:5173';
 
+products = []
 
 app.post('/create-checkout-session', async (req, res) => {
   const {choices, cartItems} = req.body; // This will contain the array of objects
@@ -29,8 +30,9 @@ app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     ui_mode: 'embedded',
     line_items: cartItems.map((item, idx) => {
-
-      updateStockValue(item.id, item?.quantity, item.choiceId[0])
+     
+      // add product to products list
+      item.quantity ? products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0]}) : null
 
       return {
         price_data: {
@@ -52,7 +54,7 @@ app.post('/create-checkout-session', async (req, res) => {
     },
     return_url: `${YOUR_DOMAIN}/return?session_id={CHECKOUT_SESSION_ID}`,
   });
-
+  console.log(JSON.stringify({products}))
   res.send({clientSecret: session.client_secret});
 }
 
@@ -66,6 +68,11 @@ app.get('/session-status', async (req, res) => {
   
   if (session.payment_status === 'paid') {
 
+    for(i = 0; i < products.length; i++){
+      updateStockValue(products[i].id, products[i].quantity, products[i].choiceId)
+      console.log('----------------')
+    }
+    products = []
 
     console.log(session.customer_details)
 

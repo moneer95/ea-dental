@@ -23,7 +23,7 @@ export default function Products(){
                     <Card 
                         id = {product.id}
                         name = {product.name}
-                        image = {product.image_path}
+                        images = {product.image_path}
                         price = {product.choices[0][0].price}
                         descrip = {product.description}
                         category = {product.catego} //to pass to cart through card

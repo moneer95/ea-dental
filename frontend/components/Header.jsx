@@ -43,6 +43,20 @@ export default function Header() {
                     PRODUCTS
                 </NavLink>
                 <NavLink 
+                    to="/venue"
+                    className="nav-link"
+                    style={({isActive}) => isActive ? activeStyles : null}
+                >
+                    Venue
+                </NavLink>
+                <NavLink 
+                    to="/recruiment"
+                    className="nav-link"
+                    style={({isActive}) => isActive ? activeStyles : null}
+                >
+                    Recruiment
+                </NavLink>
+                <NavLink 
                     to="cart"
                     className="nav-link"
                     style={({isActive}) => isActive ? activeStyles : null}

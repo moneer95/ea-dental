@@ -17,6 +17,8 @@ import NotFound from "./pages/NotFound"
 import Login, { loader as loginLoader, action as loginAction } from "./pages/Login"
 import Layout from "./components/Layout"
 import { CheckoutForm, Return } from "./pages/Stripe"
+import { Venue } from "./pages/Venue"
+import { Recruiment } from "./pages/Recruiment"
 import Error from "./components/Error"
 
 
@@ -47,12 +49,6 @@ const router = createBrowserRouter(createRoutesFromElements(
     />
 
     <Route
-      path='cart'
-      element={<Cart />}
-      errorElement={<Error />}
-    />
-
-    <Route
       path='products'
       element={<Products />}
       loader={productsLoader}
@@ -63,6 +59,24 @@ const router = createBrowserRouter(createRoutesFromElements(
       path='products/:prodId'
       element={<ProductDetail />}
       loader={productsLoader}
+      errorElement={<Error />}
+    />
+
+    <Route
+      path='cart'
+      element={<Cart />}
+      errorElement={<Error />}
+    />
+
+    <Route
+      path='venue'
+      element={<Venue />}
+      errorElement={<Error />}
+    />
+
+    <Route
+      path='recruiment'
+      element={<Recruiment />}
       errorElement={<Error />}
     />
 

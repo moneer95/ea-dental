@@ -2,6 +2,7 @@ import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import CartContext from "../contexts/cartContext";
 import toast, { Toaster } from 'react-hot-toast';
+import ImageSlider from '../components/ImageSlider';
 
 
 
@@ -20,11 +21,15 @@ const ProductDetail = () => {
     function handleChange(e){
         setChocieId(e.target.value)
     }
-
     return (
         <div className='product-detail'>
             <div className='product-detail-img-div'>
-                <img src={`${props.image}`} alt="" />
+       
+            <ImageSlider >
+            {props.images.map((image, index) => {
+                return <img key={index} src={image} alt={index} />;
+            })}
+            </ImageSlider>
             </div>
             <div className='product-detail-button-choices'>
                 <div className='product-detail-button-choices-title-div'>
@@ -84,15 +89,20 @@ const ProductDetail = () => {
     
     
     function cleanAddToCart(prevItems, option){
-               
-        const existingItems = prevItems?.filter(item => item.optionName == option.name)
+        
+        const existingItems = prevItems?.filter(item => {
+        console.log(item.choices[0][choiceId.toString()].name)
+        return (item.optionName + item.choices[0][choiceId.toString()].name) == (option.name + item.choices[0][choiceId.toString()].name)
+        }
+    )
+    
     
         if(!existingItems.length){
             toast.success(`${option.name} added to cart`)
             return [...prevItems,
                     {    
                         id: props.id,
-                        optionName: props.name,
+                        optionName: props.name + props.choices[0][choiceId.toString()].name,
                         category: props.category,
                         choices: props.choices,
                         quantity: quan,
