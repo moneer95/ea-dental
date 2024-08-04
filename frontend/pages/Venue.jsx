@@ -1,11 +1,6 @@
 import React from 'react'
 import hero from "../assets/images/ore-section.jpg"
 
-import DatePicker from 'react-datepicker';
-import TimePicker from 'react-time-picker';
-import 'react-datepicker/dist/react-datepicker.css';
-import 'react-time-picker/dist/TimePicker.css';
-import 'react-clock/dist/Clock.css';
 
 
 export const Venue = () => {
@@ -38,26 +33,6 @@ export const Venue = () => {
             </ul>
             Price doesn’t include consumables
             Exam’s dental supplies and equipment can be purchased from our course venue, refer to ORE-LDS dental supplies store for more information regarding pricing. 
-            </div>
-            <div>
-
-            <h2>Select Date and Time</h2>
-            <div>
-                <label>Date: </label>
-                <DatePicker
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                dateFormat="yyyy/MM/dd"
-                />
-            </div>
-            <div>
-                <label>Time: </label>
-                <TimePicker
-                onChange={setSelectedTime}
-                value={selectedTime}
-                disableClock={true}
-                />
-            </div>
             </div>
 
         </div>

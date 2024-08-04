@@ -91,8 +91,10 @@ const ProductDetail = () => {
     function cleanAddToCart(prevItems, option){
         
         const existingItems = prevItems?.filter(item => {
-        console.log(item.choices[0][choiceId.toString()].name)
-        return (item.optionName + item.choices[0][choiceId.toString()].name) == (option.name + item.choices[0][choiceId.toString()].name)
+            console.log((item.optionName ))
+            console.log((option.name + option.choices[0][choiceId.toString()].name))
+            console.log((item.optionName ) == (option.name + option.choices[0][choiceId.toString()].name))
+        return (item.optionName) == (option.name + item.choices[0][choiceId.toString()].name)
         }
     )
     
