@@ -47,7 +47,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 16.80,
-                    "weight": 0.0005,
+                    "weight": 0.001,
                     "dimensions": [12, 4, 4],
                     "inStock": 100                    
                 }
@@ -55,7 +55,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/bonding-agent-2/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Content: 5ml bottle + 10 Micro brushes</p> </div>  <div class='post-content'><h3 class='fusion-woocommerce-tab-title fusion-responsive-typography-calculated' data-fontsize='17' style='--fontSize: 17; line-height: 1.4; --minFontSize: 17;' data-lineheight='23.8px'>Description</h3><p>Uses</p><ul><li>Bonding for direct composite</li><li>Bonding for porcelain, composite, metal repair, set amalgam, post</li><li>Bonding for porcelain veneer</li></ul><p>Content:</p><ul><li>3ml bottle + 10 Micro brushes</li></ul><p>Price:<br>£16.00</p></div>",
-        "image_path": ["../assets/product_images/IMG_7450-e1652302475292-350x350.webp"],
+        "image_path": ["../assets/product_images/bonding-agent.webp"],
         "category": "Restorative"
     },
     {
@@ -123,15 +123,15 @@ const arr = [
                 {
                     "name": "default",
                     "price": 16.80,
-                    "weight": 24.4,
+                    "weight": 0.0244,
                     "dimensions": [16, 3.5, 3],
                     "inStock": 100                    
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/micro-hybrid-composite-2/",
+        "url": ["../assets/product_images/composite-syreng.jpg"],
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>Universal light-cure composite restorative. Fluoride containing Nano-Hyrbid</p> <p>Uses:</p> <ul> <li>Restorations of all cavity classes</li> <li>Indirect inlays</li> <li>Onlays</li> <li>Veneer</li> </ul> <p>Package Content:</p> <ul> <li>4g Syringe, Shade B1</li> </ul> <p>\u00a0</p> </div>",
-        "image_path": ["../assets/product_images/com-350x350.png"],
+        "image_path": ["../assets/product_images/composite-syreng.jpg"],
         "category": "Restorative"
     },
     {
@@ -188,7 +188,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/matrix-band-roll-2/",
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p>Matrix bands</p>\n<p>Material:</p>\n<ul>\n<li>Stainless Steel</li>\n</ul>\n<p>Details:</p>\n<ul>\n<li>Rusting Prevention Procedure: Passivity</li>\n<li>Ultrasonic Cleaned: Yes</li>\n<li>Polished:\u00a0Yes</li>\n<li>Tests Performed: Boil Test, Performance Test, Shape Test</li>\n<li>QC Passed: Yes</li>\n</ul>\n<p>Content: 1m roll of matrix band ( 6mm x 0.05mm x 1m)</p>\n<p>Price: \u00a39.00 per pack</p>\n</div>",
-        "image_path": ["../assets/products.svg"],
+        "image_path": ["../assets/product_images/matrix-bond1.jpg"],
         "category": "Restorative"
     },
     {
@@ -224,7 +224,7 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/micro-brushes-2/",
+        "url": ["../assets/product_images/micro-brushes.jpg"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\">\n<p>Flexible head design that can be bent for easy access to all application areas</p>\n</div>    <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Disposable micro brushes</p><p>Advantages:</p><ul><li><span class=\"a-list-item\">High quality disposable brushes ideal for dental clinic use</span></li><li>Perfect application: solutions are retained between the fibres, preventing dripping.</li><li>Flexible head design that can be bent for easy access to all application areas</li><li>Adjustable length and angle</li><li>Economical: the brushes’ high precision reduces the amount of solution to be used.</li></ul><p>Used with:</p><ul class=\"a-unordered-list a-vertical a-spacing-mini\"><li><span class=\"a-list-item\">Whitening agents</span></li><li><span class=\"a-list-item\">Etchants</span></li><li><span class=\"a-list-item\">Bonding agents</span></li><li><span class=\"a-list-item\">Sealants</span></li><li><span class=\"a-list-item\">Desensitizers</span></li><li><span class=\"a-list-item\">Adhesives and resins</span></li></ul><p>Additional information:</p><ul><li>ORE kit</li></ul><p>Content: 1 pack of 10 micro brushes. Colours may vary</p><p>Price: £2.00 per pack</p></div>",
         "image_path": ["../assets/product_images/productvariantdetailmain-0008155_1000.webp"],
         "category": "Restorative"
@@ -237,7 +237,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 10.80,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                    
                 }
@@ -473,7 +473,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/gates-glidden/",
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p>Gates Enlargers</p>\n<ul>\n<li>For enlargement of the coronal third</li>\n<li>Non-cutting tip with guide</li>\n<li>Exceeds all ISO/ADA specifications</li>\n<li>High Quality Stainless Steel</li>\n<li>Predetermined breaking point at the shank. If the instrument fractures it can be removed easily</li>\n<li>Ring markings</li>\n<li>Recommended speed 800-1200RPM</li>\n<li>Packed in blister cards; 6 Pieces/ card</li>\n<li>Sterilizable up to 200C/390F</li>\n</ul>\n<p>Contents:1 packet of 6 x gates glidden burs</p>\n<p>Price: \u00a310.00</p>\n</div>",
-        "image_path": ["../assets/product_images/IMG_7363-scaled-350x350.webp"],
+        "image_path": ["../assets/product_images/gates-glidden.jpeg", "../assets/product_images/IMG_7363-scaled-350x350.webp"],
         "category": "Endodontics"
     },
     {
@@ -693,13 +693,13 @@ const arr = [
                 {
                     "name": "default",
                     "price": 16.80,
-                    "weight": "",
+                    "weight": 0.437,
                     "dimensions": [],
                     "inStock": 100                    
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/handpiece-oil-unolube/",
+        "url": ["../assets/product_images/unoluble-oil.webp"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Used for lubricating instruments</p> </div> <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Complex oil with silicone and anti-rust inhibitors. Highly effective cleaning and lubrication for all high speed and low speed dental rotary handpieces and air motors.</p><p><em>Brand: Unolube</em></p><p>Use</p><ul><li>Lubricating instruments ready for re-use</li></ul><p>Advantages</p><ul><li>Suitable for use with most types of handpiece.</li><li>Non-flammable aerosol can.</li><li>Light peppermint aroma on contact.</li><li>High penetrative ability to ensure thorough coating of bearing surface.</li><li>Ozone friendly</li></ul><p>No nozzle. Suitable for use with most types of handpiece</p><p>Packaging: 1 x 500ml spray can</p><p>Price: £14.00</p></div>",
         "image_path": ["../assets/product_images/oil-1-350x350.png"],
         "category": "Equipment"
@@ -788,7 +788,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 50.40,
-                    "weight": 1.5418,
+                    "weight": 1.8,
                     "dimensions": [18.5, 11, 11],
                     "inStock": 100                    
                 }
@@ -910,7 +910,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/blue-mixing-tip/",
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p>Mixpac Mixing Tips 10:1.</p>\n<p>These disposable blue mixing tips provide an exact 10:1 base/catalyst guaranteeing a thorough mix every time and colour stability.</p>\n<p>Uses</p>\n<ul>\n<li>To be used with crown and bridge temporary material.</li>\n</ul>\n<p>Packaging\u00a0 content: 10 x mixing tips</p>\n<p>Price: \u00a311.00 per pack</p>\n<p>\u00a0</p>\n</div>",
-        "image_path": ["../assets/product_images/imp-tips-350x227.png"],
+        "image_path": ["../assets/product_images/blue-mixing-tips.jpeg"],
         "category": "Impression Materials"
     },
     {
@@ -948,7 +948,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/complete-ore2-hand-instrument-kit/",
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<div class=\"flex-1 overflow-hidden\">\n<div class=\"react-scroll-to-bottom--css-hgzro-79elbk h-full\">\n<div class=\"react-scroll-to-bottom--css-hgzro-1n7m0yu\">\n<div class=\"flex flex-col pb-9 text-sm\">\n<div class=\"w-full text-token-text-primary\" data-testid=\"conversation-turn-5\">\n<div class=\"px-4 py-2 justify-center text-base md:gap-6 m-auto\">\n<div class=\"flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion\">\n<div class=\"relative flex w-full flex-col lg:w-[calc(100%-115px)] agent-turn\">\n<div class=\"flex-col gap-1 md:gap-3\">\n<div class=\"flex flex-grow flex-col max-w-full\">\n<div class=\"min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto\" data-message-author-role=\"assistant\" data-message-id=\"a5e5b766-1703-422b-b0a2-86fa9833248d\">\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\n<p>Introducing our Exquisite ORE2 Mastery Instrument Kit, meticulously curated to encompass the quintessential tools necessary to elevate your ORE2 experience in accordance with the exacting standards of the examination:</p>\n<ol>\n<li>Mirror Size 5</li>\n<li>William Probe</li>\n<li>Sharp Probe</li>\n<li>College Tweezer</li>\n<li>Dycal applicator</li>\n<li>Amalgam Carrier</li>\n<li>GV Black Condenser 1.5mm Head</li>\n<li>Mortenson Plugger 1.2mm Head</li>\n<li>Hollenbech Carver</li>\n<li>Burnisher</li>\n<li>Flat Plastic</li>\n<li>Enamel Hatchet 1mm Head</li>\n<li>Gingival Marginal Trimmer: Mesial</li>\n<li>Gingival Marginal Trimmer: Distal</li>\n</ol>\n<p>Elevate your preparation with the unparalleled sophistication and precision of our Exquisite ORE2 Mastery Instrument Kit, where every tool is a testament to your pursuit of dental excellence.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
-        "image_path": ["../assets/product_images/complete-ore2-intrument-kit.webp"],
+        "image_path": ["../assets/product_images/complete-ore2-intrument-kit.webp", "../assets/product_images/hand5.jpeg", "../assets/product_images/handk6.jpeg", "../assets/product_images/handk7.jpeg", "../assets/product_images/handk8.jpeg"],
         "category": "Instruments"
     },
     {
@@ -997,7 +997,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 8.40 ,
-                    "weight": "",
+                    "weight": 0.0025,
                     "dimensions": [],
                     "inStock": 100                   
                 }
@@ -1205,7 +1205,7 @@ const arr = [
             {"0":{
                 "name": "(1) Disposable Scalpel #11",
                 "price": 3.60 ,
-                "weight": 0.01,
+                "weight": 0.0082,
                 "dimensions": [],
                 "inStock": 100                   
             },
@@ -1213,7 +1213,7 @@ const arr = [
                 {
                     "name": "(2) 3-0 Silk Sutures",
                     "price": 4.80 ,
-                    "weight": 0.01,
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                   
                 },         
@@ -1221,7 +1221,7 @@ const arr = [
                 {
                     "name": "(1) Mayo Needle Holder",
                     "price": 7.80 ,
-                    "weight": 0.01,
+                    "weight": 0.04,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -1245,7 +1245,7 @@ const arr = [
                 {
                     "name": "(1) Skin Pad",
                     "price": 24.00 ,
-                    "weight": 0.01,
+                    "weight": 0.0156,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -1253,7 +1253,7 @@ const arr = [
                 {
                     "name": "Sutue Kit",
                     "price": 58.80 ,
-                    "weight": 0.01,
+                    "weight": 0.176,
                     "dimensions": [],
                     "inStock": 100                   
                 }
@@ -1296,7 +1296,7 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/gloves-powder-free/",
+        "url": ["../assets/product_images/gloves.jpg"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Contains no natural latex protein and therefore eliminates Type 1 recations, powder free</p> </div>    <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Nitrile examination gloves: Contains no natural latex protein and therefore eliminates Type 1 reactions, powder free, exceptionally lightweight, flat with rolled rim, Single use, Ambidextrous.</p><p>Sizes:</p><ul><li>Small</li><li>Medium</li><li>Large</li></ul><p>Content: 10 x gloves. Colours may vary</p><p>Price: £2.00</p></div>",
         "image_path": ["../assets/product_images/gloves-350x350.jpg"],
         "category": "Infection Control"
@@ -1317,7 +1317,7 @@ const arr = [
                 {
                     "name": "2 meters",
                     "price": 60.00,
-                    "weight": 0.005,
+                    "weight": 0.015,
                     "dimensions": [],
                     "inStock": 100                    
                 }
@@ -1412,7 +1412,7 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/endo-rct-frasaco-teeth/",
+        "url": ["../assets/product_images/frasaco-ag3.webp"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Authentic RCT Frasaco teeth</p> </div>  <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Authentic RCT Frasaco teeth</p><p>Features</p><ul><li>Authentic, smooth plastic teeth with transparent ‘roots’; that contain red wax</li></ul><p>Advantages</p><ul><li>Identical to that used in the ORE part 2 examination</li><li>Beneficial to those who want to practice under simulated conditions</li><li>Ideal for teaching and demonstrating.</li></ul><p>Uses:</p><ul><li>Perfect for practicing RCT obturation and access opening in mannikin practice.</li><li>Upper left first incisor – RCT obturation</li><li>Upper left first molar – access opening</li></ul><p>Packaging content:</p><ul><li>1 upper left first incisor<em> OR</em></li><li><em> 1 </em>upper left first molar</li></ul><p>&nbsp;</p></div>",
         "image_path": ["../assets/product_images/teeth-for-typodont-ag-3_0.webp"],
         "category": "Endodontics"
@@ -1425,7 +1425,7 @@ const arr = [
                 {
                     "name": "Upper Cast",
                     "price": 28.80,
-                    "weight": "",
+                    "weight": 0.008,
                     "dimensions": [],
                     "inStock": 100                    
                 },
@@ -1909,7 +1909,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/ore2-bur-stand/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p><strong>Labelled bur stand designed for ORE2 Dental Manikin examination</strong></p> </div>   <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p><strong>Labelled bur stand designed for ORE2 Dental Manikin examination:</strong></p><ul><li>Stainless steel and silicone.</li><li>Featuring secure grip silicone bur holders. The cover can be rotated to offer the burs flat or at an angle. Holds any combination of FG or RA burs.</li><li>Accommodates 11 sites for burs / stones of different types and sizes</li></ul><p>Variations:</p><ul><li>Sold alone</li><li>Sold with a standardised kit of burs according to the <strong>General Dental Council consortium&nbsp;</strong></li></ul></div>",
-        "image_path": ["../assets/product_images/bur-stand.jpeg"],
+        "image_path": ["../assets/product_images/bur-stand.jpeg", "../assets/product_images/bur-stand5.jpeg", "../assets/product_images/bur-stand4.jpeg", "../assets/product_images/bur-stand3.jpeg", "../assets/product_images/bur-stand2.jpeg", "../assets/product_images/bur-stand1.jpeg"],
         "category": "Instruments"
     },
     {
@@ -1928,7 +1928,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 33.60 ,
-                    "weight": 0.0188,
+                    "weight": 0.0044,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -1955,7 +1955,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 33.60 ,
-                    "weight": 0.0188,
+                    "weight": 0.0044,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -1982,7 +1982,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 33.60 ,
-                    "weight": 0.0188,
+                    "weight": 0.0044,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -2009,7 +2009,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 33.60 ,
-                    "weight": 0.0188,
+                    "weight": 0.0044,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -2028,7 +2028,7 @@ const arr = [
                 {
                     "name": "Single Bur",
                     "price": 9.60 ,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -2036,7 +2036,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 33.60 ,
-                    "weight": 0.0188,
+                    "weight": 0.0044,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -2063,7 +2063,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 19.20 ,
-                    "weight": 0.2,
+                    "weight": 0.0044,
                     "dimensions": [5, 3, 1],
                     "inStock": 100                   
                 }
@@ -2082,7 +2082,7 @@ const arr = [
                 {
                     "name": "Single Bur size 1",
                     "price": 4.20 ,
-                    "weight": 0.0188,
+                    "weight": 0.001,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 },
@@ -2090,7 +2090,7 @@ const arr = [
                 {
                     "name": "Pack of 5 size 1",
                     "price": 19.20 ,
-                    "weight": 0.2,
+                    "weight": 0.0089,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 },
@@ -2098,7 +2098,7 @@ const arr = [
                 {
                     "name": "Single Bur size 4",
                     "price": 4.20 ,
-                    "weight": 0.0188,
+                    "weight": 0.001,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 },
@@ -2106,7 +2106,7 @@ const arr = [
                 {
                     "name": "Pack of 5 size 4",
                     "price": 19.20 ,
-                    "weight": 0.2,
+                    "weight":0.009,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -2125,7 +2125,7 @@ const arr = [
                 {
                     "name": "Single Bur",
                     "price": 4.20 ,
-                    "weight": 0.0188,
+                    "weight": 0.001,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 },
@@ -2133,7 +2133,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 19.20 ,
-                    "weight": 0.0188,
+                    "weight": 0.0083,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -2160,7 +2160,7 @@ const arr = [
                 {
                     "name": "Pack of 5",
                     "price": 19.20 ,
-                    "weight": 0.0188,
+                    "weight": 0.0044,
                     "dimensions": [8, 7, 0.5],
                     "inStock": 100                   
                 }
@@ -2206,7 +2206,7 @@ const arr = [
                 {
                     "name": "Rubber face mask with built-in fixture for drainage pipe",
                     "price": 96.00,
-                    "weight": 6,
+                    "weight": 5,
                     "dimensions": [],
                     "inStock": 100                    
                 },
@@ -2222,7 +2222,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/phantom-head/",
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>The dental simulator head model can be fixed on the desktop for oral simulation training and demonstration. It is easy to disassemble and easy to use. It is an ideal choice for dental school education and dentist training.</p> <p>FEATURES</p> <p>1. The advanced human body model is vivid and lifelike, and the simulation exercise effect will be better.<br/>\n2. The universal adjustment handle can freely adjust the position of the imitation head mold and the shoulder body.<br/>\n3. The detachable and drainable design makes installation and use more convenient.<br/>\n4. Magnetic jaw attachment for ease jaw attachment, suitable for multiple clinical operation simulation exercises</p> <p>5. Excellent material, exquisite workmanship, and more durable.</p> <p>Product name\u2014dental simulator head model Material\u2014resin; silica gel; stainless steel; aluminum alloy</p> <p>Please remember to clean the model after use to keep\u00a0it\u00a0hygienic.</p> <p>LIMITED STOCK AVAILABILITY!!</p> </div>",
-        "image_path": ["../assets/products.svg"],
+        "image_path": ["../assets/product_images/phanthom1.jpg", "../assets/product_images/phanthom2.jpg", "../assets/product_images/phanthom3.jpg", "../assets/product_images/phanthom4.jpg"],
         "category": "Simulation"
     },
     {
@@ -2231,15 +2231,14 @@ const arr = [
         "choices": [
             {"0": 
                 {
-                    "name": "default",
                     "price": 228.00,
-                    "weight": 8,
+                    "weight": 5,
                     "dimensions": [],
                     "inStock": 100                   
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/portable-dental-unit/",
+        "url": ["../assets/product_images/portable-unit.jpg"],
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>Wall mounted, portable dental unit with a 3 month warranty.</p> <p>Features:</p> <ul> <li>Dental unit water lines that connect the unit to 2 handpieces and a 3-way syringe.</li> </ul> <p>Advantages:</p> <ul> <li>Wall mounted</li> <li>Portable</li> <li>Easy to move around</li> <li>Conveniently light in weight and durable</li> </ul> <p><span style=\"color: #000000;\">Available in:</span></p> <ul> <li><span style=\"color: #000000;\">4 holes</span></li> </ul> <p>Contents:</p> <ul> <li>One Dental Turbine Unit</li> <li>Two handpiece tubing</li> <li>One foot switch</li> <li>One 3-way syringe</li> <li>One water bottle</li> <li>One plastic hose to connect to air compressor</li> </ul> <p>Guarantee:</p> <ul> <li>3 month warranty</li> </ul> </div>",
         "image_path": ["../assets/product_images/1108_G_1555065731746-350x350.jpg"],
         "category": "Equipment"
@@ -2285,9 +2284,9 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/handpiece-oil-unolube/",
+        "url": ["../assets/product_images/high-hand-pice.png"],
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>High speed handpiece</p><p>Advantages:</p><ul><li>Push button</li><li>Autoclavable 135°C</li><li>Easy to change cartridge</li><li>Metal casing</li></ul><p>Technical Data:</p><ul><li>Rated air pressure: 0.2 MPa</li><li>Rated rotation speed: 400000rpm</li><li>Noise: &lt;70dB</li></ul><p>Available in:</p><ul><li>4 Holes</li><li>2 Holes</li></ul><p>Comes with 3 months warranty, please refer to instructions before use</p><p>Price: £95.00</p></div>",
-        "image_path": ["../assets/product_images/soco-h-e1652311673360.wepb"],
+        "image_path": ["../assets/product_images/high-hand-pice.png"],
         "category": "Equipment"
     },
     {
@@ -2336,7 +2335,7 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/low-speed-handpiece/",
+        "url": ["../assets/product_images/low-spped-hand.png"],
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p>Low speed handpiece</p>\n<p>Content: Handpiece kit ( Contra angle- Air Motor)</p>\n<p>Available in:</p>\n<ul>\n<li>4 hole</li>\n<li>2 hole</li>\n</ul>\n<p>Advantages:</p>\n<ul>\n<li>Push type contra angle with anti-heating safety system, this can reduce the risk of burning your patients by your instruments.</li>\n<li>Axis and gears are machined in stainless steel with high resistance to corrosion.</li>\n<li>Ideal Geometry: improved the accessibility to areas at the rear of the mouth, the type angles are designed to offer you improved handling and accessibility.</li>\n<li>This contra angle handpiece is autoclavable up to 135\u2103</li>\n<li>Basic midwest air motor with E type fitting for all your slow handpieces.</li>\n<li>External water spray pipe</li>\n</ul>\n<p>Technical information:</p>\n<ul>\n<li>Air pressure: 0.3 MPa</li>\n<li>Speed: 18,000\uff5e25,000min-1</li>\n<li>Midwest 4 hole</li>\n<li>Borden 2 hole</li>\n</ul>\n<p>\u00a0</p>\n</div>",
         "image_path": ["../assets/product_images/soco-350x350.png"],
         "category": "Handpieces"
@@ -2363,7 +2362,7 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/impression-tray-2/",
+        "url": ["https://ea-dental.com/shop/impression-tray-2/"],
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>Sectional impression tray</p> <p>Used for:</p> <ul> <li>Impression taking ( single and double stage)</li> <li>Temporary crown fabrication</li> </ul> <p>Packaging contents:</p> <ul> <li>1 Left Tray</li> <li>1 Right Tray</li> </ul> </div>",
         "image_path": ["../assets/product_images/iiu058_1-350x350.webp"],
         "category": "Impression Materials"
@@ -2422,7 +2421,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 1874.40,
-                    "weight": "",
+                    "weight": 8,
                     "dimensions": [],
                     "inStock": 100                    
                 }
@@ -2441,15 +2440,15 @@ const arr = [
                 {
                     "name": "default",
                     "price": 2184.00,
-                    "weight": "",
+                    "weight": 14,
                     "dimensions": [],
                     "inStock": 100                    
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/my-restorative-kit/",
+        "url": ["../assets/product_images/phanthom1.jpg", "../assets/product_images/portable-unit.jpg", "../assets/product_images/high-hand-pice.png", "../assets/product_images/unoluble-oil.webp", "../assets/product_images/composite-syreng.jpg", "../assets/product_images/gloves.jpg", "../assets/product_images/bonding-agent.webp"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Introducing the EA Dental Comprehensive ORE2 Manikin: Your Ultimate Solution for Setting Up a Dental Practice Kit at Home!</p> <p>Are you eager to hone your dental skills and set up a comprehensive manikin kit at home, but uncertain about where to begin? Look no further, as we present the EA Dental Comprehensive ORE2 Manikin \u2013 the perfect starting point for your journey into the world of dentistry!</p> <p>What\u2019s Included in this All-In-One Kit:</p> <ul> <li>High-Quality Phantom Head: Crafted to replicate the real dental experience with precision.</li> <li>Portable Dental Unit: The convenience of a fully functional dental unit in a portable form.</li> <li>Original Frasaco Jaws: Ensuring authenticity and real-world practice scenarios.</li> <li>Original Frasaco Teeth: With a total of 104 teeth, you\u2019ll be ready for any dental procedure.</li> <li>Original Frasaco Endo Teeth:\u00a0 1 * Molar endodontic tooth,</li> <li>Complete Hand Instruments: Equip yourself with a comprehensive set of instruments for precise dental work.</li> <li>Restorative Kit: Master the art of restorative dentistry.</li> <li>Endodontic Kit: Enhance your endodontic skills with confidence.</li> <li>Crown and Bridge Kit: Elevate your crown and bridge techniques to perfection.</li> </ul> <p>At EA Dental, we understand your aspirations and the need for a comprehensive training solution. Our Comprehensive ORE2 Manikin has been curated with your success in mind, leveraging materials used at the prestigious Eastman Dental University exam facility.</p> </div>",
-        "image_path": ["../assets/product_images/EA-Dental-LOGO.bmp"],
+        "image_path": ["../assets/product_images/phanthom1.jpg", "../assets/product_images/portable-unit.jpg", "../assets/product_images/high-hand-pice.png", "../assets/product_images/unoluble-oil.webp", "../assets/product_images/composite-syreng.jpg", "../assets/product_images/gloves.jpg", "../assets/product_images/bonding-agent.webp"],
         "category": "Kits"
     },
     {
@@ -2460,7 +2459,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 1362.00,
-                    "weight": "",
+                    "weight": 12,
                     "dimensions": [],
                     "inStock": 100                   
                 }

@@ -66,6 +66,10 @@ a{
     text-align: center;
 }
 
+.flex{
+    display: flex;
+}
+
 
 
 @media (max-width: 39em) {
@@ -875,15 +879,15 @@ header .login-link {
   }
   
   .slider__item-active-5 {
-    transform: translateX(-300%);
+    transform: translateX(-400%);
   }
   
   .slider__item-active-6 {
-    transform: translateX(-300%);
+    transform: translateX(-500%);
   }
   
   .slider__item-active-7 {
-    transform: translateX(-300%);
+    transform: translateX(-600%);
   }
   
   .slider__item img {
@@ -918,6 +922,33 @@ header .login-link {
 /* 0000000000000000000000 Venue page 000000000000000000000 */
 .venue-div{
     margin: 1rem 3rem;
+    display: block;
+}
+
+.booking-div{
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.picker-duration-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 2rem;
+}
+
+
+.book-button-div{
+    display: flex;
+}
+
+.book-button{
+    width: 50%;   
+     margin: 1rem auto;
 }
 
 

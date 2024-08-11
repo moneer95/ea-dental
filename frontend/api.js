@@ -65,6 +65,23 @@ export async function getVan(id) {
     }
 }
 
+export async function getStockQuan(id, choiceId){
+    const docRef = doc(db, "products", id);
+    const docSnap = await getDoc(docRef);
+    const stockQuan = docSnap.data().choices[0][choiceId].inStock
+    return stockQuan
+}
+
+export async function getPrevBooking(collectionName){
+    const collecRef = collection(db, collectionName)
+    const querySnapshot = await getDocs(collecRef)
+    
+    const dataArr = querySnapshot.docs.map(doc => ({
+        ...doc.data()
+    }))
+    return dataArr
+}
+
 export async function getHostVans() {
     // const q = query(categosCollecRef, where("hostId", "==", "123"))
     // const querySnapshot = await getDocs(q)

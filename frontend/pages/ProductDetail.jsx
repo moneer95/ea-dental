@@ -3,20 +3,39 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import CartContext from "../contexts/cartContext";
 import toast, { Toaster } from 'react-hot-toast';
 import ImageSlider from '../components/ImageSlider';
+import {getStockQuan} from '../api'
+
+
 
 
 
 const ProductDetail = () => {
-
+    //get all values from outside
     const location = useLocation()
     const navigate = useNavigate()
+    const { cartItems, setCartItems } = React.useContext(CartContext)
+    const props = location.state.props //props passed from product card
+    
+    // state vars
     const [quan, setQuan] = React.useState(1)
     const [choiceId, setChocieId] = React.useState(0)
+    const [stockQuan, setStockQuan] = React.useState(0);
+    const [isdisapled, setIsdisapled] = React.useState(false);
+    
 
-    const { cartItems, setCartItems } = React.useContext(CartContext)
-
-    const props = location.state.props
-
+    React.useEffect(() => {
+        const fetchStockQuan = async () => {
+          const quantity = await getStockQuan(props.id, choiceId.toString());
+          setStockQuan(quantity);
+        };
+      
+        fetchStockQuan();
+      }, [props.id, choiceId]);
+      
+      React.useEffect(() => {
+        setIsdisapled((stockQuan - quan) < 0 ? true : false);
+      }, [stockQuan, quan]);
+      
 
     function handleChange(e){
         setChocieId(e.target.value)
@@ -64,7 +83,8 @@ const ProductDetail = () => {
 
               }
 
-                <button className='add-cart-product-button' onClick={() => addToCart(props)}>add to cart</button>
+                <button disabled={isdisapled} style={{cursor: isdisapled ? 'not-allowed' : 'pointer'}} className='add-cart-product-button' onClick={() => addToCart(props)}>{isdisapled ? (stockQuan ? <p>no enough stock</p> : <p>out of stock</p> ): 'add to cart'}</button>
+                
                 <Toaster
                     position="top-right"
                 />
@@ -74,10 +94,6 @@ const ProductDetail = () => {
             </div>
         </div>
     )
-
-
-
-
 
 
 
@@ -91,10 +107,9 @@ const ProductDetail = () => {
     function cleanAddToCart(prevItems, option){
         
         const existingItems = prevItems?.filter(item => {
-            console.log((item.optionName ))
-            console.log((option.name + option.choices[0][choiceId.toString()].name))
-            console.log((item.optionName ) == (option.name + option.choices[0][choiceId.toString()].name))
-        return (item.optionName) == (option.name + item.choices[0][choiceId.toString()].name)
+
+            console.log( item.optionName  == (option.name + option.choices[0][choiceId.toString()].name))
+            return ( item.optionName ) == (option.name + option.choices[0][choiceId.toString()].name)
         }
     )
     
@@ -104,7 +119,7 @@ const ProductDetail = () => {
             return [...prevItems,
                     {    
                         id: props.id,
-                        optionName: props.name + props.choices[0][choiceId.toString()].name,
+                        optionName: props.name + props.choices[0][choiceId.toString()].name ,
                         category: props.category,
                         choices: props.choices,
                         quantity: quan,
@@ -144,11 +159,11 @@ const ProductDetail = () => {
             return prevItems
         }
         }
-    
 
 
 
 
+          
 
 
 

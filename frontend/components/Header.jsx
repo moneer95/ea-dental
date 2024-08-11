@@ -28,7 +28,6 @@ export default function Header() {
                     Home
                 </NavLink>
                 <NavLink 
-                    end
                     to="categories?type=courses"
                     className="nav-link"
                     style={({isActive}) => isActive ? activeStyles : null}

@@ -12,7 +12,32 @@ const db = getFirestore();
 
 
 
-async function updateStockValue(id, quantity, choiceId) {
+async function updateStocTicketValue(collectionName, docID, choiceId) {
+
+    const itemRef = db.collection(collectionName).doc(docID)
+
+      // get choices arr value
+  
+      const item = await itemRef.get();
+      const choices = item.data().choices
+
+      updatedStock = [...choices]
+      updatedStock[0][choiceId].inStock -= quantity
+
+    try {
+      const res = await itemRef.update({
+        choices: updatedStock
+      });
+      
+      console.log('Document successfully updated!', res);
+    } catch (error) {
+      console.error('Error updating document:', error);
+    }
+  }
+  
+
+
+  async function updateStockValue(id, quantity, choiceId) {
     quantity = quantity || 1
 
     const itemRef = db.collection('products').doc(id)
@@ -35,7 +60,30 @@ async function updateStockValue(id, quantity, choiceId) {
       console.error('Error updating document:', error);
     }
   }
+
+
+  async function addBookingTime(collectionName, startDate, choiceId) {
+    
+    const duration = parseInt(choiceId, 10) + 1;
+    const startSelectedDate = startDate;
+    const endDate = startSelectedDate + (duration * 60 * 60);
+
+    const data = {
+      startDate: startDate,
+      endDate: endDate 
+    };
+    
+    // Add a new document in collection "cities" with ID 'LA'
+    const res = await db.collection(collectionName).add(data);
+    console.log('Added document with ID: ', res.id);
+
+  }
   
+
+
+
 module.exports = updateStockValue
+module.exports = addBookingTime
+// module.exports = updateStocTicketValue
   
   

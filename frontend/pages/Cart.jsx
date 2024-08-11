@@ -43,7 +43,8 @@ function Cart() {
             <p className='cart-item-catego'>Category: <span className='capital'>{item.category}</span> </p>
             <button onClick={() => deleteItem(iIndex)} className='cart-delete-button fs-7'> <i><FaTrash/></i> </button>
 
-              { Object.keys(item.choices[0]).length > 1 &&
+
+              { (Object.keys(item.choices[0]).length > 1 && (item.quantity == undefined)) &&
               item.choices.map( (choice, cIndex) => {
               return <select value={cartItems[iIndex].choiceId[cIndex]} onChange={(event) => handleChoiceChange(event, iIndex, cIndex)} className={`fs-8 cart-choices${cIndex}`}>
                   {Object.entries(choice).map( (option, oIndex)  => {
@@ -60,6 +61,7 @@ function Cart() {
               } )
 
               }
+              {console.log(item)}
             <h4 className='cart-item-price'>price: £{item.choices[0][cartItems[iIndex].choiceId[0]].price}</h4>
           </div>
         ))

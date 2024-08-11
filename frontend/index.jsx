@@ -15,9 +15,10 @@ import Products, { loader as productsLoader } from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import NotFound from "./pages/NotFound"
 import Login, { loader as loginLoader, action as loginAction } from "./pages/Login"
+import { MEVenue } from "./pages/venue/MEVenue"
+import { loader as mEVenueLoader } from './pages/venue/MEVenue';
 import Layout from "./components/Layout"
 import { CheckoutForm, Return } from "./pages/Stripe"
-import { Venue } from "./pages/Venue"
 import { Recruiment } from "./pages/Recruiment"
 import Error from "./components/Error"
 
@@ -70,7 +71,8 @@ const router = createBrowserRouter(createRoutesFromElements(
 
     <Route
       path='venue'
-      element={<Venue />}
+      element={<MEVenue />}
+      loader={mEVenueLoader}
       errorElement={<Error />}
     />
 
