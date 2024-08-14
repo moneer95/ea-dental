@@ -192,16 +192,16 @@ export const MEVenue = () => {
                 console.log(i)
                 const duration = parseInt(choiceId, 10) + 1;
                 const startSelectedDate = startDate.getTime();
-                const endDate = startSelectedDate + (duration * 60 * 60);
+                const endDate = startSelectedDate + ( duration * 60 * 60 * 1000 ) - ( 60 * 60 ) // add the duration in milleseconds the minutes the additional three seconds;
 
                 
-                console.log(new Date(prevBookings[i].startDate),  new Date(prevBookings[i].endDate))
+                console.log(new Date(prevBookings[i].startDate) + '====' +  new Date(prevBookings[i].endDate)) 
                 console.log('-----------------')
-                console.log(new Date(startDate), new Date(endDate))
+                console.log(new Date(startDate) + '====' + new Date(endDate))
 
                 const isOverLap = areIntervalsOverlapping(
-                    {start: new Date(prevBookings[i].startDate * 1000), end: new Date(prevBookings[i].endDate * 1000)},
-                     {start: new Date(startDate * 1000), end: new Date(endDate * 1000)}
+                    {start: new Date(prevBookings[i].startDate), end: new Date(prevBookings[i].endDate)},
+                     {start: new Date(startDate), end: new Date(endDate)}
                 );
                 console.log(isOverLap)
                 if(isOverLap) return true;

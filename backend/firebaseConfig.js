@@ -66,7 +66,7 @@ async function updateStocTicketValue(collectionName, docID, choiceId) {
     
     const duration = parseInt(choiceId, 10) + 1;
     const startSelectedDate = startDate;
-    const endDate = startSelectedDate + (duration * 60 * 60);
+    const endDate = startSelectedDate + ( duration * 60 * 60 * 1000 ) - ( 60 * 60 ) // add the duration in milleseconds the minutes the additional three seconds;
 
     const data = {
       startDate: startDate,

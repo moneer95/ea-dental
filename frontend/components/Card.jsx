@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import { getImageUrl } from '../utils'
 
-
-
 const Card = (props) => {
+
+
 
   return (
     <div key={props.name}>

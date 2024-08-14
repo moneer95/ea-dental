@@ -98,8 +98,8 @@ app.post('/create-checkout-session', async (req, res) => {
       // console.log(JSON.stringify({products}))
       res.send({clientSecret: session.client_secret});
   }
-  catch{
-    console.log("somthing went error");
+  catch(e){
+    console.log("somthing went error", console.log(e));
   }
 
 }
