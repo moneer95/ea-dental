@@ -17,7 +17,7 @@ export default function Home() {
         <>
         <div class="grid-container">
             <div class="content">
-                <div className="badges flex">
+                <div className="badges">
                     <span class="new-course">New Course Launched</span>
                     <span class="explore-prods">
                         Explore our courses & Products
@@ -37,7 +37,6 @@ export default function Home() {
                 <img src={hero} alt="EA Dental Academy Logo" />
             </div>
         </div>
-        { Courses }
 
         <Courses />
 
