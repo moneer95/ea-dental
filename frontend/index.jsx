@@ -7,7 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom"
-import Home from "./pages/Home"
+import Home from "./pages/Home/Home"
 import About from "./pages/About"
 import Categories, { loader as CategoriesLoader } from "./pages/Categories/Categories"
 import CategoDetail, { loader as categoDetailLoader } from "./pages/Categories/CategoDetail"
