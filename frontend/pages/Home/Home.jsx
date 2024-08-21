@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
@@ -13,14 +13,15 @@ import mission from "../../assets/images/homePage/mission.png"
 import ceo from "../../assets/images/homePage/dr_ebtisam.webp"
 
 export default function Home() {
+    const navigate = useNavigate()
     return (
-        <>
+        <div className="home-wraper">
         <div class="grid-container">
             <div class="content">
                 <div className="badges">
-                    <span class="new-course">New Course Launched</span>
-                    <span class="explore-prods">
-                        Explore our courses & Products
+                    <span onClick={() => navigate('/categories?type=courses')} class="new-course">New Course Launched</span>
+                    <span onClick={() => navigate('/products')} class="explore-prods">
+                        Explore our Products
                     </span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                         <path d="M3.58325 8.50004H12.9166M12.9166 8.50004L8.24992 3.83337M12.9166 8.50004L8.24992 13.1667" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -29,11 +30,21 @@ export default function Home() {
                 <p class="heading">Elevate your <span class="highlight">Dental Career</span> in the UK with our High-quality Dental Courses</p>
                 <p class="subtext">Embark on a transformative journey with our Dental Academy. Add purpose to your career by joining a community dedicated to excellence in dental education.</p>
                 <div class="buttons flex">
-                    <button class="view-courses dark-btn">View Courses</button>
-                    <button class="view-products light-btn">View Products</button>
+                    <button 
+                      class="view-courses dark-btn"
+                      onClick={() => navigate('/categories?type=courses')}
+                    >
+                      View Courses
+                    </button>
+                    <button 
+                      class="view-products light-btn"
+                      onClick={() => navigate('/products')}
+                    >
+                      View Products
+                    </button>
                 </div>
             </div>
-            <div class="logo">
+            <div class="hero-logo">
                 <img src={hero} alt="EA Dental Academy Logo" />
             </div>
         </div>
@@ -50,7 +61,7 @@ export default function Home() {
 
         <FAQ />
 
-    </>
+    </div>
     )
  
 
@@ -58,6 +69,8 @@ export default function Home() {
 
 
 const Courses = () => {
+    const navigate = useNavigate()
+
     return (
       <div className="courses-container">
         <h1>
@@ -67,7 +80,10 @@ const Courses = () => {
   
         <div className="courses-grid text-center">
           {courses.map((course, index) => (
-            <div className="course-item">
+            <div 
+              className="course-item"
+              onClick={() => navigate(course.to)}
+            >
                 <div >
                     <div>
                         <img src={course.image} alt={course.title} />
@@ -97,6 +113,8 @@ const Courses = () => {
 
 
 const Products = () => {
+    const navigate = useNavigate()
+
     return (
         <div className="products-container">
         <h1>
@@ -106,7 +124,10 @@ const Products = () => {
 
         <div className="products-grid text-center">
             {products.map((product, index) => (
-            <div className="product-item">
+            <div 
+              className="product-item"
+              onClick={() => navigate(`/products#${product.title}`)}
+            >
                 <div >
                     <div>
                         <img src={product.image} alt={product.title} />
@@ -173,7 +194,7 @@ const CompanyInfo = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
           <p className="ceo-name">
-            <strong>Jane Cooper</strong><br/>
+            <strong>Ebtisam El Hamalawy</strong><br/>
             CEO/President
           </p>
         </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, useLoaderData} from "react-router-dom"
+import React, {useEffect} from 'react'
+import { Link, useLoaderData, useLocation} from "react-router-dom"
 import  Card  from "../components/Card"
 import { getProducts } from "../api"
 import hero from "../assets/images/ore-section.jpg"
@@ -10,13 +10,25 @@ export function loader(){
 
 export default function Products(){
     const productsData = useLoaderData()
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            setTimeout(() => {
+                const element = document.getElementById(hash.substring(1));
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100); // Adjust timeout as needed
+        }
+    }, [hash]);
     
     function categozedProducts(catego){
         return productsData.filter( product => product.category == catego )
     }
 
-    const categoDivs = categos.map(catego => (
-        <div className='products-list-container'>
+    const categoDivs = categos.map((catego, idx) => (
+        <div id={ids[idx]} className='products-list-container'>
             <h2 className='catego-title main-question' > { catego } </h2>
             <div className='products-list'>
                 { categozedProducts(catego).map(product => (
@@ -61,4 +73,19 @@ const categos = [
     "Impression Materials",
     "Kits",
     "Infection Control"
+]
+
+const ids = [
+    "Instruments",
+    "Endodontics",
+    "Restorative",
+    "Burs",
+    "Surgical",
+    "Accessories",
+    "Simulation",
+    "Equipment",
+    "Handpieces",
+    "ImpressionMaterials",
+    "Kits",
+    "InfectionControl"
 ]

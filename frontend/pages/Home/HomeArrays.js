@@ -21,76 +21,95 @@ import student1 from "../../assets/images/homePage/student1.jpeg"
 export const courses = [
     {
       title: 'ORE Courses',
-      image: group1, // Replace with actual image path
+      image: group1, 
       rating: 5,
+      to: "/categories/ore"
     },
     {
       title: 'LDS Courses',
-      image: group2, // Replace with actual image path
+      image: group2, 
       rating: 5,
+      to: "/categories/lds"
     },
     {
       title: 'Revision Sessions',
-      image: group3, // Replace with actual image path
+      image: group3, 
       rating: 5,
+      to: "/categories/revisions"
     },
     {
       title: 'Mock Exams',
-      image: group4, // Replace with actual image path
+      image: group4, 
       rating: 5,
+      to: "/categories/mocks"
     },
   ];
 
-export const products = [
+  export const products = [
     {
       title: 'Instruments',
-      image: product1, // Replace with actual image path if needed
+      image: product1,
+      to: "Instruments" 
     },
     {
       title: 'Endodontics',
-      image: product2, // Replace with actual image path if needed
+      image: product2,
+      to: "Endodontics" 
     },
     {
       title: 'Restorative',
-      image: product3, // Replace with actual image path if needed
+      image: product3,
+      to: "Restorative" 
     },
     {
       title: 'Burs',
-      image: product4, // Replace with actual image path if needed
+      image: product4,
+      to: "Burs" 
     },
     {
       title: 'Surgical',
-      image: product5, // Replace with actual image path if needed
+      image: product5,
+      to: "Surgical" 
     },
     {
       title: 'Simulation',
-      image: product7, // Replace with actual image path if needed
+      image: product7,
+      to: "Simulation" 
     },
     {
       title: 'Equipment',
-      image: product8, // Replace with actual image path if needed
+      image: product8,
+      to: "Equipment" 
     },
     {
       title: 'Handpieces',
-      image: product9, // Replace with actual image path if needed
+      image: product9,
+      to: "Handpieces" 
     },
     {
       title: 'Impression Materials',
-      image: product10, // Replace with actual image path if needed
+      image: product10,
+      to: "ImpressionMaterials" 
     },
     {
       title: 'Kits',
-      image: product11, // Replace with actual image path if needed
+      image: product11,
+      to: "Kits" 
+    },
+    {
+      title: 'Accessories',
+      image: product12,
+      to: "Accessories" 
     },
     {
       title: 'Infection Control',
-      image: product12, // Replace with actual image path if needed
-    },
-    {
-      title: 'Extra Product',
-      image: product13, // Replace with actual image path if needed
-    },
+      image: product13,
+      to: "InfectionControl" 
+    }
   ];
+
+
+
   
 
   export const testimonials = [

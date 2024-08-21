@@ -25,11 +25,16 @@ export default function Header() {
     
     return (
         <header>
-            <img className="logo" src={logo} alt="logo"/>
+            <NavLink 
+                to="/"
+                className="z-index-top"
+            >
+                <img className="logo" src={logo} alt="logo"/>
+            </NavLink>
             <nav className="navbar primary-navigation">
                 <button 
                     onClick={handleToggle}
-                    className="toggle-btn"
+                    className="toggle-btn z-index-top"
                 >
                     <img src={sandwich} alt="toggle navigation" />
                 </button>
@@ -41,6 +46,7 @@ export default function Header() {
                     <NavLink 
                         to="/"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Home
@@ -50,6 +56,7 @@ export default function Header() {
                     <NavLink 
                         to="categories?type=courses"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Courses
@@ -59,6 +66,7 @@ export default function Header() {
                     <NavLink 
                         to="/products"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Products
@@ -68,6 +76,7 @@ export default function Header() {
                     <NavLink 
                         to="/venue"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Venue
@@ -77,6 +86,7 @@ export default function Header() {
                     <NavLink 
                         to="/recruiment"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Recruitment
@@ -86,6 +96,7 @@ export default function Header() {
                     <NavLink 
                         to="/faq"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         FAQ
@@ -95,9 +106,31 @@ export default function Header() {
                     <NavLink 
                         to="/contact"
                         className="nav-link"
+                        onClick={handleToggle}
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Contact
+                    </NavLink>
+                </li>
+                <li
+                    className="mobile-login-cart-btns"
+                    onClick={handleToggle}
+                >
+                    <Link to="login" className="light-btn">
+                        Login
+                    </Link>
+                </li>
+                <li
+                        className="mobile-login-cart-btns"
+                        onClick={handleToggle}
+                >
+                    <NavLink 
+                        to="cart"
+                        className="dark-btn"
+                        style={({isActive}) => isActive ? activeStyles : null}
+                    >
+                    <img src={cartIcon} alt="cart icon" />
+                        Cart
                     </NavLink>
                 </li>
             </ul>
