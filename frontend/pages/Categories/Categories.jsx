@@ -9,7 +9,7 @@ import {
 } from "react-router-dom"
 import { courses, therapists, advanced } from './ctegoriesArr'
 import { AiOutlineUnorderedList } from "react-icons/ai"
-import hero from "../../assets/images/ore-section.jpg"
+import hero from "../../assets/images/categories.jpg"
 
 
 
@@ -103,11 +103,15 @@ export default function Categories() {
 
     return (
         <>
-            {<img className='sub-hero' src={hero} alt=""/>}
             <div className="categos-list-container">
-                {/* <h1 className="text-gradient">Explore our Courses, Products And Services</h1> */}
+                <div className='hero-div fs-2'>
+                    <img src={hero} alt="" width='100%' className='products-hero' />
+                    <div className='hero-img-text fs-6'>
+                        <h1>Courses</h1>
+                    </div>
+                </div>
                 {categosNav()}
-                <React.Suspense fallback={<h2>Loading categories...</h2>}>
+                <React.Suspense fallback={<h2 style={{height: '1000px'}}>Loading categories...</h2>}>
                     <Await resolve={dataPromise.categos}>
                         {categos => typeFilter ? renderCategories(categos) : <h2>Please select a category</h2>}
                     </Await>
