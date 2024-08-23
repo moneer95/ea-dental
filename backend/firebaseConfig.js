@@ -47,8 +47,10 @@ async function updateStocTicketValue(collectionName, docID, choiceId) {
       const item = await itemRef.get();
       const choices = item.data().choices
 
-      updatedStock = [...choices]
+      let updatedStock = [...choices]
       updatedStock[0][choiceId].inStock -= quantity
+      
+      let weight = updatedStock[0][choiceId].weight * 1000 //product weight in grams
 
     try {
       const res = await itemRef.update({
@@ -56,6 +58,8 @@ async function updateStocTicketValue(collectionName, docID, choiceId) {
       });
       
       console.log('Document successfully updated!', res);
+      return weight;
+
     } catch (error) {
       console.error('Error updating document:', error);
     }
@@ -82,8 +86,10 @@ async function updateStocTicketValue(collectionName, docID, choiceId) {
 
 
 
-module.exports = updateStockValue
-module.exports = addBookingTime
+  module.exports = {
+    updateStockValue,
+    addBookingTime
+  };
 // module.exports = updateStocTicketValue
   
   

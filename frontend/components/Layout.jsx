@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom"
 import Header from "./Header"
 import Footer from "./Footer"
 import ScrollToTop from '../hooks/scrollTop';
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -15,6 +16,9 @@ export default function Layout() {
         <CartProvider>
             <ScrollToTop />
             <div className="site-wrapper">
+                <Toaster
+                    position="top-right"
+                />
                 <Header />
                 <main>
                     <Outlet />

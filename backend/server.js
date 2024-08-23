@@ -4,9 +4,9 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const updateStockValue = require('./firebaseConfig')
-const enrollUser = require('./interactions')
-const addBookingTime = require('./firebaseConfig')
+const { updateStockValue, addBookingTime } = require('./firebaseConfig');
+const { enrollUser, createOrder } = require('./interactions')
+const  getShippingPrice = require('./shippingPricing')
 
 const app = express();
 
@@ -23,6 +23,7 @@ const YOUR_DOMAIN = 'http://localhost:5173';
 let products = []
 let tickets = []
 let courses = []
+let weight = 0
 
 app.post('/create-checkout-session', async (req, res) => {
   const {choices, cartItems} = req.body; // This will contain the array of objects
@@ -36,8 +37,12 @@ app.post('/create-checkout-session', async (req, res) => {
       line_items: cartItems.map((item, idx) => {
        
         // add product to products arr
-        item.quantity ? products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0]}) : null
+        if(item.quantity){
+          products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0]});
+          weight += (choices[idx].weight * 1000) * item.quantity
+        }
         
+
         // add ticket to tickets arr
         choices[idx].inStock && !item.quantity ? tickets.push({'ticketName': item.optionName, 'date': item.choiceId[0]}) : null
         
@@ -46,6 +51,7 @@ app.post('/create-checkout-session', async (req, res) => {
         
         // Call addBookingTime here
         if (item.dateTime && item.choiceId[0]) {
+          console.log('whywhywhywhywhywhy')
           addBookingTime('MEBookings', item.dateTime, item.choiceId[0])
             .then(() => console.log('Booking time added'))
             .catch(err => console.error('Error adding booking time:', err));
@@ -68,30 +74,43 @@ app.post('/create-checkout-session', async (req, res) => {
       phone_number_collection: {
         enabled: true,
       },
-      shipping_options: [
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: { amount: 500, currency: 'GBP' },
-            display_name: 'Standard Shipping',
-            delivery_estimate: {
-              minimum: { unit: 'business_day', value: 5 },
-              maximum: { unit: 'business_day', value: 7 },
+      ...(weight && {
+        shipping_options: [
+          {
+            shipping_rate_data: {
+              type: 'fixed_amount',
+              fixed_amount: { amount: getShippingPrice(weight)[0], currency: 'GBP' },
+              display_name: 'Royal Mail 1nd Class',
+              delivery_estimate: {
+                minimum: { unit: 'business_day', value: 1 },
+                maximum: { unit: 'business_day', value: 1 },
+              },
             },
           },
-        },
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: { amount: 1500, currency: 'GBP' },
-            display_name: 'Express Shipping',
-            delivery_estimate: {
-              minimum: { unit: 'business_day', value: 1 },
-              maximum: { unit: 'business_day', value: 2 },
+          {
+            shipping_rate_data: {
+              type: 'fixed_amount',
+              fixed_amount: { amount: getShippingPrice(weight)[1], currency: 'GBP' },
+              display_name: 'Royal Mail 2nd Class',
+              delivery_estimate: {
+                minimum: { unit: 'business_day', value: 1 },
+                maximum: { unit: 'business_day', value: 2 },
+              },
             },
           },
-        },
-      ],
+          {
+            shipping_rate_data: {
+              type: 'fixed_amount',
+              fixed_amount: { amount: getShippingPrice(weight)[2], currency: 'GBP' },
+              display_name: 'Royal Mail OLP	Royal Mail Special Delivery Guaranteed by 1pm - £750 Compensation',
+              delivery_estimate: {
+                minimum: { unit: 'business_day', value: 1 },
+                maximum: { unit: 'business_day', value: 1 },
+              },
+            },
+          },
+        ]
+      }),
   
       return_url: `${YOUR_DOMAIN}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
@@ -116,10 +135,11 @@ app.get('/session-status', async (req, res) => {
     courses.length ? () => enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses) : null
     courses = []
 
+    let weight = 0
     for(i = 0; i < products.length; i++){
-      updateStockValue(products[i].id, products[i].quantity, products[i].choiceId)
-      console.log('----------------')
+      weight += await updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
     }
+    createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight)
     products = [] // delete the array after updating stock
 
     console.log(session.customer_details)

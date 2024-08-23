@@ -53,7 +53,7 @@ const ProductDetail = () => {
             <div className='product-detail-button-choices'>
                 <div className='product-detail-button-choices-title-div'>
                     <h2>{props.name}</h2>
-                    <div className='fs-5'>£{props.price} <span className='fs-8'>inc VAT</span></div>
+                    <div className='fs-3'>£{props.choices[0][choiceId].price} <span className='fs-8'>inc VAT</span></div>
                 </div>
                 <div className='product-detail-quan'>
                     <button onClick={() => setQuan(
@@ -85,9 +85,6 @@ const ProductDetail = () => {
 
                 <button disabled={isdisapled} style={{cursor: isdisapled ? 'not-allowed' : 'pointer'}} className='add-cart-product-button' onClick={() => addToCart(props)}>{isdisapled ? (stockQuan ? <p>no enough stock</p> : <p>out of stock</p> ): 'add to cart'}</button>
                 
-                <Toaster
-                    position="top-right"
-                />
             </div>
             <div className='product-detail-description fs-4 ls-5'>
                 <div dangerouslySetInnerHTML={{ __html: location.state.props.descrip }}/>

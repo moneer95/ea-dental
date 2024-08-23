@@ -131,9 +131,7 @@ export default function CategoDetail() {
                                 {option.name}
                             </h2>
                             <button onClick={()=> addToCart(option)} className="add-cart-button fs-6"> <i>Add To Cart + <FaShoppingCart/></i> </button> 
-                            <Toaster
-                                position="top-right"
-                            />
+
                         </div>
                         {
                          

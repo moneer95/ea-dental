@@ -4,6 +4,7 @@ import { EmbeddedCheckoutProvider, EmbeddedCheckout } from '@stripe/react-stripe
 import { Navigate } from "react-router-dom";
 import CartContext from '../contexts/cartContext';
 
+const YOUR_DOMAIN = 'http://localhost:4242'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -17,7 +18,7 @@ export const CheckoutForm = () => {
 
   const fetchClientSecret = useCallback(() => {
     // Create a Checkout Session
-    return fetch("http://localhost:4242/create-checkout-session", {
+    return fetch(`${YOUR_DOMAIN}/create-checkout-session`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -56,7 +57,7 @@ export const Return = () => {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get('session_id');
 
-    fetch(`http://localhost:4242/session-status?session_id=${sessionId}`)
+    fetch(`${YOUR_DOMAIN}/session-status?session_id=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
         setStatus(data.status);

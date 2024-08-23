@@ -102,36 +102,38 @@ async function enrollUser(userEmail, fName, lName, courses){
 const axios = require('axios');
 const { cursorTo } = require('readline');
 
-const createOrder = async () => {
+const createOrder = async (email, name, phone, country, city, line1, line2, postal_code, weight) => {
+  console.log( weight + 'momomomomomomomomomo')
   try {
     const response = await axios.post('https://api.parcel.royalmail.com/api/v1/Orders', {
       items: [
         {
           orderReference: "ORDER123",
           recipient: {
-            name: "John Doe",
+            name: name,
             address: {
-                fullName: 'moni skaik',
-                line1: "123 Main St",
-                city: "London",
-                postcode: "E1 6AN",
-                countryCode: "GB",
-                addressLine1: "23 - 25 st",
-                postcode: "HR5 - WDS"
-              }
+                fullName: name,
+                city: city,
+                addressLine1: line1,
+                addressLine2: line2,
+                postcode: postal_code,
+                countryCode: country,
+              },
+            emailAddress: email,
+            phoneNumber: phone,
           },
           packages: [
             {
-                weightInGrams: 700,
+                weightInGrams: weight,
                 dimensions: {
                   depthInMms: 1000,
-                  widthInMms: 5000,
-                  heightInMms: 8000
+                  widthInMms: 1000,
+                  heightInMms: 1000
                 },
                 packageFormatIdentifier: "undefined"
               }
           ],
-          orderDate: "2024-08-05T14:48:00.000Z",
+          orderDate: new Date().toISOString(),
           subtotal: 100.00,
           shippingCostCharged: 10.00,
           total: 110.00,
@@ -204,5 +206,7 @@ let coursesInfo= {
 
 
 
-module.exports = createUser
-module.exports = enrollUser
+module.exports = {
+  enrollUser,
+  createOrder
+};
