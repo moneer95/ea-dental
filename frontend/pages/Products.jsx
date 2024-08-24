@@ -54,7 +54,7 @@ export default function Products(){
     return(
         <>
             <div className='hero-div fs-4'>
-                <img src={hero} alt="" width='100%' className='products-hero' />
+                <img src={hero} alt="" width='100%' />
                 <div className='hero-img-text fs-6'>
                     <h2 >Shop Premium EA-Dental Products</h2>
                     <p>Trusted by Professionals accross the UK</p>

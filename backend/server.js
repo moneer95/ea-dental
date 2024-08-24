@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const { updateStockValue, addBookingTime } = require('./firebaseConfig');
+const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
 
@@ -42,20 +42,23 @@ app.post('/create-checkout-session', async (req, res) => {
           weight += (choices[idx].weight * 1000) * item.quantity
         }
         
-
         // add ticket to tickets arr
-        choices[idx].inStock && !item.quantity ? tickets.push({'ticketName': item.optionName, 'date': item.choiceId[0]}) : null
+        if(choices[idx].inStock && !item.quantity){
+          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption}) //category the same as collection name 
+        }
         
         // add online courses to courses arr
-        !choices[idx].inStock ? courses.push({'courseName': item.optionName}) : null
+        if(!choices[idx].inStock){
+          courses.push({'courseName': item.optionName})
+        }
         
         // Call addBookingTime here
         if (item.dateTime && item.choiceId[0]) {
-          console.log('whywhywhywhywhywhy')
           addBookingTime('MEBookings', item.dateTime, item.choiceId[0])
             .then(() => console.log('Booking time added'))
             .catch(err => console.error('Error adding booking time:', err));
-        }       
+        }
+
         return {
           price_data: {
             currency: 'GBP',
@@ -125,6 +128,17 @@ app.post('/create-checkout-session', async (req, res) => {
 
 );
 
+
+
+
+
+
+
+
+
+
+
+
 app.get('/session-status', async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
   console.log(session.status)
@@ -132,15 +146,23 @@ app.get('/session-status', async (req, res) => {
   
   if (session.payment_status === 'paid') {
 
+    //use courses array
     courses.length ? () => enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses) : null
     courses = []
 
-    let weight = 0
+    //use products array
     for(i = 0; i < products.length; i++){
-      weight += await updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
+      updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
     }
-    createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight)
+    weight ? createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight) : null
     products = [] // delete the array after updating stock
+
+    //use tickets array
+    for(i = 0; i <  tickets.length; i++){
+      let ticket = tickets[i]
+      console.log(ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId)
+      updateStocTicketValue( ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId )
+    }
 
     console.log(session.customer_details)
 

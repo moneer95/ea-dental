@@ -20,8 +20,6 @@ export default function CategoDetail() {
 
     function loadData(colloecData){
         const location = useLocation()
-
-        console.log(colloecData)
     
         const type = location.state?.type || "";
     
@@ -30,6 +28,7 @@ export default function CategoDetail() {
     
         const { cartItems, setCartItems } = React.useContext(CartContext)
         const navigate = useNavigate()
+ 
     
         const toggleItem = (index) => {
             setOpenItems((prevOpenItems) => ({
@@ -130,7 +129,13 @@ export default function CategoDetail() {
                             <h2 onClick={() => toggleOption(idx)} style={{cursor: 'pointer',}} className="fs-7">
                                 {option.name}
                             </h2>
-                            <button onClick={()=> addToCart(option)} className="add-cart-button fs-6"> <i>Add To Cart + <FaShoppingCart/></i> </button> 
+                            <button 
+                                onClick={()=> addToCart(option, idx)} 
+                                className="add-cart-button fs-6"
+                                disabled={option?.choices?.length ? false : true} //disable if there is no choices
+                            > 
+                                <i>Add To Cart + <FaShoppingCart/></i> 
+                            </button> 
 
                         </div>
                         {
@@ -149,14 +154,14 @@ export default function CategoDetail() {
             )
         }
     
-        function addToCart(option){
+        function addToCart(option, idx){
             setCartItems( prevItems =>
-                cleanAddToCart(prevItems, option)
+                cleanAddToCart(prevItems, option, idx)
             )
         }
     
     
-        function cleanAddToCart(prevItems, option){
+        function cleanAddToCart(prevItems, option, idx){
             
             const existingItems = prevItems?.filter(item => item.optionName == option.name)
     
@@ -165,7 +170,9 @@ export default function CategoDetail() {
                 return [...prevItems,
                         {    
                             optionName: option.name,
+                            shoppingOption: idx,
                             category: collectionName,
+                            docID: option.docID,
                             choices: option.choices,
                             choiceId: [
                                 Object.keys(option.choices[0])[0],

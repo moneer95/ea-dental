@@ -105,7 +105,7 @@ export default function Categories() {
         <>
             <div className="categos-list-container">
                 <div className='hero-div fs-2'>
-                    <img src={hero} alt="" width='100%' className='products-hero' />
+                    <img src={hero} alt="" width='100%'  />
                     <div className='hero-img-text fs-6'>
                         <h1>Courses</h1>
                     </div>

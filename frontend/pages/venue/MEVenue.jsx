@@ -1,6 +1,11 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom';
-import hero from "../../assets/images/ore-section.jpg"
+
+import hero from "../../assets/images/venue-hero.png"
+import locationSvg from "../../assets/images/location.svg"
+import room1 from "../../assets/images/room1.png"
+import room2 from "../../assets/images/room2.png"
+
 import DateTimePicker from '../../components/DateTimePicker';
 import { areIntervalsOverlapping, format } from 'date-fns';
 import CartContext from "../../contexts/cartContext";
@@ -55,13 +60,36 @@ export const MEVenue = () => {
 
     return (
         <div className='venue-div'>
-            <img className='sub-hero' src={hero} alt=""/>
+            <div className='hero-div fs-4'>
+                <img src={hero} alt="hero image" width='100%' />
+                <div className='hero-img-text fs-4 mi-1'>
+                    <h2 >Venue Hire</h2>
+                </div>
+            </div>
             <div className='mi-1 text-center'>
-                <p className='fs-5 ls-5'>
+                <h3 className='fs-5 ls-5'>
                     Rent our manikin facility for ORE2- LDS2 dental manikin practice.<br />
-                    Venue Location: Westbury House, 23-25 Bridge St, Pinner, Middlesex, HA5 3HRx<br /> 
-                </p>
-                <h3 className='fs-4 '>We have the equipment and materials recommended by The Consortium published by the GDC.</h3>
+                </h3>
+                <div className='light-info-div fs-6 flex'>
+                    <img src={locationSvg} alt="location" /><h4>  <span className='light-text'>Venue Location:</span>  Westbury House, 23-25 Bridge St, Pinner, Middlesex, HA5 3HRx</h4>
+                </div>  
+                <h4 className='fs-4 navy'>We have the equipment and materials recommended by The Consortium published by the GDC.</h4>
+                <div className='rental-cards-div flex'>
+                    <RentalCard 
+                        image={room1}
+                        title='Mankin Facility Rental for ORE2 LDS2'
+                        price='25£'
+                    />
+                    <RentalCard 
+                        image={room2}
+                        title='Room Rental for OSCE & ME Training'
+                        price='25£'
+                    />
+                </div>
+                
+                
+                
+                
                 <h3 className='fs-4 main-question '>
                     Starts from £15.00/hr for EA Manikin students only &
                     £25.00/hr for any candidate
@@ -212,3 +240,23 @@ export const MEVenue = () => {
 
     }
 
+
+
+const RentalCard = ({ image, title, price }) => {
+    return (
+        <div className="rental-card">
+        <img src={image} alt={title} className="rental-card-image" />
+        <div className="rental-card-content">
+            <h3 className="rental-card-title">{title}</h3>
+            <p className="rental-card-price">£{price}</p>
+            <button 
+                className="rental-card-button"
+                onClick={}
+            >
+                Choose
+            </button>
+        </div>
+        </div>
+    );
+    };
+    

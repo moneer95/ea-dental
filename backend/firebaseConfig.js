@@ -12,17 +12,16 @@ const db = getFirestore();
 
 
 
-async function updateStocTicketValue(collectionName, docID, choiceId) {
+async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, choiceId) {
 
     const itemRef = db.collection(collectionName).doc(docID)
-
-      // get choices arr value
-  
-      const item = await itemRef.get();
-      const choices = item.data().choices
+    // get choices arr value
+    const item = await itemRef.get();
+    // console.log(item.data())
+    const choices = item.data().shoppingOptions[shoppingOptionIdx].choices
 
       updatedStock = [...choices]
-      updatedStock[0][choiceId].inStock -= quantity
+      updatedStock[0][choiceId].inStock -= 1
 
     try {
       const res = await itemRef.update({
@@ -88,7 +87,8 @@ async function updateStocTicketValue(collectionName, docID, choiceId) {
 
   module.exports = {
     updateStockValue,
-    addBookingTime
+    addBookingTime,
+    updateStocTicketValue
   };
 // module.exports = updateStocTicketValue
   

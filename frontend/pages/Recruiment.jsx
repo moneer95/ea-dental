@@ -6,7 +6,7 @@ export const Recruiment = () => {
   return (
     <>
     <div className='hero-div fs-2'>
-      <img src={hero} alt="" width='100%' className='products-hero' />
+      <img src={hero} alt="" width='100%' />
       <div className='hero-img-text fs-5'>
           <h2>Recruitment</h2>
           <p className='fs-5'>Looking for dentists & dental care providers, look no more! with no fee, unless we are successful for you</p>

@@ -185,8 +185,13 @@ a{
     text-transform: uppercase;
 }
 
+.light-text{
+    color: #F36611;
+}
 
-
+.navy {
+    color: #22207E;
+}
 
 /* ###################### header ###################### */
 
@@ -1238,13 +1243,13 @@ p {
 }
 
 .option-card p{
-    max-height: calc(80vh - 120px); /* Ensure content area is below the sticky header */
+    /* max-height: calc(80vh - 120px);  */
 }
 
 .expanded-option {
     /* height: fit-content;  */
     overflow: scroll;
-    padding-bottom: 1000rem;
+    /* padding-bottom: 1000rem; */
 }
 
 .collapsed-option {
@@ -1336,7 +1341,7 @@ p {
     color: #787ECF;
 }
 
-.add-cart-button{
+.add-cart-button {
     width: 40vh;
     height: 3rem;
     margin: .6rem;
@@ -1346,12 +1351,15 @@ p {
     color: white;
     background-color: #77b4de;
     font-family: 'Gotham', sans-serif;
-
-
 }
 
-.add-cart-button:hover{
+.add-cart-button:hover {
     background-color: #5ea5d5;
+}
+
+.add-cart-button:disabled {
+    background-color: #CCCCCC; 
+    cursor: not-allowed; 
 }
 
 /* ++++++++++++++++++++++ CART +++++++++++++++++++++++++ */
@@ -1448,7 +1456,7 @@ p {
 
 /* +++++++++++++++++++++++++ products ++++++++++++++++++++++++++ */
 
-.products-hero{
+.hero-img{
     width: 100%;
 }
 
@@ -1824,9 +1832,86 @@ p {
 
 /* 0000000000000000000000 Venue page 000000000000000000000 */
 .venue-div{
-    margin: 1rem 3rem;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.light-info-div {
+    border-radius: 0.75rem;
+    background: #FEF3F2;
+    padding: .7rem 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.rental-cards-div {
+    gap: 3rem;
+}
+
+.rental-cards-div p {
+    border: none;
+    padding: 0;
+}
+
+.rental-card {
+    padding: 1px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 550px;
+  }
+  
+  .rental-card-image {
+    width: 100%;
+    border-radius: 10px;
+    /* height: auto; */
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .rental-card-content {
+    padding: 20px;
+  }
+  
+  .rental-card-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .rental-card-price {
+    font-size: 1.5rem;
+    color: #e36b25;
+    margin: 10px 0;
+  }
+  
+  .rental-card-button {
+    background-color: white;
+    color: #202939;
+    border: 1px solid #E3E8EF ;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .rental-card-button .selected{
+    color: #fff;
+    background-color: #e36b25;
+  }
+  
+  .rental-card-button:hover {
+    color: white;
+    background-color: #d4591cd1;
+  }
+  
 
 .booking-div{
     border: 1px solid gray;
@@ -1851,11 +1936,15 @@ p {
 
 .book-button{
     width: 50%;   
-     margin: 1rem auto;
+    margin: 1rem auto;
 }
 
 
-
+@media (max-width: 50em) {
+    .rental-cards-div {
+        flex-direction: column;
+    }
+}
 
 
 
