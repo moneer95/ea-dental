@@ -1902,7 +1902,12 @@ p {
     transition: background-color 0.3s ease;
   }
 
-  .rental-card-button .selected{
+  .rental-card.selected {
+    background-color: #FEF3F2;
+
+  }
+
+  .rental-card-button.selected {
     color: #fff;
     background-color: #e36b25;
   }
@@ -1913,25 +1918,146 @@ p {
   }
   
 
+  .feature-card {
+    background-color: #fff;
+    max-width: 13rem;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-icon {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 10rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-icon img {
+    width: 60px;
+    height: auto;
+  }
+  
+  .feature-title {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .feature-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  
+  .features-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .features-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .features-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .light-info-div p {
+    border: none;
+  }
+
 .booking-div{
-    border: 1px solid gray;
+    background-color: #EEF2F6;
     border-radius: 10px;
     text-align: center;
     padding: 1rem;
     margin: 1rem;
+    width: 70%;
+    color: #344054;
+
 }
 
 .picker-duration-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+        'date duration'
+        'info info'
+        'button button'
+    ;
     margin: 1rem 0;
     gap: 2rem;
+}
+
+.picker-duration-div .date {
+    grid-area: date;
+    width: 100%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.picker-duration-div .date  {
+    text-align: left;
+}
+
+.picker-duration-div .duration {
+    grid-area: duration;
+    width: 100%;
+    text-align: left;
+}
+
+.picker-duration-div .light-info-div {
+    grid-area: info;
+}
+
+.react-datepicker-wrapper{
+    width: 100%;
+}
+
+.picker-duration-div input {
+    padding: .7rem 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    letter-spacing: 1.7px;
+    border: 1px solid #D0D5DD;
+    color: #344054;
+    width: 100% !important;
+}
+
+
+.picker-duration-div select {
+    padding: .7rem 10px;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    letter-spacing: 1.7px;
+    border: 1px solid #D0D5DD;
+    color: #344054;
+    width: 100% ;
+}
+
+.booking-div .light-info-div{
+    background-color: white;
+    text-align: left;
 }
 
 
 .book-button-div{
     display: flex;
+    grid-area: button;
+}
+
+.book-button-div button {
+    background-color: #e36b25;
 }
 
 .book-button{
@@ -1944,6 +2070,8 @@ p {
     .rental-cards-div {
         flex-direction: column;
     }
+
+
 }
 
 

@@ -17,7 +17,8 @@ export default function Layout() {
             <ScrollToTop />
             <div className="site-wrapper">
                 <Toaster
-                    position="top-right"
+                    position="bottom-right"
+                    containerStyle={{zIndex: "30000"}}
                 />
                 <Header />
                 <main>

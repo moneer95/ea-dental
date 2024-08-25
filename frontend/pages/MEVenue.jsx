@@ -1,16 +1,26 @@
-import React from 'react'
-import { useLoaderData } from 'react-router-dom';
+import React, {useState} from 'react'
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import FeatureCard from '../components/FeatureCard'
 
-import hero from "../../assets/images/venue-hero.png"
-import locationSvg from "../../assets/images/location.svg"
-import room1 from "../../assets/images/room1.png"
-import room2 from "../../assets/images/room2.png"
+import hero from "../assets/images/venue/venue-hero.png"
+import locationSvg from "../assets/images/location.svg"
+import info from "../assets/images/info-circle.svg"
 
-import DateTimePicker from '../../components/DateTimePicker';
+import room1 from "../assets/images/venue/room1.png"
+import room2 from "../assets/images/venue/room2.png"
+
+import facilityIcon from "../assets/images/venue/facility.svg"
+import dentalIcon from "../assets/images/venue/dental.svg"
+import handpiecesIcon from "../assets/images/venue/handpiecesIcon.svg"
+import refreshmentsIcon from "../assets/images/venue/refreshmentsIcon.svg"
+import supportIcon from "../assets/images/venue/supportIcon.svg"
+
+
+import DateTimePicker from '../components/DateTimePicker';
 import { areIntervalsOverlapping, format } from 'date-fns';
-import CartContext from "../../contexts/cartContext";
+import CartContext from "../contexts/cartContext";
 import toast, { Toaster } from 'react-hot-toast';
-import { getPrevBooking } from '../../api'
+import { getPrevBooking } from '../api'
 
 
 export function loader(){
@@ -27,6 +37,13 @@ export const MEVenue = () => {
     const [choiceId, setChoiceId] = React.useState('0')
 
     const { cartItems, setCartItems } = React.useContext(CartContext)
+
+    const [selectedRental, setSelectedRental] = useState({name: 'Mankin Facility Rental for ORE2 LDS2', collectionName: 'orldBookings'});
+    const handleClick = (rentalName) => {
+      setSelectedRental(rentalName);
+      console.log(selectedRental.collectionName === 'MEBookings')
+    };  
+
 
     const prevBookings = useLoaderData()
     console.log(prevBookings)
@@ -58,6 +75,10 @@ export const MEVenue = () => {
     }
 
 
+    const navigate = useNavigate()
+
+
+
     return (
         <div className='venue-div'>
             <div className='hero-div fs-4'>
@@ -79,41 +100,28 @@ export const MEVenue = () => {
                         image={room1}
                         title='Mankin Facility Rental for ORE2 LDS2'
                         price='25£'
+                        onClick={() => handleClick({name: 'Mankin Facility Rental for ORE2 LDS2', collectionName: 'orldBookings'})}
+                        selected={selectedRental.collectionName === 'orldBookings'}
                     />
                     <RentalCard 
                         image={room2}
                         title='Room Rental for OSCE & ME Training'
                         price='25£'
+                        onClick={() => handleClick({name: 'Room Rental for OSCE & ME Training', collectionName: 'MEBookings'})}
+                        selected={selectedRental.collectionName === 'MEBookings'}
                     />
                 </div>
                 
-                
-                
-                
-                <h3 className='fs-4 main-question '>
-                    Starts from £15.00/hr for EA Manikin students only &
-                    £25.00/hr for any candidate
-                </h3>
-            </div>
-            <div class="mi-1 fs-6 ls-4">
-            What’s included?
-            <ul>
-                <li>Access to the facility</li>
-                <li>Exam dental Frasaco simulators with torso</li>
-                <li>Handpieces, Dental units, Light cure, Amalgamator</li>
-                <li>Refreshments</li>
-                <li>Administrator support</li>
-            </ul>
-            Price doesn’t include consumables
-            Exam’s dental supplies and equipment can be purchased from our course venue, refer to ORE-LDS dental supplies store for more information regarding pricing. 
+                <FeaturesSection />
+
             </div>
 
             <div className='booking-div'>
                 <h3 className='fs-4'>Choose Your Booking Date Now!</h3>
 
 
-                <div className='picker-duration-div fs-5 main-question'>
-                    <div className='flex'>
+                <div className='picker-duration-div fs-5'>
+                    <div className='date'>
                         <label >Date & Time:</label>
                         <DateTimePicker
                             startDate={startDate}
@@ -121,29 +129,36 @@ export const MEVenue = () => {
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="duration">Duration:</label>
-                        <select id="duration" className='fs-5' value={choiceId} onChange={(e) => handleChoiceChange(e)} >
+                    <div className='duration'>
+                        <label>Duration:</label>
+                        <br />
+                        <select className='fs-6' value={choiceId} onChange={(e) => handleChoiceChange(e)} >
                             <option value="0">1 Hour 25£</option>
                             <option value="1">2 Hour 50£</option>
                         </select>
                     </div>
 
+
+                    {changedCount>=2 &&
+                        <div className='book-button-div'>
+                            <button 
+                                onClick={addToCart}
+                                className='add-cart-button book-button fs-5'
+                            >
+                                Book At {selectedDate} {selectedTime} 
+                            </button>
+                        </div>
+                    }   
+
+
+                    <div className='light-info-div fs-7 flex'>
+                        <img src={info} alt="location" /><p className=' fs-7'>  Price doesn’t include consumables
+                        Exam’s dental supplies and equipment can be purchased from our course venue, refer to ORE-LDS dental supplies store for more information regarding pricing. </p>
+                    </div> 
+
                 </div>
 
-                {changedCount>=2 &&
-                    <div className='book-button-div'>
-                        <button 
-                            onClick={addToCart}
-                            className='add-cart-button book-button fs-5'
-                        >
-                            Book At {selectedDate} {selectedTime} 
-                        </button>
-                    </div>
-                }
-                <Toaster
-                    position="top-right"
-                />
+
             </div>
 
 
@@ -242,21 +257,59 @@ export const MEVenue = () => {
 
 
 
-const RentalCard = ({ image, title, price }) => {
-    return (
-        <div className="rental-card">
-        <img src={image} alt={title} className="rental-card-image" />
-        <div className="rental-card-content">
-            <h3 className="rental-card-title">{title}</h3>
-            <p className="rental-card-price">£{price}</p>
-            <button 
-                className="rental-card-button"
-                onClick={}
-            >
-                Choose
-            </button>
-        </div>
-        </div>
-    );
-    };
-    
+    const RentalCard = ({ image, title, price, onClick, selected }) => {
+
+        return (
+            <div className={`rental-card ${selected ? 'selected' : ''}`}>
+            <img src={image} alt={title} className="rental-card-image" />
+            <div className="rental-card-content">
+                <h3 className="rental-card-title">{title}</h3>
+                <p className="rental-card-price">£{price}</p>
+                <button 
+                        className={`rental-card-button ${selected ? 'selected' : ''}`}
+                        onClick={onClick}
+                >
+                    Choose
+                </button>
+            </div>
+            </div>
+        );
+        };
+        
+
+
+    const FeaturesSection = () => {
+        return (
+            <div className="features-section">
+            <h2 className="features-title">What’s included?</h2>
+            <div className="features-grid">
+                <FeatureCard 
+                icon={facilityIcon} 
+                title="Access to the facility" 
+                description="Access to the facility"
+                />
+                <FeatureCard 
+                icon={dentalIcon} 
+                title="Exam dental Frasaco simulators with torso" 
+                description="Exam dental Frasaco simulators with torso"
+                />
+                <FeatureCard 
+                icon={handpiecesIcon} 
+                title="Handpieces, Dental units, Light cure, Amalgamator" 
+                description="Handpieces, Dental units, Light cure, Amalgamator"
+                />
+                <FeatureCard 
+                icon={refreshmentsIcon} 
+                title="Refreshments" 
+                description="Refreshments"
+                />
+                <FeatureCard 
+                icon={supportIcon} 
+                title="Administrator support" 
+                description="Administrator support"
+                />
+            </div>
+            </div>
+        );
+        };
+        

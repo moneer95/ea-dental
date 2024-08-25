@@ -15,8 +15,8 @@ import Products, { loader as productsLoader } from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import NotFound from "./pages/NotFound"
 import Login, { loader as loginLoader, action as loginAction } from "./pages/Login"
-import { MEVenue } from "./pages/venue/MEVenue"
-import { loader as mEVenueLoader } from './pages/venue/MEVenue';
+import { MEVenue } from "./pages/MEVenue"
+import { loader as mEVenueLoader } from './pages/MEVenue';
 import Layout from "./components/Layout"
 import { CheckoutForm, Return } from "./pages/Stripe"
 import { Recruiment } from "./pages/Recruiment"
