@@ -1836,6 +1836,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+
 }
 
 .light-info-div {
@@ -1984,7 +1986,6 @@ p {
     margin: 1rem;
     width: 70%;
     color: #344054;
-
 }
 
 .picker-duration-div{
@@ -2071,6 +2072,17 @@ p {
         flex-direction: column;
     }
 
+    .picker-duration-div{
+        display: grid;
+        grid-template-areas: 
+            'date'
+            'duration'
+            'info'
+            'button'
+        ;
+        margin: 1rem 0;
+        gap: 2rem;
+    }
 
 }
 

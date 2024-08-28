@@ -7,9 +7,10 @@ const bodyParser = require('body-parser');
 const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
+    
+const { createPurchaseOrder, createCourseOrder } = require('./interactions-frappe')
 
 const app = express();
-
 
 
 app.use(cors());
@@ -38,7 +39,7 @@ app.post('/create-checkout-session', async (req, res) => {
        
         // add product to products arr
         if(item.quantity){
-          products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0]});
+          products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
           weight += (choices[idx].weight * 1000) * item.quantity
         }
         
@@ -147,7 +148,13 @@ app.get('/session-status', async (req, res) => {
   if (session.payment_status === 'paid') {
 
     //use courses array
-    courses.length ? () => enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses) : null
+    if(courses.length){
+      enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses)
+      console.log('000000')
+      createCourseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), courses)
+      console.log('000000')
+    
+    }
     courses = []
 
     //use products array
@@ -155,6 +162,7 @@ app.get('/session-status', async (req, res) => {
       updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
     }
     weight ? createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight) : null
+    weight ? createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), products) : null
     products = [] // delete the array after updating stock
 
     //use tickets array

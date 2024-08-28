@@ -48,8 +48,13 @@ function Cart() {
               item.choices.map( (choice, cIndex) => {
               return <select value={cartItems[iIndex].choiceId[cIndex]} onChange={(event) => handleChoiceChange(event, iIndex, cIndex)} className={`fs-8 cart-choices${cIndex}`}>
                   {Object.entries(choice).map( (option, oIndex)  => {
+                  
+                  //check if the item has stock prob and check
                   let isEventFull = item.choices[0][oIndex]?.inStock > 0 ? false : true //check if the event is full
-                  console.log(oIndex)
+                  if(item.choices[0][oIndex]?.inStock === undefined){
+                    isEventFull = false
+                  }
+
                   return <option
                           key={oIndex}
                           value={oIndex}

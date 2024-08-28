@@ -2,7 +2,7 @@
 const { exec } = require('child_process');
 
 function getUserID(userEmail){
-    const curlCommand = `curl -g "https://ea-dental-moodle.monirskaik.sbs/moodle/webservice/rest/server.php?wstoken=${process.env.GET_USER_TOKEN}&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=username&criteria[0][value]='${userEmail}'"`
+    const curlCommand = `curl -g "https://moodle.ea-dental.com/moodle/webservice/rest/server.php?wstoken=${process.env.GET_USER_TOKEN}&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=username&criteria[0][value]='${userEmail}'"`
 
     return new Promise((resolve, reject) => {
         exec(curlCommand, (error, stdout, stderr) => {
@@ -39,7 +39,7 @@ async function createUser(userEmail, fName, lName){ //userEmail is the email we 
 
     else{
 
-        const curlCommand = `curl -g "https://ea-dental-moodle.monirskaik.sbs/moodle/webservice/rest/server.php?wstoken=${process.env.CREATE_USER_TOKEN}&wsfunction=core_user_create_users&moodlewsrestformat=json&users[0][username]=${userEmail}&users[0][firstname]=${fName}&users[0][lastname]=${lName}&users[0][email]=${userEmail}&users[0][password]=${password}"`;
+        const curlCommand = `curl -g "https://moodle.ea-dental.com/moodle/webservice/rest/server.php?wstoken=${process.env.CREATE_USER_TOKEN}&wsfunction=core_user_create_users&moodlewsrestformat=json&users[0][username]=${userEmail}&users[0][firstname]=${fName}&users[0][lastname]=${lName}&users[0][email]=${userEmail}&users[0][password]=${password}"`;
         
         // Execute the curl command
         return new Promise((resolve, reject) => {
@@ -71,7 +71,7 @@ async function enrollUser(userEmail, fName, lName, courses){
 
     const userID = await createUser(userEmail, fName, lName)
     
-    curlCommand = `curl -g "https://ea-dental-moodle.monirskaik.sbs/moodle/webservice/rest/server.php?wstoken=${process.env.ENROLL_USER_TOKEN}&wsfunction=enrol_manual_enrol_users&moodlewsrestformat=json&enrolments[0][roleid]=5&`
+    curlCommand = `curl -g "https://moodle.ea-dental.com/moodle/webservice/rest/server.php?wstoken=${process.env.ENROLL_USER_TOKEN}&wsfunction=enrol_manual_enrol_users&moodlewsrestformat=json&enrolments[0][roleid]=5&`
 
     for(let i=0; i<courses.length; i++){
       let courseIDs = coursesInfo[courses[i].courseName]

@@ -1,5 +1,5 @@
 import React from 'react'
-import hero from "../assets/images/recruitment.jpg"
+import hero from "../assets/images/shaking.webp"
 
 
 export const Recruiment = () => {

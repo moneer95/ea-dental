@@ -172,10 +172,12 @@ export const MEVenue = () => {
     }
 
     function cleanAddToCart(prevItems){
+
+        let collectionName = selectedRental.collectionName == 'orldBookings' ? "ORE2 LDS2" : "OSCE & ME"
         
         const existingItems = prevItems?.filter(item => {
-            
-            const isExist = (item.optionName + `${item.dateTime}`) == ('Venue Booking' + startDate.getTime())
+
+            const isExist = (item.optionName) == ('Venue Booking ' + collectionName + ' ' + selectedDate + ' ' + selectedTime)
             return ( isExist )
             }
         )
@@ -187,7 +189,7 @@ export const MEVenue = () => {
             toast.success('Venue Booking added to cart')
             return [...prevItems,
                     {    
-                        optionName: 'Venue Booking',
+                        optionName: `Venue Booking ${collectionName} ${selectedDate} ${selectedTime}`,
                         dateTime: startDate.getTime(),
                         collectionName: 'MEBookings',
                         category: 'Venue Hire',
@@ -238,9 +240,9 @@ export const MEVenue = () => {
                 const endDate = startSelectedDate + ( duration * 60 * 60 * 1000 ) - ( 60 * 60 ) // add the duration in milleseconds the minutes the additional three seconds;
 
                 
-                console.log(new Date(prevBookings[i].startDate) + '====' +  new Date(prevBookings[i].endDate)) 
-                console.log('-----------------')
-                console.log(new Date(startDate) + '====' + new Date(endDate))
+                // console.log(new Date(prevBookings[i].startDate) + '====' +  new Date(prevBookings[i].endDate)) 
+                // console.log('-----------------')
+                // console.log(new Date(startDate) + '====' + new Date(endDate))
 
                 const isOverLap = areIntervalsOverlapping(
                     {start: new Date(prevBookings[i].startDate), end: new Date(prevBookings[i].endDate)},
