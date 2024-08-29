@@ -8,7 +8,7 @@ const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./f
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
     
-const { createPurchaseOrder, createCourseOrder } = require('./interactions-frappe')
+const { createPurchaseOrder, createCourseOrder, createTicketOrder } = require('./interactions-frappe')
 
 const app = express();
 
@@ -64,7 +64,7 @@ app.post('/create-checkout-session', async (req, res) => {
           price_data: {
             currency: 'GBP',
             product_data: {
-              name: item.optionName + (choices[idx].name == 'default' ? '' : ` ${choices[idx].name}`), //add option name to the displayed name in checkout
+              name: item.optionName, //add option name to the displayed name in checkout
             },
             unit_amount: choices[idx].price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
           },
@@ -149,27 +149,34 @@ app.get('/session-status', async (req, res) => {
 
     //use courses array
     if(courses.length){
-      enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses)
-      console.log('000000')
       createCourseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), courses)
-      console.log('000000')
-    
+      
+      enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses)
     }
     courses = []
+      
+    if(products.length){
+      //create the order on frappe
+      createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), products)
+      
+      //use products array
+      for(i = 0; i < products.length; i++){
+        updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
+      }
 
-    //use products array
-    for(i = 0; i < products.length; i++){
-      updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
+      createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight)
     }
-    weight ? createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight) : null
-    weight ? createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), products) : null
     products = [] // delete the array after updating stock
 
-    //use tickets array
-    for(i = 0; i <  tickets.length; i++){
-      let ticket = tickets[i]
-      console.log(ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId)
-      updateStocTicketValue( ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId )
+    if(tickets.length){
+      
+      createTicketOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, tickets)
+      
+      //use tickets array
+      for(i = 0; i <  tickets.length; i++){
+        let ticket = tickets[i]
+        updateStocTicketValue( ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId )
+      }
     }
 
     console.log(session.customer_details)

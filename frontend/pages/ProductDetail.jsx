@@ -102,11 +102,13 @@ const ProductDetail = () => {
     
     
     function cleanAddToCart(prevItems, option){
+
+        const choiceName = ` ${props.choices[0][choiceId.toString()].name == 'default' ? '' : props.choices[0][choiceId.toString()].name}`
         
         const existingItems = prevItems?.filter(item => {
 
             console.log( item.optionName  == (option.name + option.choices[0][choiceId.toString()].name))
-            return ( item.optionName ) == (option.name + option.choices[0][choiceId.toString()].name)
+            return ( item.optionName ) == (option.name + choiceName)
         }
     )
     
@@ -116,7 +118,7 @@ const ProductDetail = () => {
             return [...prevItems,
                     {    
                         id: props.id,
-                        optionName: props.name + props.choices[0][choiceId.toString()].name ,
+                        optionName: props.name + choiceName,
                         category: props.category,
                         choices: props.choices,
                         quantity: quan,

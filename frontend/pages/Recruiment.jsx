@@ -1,5 +1,5 @@
 import React from 'react'
-import hero from "../assets/images/shaking.webp"
+import hero from "../assets/images/recruitment.jpg"
 
 
 export const Recruiment = () => {
@@ -7,9 +7,9 @@ export const Recruiment = () => {
     <>
     <div className='hero-div fs-2'>
       <img src={hero} alt="" width='100%' />
-      <div className='hero-img-text fs-5'>
-          <h2>Recruitment</h2>
-          <p className='fs-5'>Looking for dentists & dental care providers, look no more! with no fee, unless we are successful for you</p>
+      <div className='hero-img-text fs-6'>
+          <h2>Looking for dentists & dental care providers, look no more!</h2>
+          <p className='fs-5'>With no fee, unless we are successful for you</p>
       </div>
       </div>
     <div className='text-center mi-1'>

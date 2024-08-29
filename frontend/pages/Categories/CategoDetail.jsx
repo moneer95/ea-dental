@@ -169,7 +169,7 @@ export default function CategoDetail() {
                 toast.success(`${option.name} added to cart`)
                 return [...prevItems,
                         {    
-                            optionName: option.name,
+                            optionName: option.name + (choices[idx].name == 'default' ? '' : ` ${choices[idx].name}`),
                             shoppingOption: idx,
                             category: collectionName,
                             docID: option.docID,

@@ -37,7 +37,6 @@ function createPurchaseOrder(email, full_name, phone, address, items){
 
 
 function createCourseOrder(email, full_name, phone, address, courses){
-    console.log('++++++++++++++++++++++++====================++++++++++++++++++++++++++==========+++++++++====+++++==+=+=======+=+============')
 
     const data = {
         email: email,
@@ -64,9 +63,37 @@ function createCourseOrder(email, full_name, phone, address, courses){
 }
 
 
+function createTicketOrder(email, full_name, phone, tickets){
+    
+    const data = {
+        email: email,
+        full_name: full_name,
+        phone: phone,
+        order_date: new Date().toISOString().split('T')[0],
+        tickets: tickets.map( ticket => {
+            return {
+                ticket_name: ticket.ticketName
+            }
+        })
+    };
+
+
+    axios.post('https://backend.ea-dental.com/api/resource/Tickets%20Orders', data, config)
+        .then(response => {
+            console.log('Document created successfully:', response.data);
+        })
+        .catch(error => {
+            console.error('Error creating document:', error.response ? error.response.data : error.message);
+        });
+
+}
+
+
+
 
 module.exports = {
     createPurchaseOrder,
-    createCourseOrder
+    createCourseOrder,
+    createTicketOrder
   };
   
