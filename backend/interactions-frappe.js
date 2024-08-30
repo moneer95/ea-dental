@@ -77,8 +77,30 @@ function createTicketOrder(email, full_name, phone, tickets){
         })
     };
 
-
     axios.post('https://backend.ea-dental.com/api/resource/Tickets%20Orders', data, config)
+        .then(response => {
+            console.log('Document created successfully:', response.data);
+        })
+        .catch(error => {
+            console.error('Error creating document:', error.response ? error.response.data : error.message);
+        });
+}
+
+
+function createBooking(email, full_name, phone, bookings){
+    const data = {
+        email: email,
+        full_name: full_name,
+        phone: phone,
+        order_date: new Date().toISOString().split('T')[0],
+        bookings: bookings.map( booking => {
+            return {
+                booking_details: booking.optionName
+            }
+        })
+    };
+
+    axios.post('https://backend.ea-dental.com/api/resource/Venue%20Bookings', data, config)
         .then(response => {
             console.log('Document created successfully:', response.data);
         })
@@ -90,10 +112,10 @@ function createTicketOrder(email, full_name, phone, tickets){
 
 
 
-
 module.exports = {
     createPurchaseOrder,
     createCourseOrder,
-    createTicketOrder
+    createTicketOrder,
+    createBooking
   };
   

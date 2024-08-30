@@ -76,7 +76,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
       endDate: endDate 
     };
     
-    // Add a new document in collection "cities" with ID 'LA'
+    
     const res = await db.collection(collectionName).add(data);
     console.log('Added document with ID: ', res.id);
 

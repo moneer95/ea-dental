@@ -8,7 +8,7 @@ const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./f
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
     
-const { createPurchaseOrder, createCourseOrder, createTicketOrder } = require('./interactions-frappe')
+const { createPurchaseOrder, createCourseOrder, createTicketOrder, createBooking } = require('./interactions-frappe')
 
 const app = express();
 
@@ -24,6 +24,7 @@ const YOUR_DOMAIN = 'http://localhost:5173';
 let products = []
 let tickets = []
 let courses = []
+let bookings = []
 let weight = 0
 
 app.post('/create-checkout-session', async (req, res) => {
@@ -49,15 +50,13 @@ app.post('/create-checkout-session', async (req, res) => {
         }
         
         // add online courses to courses arr
-        if(!choices[idx].inStock){
+        if(!choices[idx].inStock && !item.dateTime){
           courses.push({'courseName': item.optionName})
         }
         
         // Call addBookingTime here
         if (item.dateTime && item.choiceId[0]) {
-          addBookingTime('MEBookings', item.dateTime, item.choiceId[0])
-            .then(() => console.log('Booking time added'))
-            .catch(err => console.error('Error adding booking time:', err));
+          bookings.push({'collectionName': item.collectionName, 'optionName': item.optionName, 'dateTime': item.dateTime, 'choiceId': item.choiceId[0] })
         }
 
         return {
@@ -149,6 +148,8 @@ app.get('/session-status', async (req, res) => {
 
     //use courses array
     if(courses.length){
+      console.log(1111111)
+
       createCourseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), courses)
       
       enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses)
@@ -156,6 +157,7 @@ app.get('/session-status', async (req, res) => {
     courses = []
       
     if(products.length){
+      console.log(222222)
       //create the order on frappe
       createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), products)
       
@@ -168,14 +170,27 @@ app.get('/session-status', async (req, res) => {
     }
     products = [] // delete the array after updating stock
 
+
     if(tickets.length){
-      
+      console.log(333333)
       createTicketOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, tickets)
       
       //use tickets array
-      for(i = 0; i <  tickets.length; i++){
+      for(i = 0; i < tickets.length; i++){
         let ticket = tickets[i]
         updateStocTicketValue( ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId )
+      }
+    }
+
+    if(bookings.length){
+      console.log(444444)
+      createBooking(session.customer_details.email, session.customer_details.name, session.customer_details.phone, bookings)
+
+      for(i = 0; i < bookings.length; i++){
+        let booking = bookings[i]
+        addBookingTime(booking.collectionName, booking.dateTime, booking.choiceId)
+        .then(() => console.log('Booking time added'))
+        .catch(err => console.error('Error adding booking time:', err));  
       }
     }
 

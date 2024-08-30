@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate, Await, defer } from 'react-router-dom';
 import FeatureCard from '../components/FeatureCard'
 
 import hero from "../assets/images/venue/venue-hero.png"
@@ -23,8 +23,11 @@ import toast, { Toaster } from 'react-hot-toast';
 import { getPrevBooking } from '../api'
 
 
-export function loader(){
-    return getPrevBooking('MEBookings')
+export async function loader(){
+    const MEBookings = await getPrevBooking('MEBookings');
+    const orldBookings = await getPrevBooking('orldBookings');
+    
+    return { MEBookings, orldBookings };
 }
 
 
@@ -41,13 +44,7 @@ export const MEVenue = () => {
     const [selectedRental, setSelectedRental] = useState({name: 'Mankin Facility Rental for ORE2 LDS2', collectionName: 'orldBookings'});
     const handleClick = (rentalName) => {
       setSelectedRental(rentalName);
-      console.log(selectedRental.collectionName === 'MEBookings')
     };  
-
-
-    const prevBookings = useLoaderData()
-    console.log(prevBookings)
-
 
     const handleDateChange = (date) => {
       setStartDate(date);
@@ -73,6 +70,10 @@ export const MEVenue = () => {
     function handleChoiceChange(e){
         setChoiceId(e.target.value);
     }
+
+    //get from fire store
+    const prevBookings = useLoaderData()
+    const selectedPrevBookings = prevBookings[selectedRental.collectionName]
 
 
     const navigate = useNavigate()
@@ -117,7 +118,7 @@ export const MEVenue = () => {
             </div>
 
             <div className='booking-div'>
-                <h3 className='fs-4'>Choose Your Booking Date Now!</h3>
+                <h3 className='fs-4'>Choose Your Date & Time to Start!</h3>
 
 
                 <div className='picker-duration-div fs-5'>
@@ -191,7 +192,7 @@ export const MEVenue = () => {
                     {    
                         optionName: `Venue Booking ${collectionName} ${selectedDate} ${selectedTime}`,
                         dateTime: startDate.getTime(),
-                        collectionName: 'MEBookings',
+                        collectionName: selectedRental.collectionName,
                         category: 'Venue Hire',
                         choices: [{'0': {name: '1 Hour 25£', price: 25}, '1': {name: '2 Hours 50£', price: 50}}], // price here just for display in cart
                         choiceId: [
@@ -201,6 +202,15 @@ export const MEVenue = () => {
                     }
                 ]
         }
+
+        else if(isOverLap){
+                
+            toast('This Time is Not Available, please Choose another one!', {
+                icon: '⚠️'
+            });
+            return prevItems
+        }
+
         else{
             toast(() => (
                 <span 
@@ -233,7 +243,7 @@ export const MEVenue = () => {
 
         function checkOverLap(){
             
-            for(let i=0; i<prevBookings.length; i++){
+            for(let i=0; i<selectedPrevBookings.length; i++){
                 console.log(i)
                 const duration = parseInt(choiceId, 10) + 1;
                 const startSelectedDate = startDate.getTime();
@@ -245,7 +255,7 @@ export const MEVenue = () => {
                 // console.log(new Date(startDate) + '====' + new Date(endDate))
 
                 const isOverLap = areIntervalsOverlapping(
-                    {start: new Date(prevBookings[i].startDate), end: new Date(prevBookings[i].endDate)},
+                    {start: new Date(selectedPrevBookings[i].startDate), end: new Date(selectedPrevBookings[i].endDate)},
                      {start: new Date(startDate), end: new Date(endDate)}
                 );
                 console.log(isOverLap)

@@ -193,6 +193,12 @@ a{
     color: #22207E;
 }
 
+
+.border-none{
+    border: none;
+    padding: 0;
+}
+
 /* ###################### header ###################### */
 
 header {
@@ -519,6 +525,7 @@ header .login-link {
     padding: 4px;
     border-radius: 10px;
     width:fit-content;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -1613,7 +1620,7 @@ p {
     padding: 1rem;
     margin: .4rem auto;
     border: 2px solid whitesmoke;
-    max-width: fit-content;
+    max-width: 500px;
 }
 
 .product-detail-img-div img{

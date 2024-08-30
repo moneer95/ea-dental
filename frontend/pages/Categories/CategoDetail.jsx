@@ -163,13 +163,15 @@ export default function CategoDetail() {
     
         function cleanAddToCart(prevItems, option, idx){
             
+            // const choiceName = option.choices[idx][choiceId.toString()].name == 'default' ? '' : ` ${option.choices[idx].name}`
+
             const existingItems = prevItems?.filter(item => item.optionName == option.name)
     
             if(!existingItems.length){
                 toast.success(`${option.name} added to cart`)
                 return [...prevItems,
                         {    
-                            optionName: option.name + (choices[idx].name == 'default' ? '' : ` ${choices[idx].name}`),
+                            optionName: option.name,
                             shoppingOption: idx,
                             category: collectionName,
                             docID: option.docID,

@@ -2,6 +2,7 @@
 const { exec } = require('child_process');
 
 function getUserID(userEmail){
+    
     const curlCommand = `curl -g "https://moodle.ea-dental.com/moodle/webservice/rest/server.php?wstoken=${process.env.GET_USER_TOKEN}&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=username&criteria[0][value]='${userEmail}'"`
 
     return new Promise((resolve, reject) => {
@@ -12,7 +13,11 @@ function getUserID(userEmail){
             }
             try {
                 const json = JSON.parse(stdout);
+                console.log(json)
+                
                 const users = json.users;
+                console.log(users)
+
                 if (users.length) {
                     resolve(users[0]['id']);
                 } else {
@@ -28,13 +33,15 @@ function getUserID(userEmail){
 
 
 async function createUser(userEmail, fName, lName){ //userEmail is the email we get from stripe
+    
 
     const password = generatePassword(fName + ' ' + lName)
 
     const user = await getUserID(userEmail)
+    console.log(user + 'beforeeeeee')
     if(user){
-        console.log(user)
-        return user;
+      console.log(user + 'afterrrrrrrrrř')        
+      return user;
     }
 
     else{
@@ -202,9 +209,6 @@ let coursesInfo= {
   "ORE2 Dental Manikin Videos Subscription": [7]
 }
   
-
-
-
 
 module.exports = {
   enrollUser,
