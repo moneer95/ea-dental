@@ -10,7 +10,6 @@ import product4 from "../../assets/images/homePage/product4.png"
 import product5 from "../../assets/images/homePage/product5.png"
 import product7 from "../../assets/images/homePage/product7.png"
 import product8 from "../../assets/images/homePage/product8.png"
-import product9 from "../../assets/images/homePage/product9.png"
 import product10 from "../../assets/images/homePage/product10.png"
 import product11 from "../../assets/images/homePage/product11.png"
 import product12 from "../../assets/images/homePage/product12.jpeg"
@@ -48,12 +47,12 @@ export const courses = [
   export const products = [
     {
       title: 'Instruments',
-      image: product1,
+      image: product13,
       to: "Instruments" 
     },
     {
       title: 'Endodontics',
-      image: product2,
+      image: product5,
       to: "Endodontics" 
     },
     {
@@ -63,18 +62,8 @@ export const courses = [
     },
     {
       title: 'Burs',
-      image: product4,
+      image: product10,
       to: "Burs" 
-    },
-    {
-      title: 'Surgical',
-      image: product5,
-      to: "Surgical" 
-    },
-    {
-      title: 'Simulation',
-      image: product7,
-      to: "Simulation" 
     },
     {
       title: 'Equipment',
@@ -82,29 +71,14 @@ export const courses = [
       to: "Equipment" 
     },
     {
-      title: 'Handpieces',
-      image: product9,
-      to: "Handpieces" 
-    },
-    {
       title: 'Impression Materials',
-      image: product10,
+      image: product7,
       to: "ImpressionMaterials" 
     },
     {
       title: 'Kits',
       image: product11,
       to: "Kits" 
-    },
-    {
-      title: 'Accessories',
-      image: product12,
-      to: "Accessories" 
-    },
-    {
-      title: 'Infection Control',
-      image: product13,
-      to: "InfectionControl" 
     }
   ];
 

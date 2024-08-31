@@ -151,7 +151,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/scalpels/",
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>Disposable Scalpels (Sterile) No. 10 -Swann-Morton have become a world leader in the manufacture of surgical blades, scalpels and handles.</p> <p>Uses:</p> <ul> <li>To cut putty index ( in crown preperations)</li> </ul> <p>Content:</p> <ul> <li>1 Scalpel</li> </ul> <p>\u00a0</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/Disposable-Scalpel.jpeg"],
-        "category": "Surgical"
+        "category": "Restorative"
     },
     {
         "id": 11,
@@ -170,7 +170,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/disposable-instrument-tray/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\">\n<p>Plastic dental instrument tray to keep all of the necessary supplies and equipment directly on hand</p>\n</div>   <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Plastic dental instrument tray</p><p>Advantages:</p><ul><li>These disposable instrument trays allow you to keep all of the necessary supplies and equipment directly on hand.</li><li>Equipment, and instruments can be kept in a tidy and organised fashion; making life easier when you are hard at work</li></ul><p>Material</p><ul><li>Plastic</li></ul><p>Content: 1 x disposable tray</p><p>Available:</p><ul><li>Single; colours may vary.</li></ul><p>Price: £0.50</p></div>",
         "image_path": ["https://v2.ea-dental.com/images/IMG_6910-1-scaled-e1652101885118-350x350.jpg"],
-        "category": "Infection Control"
+        "category": "Restorative"
     },
     {
         "id": 13,
@@ -303,7 +303,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/tofflemire-bands/",
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>Stainless steel Tofflemire bands that are ideally used with the Tofflemire matrix retainers</p> <p>Advantages:</p> <ul> <li>Smoothly finished bands</li> <li>Stainless steel</li> <li>Do not tear easily</li> <li>Provide maximum proximal contour</li> <li>For single use only</li> </ul> <p>Content: 1 x 10 Tofflemire bands</p> <p>Price: \u00a35.00 per packet</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/JPG_954078-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 20,
@@ -626,7 +626,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/rubber-dam-kit/",
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p style=\"font-weight: 400;\"><strong>Dental Rubber Dam Kit\u00a0</strong></p>\n<p style=\"font-weight: 400;\">Professional quality product which meets the needs of ORE. LDS Skilled OSCEs</p>\n<ul>\n<li style=\"font-weight: 400;\">Surgical Stainless Steel</li>\n<li style=\"font-weight: 400;\">Contains both winged and wingless clamp kit</li>\n</ul>\n<p style=\"font-weight: 400;\"><strong>Kit Contains:</strong></p>\n<ul>\n<li style=\"font-weight: 400;\">Rubber Dam Punch Pliers</li>\n<li style=\"font-weight: 400;\">Ainsworth Brewer Forceps</li>\n<li style=\"font-weight: 400;\">1 x Rubber Dam Frame</li>\n<li style=\"font-weight: 400;\">10 x Rubber Dam Clamps</li>\n</ul>\n<p style=\"font-weight: 400;\">\n</p></div>",
         "image_path": ["https://v2.ea-dental.com/images/20240203_092024-350x350.jpg"],
-        "category": "Endodontics"
+        "category": "Kits"
     },
     {
         "id": 38,
@@ -645,7 +645,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/face-shield/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <ul> <li><strong><span class=\"a-list-item\">\u00a0Protective Face Cover is mandatory for ORE CANDIDATES who don\u2019t use loops</span></strong></li> <li><span class=\"a-list-item\">Comfortable and compatible with glasses</span></li> </ul> </div> <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><ul><li><strong><span class=\"a-list-item\">&nbsp;Protective Face Cover is mandatory for ORE CANDIDATES who don’t use loops</span></strong></li><li><span class=\"a-list-item\">Comfortable and compatible with glasses</span></li><li><span class=\"a-list-item\">Foldable: This protective face cover cap can be folded , it doesnt take up space and is easy to carry</span></li><li><span class=\"a-list-item\">Elastic &amp; Adjustable- Anti-saliva face visors with breathable and elastic band, easy to adjust, one size fits men and wome</span></li><li><span class=\"a-list-item\">Made from transparent PET (Polyethylene terephthalate) with Double Sided Anti Fog, Reusable, and protective cover can be cleaned with disinfectant.</span></li></ul></div>",
         "image_path": ["https://v2.ea-dental.com/images/FS3-350x350.png"],
-        "category": "Infection Control"
+        "category": "Restorative"
     },
     {
         "id": 40,
@@ -664,7 +664,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/rubber-face-mask-with-built-in-fixture-for-drainage-pipe/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\">\n<p>Replacement of rubber face mask for the phantom head</p>\n</div> <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>High quality replacement face mask with drainage and 1m pipe.</p></div>",
         "image_path": ["../assets/products.svg"],
-        "category": "Infection Control"
+        "category": "Restorative"
     },
     {
         "id": 42,
@@ -1006,7 +1006,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/tofflemier-retainer/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Used for class II amalgam and composite restorations</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/953-7234__53854-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 62,
@@ -1025,7 +1025,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/hollenbach-carver/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Additional information</p><ul><li>ORE hand instrument</li></ul><p>Content : 1 x hollenbach carver</p><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\">\n<p>Used for carving amalgam restorations</p>\n</div>",
         "image_path": ["https://v2.ea-dental.com/images/CVHL1-2__CVHL1_2_h1_rgb-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 63,
@@ -1044,7 +1044,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/amalgam-carrier/",
         "description": "None",
         "image_path": ["https://v2.ea-dental.com/images/amalgam-carrier-350x350.png"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 64,
@@ -1063,7 +1063,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/mortensons-plugger/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Additional information</p><ul><li>ORE hand instrument EXACT SIZE PROVIDED IN THE EXAM</li></ul><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\"> <p>\u00a0</p> <p>ORE 2 hand instrument <strong>EXACT SIZE PROVIDED IN THE EXAM</strong></p> <p>\u00a0</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/PLGMO2__PLGMO2_h1_rgb-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 65,
@@ -1082,7 +1082,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/dycal-applicator/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Features</p><ul><li>Smooth, pointed nib that eases dycal application</li></ul><p>Use</p><ul><li>Apply dycal on appropriate pulpal/axial walls</li></ul><p>Additional information</p><ul><li>ORE hand instrument</li></ul><p>Content: 1 unit</p><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\">\n<p>Smooth, pointed nib that eases dycal application</p>\n<p>\u00a0</p>\n</div>",
         "image_path": ["https://v2.ea-dental.com/images/DYCAL-350x350.png"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 66,
@@ -1101,7 +1101,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/siqveland-retainer/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Additional information</p><ul><li>ORE hand instrument</li></ul><p>Content: 1 unit</p><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\"> <p>ORE2 Exam commonly used matrix holder for amalgam restorations</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/mps007_1-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 67,
@@ -1120,7 +1120,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/burnisher/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Additional information</p><ul><li>ORE hand instrument</li></ul><p>Content: 1 unit</p><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\">\n<p>Used for amalgam restorations</p>\n</div>",
         "image_path": ["https://v2.ea-dental.com/images/nmd_ball_burnisher_3_-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 68,
@@ -1139,7 +1139,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/flat-plastic/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Additional information</p><ul><li>ORE hand instrument</li></ul><p>Content: 1 unit</p><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\">\n<p>Used for composite restoration</p>\n<p>\u00a0</p>\n</div>",
         "image_path": ["https://v2.ea-dental.com/images/317PgHsPLrL._SX425_-e1652310564854-350x265.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 69,
@@ -1177,7 +1177,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/enamel-hatchet/",
         "description": "<div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Material</p><ul><li>Stainless steel</li></ul><p>Additional information</p><ul><li>ORE hand instrument</li></ul><p>Content: 1 unit</p><p>&nbsp;</p></div><div class=\"post-content woocommerce-product-details__short-description\"> <p>Used to remove unsupported enamel and refine and smoothen the cavity preparations</p> <p>\u00a0</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/1769187858-350x350.webp"],
-        "category": "Restorative"
+        "category": "Instruments"
     },
     {
         "id": 71,
@@ -1264,7 +1264,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/suture-kit/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p><strong>Designed to meet the criteria of the ORE2 Skilled OSCE\u00a0</strong></p> <p>Our special well made suturing kit entails:</p> <p>\u2013 One soft ORE2 exam suturing pad<br/>\n\u2013 Two silk sutures<br/>\n\u2013 One curved scissor<br/>\n\u2013 Scalpel bland size 11<br/>\n\u2013 Adson tissue forceps<br/>\n\u2013 Mayo Needle holder</p> </div> <p>Well made high end suturing pouch which entails:<br>– One soft ORE2 exam suturing pad<br>– Two silk sutures<br>– One curved scissor<br>– Scalpel bland size 11<br>– Adson tissue forceps<br>– Mayo Needle holder</p>",
         "image_path": ["https://v2.ea-dental.com/images/suture-kit.jpeg"],
-        "category": "Surgical"
+        "category": "Kits"
     },
     {
         "id": 73,
@@ -1299,7 +1299,7 @@ const arr = [
         "url": ["https://v2.ea-dental.com/images/gloves.jpg"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Contains no natural latex protein and therefore eliminates Type 1 recations, powder free</p> </div>    <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>Nitrile examination gloves: Contains no natural latex protein and therefore eliminates Type 1 reactions, powder free, exceptionally lightweight, flat with rolled rim, Single use, Ambidextrous.</p><p>Sizes:</p><ul><li>Small</li><li>Medium</li><li>Large</li></ul><p>Content: 10 x gloves. Colours may vary</p><p>Price: £2.00</p></div>",
         "image_path": ["https://v2.ea-dental.com/images/gloves-350x350.jpg"],
-        "category": "Infection Control"
+        "category": "Restorative"
     },
     {
         "id": 74,
@@ -1910,7 +1910,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/ore2-bur-stand/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p><strong>Labelled bur stand designed for ORE2 Dental Manikin examination</strong></p> </div>   <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p><strong>Labelled bur stand designed for ORE2 Dental Manikin examination:</strong></p><ul><li>Stainless steel and silicone.</li><li>Featuring secure grip silicone bur holders. The cover can be rotated to offer the burs flat or at an angle. Holds any combination of FG or RA burs.</li><li>Accommodates 11 sites for burs / stones of different types and sizes</li></ul><p>Variations:</p><ul><li>Sold alone</li><li>Sold with a standardised kit of burs according to the <strong>General Dental Council consortium&nbsp;</strong></li></ul></div>",
         "image_path": ["https://v2.ea-dental.com/images/bur-stand.jpeg", "https://v2.ea-dental.com/images/bur-stand5.jpeg", "https://v2.ea-dental.com/images/bur-stand4.jpeg", "https://v2.ea-dental.com/images/bur-stand3.jpeg", "https://v2.ea-dental.com/images/bur-stand2.jpeg", "https://v2.ea-dental.com/images/bur-stand1.jpeg"],
-        "category": "Instruments"
+        "category": "Burs"
     },
     {
         "id": 82,
@@ -2196,7 +2196,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/conversion-adaptor/",
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p>Handpiece converter</p>\n<p>Material: Stainless Steel</p>\n<p>Advantages:</p>\n<ul>\n<li>Conversion of a 4\u2011hole and 2 hole high\u2011speed handpiece.</li>\n<li>\u00a0Made of quality stainless steel material and thus oxidation resistance, rust prevention and long life service.</li>\n<li>Quick installation</li>\n</ul>\n<p>Available in:</p>\n<ul>\n<li>2 Hole Hand Piece to 4 Hole Dental Unit Converter</li>\n<li>4 Hole Hand Piece to 2 Hole Dental Unit Converter</li>\n</ul>\n<p>Package: 1 x converter</p>\n<p>Price: \u00a315.00</p>\n</div>",
         "image_path": ["https://v2.ea-dental.com/images/H24d4c3c5afd246938ba14b4dc20f30dcu-350x350.webp"],
-        "category": "Accessories"
+        "category": "Equipment"
     },
     {
         "id": 93,
@@ -2223,7 +2223,7 @@ const arr = [
         "url": "https://ea-dental.com/shop/phantom-head/",
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>The dental simulator head model can be fixed on the desktop for oral simulation training and demonstration. It is easy to disassemble and easy to use. It is an ideal choice for dental school education and dentist training.</p> <p>FEATURES</p> <p>1. The advanced human body model is vivid and lifelike, and the simulation exercise effect will be better.<br/>\n2. The universal adjustment handle can freely adjust the position of the imitation head mold and the shoulder body.<br/>\n3. The detachable and drainable design makes installation and use more convenient.<br/>\n4. Magnetic jaw attachment for ease jaw attachment, suitable for multiple clinical operation simulation exercises</p> <p>5. Excellent material, exquisite workmanship, and more durable.</p> <p>Product name\u2014dental simulator head model Material\u2014resin; silica gel; stainless steel; aluminum alloy</p> <p>Please remember to clean the model after use to keep\u00a0it\u00a0hygienic.</p> <p>LIMITED STOCK AVAILABILITY!!</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/phanthom2.jpg", "https://v2.ea-dental.com/images/phanthom3.jpg", "https://v2.ea-dental.com/images/phanthom4.jpg"],
-        "category": "Simulation"
+        "category": "Restorative"
     },
     {
         "id": 94,
@@ -2338,7 +2338,7 @@ const arr = [
         "url": ["https://v2.ea-dental.com/images/low-spped-hand.png"],
         "description": "<div class=\"post-content\">\n<h3 class=\"fusion-woocommerce-tab-title\">Description</h3>\n<p>Low speed handpiece</p>\n<p>Content: Handpiece kit ( Contra angle- Air Motor)</p>\n<p>Available in:</p>\n<ul>\n<li>4 hole</li>\n<li>2 hole</li>\n</ul>\n<p>Advantages:</p>\n<ul>\n<li>Push type contra angle with anti-heating safety system, this can reduce the risk of burning your patients by your instruments.</li>\n<li>Axis and gears are machined in stainless steel with high resistance to corrosion.</li>\n<li>Ideal Geometry: improved the accessibility to areas at the rear of the mouth, the type angles are designed to offer you improved handling and accessibility.</li>\n<li>This contra angle handpiece is autoclavable up to 135\u2103</li>\n<li>Basic midwest air motor with E type fitting for all your slow handpieces.</li>\n<li>External water spray pipe</li>\n</ul>\n<p>Technical information:</p>\n<ul>\n<li>Air pressure: 0.3 MPa</li>\n<li>Speed: 18,000\uff5e25,000min-1</li>\n<li>Midwest 4 hole</li>\n<li>Borden 2 hole</li>\n</ul>\n<p>\u00a0</p>\n</div>",
         "image_path": ["https://v2.ea-dental.com/images/low-spped-hand.png"],
-        "category": "Handpieces"
+        "category": "Equipment"
     },
     {
         "id": 96,
@@ -2446,7 +2446,7 @@ const arr = [
                 }
             }
         ],
-        "url": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/portable-unit.jpg", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/unoluble-oil.webp", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp"],
+        "url": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/portable-unit.jpg", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/unoluble-oil.webp", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp", "https://v2.ea-dental.com/images/productvariantdetailmain-0008155_1000.webp", "https://v2.ea-dental.com/images/calcium-hydroxide-350x350.png", "https://v2.ea-dental.com/images/Alloy_Capsules-350x350.webp"],
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Introducing the EA Dental Comprehensive ORE2 Manikin: Your Ultimate Solution for Setting Up a Dental Practice Kit at Home!</p> <p>Are you eager to hone your dental skills and set up a comprehensive manikin kit at home, but uncertain about where to begin? Look no further, as we present the EA Dental Comprehensive ORE2 Manikin \u2013 the perfect starting point for your journey into the world of dentistry!</p> <p>What\u2019s Included in this All-In-One Kit:</p> <ul> <li>High-Quality Phantom Head: Crafted to replicate the real dental experience with precision.</li> <li>Portable Dental Unit: The convenience of a fully functional dental unit in a portable form.</li> <li>Original Frasaco Jaws: Ensuring authenticity and real-world practice scenarios.</li> <li>Original Frasaco Teeth: With a total of 104 teeth, you\u2019ll be ready for any dental procedure.</li> <li>Original Frasaco Endo Teeth:\u00a0 1 * Molar endodontic tooth,</li> <li>Complete Hand Instruments: Equip yourself with a comprehensive set of instruments for precise dental work.</li> <li>Restorative Kit: Master the art of restorative dentistry.</li> <li>Endodontic Kit: Enhance your endodontic skills with confidence.</li> <li>Crown and Bridge Kit: Elevate your crown and bridge techniques to perfection.</li> </ul> <p>At EA Dental, we understand your aspirations and the need for a comprehensive training solution. Our Comprehensive ORE2 Manikin has been curated with your success in mind, leveraging materials used at the prestigious Eastman Dental University exam facility.</p> </div>",
         "image_path": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/portable-unit.jpg", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/unoluble-oil.webp", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp"],
         "category": "Kits"

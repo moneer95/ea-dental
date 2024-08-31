@@ -60,11 +60,11 @@ export default function Products(){
                     <p>Trusted by Professionals accross the UK</p>
                 </div>
             </div>
-                <React.Suspense fallback={<h2 style={{height: '1000px'}}>Loading products...</h2>}>
-                    <Await resolve={dataPromise.productsData}>
-                        {productsData => loadData(productsData)}
-                    </Await>
-                </React.Suspense>
+            <React.Suspense fallback={<h2 style={{height: '1000px'}}>Loading products...</h2>}>
+                <Await resolve={dataPromise.productsData}>
+                    {productsData => loadData(productsData)}
+                </Await>
+            </React.Suspense>
         </>
         
     )
@@ -76,14 +76,9 @@ const categos = [
     "Endodontics",
     "Restorative",
     "Burs",
-    "Surgical",
-    "Accessories",
-    "Simulation",
     "Equipment",
-    "Handpieces",
     "Impression Materials",
-    "Kits",
-    "Infection Control"
+    "Kits"
 ]
 
 const ids = [
@@ -91,12 +86,7 @@ const ids = [
     "Endodontics",
     "Restorative",
     "Burs",
-    "Surgical",
-    "Accessories",
-    "Simulation",
     "Equipment",
-    "Handpieces",
     "ImpressionMaterials",
-    "Kits",
-    "InfectionControl"
+    "Kits"
 ]
