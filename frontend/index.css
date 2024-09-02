@@ -33,7 +33,7 @@ a{
 
 
 .main-question{
-    color: #1115c2    ;
+    color: #2d2bb2    ;
     font-weight: 500;
 }
 
@@ -75,6 +75,10 @@ a{
 
 .hide{
     display: none;
+}
+
+.fw-5{
+    font-weight: 400;
 }
 
 
@@ -1416,6 +1420,12 @@ p {
     margin: 0;
     justify-self: end; /* Aligns to the left */
     align-self: center;
+}
+
+.cart-delete-button:hover{
+    background-color: transparent;
+    font-size: 20px;
+
 }
 
 .cart-choices0{

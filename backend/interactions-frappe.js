@@ -45,7 +45,7 @@ function createCourseOrder(email, full_name, phone, address, courses){
         address: address,
         courses: courses.map( item => {
             return {
-                course_name: item.courseName,
+                course_name: item.courseName + item.choiceName,
                 enroll_date: (new Date()).toString().split('T')[0]
             }
         })
@@ -72,7 +72,7 @@ function createTicketOrder(email, full_name, phone, tickets){
         order_date: new Date().toISOString().split('T')[0],
         tickets: tickets.map( ticket => {
             return {
-                ticket_name: ticket.ticketName
+                ticket_name: ticket.ticketName + item.choiceName
             }
         })
     };

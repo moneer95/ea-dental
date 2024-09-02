@@ -16,6 +16,10 @@ import product12 from "../../assets/images/homePage/product12.jpeg"
 import product13 from "../../assets/images/homePage/product13.png"
 
 import student1 from "../../assets/images/homePage/student1.jpeg"
+import student2 from "../../assets/images/homePage/student2.png"
+import student3 from "../../assets/images/homePage/student3.png"
+import student4 from "../../assets/images/homePage/student4.png"
+import student5 from "../../assets/images/homePage/student5.png"
 
 export const courses = [
     {
@@ -95,7 +99,22 @@ export const courses = [
     {
       name: 'Apil Basnet',
       text: "EBitassam is the hacker of ORE exams by all her experience. Sitting at her own institution EA dental academy, she knows what exactly is coming in the exams be it osces, or manikin or dtp and medical even a few emergencies cases. I have never seen tutor like her and her team with Dr Ahmed and Dr Shahleh are the best for manikin. I can\'t express my gratitude to them on words, you have to witness yourself.Thank you EA dental team. 🙏",
-      image: student1
+      image: student2
+    },
+    {
+      name: 'Tina Israni',
+      text: "I recently attended the ORE mock exam and crash course by Dr. Ebtisam at EA Dental, and I highly recommend it. The hands-on experience with skilled OSCEs and the use of the ME manikin were both incredibly helpful in improving my technique and confidence. The online revision lectures were comprehensive and easy to follow. Dr. Ebtisam and her team provided helpful predictions and support pre-exam, ensuring I focused on the most critical areas. Overall, this course exceeded my expectations and greatly contributed to my success in the exam.",
+      image: student3
+    },
+    {
+      name: 'Hamza Adeel',
+      text: "I took the EA dental Manikin and Theory academy. The Theory from EA is the best, there is no comparison to anywhere else. Just make sure to take the revision lectures before the exam. Dr Ebtissam is extremely helpful. I would not have been able to practice for manikin before the exam had it not been for her generosity and understanding. The mocks are very well made and professional, I recommend taking them 100% as they gave me a lot of confidence going into the exam.",
+      image: student5
+    },
+    {
+      name: 'Areej Saad',
+      text: "Honestly it is one of the best courses it gives you all the support needed for the exam. It also gives you an exact reflection of how the exam is which really helps. In regards to the manikin part of the course there’s always a very efficient and fast response for the preps which help improve your skills. Regarding the theory you are provided with all the needed materials which are very reliable and also they teach the right way to approach it. I personally would recommend this course 100% for the ORE part 2 exam.",
+      image: student4
     }
   ]
 

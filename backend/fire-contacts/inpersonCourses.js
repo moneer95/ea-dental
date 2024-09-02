@@ -14,10 +14,8 @@ async function threeInOneMock() {
 
     const itemRef = db.collection('mocks').doc('ore3')
 
-      // get choices arr value
   
       const item = await itemRef.get();
-    //   const choices = item.data().shoppingOptions[0].choices
     
       shoppingOptions = [
                 {
@@ -229,5 +227,9 @@ async function threeInOneMock() {
     }
   }
 
+
+
+
+  
 
   threeInOneMock()

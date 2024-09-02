@@ -37,8 +37,12 @@ function Cart() {
   return (
     <div className='cart-container'>
       {cartItems.length ? (
-        cartItems.map((item, iIndex) => (
-          <div key={iIndex} className='cart-item'>
+        cartItems.map((item, iIndex) => {
+
+          const quantity = item?.quantity || 1
+          const price = item.choices[0][cartItems[iIndex].choiceId[0]].price * quantity
+
+          return <div key={iIndex} className='cart-item'>
             <h2 className='cart-item-title'>{item.optionName}</h2>
             <p className='cart-item-catego'>Category: <span className='capital'>{item.category}</span> </p>
             <button onClick={() => deleteItem(iIndex)} className='cart-delete-button fs-7'> <i><FaTrash/></i> </button>
@@ -59,7 +63,7 @@ function Cart() {
                           key={oIndex}
                           value={oIndex}
                           disabled={isEventFull}
-                        >
+                         >
                           {option[1].name + (isEventFull ? " (Event Full)" : "")} 
                         </option>
                }               
@@ -70,9 +74,9 @@ function Cart() {
 
               }
               {console.log(item)}
-            <h4 className='cart-item-price'>price: £{item.choices[0][cartItems[iIndex].choiceId[0]].price}</h4>
+            <h4 className='cart-item-price'> Quantity: {quantity} <span className='fw-5'> | </span> Price: £{price}</h4>
           </div>
-        ))
+        })
       ) : (
         <p>Your cart is empty.</p>
       )}

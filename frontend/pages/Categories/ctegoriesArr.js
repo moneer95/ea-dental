@@ -2,7 +2,6 @@ import oreSvg from "../../assets/images/ore-section.svg"
 import revisionsSvg from "../../assets/images/revision-sessions.svg"
 import ldsSvg from "../../assets/images/lds-section.svg"
 import mocksSvg from "../../assets/images/mock-exams.svg"
-// import productsSvd from "../../assets/images/products.svg"
 
 
 export const courses = [
@@ -17,14 +16,14 @@ export const courses = [
         caption: 'LDS COURSES'
     },
     {
-        collection: 'revisions',
-        svg: revisionsSvg,
-        caption: 'REVISION SESSIONS'
-    },
-    {
         collection: 'mocks',
         svg: mocksSvg,
         caption: 'MOCK EXAMS'
+    },
+    {
+        collection: 'revisions',
+        svg: revisionsSvg,
+        caption: 'REVISION SESSIONS'
     }
 ];
 

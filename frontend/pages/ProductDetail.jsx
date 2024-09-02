@@ -158,17 +158,6 @@ const ProductDetail = () => {
             return prevItems
         }
         }
-
-
-
-
-          
-
-
-
 }
-
-
-
 
 export default ProductDetail

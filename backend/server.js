@@ -28,9 +28,10 @@ let bookings = []
 let weight = 0
 
 app.post('/create-checkout-session', async (req, res) => {
-  const {choices, cartItems} = req.body; // This will contain the array of objects
+  const {choices, choices1, cartItems} = req.body; // This will contain the array of objects
 
   console.log(choices)
+  console.log(choices1)
   console.log(cartItems)
 
   try{
@@ -43,15 +44,22 @@ app.post('/create-checkout-session', async (req, res) => {
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
           weight += (choices[idx].weight * 1000) * item.quantity
         }
-        
+                
+        // add option name for courses and tickets
+        const courseOrTicketChoice = choices[idx].name != "" ? choices[idx].name : ""
+        const courseSecondChoice = choices1[idx] ? choices1[idx].name : ""
+
         // add ticket to tickets arr
         if(choices[idx].inStock && !item.quantity){
-          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption}) //category the same as collection name 
+          console.log(choices[idx].inStock && !item.quantity)
+          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+          console.log('momomomomomom' + item.optionName)
         }
+
         
         // add online courses to courses arr
         if(!choices[idx].inStock && !item.dateTime){
-          courses.push({'courseName': item.optionName})
+          courses.push({'courseName': item.optionName, 'choiceName': (courseOrTicketChoice + courseSecondChoice) })
         }
         
         // Call addBookingTime here
@@ -63,7 +71,7 @@ app.post('/create-checkout-session', async (req, res) => {
           price_data: {
             currency: 'GBP',
             product_data: {
-              name: item.optionName, //add option name to the displayed name in checkout
+              name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
             },
             unit_amount: choices[idx].price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
           },
@@ -174,6 +182,9 @@ app.get('/session-status', async (req, res) => {
     if(tickets.length){
       console.log(333333)
       createTicketOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, tickets)
+      
+      // enroll in the course on moodle
+      enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', tickets)
       
       //use tickets array
       for(i = 0; i < tickets.length; i++){

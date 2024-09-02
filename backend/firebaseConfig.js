@@ -39,10 +39,14 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   async function updateStockValue(id, quantity, choiceId) {
     quantity = quantity || 1
 
+    if( id == 100 ){
+      updateKitStockValue(id);
+      return;
+    }
+
     const itemRef = db.collection('products').doc(id)
 
       // get choices arr value
-  
       const item = await itemRef.get();
       const choices = item.data().choices
 
@@ -63,6 +67,50 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
       console.error('Error updating document:', error);
     }
   }
+
+
+
+  async function updateKitStockValue(id) {
+
+    const itemRef = db.collection('products').doc(id)
+    
+    // get choices arr value
+    const kit = await itemRef.get();
+    const kitIDs = kit.data().ids
+    
+    
+    for(i = 0; i < kitIDs.length; i++){
+      const id = kitIDs[i].id
+      const choiceId = kitIDs[i].choiceId
+      const quantity = kitIDs[i].quantity
+
+      const itemRef = db.collection('products').doc(id)
+
+      // get choices arr value
+      const item = await itemRef.get();
+      const choices = item.data().choices
+
+      let updatedStock = [...choices]
+      updatedStock[0][choiceId].inStock -= quantity
+      
+      let weight = updatedStock[0][choiceId].weight * 1000 //product weight in grams
+
+      try {
+          const res = await itemRef.update({
+          choices: updatedStock
+        });
+        
+        console.log('Document successfully updated!', res);
+        return weight;
+
+      } catch (error) {
+        console.error('Error updating document:', error);
+      }
+    }
+    }
+
+
+
 
 
   async function addBookingTime(collectionName, startDate, choiceId) {

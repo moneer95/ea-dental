@@ -6,7 +6,7 @@ import candidateImg from "../assets/images/candidate.jpg"
 
 export const Recruiment = () => {
 
-  const [selectedOption, setSelectedOption] = useState({option: 1, frame: "https://backend.ea-dental.com/candidate?embedded=true"});
+  const [selectedOption, setSelectedOption] = useState({option: 1, frame: "https://backend.ea-dental.com/employer?embedded=true"});
   const handleClick = (option) => {
     setSelectedOption(option);
   };  

@@ -126,7 +126,7 @@ const Products = () => {
             {products.map((product, index) => (
             <div 
               className="product-item"
-              onClick={() => navigate(`/products#${product.title}`)}
+              onClick={() => navigate(`/products#${product.to}`)}
             >
                 <div >
                     <div>

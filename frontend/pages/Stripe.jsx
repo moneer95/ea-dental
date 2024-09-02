@@ -25,6 +25,7 @@ export const CheckoutForm = () => {
       },
       body: JSON.stringify({
         choices: cartItems.map(item => item.choices[0][item.choiceId[0]]),
+        choices1: cartItems.map(item => item.choices[1] ? item.choices[1][item.choiceId[1]] : null),
         cartItems
       }),
     })

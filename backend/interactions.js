@@ -206,7 +206,14 @@ let coursesInfo= {
   "ORE2 Comprehensive Online Course": [16],
   "ORE2 Dental Treatment Planning Videos Subscription": [6],
   "ORE2 Theory course notes + Videos 10 DTP cases": [12],
-  "ORE2 Dental Manikin Videos Subscription": [7]
+  "ORE2 Dental Manikin Videos Subscription": [7],
+  "ORE2 (Five days comprehensive course)": [12],
+  "3-Days Manikin ORE2": [7, 8],
+  "ORE2 Medical Emergencies": [12],
+  "ORE2 Two DTP Days": [6],
+  "ORE2 Two Days OSCE": [12],
+  "3-in-1 Mock Sessions": [7, 8],
+  "Revision / Mock Session: Dental Manikin": [7, 8]
 }
   
 
