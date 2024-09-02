@@ -304,7 +304,7 @@ header .logo {
         text-align: center;
     }
 
-    .nav-list[ data-visible="true"]{
+    .nav-list[data-visible="true"]{
         transform: translateX(100%);
     }
     
