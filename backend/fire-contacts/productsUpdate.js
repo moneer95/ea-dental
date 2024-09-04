@@ -2088,7 +2088,7 @@ const arr = [
                 },
             "1": 
                 {
-                    "name": "Pack of 5 size 1",
+                    "name": "Pack of 6 size 1",
                     "price": 19.20 ,
                     "weight": 0.0089,
                     "dimensions": [8, 7, 0.5],
@@ -2104,7 +2104,7 @@ const arr = [
                 },
             "3": 
                 {
-                    "name": "Pack of 5 size 4",
+                    "name": "Pack of 6 size 4",
                     "price": 19.20 ,
                     "weight":0.009,
                     "dimensions": [8, 7, 0.5],
@@ -2231,6 +2231,7 @@ const arr = [
         "choices": [
             {"0": 
                 {
+                    "name": "default",
                     "price": 228.00,
                     "weight": 5,
                     "dimensions": [],
@@ -2320,7 +2321,7 @@ const arr = [
                 "3": 
                 {
                     "name": "Contra-Angle & Air Motor - 2 Holes",
-                    "price": 16200,
+                    "price": 162.00,
                     "weight": 0.35,
                     "dimensions": [10.5, 6, 4],
                     "inStock": 100                    
@@ -2373,7 +2374,15 @@ const arr = [
         "choices": [
             {"0": 
                 {
-                    "name": "default",
+                    "name": "U1, U2",
+                    "price": 6.00 ,
+                    "weight": 0.0267 ,
+                    "dimensions": [17, 2],
+                    "inStock": 100                   
+                },
+            "1": 
+                {
+                    "name": "U3, U4",
                     "price": 6.00 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
@@ -2429,7 +2438,8 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/ea-ore2-starter-kit/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p><strong>Introducing the EA Dental ORE2 Manikin Starter Kit</strong></p> <p>Are you preparing for the ORE? Look no further! Our EA Dental ORE2 Manikin Starter Kit has everything you need to excel during your exams at the Eastman Dental University exam facility.</p> <p>What\u2019s Included:</p> <ul> <li>Original Frasaco Jaws: Authenticity matters, and our kit comes with the real deal.</li> <li>120 Teeth: Comprehensive coverage with a total of 120 teeth, ensuring you\u2019re well-equipped for every aspect of your exam.</li> <li>2 Endodontic Teeth: Perfect for honing your endodontic skills.</li> <li>Complete Hand Instruments: You\u2019ll have all the tools you need at your fingertips.</li> <li>Restorative Kit: Achieve precision and finesse in your restorative work.</li> <li>Endodontic Kit: Master endodontics with confidence.</li> <li>Crown and Bridge Kit: Elevate your crown and bridge techniques to perfection.</li> </ul> </div>",
-        "image_path": ["../assets/products.svg"],
+        "image_path": ["../assets/products.svg", "https://v2.ea-dental.com/images/81746-350x350.webp", "https://v2.ea-dental.com/images/low-spped-hand.png", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/oil-1-350x350.png", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves-350x350.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp", "https://v2.ea-dental.com/images/productvariantdetailmain-0008155_1000.webp", "https://v2.ea-dental.com/images/calcium-hydroxide-350x350.png", "https://v2.ea-dental.com/images/amalgam-carrier-350x350.png", "https://v2.ea-dental.com/images/IMG_7466-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/d314-mi-350x350.webp", "https://v2.ea-dental.com/images/IMG_6910-1-scaled-e1652101885118-350x350.jpg", "https://v2.ea-dental.com/images/FS3-350x350.png", "https://v2.ea-dental.com/images/RDAM-350x315.png", "https://v2.ea-dental.com/images/Disposable-Scalpel.jpeg", "https://v2.ea-dental.com/images/shofu-Brownie-Mini-point-350x350.jpg", "https://v2.ea-dental.com/images/IMG_7392-scaled-350x350.webp", "https://v2.ea-dental.com/images/IMG_7394-scaled-350x350.webp", "https://v2.ea-dental.com/images/ad405-350x350.webp", "https://v2.ea-dental.com/images/polishing-discs-sof-lex-350x350.webp", "https://v2.ea-dental.com/images/3M-S0074__53218-350x350.jpg", "https://v2.ea-dental.com/images/White-shofu-round-stone-350x350.jpg", "https://v2.ea-dental.com/images/henryschein-images-3124396.webp", "https://v2.ea-dental.com/images/download-350x259.webp", "https://v2.ea-dental.com/images/blue-mixing-tips.jpeg", "https://v2.ea-dental.com/images/Rose-head-1-350x350.jpg", "https://v2.ea-dental.com/images/flat-fisssure-1-350x350.jpg", "https://v2.ea-dental.com/images/pear330-rotated-350x350.jpg", "https://v2.ea-dental.com/images/IMG_6729-scaled-350x350.jpg", "https://v2.ea-dental.com/images/IMG_6971-scaled-350x350.jpg", "https://v2.ea-dental.com/images/IMG_7358-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_7361-scaled-e1652224642170-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_7380-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_7359-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/ki-file--350x350.png", "https://v2.ea-dental.com/images/tggutta_percha_15-40-350x350.webp", "https://v2.ea-dental.com/images/pp1.png", "https://v2.ea-dental.com/images/sealer-350x350.png", "https://v2.ea-dental.com/images/Size-25-spreader-1-350x350.jpg", "https://v2.ea-dental.com/images/51uT0BISPBL._SY355_-350x350.webp", "https://v2.ea-dental.com/images/1769187858-350x350.webp", "https://v2.ea-dental.com/images/PLG153__PLG153_h1_rgb-350x350.webp", "https://v2.ea-dental.com/images/CVHL1-2__CVHL1_2_h1_rgb-350x350.webp", "https://v2.ea-dental.com/images/71rltnGuZyL._SX342_.webp", "https://v2.ea-dental.com/images/gdc-single-end-probe-exs9-exs9-350x350.webp", "https://v2.ea-dental.com/images/nmd_ball_burnisher_3_-350x350.webp", "https://v2.ea-dental.com/images/317PgHsPLrL._SX425_-e1652310564854-350x265.webp", "https://v2.ea-dental.com/images/PLGMO2__PLGMO2_h1_rgb-350x350.webp", "https://v2.ea-dental.com/images/Dental-Tweezers-1000x1000-1-350x350.webp", "https://v2.ea-dental.com/images/JPG_954078-350x350.webp", "https://v2.ea-dental.com/images/mps007_1-350x350.webp", "https://v2.ea-dental.com/images/matrix-bond1.jpg", "https://v2.ea-dental.com/images/tgd-putty-light-body-fast-350x350.webp", "https://v2.ea-dental.com/images/21-350x350.webp", "https://v2.ea-dental.com/images/iiu058_1-350x350.webp", "https://v2.ea-dental.com/images/teeth-for-typodont-ag-3_0.webp", "https://v2.ea-dental.com/images/IMG_7505-350x350.jpeg"],
+        "ids": [[79, 2, 1], [95, 4, 1], [107, 0, 1], [9, 0, 1], [73, 1, 1], [5, 0, 1], [15, 0, 1], [6, 0, 1], [63, 0, 1], [20, 0, 1], [27, 0, 1], [11, 0, 1], [38, 0, 1], [17, 0, 1], [10, 0, 1], [31, 0, 1], [56, 0, 1], [46, 0, 1], [34, 0, 1], [35, 0, 1], [16, 0, 1], [36, 0, 1], [33, 0, 1], [51, 0, 1], [50, 0, 1], [55, 0, 1], [90, 1, 1], [88, 1, 1], [91, 1, 1], [89, 1, 1], [89, 3, 1], [82, 1, 1], [86, 1, 1], [84, 1, 1], [85, 1, 1], [83, 1, 1], [24, 0, 1], [25, 0, 1], [76, 0, 1], [76, 1, 1], [75, 0, 1], [75, 1, 1], [26, 0, 1], [28, 0, 1], [98, 1, 1], [70, 0, 1], [97, 0, 1], [97, 1, 1], [59, 0, 1], [62, 0, 1], [69, 0, 1], [58, 0, 1], [67, 0, 1], [68, 0, 1], [64, 0, 1], [71, 0, 1], [61, 0, 1], [19, 0, 1], [66, 0, 1], [13, 0, 1], [47, 0, 1], [49, 0, 1], [96, 0, 1], [96, 1, 1], [77, 0, 1], [77, 2, 1], [80, 28, 1], [80, 29, 1], [80, 32, 1], [80, 33, 1], [80, 34, 1], [80, 35, 1], [80, 36, 1], [80, 37, 1], [80, 38, 1], [80, 39, 1], [80, 2, 1], [80, 3, 1], [80, 12, 1], [80, 13, 1]],
         "category": "Kits"
     },
     {
@@ -2447,9 +2457,74 @@ const arr = [
             }
         ],
         "url": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/portable-unit.jpg", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/unoluble-oil.webp", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp", "https://v2.ea-dental.com/images/productvariantdetailmain-0008155_1000.webp", "https://v2.ea-dental.com/images/calcium-hydroxide-350x350.png", "https://v2.ea-dental.com/images/Alloy_Capsules-350x350.webp"],
-        "description": "<div className=\"fs-3\"> <p>Introducing the EA Dental Comprehensive ORE2 Manikin: Your Ultimate Solution for Setting Up a Dental Practice Kit at Home!</p> <p>Are you eager to hone your dental skills and set up a comprehensive manikin kit at home, but uncertain about where to begin? Look no further, as we present the EA Dental Comprehensive ORE2 Manikin \u2013 the perfect starting point for your journey into the world of dentistry!</p> <p>What\u2019s Included in this All-In-One Kit:</p> <ul className=\"fs-7\"> <li>High-Quality Phantom Head: Crafted to replicate the real dental experience with precision.</li> <li>Portable Dental Unit: The convenience of a fully functional dental unit in a portable form.</li> <li>Original Frasaco Jaws: Ensuring authenticity and real-world practice scenarios.</li> <li>Original Frasaco Teeth: With a total of 104 teeth, you\u2019ll be ready for any dental procedure.</li> <li>Original Frasaco Endo Teeth:\u00a0 1 * Molar endodontic tooth,</li> <li>Complete Hand Instruments: Equip yourself with a comprehensive set of instruments for precise dental work.</li> <li>Restorative Kit: Master the art of restorative dentistry.</li> <li>Endodontic Kit: Enhance your endodontic skills with confidence.</li> <li>Crown and Bridge Kit: Elevate your crown and bridge techniques to perfection.</li> </ul> <p>At EA Dental, we understand your aspirations and the need for a comprehensive training solution. Our Comprehensive ORE2 Manikin has been curated with your success in mind, leveraging materials used at the prestigious Eastman Dental University exam facility.</p> </div>                 <ul><li>Phantom head</li><li>Portable dental unit</li><li>Original Frasaco Jaw AG3 Upper & Lower + Screw driver</li><li>AG3 (UR1) * 10</li><li>AG3 (UR3) * 10</li><li>AG3 (UR4) * 10</li><li>AG3 (UR5) * 10</li><li>AG3 (UR6) * 10</li><li>AG3 (UL1) * 10</li><li>AG3 (UL3) * 10</li><li>AG3 (UL4) * 10</li><li>AG3 (UL5) * 10</li><li>AG3 (UL6) * 10</li><li>AG3 (UR2) * 1</li><li>AG3 (UR7) * 1</li><li>AG3 (UL2) * 1</li><li>AG3 (Ul7) * 1</li><li>Endo tooth 26 molar (1)</li><li>SOCO Low speed handpiece kit and contra angle</li><li>SOCO High Speed</li><li>Handpiece oil</li><li>Metal nozzle for handpiece oil</li><li>Complete Hand instrument kit</li><li>Tofflemier retainer</li><li>Tofflemier band</li><li>Disposable instrument tray</li><li>Matric roll band</li><li>Wooden wedges 20</li><li>Amalgam capsules pack of 10</li><li>Polishing strips pack 10 (3m)</li><li>Composite syringe 4.5</li><li>Composite dispenser gun</li><li>Bonding Agent 5ml</li><li>Micro brushes pack of 10</li><li>Gloves</li><li>Face shield</li><li>Dycal calcium hydroxide</li><li>Transparent strips</li><li>Endo Sealer</li><li>K files 15-40</li><li>K files 45-80</li><li>Spreader</li><li>GP point 15-40</li><li>GP point 45-80</li><li>Paper points 15-40</li><li>Gates Glidden 1-6</li><li>Disposable syringe</li><li>Complete OREII bur stand</li><li>Brownie</li><li>Mandrel</li><li>Original Soflex polishing disc</li><li>Putty and catalyst</li><li>Light body material 50 ml</li><li>Temp Crown and Bridge material</li><li>Dispenser Gun 10:1</li><li>Dispenser Gun 1:1</li><li>Impression tray right and left</li></ul>",
-        "image_path": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/portable-unit.jpg", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/unoluble-oil.webp", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp"],
-        "category": "Kits"
+        "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Introducing the EA Dental Comprehensive ORE2 Manikin: Your Ultimate Solution for Setting Up a Dental Practice Kit at Home!</p> <p>Are you eager to hone your dental skills and set up a comprehensive manikin kit at home, but uncertain about where to begin? Look no further, as we present the EA Dental Comprehensive ORE2 Manikin \u2013 the perfect starting point for your journey into the world of dentistry!</p> <p>What\u2019s Included in this All-In-One Kit:</p> <ul> <li>High-Quality Phantom Head: Crafted to replicate the real dental experience with precision.</li> <li>Portable Dental Unit: The convenience of a fully functional dental unit in a portable form.</li> <li>Original Frasaco Jaws: Ensuring authenticity and real-world practice scenarios.</li> <li>Original Frasaco Teeth: With a total of 104 teeth, you\u2019ll be ready for any dental procedure.</li> <li>Original Frasaco Endo Teeth:\u00a0 1 * Molar endodontic tooth,</li> <li>Complete Hand Instruments: Equip yourself with a comprehensive set of instruments for precise dental work.</li> <li>Restorative Kit: Master the art of restorative dentistry.</li> <li>Endodontic Kit: Enhance your endodontic skills with confidence.</li> <li>Crown and Bridge Kit: Elevate your crown and bridge techniques to perfection.</li> </ul> <p>At EA Dental, we understand your aspirations and the need for a comprehensive training solution. Our Comprehensive ORE2 Manikin has been curated with your success in mind, leveraging materials used at the prestigious Eastman Dental University exam facility.</p> </div>",
+        "image_path": ["https://v2.ea-dental.com/images/phanthom1.jpg", "https://v2.ea-dental.com/images/portable-unit.jpg", "https://v2.ea-dental.com/images/high-hand-pice.png", "https://v2.ea-dental.com/images/unoluble-oil.webp", "https://v2.ea-dental.com/images/composite-syreng.jpg", "https://v2.ea-dental.com/images/gloves.jpg", "https://v2.ea-dental.com/images/bonding-agent.webp", "https://v2.ea-dental.com/images/productvariantdetailmain-0008155_1000.webp", "https://v2.ea-dental.com/images/calcium-hydroxide-350x350.png", "https://v2.ea-dental.com/images/Alloy_Capsules-350x350.webp", "https://v2.ea-dental.com/images/IMG_7466-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_6910-1-scaled-e1652101885118-350x350.jpg", "https://v2.ea-dental.com/images/FS3-350x350.png", "https://v2.ea-dental.com/images/IMG_7392-scaled-350x350.webp", "https://v2.ea-dental.com/images/IMG_7394-scaled-350x350.webp", "https://v2.ea-dental.com/images/ad405-350x350.webp","https://v2.ea-dental.com/images/3M-S0074__53218-350x350.jpg", "https://v2.ea-dental.com/images/ki-file--350x350.png", "https://v2.ea-dental.com/images/tggutta_percha_15-40-350x350.webp", "https://v2.ea-dental.com/images/pp1.png", "https://v2.ea-dental.com/images/d314-mi-350x350.webp", "https://v2.ea-dental.com/images/sealer-350x350.png", "https://v2.ea-dental.com/images/Size-25-spreader-1-350x350.jpg", "https://v2.ea-dental.com/images/matrix-bond1.jpg", "https://v2.ea-dental.com/images/tgd-putty-light-body-fast-350x350.webp", "https://v2.ea-dental.com/images/21-350x350.webp", "https://v2.ea-dental.com/images/iiu058_1-350x350.webp", "https://v2.ea-dental.com/images/teeth-for-typodont-ag-3_0.webp", "https://v2.ea-dental.com/images/IMG_7505-350x350.jpeg", "https://v2.ea-dental.com/images/complete-ore2-intrument-kit.webp", "https://v2.ea-dental.com/images/IMG_7380-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_7359-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_7358-scaled-350x350.jpeg", "https://v2.ea-dental.com/images/IMG_6971-scaled-350x350.jpg", "https://v2.ea-dental.com/images/White-shofu-round-stone-350x350.jpg", "https://v2.ea-dental.com/images/s-l500-306x350.png", "https://v2.ea-dental.com/images/IMG_7361-scaled-e1652224642170-350x350.jpeg", "https://v2.ea-dental.com/images/pear330-rotated-350x350.jpg", "https://v2.ea-dental.com/images/Rose-head-1-350x350.jpg", "https://v2.ea-dental.com/images/wooden-wedges--350x350.png", "https://v2.ea-dental.com/images/gates-glidden.jpeg", "https://v2.ea-dental.com/images/IMG_6729-scaled-350x350.jpg", "https://v2.ea-dental.com/images/20240203_092611-350x350.jpg", "https://v2.ea-dental.com/images/JPG_954078-350x350.webp" ],
+        "category": "Kits",
+        "ids": [
+            { id: 93, choiceId: 1, quantity: 1 },
+            { id: 94, choiceId: 0, quantity: 1 },
+            { id: 79, choiceId: 2, quantity: 1 },
+            { id: 95, choiceId: 4, quantity: 1 },
+            { id: 107, choiceId: 0, quantity: 1 },
+            { id: 43, choiceId: 0, quantity: 1 },
+            { id: 9, choiceId: 0, quantity: 1 },
+            { id: 73, choiceId: 0, quantity: 1 },
+            { id: 5, choiceId: 0, quantity: 1 },
+            { id: 15, choiceId: 0, quantity: 1 },
+            { id: 6, choiceId: 0, quantity: 1 },
+            { id: 4, choiceId: 0, quantity: 1 },
+            { id: 20, choiceId: 0, quantity: 1 },
+            { id: 11, choiceId: 0, quantity: 1 },
+            { id: 38, choiceId: 0, quantity: 1 },
+            { id: 56, choiceId: 0, quantity: 1 },
+            { id: 46, choiceId: 0, quantity: 1 },
+            { id: 34, choiceId: 0, quantity: 1 },
+            { id: 16, choiceId: 0, quantity: 1 },
+            { id: 24, choiceId: 0, quantity: 1 },
+            { id: 25, choiceId: 0, quantity: 1 },
+            { id: 76, choiceId: 0, quantity: 1 },
+            { id: 76, choiceId: 1, quantity: 1 },
+            { id: 75, choiceId: 0, quantity: 1 },
+            { id: 27, choiceId: 0, quantity: 1 },
+            { id: 26, choiceId: 0, quantity: 1 },
+            { id: 28, choiceId: 0, quantity: 1 },
+            { id: 13, choiceId: 0, quantity: 1 },
+            { id: 47, choiceId: 0, quantity: 1 },
+            { id: 49, choiceId: 0, quantity: 1 },
+            { id: 96, choiceId: 0, quantity: 1 },
+            { id: 96, choiceId: 1, quantity: 1 },
+            { id: 77, choiceId: 2, quantity: 1 },
+            { id: 80, choiceId: 28, quantity: 1 },
+            { id: 80, choiceId: 29, quantity: 1 },
+            { id: 80, choiceId: 32, quantity: 1 },
+            { id: 80, choiceId: 33, quantity: 1 },
+            { id: 80, choiceId: 34, quantity: 1 },
+            { id: 80, choiceId: 35, quantity: 1 },
+            { id: 80, choiceId: 36, quantity: 1 },
+            { id: 80, choiceId: 37, quantity: 1 },
+            { id: 80, choiceId: 38, quantity: 1 },
+            { id: 80, choiceId: 39, quantity: 1 },
+            { id: 80, choiceId: 2, quantity: 1 },
+            { id: 80, choiceId: 3, quantity: 1 },
+            { id: 80, choiceId: 12, quantity: 1 },
+            { id: 80, choiceId: 13, quantity: 1 },
+            { id: 57, choiceId: 0, quantity: 1 },
+            { id: 85, choiceId: 0, quantity: 1 },
+            { id: 86, choiceId: 1, quantity: 1 },
+            { id: 83, choiceId: 0, quantity: 1 },
+            { id: 82, choiceId: 1, quantity: 1 },
+            { id: 36, choiceId: 0, quantity: 1 },
+            { id: 33, choiceId: 0, quantity: 1 },
+            { id: 84, choiceId: 0, quantity: 1 },
+            { id: 91, choiceId: 1, quantity: 1 },
+            { id: 90, choiceId: 1, quantity: 1 },
+            { id: 21, choiceId: 0, quantity: 1 },
+            { id: 29, choiceId: 0, quantity: 1 },
+            { id: 89, choiceId: 1, quantity: 1 },
+            { id: 89, choiceId: 3, quantity: 1 },
+            { id: 23, choiceId: 0, quantity: 1 },
+            { id: 19, choiceId: 0, quantity: 1 }
+          ]
     },
     {
         "id": 104,

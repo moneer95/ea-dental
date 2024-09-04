@@ -53,7 +53,6 @@ app.post('/create-checkout-session', async (req, res) => {
         if(choices[idx].inStock && !item.quantity){
           console.log(choices[idx].inStock && !item.quantity)
           tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
-          console.log('momomomomomom' + item.optionName)
         }
 
         

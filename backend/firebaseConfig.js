@@ -1,6 +1,20 @@
 
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
+const nodemailer = require('nodemailer');
+
+
+// Create a transporter object using the default SMTP transport
+let transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',  // Replace with your mail server host
+  port: 587,                // Common port for SMTP
+  secure: false,            // True for 465, false for other ports
+  auth: {
+    user: 'mnyrskyk@gmail.com',  // Your email address
+    pass: 'gtzdmzmuktchpcpb'      // Your email password
+  }
+});
+
 
 const serviceAccount = require('/Users/monirskaik/Desktop/ea-dental-36bd1-firebase-adminsdk-janpv-cc74a5db82.json');
 
@@ -39,8 +53,8 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   async function updateStockValue(id, quantity, choiceId) {
     quantity = quantity || 1
 
-    if( id == 100 ){
-      updateKitStockValue(id);
+    if( id == '100' ){
+      await updateKitStockValue(id);
       return;
     }
 
@@ -52,6 +66,10 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
       let updatedStock = [...choices]
       updatedStock[0][choiceId].inStock -= quantity
+
+      if(updatedStock[0][choiceId].inStock < 5){
+        sendStockEmail(item.name, updatedStock[0][choiceId].name, updatedStock[0][choiceId].inStock)
+      }
       
       let weight = updatedStock[0][choiceId].weight * 1000 //product weight in grams
 
@@ -80,12 +98,14 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     
     
     for(i = 0; i < kitIDs.length; i++){
-      const id = kitIDs[i].id
+      const id = (kitIDs[i].id).toString()
       const choiceId = kitIDs[i].choiceId
       const quantity = kitIDs[i].quantity
 
+      
       const itemRef = db.collection('products').doc(id)
-
+      console.log(itemRef)
+      
       // get choices arr value
       const item = await itemRef.get();
       const choices = item.data().choices
@@ -93,7 +113,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
       let updatedStock = [...choices]
       updatedStock[0][choiceId].inStock -= quantity
       
-      let weight = updatedStock[0][choiceId].weight * 1000 //product weight in grams
+      // let weight = updatedStock[0][choiceId].weight * 1000 
 
       try {
           const res = await itemRef.update({
@@ -101,7 +121,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
         });
         
         console.log('Document successfully updated!', res);
-        return weight;
+        // return weight;
 
       } catch (error) {
         console.error('Error updating document:', error);
@@ -131,6 +151,23 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   }
   
 
+  function sendStockEmail(prodName, prodChoice, stockValue){
+    let mailOptions = {
+        from: '"Sender Name" <mnyrskyk@gmail>',  // Sender address
+        to: 'info@ea-dental.com',                      // List of receivers
+        subject: `Low Stock Value !!`,                               // Subject line
+        text: `Low Stock Value For ${prodName + ' ' + prodChoice}, the current value is ${stockValue}` // Plain text body
+      };
+      
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);
+      });
+      
+}
+
 
 
   module.exports = {
@@ -139,5 +176,4 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     updateStocTicketValue
   };
 // module.exports = updateStocTicketValue
-  
   
