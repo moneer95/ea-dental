@@ -14,12 +14,13 @@ import CategoDetail, { loader as categoDetailLoader } from "./pages/Categories/C
 import Products, { loader as productsLoader } from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import NotFound from "./pages/NotFound"
-import Login, { loader as loginLoader, action as loginAction } from "./pages/Login"
+import Login from "./pages/Login"
 import { MEVenue } from "./pages/MEVenue"
 import { loader as mEVenueLoader } from './pages/MEVenue';
 import Layout from "./components/Layout"
 import { CheckoutForm, Return } from "./pages/Stripe"
 import { Recruiment } from "./pages/Recruiment"
+import { Contact } from './pages/Contact';
 import Error from "./components/Error"
 
 
@@ -33,8 +34,6 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route
       path="login"
       element={<Login />}
-      loader={loginLoader}
-      action={loginAction}
     />
     <Route
       path="categories"
@@ -79,6 +78,12 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route
       path='recruiment'
       element={<Recruiment />}
+      errorElement={<Error />}
+    />
+
+    <Route
+      path='contact'
+      element={<Contact />}
       errorElement={<Error />}
     />
 

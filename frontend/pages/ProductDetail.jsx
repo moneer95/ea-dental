@@ -86,7 +86,7 @@ const ProductDetail = () => {
                 <button disabled={isdisapled} style={{cursor: isdisapled ? 'not-allowed' : 'pointer'}} className='add-cart-product-button' onClick={() => addToCart(props)}>{isdisapled ? (stockQuan ? <p>no enough stock</p> : <p>out of stock</p> ): 'add to cart'}</button>
                 
             </div>
-            <div className='product-detail-description fs-4 ls-5'>
+            <div className='product-detail-description fs-7 ls-5'>
                 <div dangerouslySetInnerHTML={{ __html: location.state.props.descrip }}/>
             </div>
         </div>

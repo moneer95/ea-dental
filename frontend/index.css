@@ -563,7 +563,6 @@ header .login-link {
     text-decoration-color: #ed6d3d;
     font-family: Lora;
     font-style: italic;
-
 }
 
 .subtext {
@@ -2860,9 +2859,8 @@ i[class*='van-type-'] {
 }
 
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-top: 1px solid gray;
+    padding-top: 2rem;
     padding-inline: 27px;
 }
 

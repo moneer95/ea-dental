@@ -15,6 +15,10 @@ export default function Header() {
         padding: 'var(--spacing-md, 8px) var(--spacing-lg, 12px)',
     }
 
+    const cartActive = {
+        color: '#F36611'
+    }
+
     const [isToggled, setIsToggled] = useState(true);
 
     // Function to handle the toggle action
@@ -94,16 +98,6 @@ export default function Header() {
                 </li>
                 <li>
                     <NavLink 
-                        to="/faq"
-                        className="nav-link"
-                        onClick={handleToggle}
-                        style={({ isActive }) => isActive ? activeStyles : null}
-                    >
-                        FAQ
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink 
                         to="/contact"
                         className="nav-link"
                         onClick={handleToggle}
@@ -127,7 +121,7 @@ export default function Header() {
                     <NavLink 
                         to="cart"
                         className="dark-btn"
-                        style={({isActive}) => isActive ? activeStyles : null}
+                        style={({isActive}) => isActive ? cartActive : null}
                     >
                     <img src={cartIcon} alt="cart icon" />
                         Cart
@@ -143,7 +137,7 @@ export default function Header() {
             <NavLink 
                 to="cart"
                 className="dark-btn"
-                style={({isActive}) => isActive ? activeStyles : null}
+                style={({isActive}) => isActive ? cartActive : null}
             >
                 <img src={cartIcon} alt="cart icon" />
                 Cart

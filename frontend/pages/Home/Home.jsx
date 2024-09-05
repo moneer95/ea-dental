@@ -222,7 +222,7 @@ const Testimonials = () => {
       <div className="testimonials-text">
         <h1>testimonials with we work<span className="dot">.</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid.</p>
-        <a href="#" className="view-all">
+        <a href="https://www.google.com/maps/place/EA+Dental+Academy/@51.5943662,-0.3860595,17z/data=!3m1!5s0x48766cabc297c70d:0x52d06ae18b14c9b5!4m14!1m5!8m4!1e1!2s103763502108805699057!3m1!1e1!3m7!1s0x48760fd58dfaaaab:0x50b5be7373bee3ec!8m2!3d51.5943662!4d-0.3834846!9m1!1b1!16s%2Fg%2F11hcym52mm?entry=ttu&g_ep=EgoyMDI0MDkwMi4xIKXMDSoASAFQAw%3D%3D" target="blank" className="view-all">
           View all <span className="arrow">→</span>
         </a>
       </div>
