@@ -40,7 +40,7 @@ export default function Products(){
                             images = {product.image_path}
                             price = {product.choices[0][0].price}
                             descrip = {product.description}
-                            category = {product.catego} //to pass to cart through card
+                            category = {product.category} //to pass to cart through card
                             choices = {product.choices}
                             // choiceId = {product.choiceId}
                         />

@@ -1427,18 +1427,23 @@ p {
 
 }
 
-.cart-choices0{
+.cart-choices0 {
     grid-area: choices0;
+    padding: 1rem;
+    margin-block: .5rem;
     width: 95%;
     justify-self: end;
     border-radius: 5px; 
 }
 
 
-.cart-choices1{
+.cart-choices1 {
     grid-area: choices1;
+    padding: 1rem;
+    margin-block: .5rem;
     width: 95%;
-    justify-self: center; 
+    border-radius: 5px; 
+    justify-self: end;
 }
 
 .cart-choices0 > option{
@@ -1452,6 +1457,23 @@ p {
 .cart-item-price{
     grid-area: price;
     justify-self: end; /* Aligns to the left */
+}
+
+@media (max-width: 40em) {
+
+    .cart-container {
+        margin: 1rem .5rem;
+    }
+
+    .cart-item {
+        grid-template-areas: 
+        ' title delete '
+        ' catego .'
+        ' choices0 .'
+        ' choices1 .'
+        ' price .';
+    }
+
 }
 
 /* ------------------------ checkout ------------------------- */
@@ -1584,15 +1606,20 @@ p {
 
 
 
-@media (min-width: 39.111em) and (max-width: 69.999em) {
-    .products-list{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+@media (min-width: 30.111em) and (max-width: 69.999em) {
+    .products-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, .5fr)); /* Ensure cards take up equal space */
     }
 
     .products-hero-div h2{
         visibility: visible;
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 30.111em) {
+    .products-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, .5fr)); /* Ensure cards take up equal space */
     }
 }
 
