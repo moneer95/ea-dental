@@ -1,20 +1,7 @@
 
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
-const nodemailer = require('nodemailer');
-
-
-// Create a transporter object using the default SMTP transport
-let transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',  // Replace with your mail server host
-  port: 587,                // Common port for SMTP
-  secure: false,            // True for 465, false for other ports
-  auth: {
-    user: 'mnyrskyk@gmail.com',  // Your email address
-    pass: 'gtzdmzmuktchpcpb'      // Your email password
-  }
-});
-
+const { getFirestore } = require('firebase-admin/firestore');
+const { transporter } = require('./utils')
 
 const serviceAccount = require('/Users/monirskaik/Desktop/ea-dental-36bd1-firebase-adminsdk-janpv-cc74a5db82.json');
 

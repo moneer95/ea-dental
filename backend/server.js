@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
+const { transporter } = require('./utils')
+
     
 const { createPurchaseOrder, createCourseOrder, createTicketOrder, createBooking } = require('./interactions-frappe')
 
@@ -27,7 +29,7 @@ let courses = []
 let bookings = []
 let weight = 0
 
-app.post('/create-checkout-session', async (req, res) => {
+app.post(`/create-checkout-session`, async (req, res) => {
   const {choices, choices1, cartItems} = req.body; // This will contain the array of objects
 
   console.log(choices)
@@ -159,7 +161,13 @@ app.get('/session-status', async (req, res) => {
 
       createCourseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), courses)
       
-      enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses)
+      try{
+        enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', courses)
+      }
+      catch(e){
+        sendEnrollIsuueEmail(session.customer_details.email, courses)
+      }
+    
     }
     courses = []
       
@@ -183,7 +191,12 @@ app.get('/session-status', async (req, res) => {
       createTicketOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, tickets)
       
       // enroll in the course on moodle
-      enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', tickets)
+      try{
+        enrollUser(session.customer_details.email, session.customer_details.name.split(' ')[0], session.customer_details.name.split(' ')[1] || '-', tickets)
+      }
+      catch(e){
+        sendEnrollIsuueEmail(session.customer_details.email, tickets)
+      }
       
       //use tickets array
       for(i = 0; i < tickets.length; i++){
@@ -215,6 +228,26 @@ app.get('/session-status', async (req, res) => {
     payment_status: session.payment_status
   });
 });
+
+
+
+
+function sendEnrollIsuueEmail(userEmail, array){
+  let mailOptions = {
+      from: '"Sender Name" <mnyrskyk@gmail>',  // Sender address
+      to: 'info@ea-dental.com',                      // List of receivers
+      subject: `Student Enrollment Issue`,                               // Subject line
+      text: `Stuednt With this Email ${userEmail}, hasn't successfully enrolled in his course ${JSON.parse(array)}` // Plain text body
+    };
+    
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        return console.log(error);
+      }
+      console.log('Message sent: %s', info.messageId);
+    });
+    
+}
 
 
 app.listen(4242, () => console.log('Running on port 4242'));
