@@ -81,6 +81,10 @@ async function enrollUser(userEmail, fName, lName, courses){
     curlCommand = `curl -g "https://moodle.ea-dental.com/moodle/webservice/rest/server.php?wstoken=${process.env.ENROLL_USER_TOKEN}&wsfunction=enrol_manual_enrol_users&moodlewsrestformat=json&enrolments[0][roleid]=5&`
 
     for(let i=0; i<courses.length; i++){
+      console.log(courses[i].courseName)
+      console.log(coursesInfo[courses[i].courseName])
+      console.log(coursesInfo[(courses[i].courseName).toString()])
+      console.log(coursesInfo["Mock Exams Only"])
       let courseIDs = coursesInfo[courses[i].courseName]
       console.log(courseIDs)
       for(let j=0; j<courseIDs.length; j++){
