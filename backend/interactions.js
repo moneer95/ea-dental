@@ -13,7 +13,6 @@ function getUserID(userEmail){
             }
             try {
                 const json = JSON.parse(stdout);
-                console.log(json)
                 
                 const users = json.users;
                 console.log(users)
@@ -38,9 +37,7 @@ async function createUser(userEmail, fName, lName){ //userEmail is the email we 
     const password = generatePassword(fName + ' ' + lName)
 
     const user = await getUserID(userEmail)
-    console.log(user + 'beforeeeeee')
     if(user){
-      console.log(user + 'afterrrrrrrrrř')        
       return user;
     }
 
@@ -80,9 +77,10 @@ async function enrollUser(userEmail, fName, lName, courses){
     
     curlCommand = `curl -g "https://moodle.ea-dental.com/moodle/webservice/rest/server.php?wstoken=${process.env.ENROLL_USER_TOKEN}&wsfunction=enrol_manual_enrol_users&moodlewsrestformat=json&enrolments[0][roleid]=5&`
 
-    for(let i=0; i<courses.length; i++){
-      let courseIDs = coursesInfo[(courses[i].courseName).toString()]
-      console.log(courseIDs)
+    for(let i=0; i < courses.length; i++){
+
+      let courseIDs = coursesInfo[courses[i].courseName] || []
+
       for(let j=0; j<courseIDs.length; j++){
         curlCommand += `enrolments[${j}][roleid]=5&enrolments[${j}][userid]=${userID}&enrolments[${j}][courseid]=${courseIDs[j]}&`
       }   
@@ -110,7 +108,7 @@ const axios = require('axios');
 const { cursorTo } = require('readline');
 
 const createOrder = async (email, name, phone, country, city, line1, line2, postal_code, weight) => {
-  console.log( weight + 'momomomomomomomomomo')
+  
   try {
     const response = await axios.post('https://api.parcel.royalmail.com/api/v1/Orders', {
       items: [

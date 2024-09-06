@@ -60,7 +60,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         
         // add online courses to courses arr
         if(!choices[idx].inStock && !item.dateTime){
-          courses.push({'courseName': item.optionName, 'choiceName': (courseOrTicketChoice + courseSecondChoice) })
+          courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
         }
         
         // Call addBookingTime here
