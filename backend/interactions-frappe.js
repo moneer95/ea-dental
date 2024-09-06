@@ -72,7 +72,7 @@ function createTicketOrder(email, full_name, phone, tickets){
         order_date: new Date().toISOString().split('T')[0],
         tickets: tickets.map( ticket => {
             return {
-                ticket_name: ticket.ticketName + item.choiceName
+                ticket_name: ticket.ticketName + ticket.choiceName
             }
         })
     };
