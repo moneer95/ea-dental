@@ -1,7 +1,7 @@
 function getShippingPrice(weight) {
 
     if (weight >= 1 && weight <= 100) {
-        return [399, 319, 735];
+        return [200, 150, 600];
     }
 
     if (weight > 100 && weight <= 500) {

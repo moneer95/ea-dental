@@ -231,7 +231,7 @@ const Testimonials = () => {
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
-              <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+              <img src={testimonial.image} alt="best dental courses in the UK" className="testimonial-image" />
               <div className="testimonial-content">
                 <h3>{testimonial.name}</h3>
                 <p>{testimonial.text}</p>

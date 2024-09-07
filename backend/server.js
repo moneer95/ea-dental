@@ -3,6 +3,8 @@ const stripe = require('stripe')(process.env.STRIPE_SK);
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config();
+
 
 const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')

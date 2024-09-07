@@ -1,9 +1,9 @@
 
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
 const { transporter } = require('./utils')
 
-const serviceAccount = require('/Users/monirskaik/Desktop/ea-dental-36bd1-firebase-adminsdk-janpv-cc74a5db82.json');
+const serviceAccount = require('./ea-dental-36bd1-firebase-adminsdk-janpv-cc74a5db82.json');
 
 initializeApp({
   credential: cert(serviceAccount)
