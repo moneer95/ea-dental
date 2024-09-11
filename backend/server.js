@@ -46,7 +46,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         // add product to products arr
         if(item.quantity){
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
-          weight += (choices[idx].weight * 1000) * item.quantity
+          weight += (choices[idx].weight) * item.quantity // it'll converted to grams in firebaseconfig.js file
         }
                 
         // add option name for courses and tickets
@@ -219,7 +219,7 @@ app.get('/session-status', async (req, res) => {
       }
     }
 
-    console.log(session.customer_details)
+    // console.log(session.customer_details)
 
 
   }

@@ -19,7 +19,7 @@ export default function Footer() {
         <footer className="footer-container">
           <div className="footer-content">
             <div className="footer-left">
-              <img src={logoText} alt="EA Dental Logo, best dental practice in the UK" className="footer-logo" />
+              <img src={logoText} alt="EA Dental Logo, best dental courses in the UK" className="footer-logo" />
               <p><i className="fas fa-map-marker-alt"></i> EA Dental, P.O. HA5 3HR, Pinner, England</p>
               <p><i className="fas fa-envelope"></i> Email: info@ea-dental.com</p>
               <p><i className="fas fa-phone-alt"></i> Phone: +44 (0)744 793 1179</p>
@@ -45,9 +45,9 @@ export default function Footer() {
           <div className="footer-bottom">
             <p>Copyright © EA Dental, All rights reserved.</p>
             <div className="social-icons">
-              <a href="https://www.facebook.com/EA.Dental.Courses/" target="_blank"><i className="fab fa-twitter"><img src={x} alt="" /></i></a>
-              <a href="https://www.instagram.com/ea.dental/" target="_blank"><i className="fab fa-linkedin-in"><img src={instagram} alt="" /></i></a>
-              <a href="https://x.com/EaDental" target="_blank"><i className="fab fa-facebook-f"><img src={facebook} alt='' /></i></a>
+              <a href="https://x.com/EaDental" target="_blank"><i className="fab fa-twitter"><img src={x} alt="ea-dental twitter" /></i></a>
+              <a href="https://www.instagram.com/ea.dental/" target="_blank"><i className="fab fa-linkedin-in"><img src={instagram} alt="ea-dental instagram" /></i></a>
+              <a href="https://www.facebook.com/EA.Dental.Courses/" target="_blank"><i className="fab fa-facebook-f"><img src={facebook} alt='ea-dental facebook' /></i></a>
             </div>
           </div>
         </footer>

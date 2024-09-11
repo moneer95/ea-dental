@@ -15,6 +15,7 @@ export const CheckoutForm = () => {
 
   const { cartItems } = React.useContext(CartContext);
   
+  
 
   const fetchClientSecret = useCallback(() => {
     // Create a Checkout Session

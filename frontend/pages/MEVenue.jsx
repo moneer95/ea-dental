@@ -24,14 +24,13 @@ import { getPrevBooking } from '../api'
 
 
 export async function loader(){
-    const MEBookings = await getPrevBooking('MEBookings');
-    const orldBookings = await getPrevBooking('orldBookings');
-    
-    return { MEBookings, orldBookings };
+    return defer({ MEBookings: getPrevBooking('MEBookings'), orldBookings: getPrevBooking('orldBookings') });
 }
 
 
 export const MEVenue = () => {
+
+    const dataPromise = useLoaderData()
 
     const [startDate, setStartDate] = React.useState(new Date());
     const [selectedDate, setSelectedDate] = React.useState(format(startDate, 'yyyy-MM-dd'))
@@ -70,57 +69,16 @@ export const MEVenue = () => {
     function handleChoiceChange(e){
         setChoiceId(e.target.value);
     }
-
-    //get from fire store
-    const prevBookings = useLoaderData()
-    const selectedPrevBookings = prevBookings[selectedRental.collectionName]
-
-
+    
     const navigate = useNavigate()
-
-
-
-    return (
-        <div className='venue-div'>
-            <div className='hero-div fs-4'>
-                <img src={hero} alt="hero image" width='100%' />
-                <div className='hero-img-text fs-4 mi-1'>
-                    <h2 >Venue Hire</h2>
-                </div>
-            </div>
-            <div className='mi-1 text-center'>
-                <h3 className='fs-5 ls-5'>
-                    Rent our manikin facility for ORE2- LDS2 dental manikin practice.<br />
-                </h3>
-                <div className='light-info-div fs-6 flex'>
-                    <img src={locationSvg} alt="location" /><h4>  <span className='light-text'>Venue Location:</span>  Westbury House, 23-25 Bridge St, Pinner, Middlesex, HA5 3HRx</h4>
-                </div>  
-                <h4 className='fs-4 navy'>We have the equipment and materials recommended by The Consortium published by the GDC.</h4>
-                <div className='rental-cards-div flex'>
-                    <RentalCard 
-                        image={room1}
-                        title='Mankin Facility Rental for ORE2 LDS2'
-                        price='25£'
-                        onClick={() => handleClick({name: 'Mankin Facility Rental for ORE2 LDS2', collectionName: 'orldBookings'})}
-                        selected={selectedRental.collectionName === 'orldBookings'}
-                    />
-                    <RentalCard 
-                        image={room2}
-                        title='Room Rental for OSCE & ME Training'
-                        price='25£'
-                        onClick={() => handleClick({name: 'Room Rental for OSCE & ME Training', collectionName: 'MEBookings'})}
-                        selected={selectedRental.collectionName === 'MEBookings'}
-                    />
-                </div>
-                
-                <FeaturesSection />
-
-            </div>
-
-            <div className='booking-div'>
-                <h3 className='fs-4'>Choose Your Date & Time to Start!</h3>
-
-
+    
+    let selectedPrevBookings = []
+    function loadData(prevBookings){
+        //get from fire store
+        selectedPrevBookings = prevBookings[selectedRental.collectionName]
+    
+        return <div className='booking-div'>
+            <h3 className='fs-4'>Choose Your Date & Time to Start!</h3>
                 <div className='picker-duration-div fs-5'>
                     <div className='date'>
                         <label >Date & Time:</label>
@@ -151,17 +109,67 @@ export const MEVenue = () => {
                         </div>
                     }   
 
-
                     <div className='light-info-div fs-7 flex'>
                         <img src={info} alt="location" /><p className=' fs-7'>  Price doesn’t include consumables
                         Exam’s dental supplies and equipment can be purchased from our course venue, refer to ORE-LDS dental supplies store for more information regarding pricing. </p>
                     </div> 
 
                 </div>
+        </div>
+    }
 
+    return (
+        <div className='venue-div'>
+            <div className='hero-div fs-4'>
+                <img src={hero} alt="hero image" width='100%' />
+                <div className='hero-img-text fs-4 mi-1'>
+                    <h2 >Venue Hire</h2>
+                </div>
+            </div>
+            <div className='mi-1 text-center'>
+                <h3 className='fs-5 ls-5'>
+                    Rent our manikin facility for ORE2- LDS2 dental manikin practice.<br />
+                </h3>
+                <div className='light-info-div fs-6 flex'>
+                    <img src={locationSvg} alt="location" /><h4>  <span className='light-text'>Venue Location:</span>  Westbury House, 23-25 Bridge St, Pinner, Middlesex, HA5 3HRx</h4>
+                </div>  
+                <h4 className='fs-4 navy'>We have the equipment and materials recommended by The Consortium published by the GDC.</h4>
+                <div className='rental-cards-div flex'>
+                    <RentalCard 
+                        image={room1}
+                        title='Mankin Facility Rental for ORE2 LDS2'
+                        price='25£ / hour'
+                        onClick={() => handleClick({name: 'Mankin Facility Rental for ORE2 LDS2', collectionName: 'orldBookings'})}
+                        selected={selectedRental.collectionName === 'orldBookings'}
+                    />
+                    <RentalCard 
+                        image={room2}
+                        title='Room Rental for OSCE & ME Training'
+                        price='25£ / hour'
+                        onClick={() => handleClick({name: 'Room Rental for OSCE & ME Training', collectionName: 'MEBookings'})}
+                        selected={selectedRental.collectionName === 'MEBookings'}
+                    />
+                </div>
+                
+                <FeaturesSection />
 
             </div>
 
+            <React.Suspense fallback={<h2 style={{height: '1000px'}}>Loading Booking Dates...</h2>}>
+                <Await resolve={Promise.all([dataPromise.MEBookings, dataPromise.orldBookings])}>
+                {([meBookingsData, orldBookingsData]) => { 
+                    // Combine both resolved data into one object
+                    const combinedBookings = {
+                        MEBookings: meBookingsData,
+                        orldBookings: orldBookingsData
+                    };
+
+                    // Call loadData once with combined data
+                    return loadData(combinedBookings);
+                }}
+
+                </Await>
+            </React.Suspense>
 
         </div>
     )
@@ -276,7 +284,7 @@ export const MEVenue = () => {
             <img src={image} alt={title} className="rental-card-image" />
             <div className="rental-card-content">
                 <h3 className="rental-card-title">{title}</h3>
-                <p className="rental-card-price">£{price}</p>
+                <p className="rental-card-price">{price}</p>
                 <button 
                         className={`rental-card-button ${selected ? 'selected' : ''}`}
                         onClick={onClick}

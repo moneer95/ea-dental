@@ -25,7 +25,7 @@ function Cart() {
   }
 
   function deleteItem(iIndex){
-    console.log(iIndex)
+    // console.log(iIndex)
     setCartItems(prevItems => {
       let updatedItems = [...prevItems]
       updatedItems.splice(iIndex, 1)
@@ -73,7 +73,7 @@ function Cart() {
               } )
 
               }
-              {console.log(item)}
+              {/* {console.log(item)} */}
             <h4 className='cart-item-price'> Quantity: {quantity} <span className='fw-5'> | </span> Price: £{price}</h4>
           </div>
         })

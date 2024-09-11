@@ -1,12 +1,9 @@
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, Link } from 'react-router-dom'
 import CartContext from "../contexts/cartContext";
 import toast, { Toaster } from 'react-hot-toast';
 import ImageSlider from '../components/ImageSlider';
 import {getStockQuan} from '../api'
-
-
-
 
 
 const ProductDetail = () => {
@@ -42,8 +39,15 @@ const ProductDetail = () => {
     }
     return (
         <div className='product-detail'>
+            <Link
+                    to={`..#${props.category}`}
+                    relative="path"
+                    className="back-button"
+                >
+                    &larr; <span>Back to all categories</span>
+            </Link>
             <div className='product-detail-img-div'>
-       
+
             <ImageSlider >
             {props.images.map((image, index) => {
                 return <img key={index} src={image} alt={index} />;

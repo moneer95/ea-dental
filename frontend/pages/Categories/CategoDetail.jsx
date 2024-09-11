@@ -92,7 +92,9 @@ export default function CategoDetail() {
                     to={`..?type=${type}`}
                     relative="path"
                     className="back-button"
-                >&larr; <span>☰Back to all categories</span></Link>
+                >
+                    &larr; <span>Back to all categories</span>
+                </Link>
     
                 {itemsList}
                 <div style={{margin: '3rem'}} dangerouslySetInnerHTML={{ __html: colloecData[0]?.details }} />              
@@ -134,7 +136,7 @@ export default function CategoDetail() {
                                 className="add-cart-button fs-6"
                                 disabled={option?.choices?.length ? false : true} //disable if there is no choices
                             > 
-                                <i>Add To Cart + <FaShoppingCart/></i> 
+                               <i>Add To Cart {option?.choices?.length ? option?.choices[0][0]?.price + '£' : ''} <FaShoppingCart/></i> 
                             </button> 
 
                         </div>
