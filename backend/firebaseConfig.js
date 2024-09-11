@@ -59,7 +59,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
       }
       
       let weight = updatedStock[0][choiceId].weight * 1000 //product weight in grams
-
+      console.log(weight)
     try {
       const res = await itemRef.update({
         choices: updatedStock
