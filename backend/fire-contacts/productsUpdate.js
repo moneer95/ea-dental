@@ -560,7 +560,7 @@ const arr = [
                 {
                     "name": "default",
                     "price": 8.40 ,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [2, 0.1, 2],
                     "inStock": 100                   
                 }
@@ -1433,7 +1433,7 @@ const arr = [
                 {
                     "name": "Lower Cast",
                     "price": 28.80,
-                    "weight": "",
+                    "weight": 0.008,
                     "dimensions": [],
                     "inStock": 100                    
                 }
@@ -1920,7 +1920,7 @@ const arr = [
                 {
                     "name": "Single Bur",
                     "price": 9.60 ,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -1947,7 +1947,7 @@ const arr = [
                 {
                     "name": "Single Bur",
                     "price": 9.60 ,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -1974,7 +1974,7 @@ const arr = [
                 {
                     "name": "Single Bur",
                     "price": 9.60 ,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -2001,7 +2001,7 @@ const arr = [
                 {
                     "name": "Single Bur",
                     "price": 9.60 ,
-                    "weight": "",
+                    "weight": 0.001,
                     "dimensions": [],
                     "inStock": 100                   
                 },
@@ -2179,7 +2179,7 @@ const arr = [
                 {
                     "name": "4 Hole",
                     "price": 18.00,
-                    "weight": 0.5,
+                    "weight": 0.05,
                     "dimensions": [],
                     "inStock": 100                    
                 },
@@ -2187,7 +2187,7 @@ const arr = [
                 {
                     "name": "2 Hole",
                     "price": 18.00,
-                    "weight": "",
+                    "weight": 0.05,
                     "dimensions": [],
                     "inStock": 100   
                 }

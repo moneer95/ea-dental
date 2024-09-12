@@ -46,6 +46,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         // add product to products arr
         if(item.quantity){
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
+          console.log(weight)
           weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
           console.log(weight)
         }
