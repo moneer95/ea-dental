@@ -157,6 +157,11 @@ app.get('/session-status', async (req, res) => {
   
   if (session.payment_status === 'paid') {
 
+    // Retrieve more detailed payment information using the payment intent ID
+    const paymentIntent = await stripe.paymentIntents.retrieve(session.payment_intent);
+    console.log('Payment Intent Details:', paymentIntent);
+    
+
     //use courses array
     if(courses.length){
       console.log(1111111)
