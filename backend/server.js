@@ -157,7 +157,7 @@ app.get('/session-status', async (req, res) => {
   
   if (session.payment_status === 'paid') {
 
-    console.log(session.total_details.amount_shipping)
+    console.log(session.total_details.amount_shipping + "lololololo")
     
 
     //use courses array
