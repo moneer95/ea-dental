@@ -44,7 +44,7 @@ const ProductDetail = () => {
                     relative="path"
                     className="back-button"
                 >
-                    &larr; <span>Back to all categories</span>
+                    &larr; <span>Back to products</span>
             </Link>
             <div className='product-detail-img-div'>
 
