@@ -17,7 +17,7 @@ function createPurchaseOrder(email, full_name, phone, address, paidShipping, ite
         full_name: full_name,
         phone: phone,
         address: address,
-        shipping: paidShipping,
+        shipping: paidShipping / 100,
         items: items.map( item => {
             return {
                 item_name: item.optionName,
