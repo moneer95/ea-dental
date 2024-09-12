@@ -46,9 +46,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         // add product to products arr
         if(item.quantity){
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
-          console.log(weight)
           weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
-          console.log(weight)
         }
                 
         // add option name for courses and tickets
@@ -186,6 +184,7 @@ app.get('/session-status', async (req, res) => {
       }
 
       createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight)
+      weight = 0
     }
     products = [] // delete the array after updating stock
 
