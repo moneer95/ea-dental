@@ -155,10 +155,7 @@ app.get('/session-status', async (req, res) => {
   console.log(session.status)
 
   
-  if (session.payment_status === 'paid') {
-
-    console.log(session.total_details.amount_shipping + "lololololo")
-    
+  if (session.payment_status === 'paid') {    
 
     //use courses array
     if(courses.length){
@@ -179,7 +176,7 @@ app.get('/session-status', async (req, res) => {
     if(products.length){
       console.log(222222)
       //create the order on frappe
-      createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), products)
+      createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), session.total_details.amount_shipping, products)
       
       //use products array
       for(i = 0; i < products.length; i++){
