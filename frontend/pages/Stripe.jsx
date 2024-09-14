@@ -14,6 +14,8 @@ const stripePromise = loadStripe("pk_test_51PVRD2K1xhAcvKUPeT1r8QlJpG8hrUXsClTWt
 export const CheckoutForm = () => {
 
   const { cartItems } = React.useContext(CartContext);
+  const [loading, setLoading] = useState(true);
+  const [clientSecret, setClientSecret] = useState(null);
   
   
 
@@ -31,10 +33,39 @@ export const CheckoutForm = () => {
       }),
     })
       .then((res) => res.json())
-      .then((data) => data.clientSecret);
+      .then((data) => {
+        setClientSecret(data.clientSecret);
+        setLoading(false);  // Cart items and client secret have been loaded
+      })
+      .catch((error) => {
+        console.error("Error fetching client secret:", error);
+        setLoading(false);  // Set loading to false even if there’s an error
+      })
   }, [cartItems]);
 
-  const options = {fetchClientSecret};
+  
+  // useEffect to ensure cart items are loaded before proceeding with checkout
+  useEffect(() => {
+    if (cartItems && cartItems.length > 0) {
+      fetchClientSecret();
+    } else {
+      setLoading(false);  // No cart items found
+    }
+  }, [cartItems, fetchClientSecret]);
+
+    // Conditional rendering based on loading state
+    if (loading) {
+      return <div>Loading...</div>;
+    }
+  
+    if (!clientSecret) {
+      return <div>Loading Data...</div>;
+    }
+  
+    const options = {
+      clientSecret,
+    };
+  
 
   return (
     <div id="checkout">
