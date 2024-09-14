@@ -32,7 +32,7 @@ export const CheckoutForm = () => {
     })
       .then((res) => res.json())
       .then((data) => data.clientSecret);
-  }, []);
+  }, [cartItems]);
 
   const options = {fetchClientSecret};
 

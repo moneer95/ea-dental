@@ -2,7 +2,6 @@ import React from 'react';
 import CartContext from '../contexts/cartContext';
 
 import { FaTrash } from 'react-icons/fa'; // Font Awesome
-import { MdDelete } from 'react-icons/md'; // Material Design
 import { useNavigate } from 'react-router-dom';
 
 
