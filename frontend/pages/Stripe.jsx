@@ -4,7 +4,7 @@ import { EmbeddedCheckoutProvider, EmbeddedCheckout } from '@stripe/react-stripe
 import { Navigate } from "react-router-dom";
 import CartContext from '../contexts/cartContext';
 
-const YOUR_DOMAIN = 'https://v2.ea-dental.com/'
+const YOUR_DOMAIN = 'https://v1.ea-dental.com/'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
