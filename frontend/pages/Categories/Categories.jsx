@@ -7,7 +7,7 @@ import {
     defer,
     Await
 } from "react-router-dom"
-import { courses, therapists, advanced } from './ctegoriesArr'
+import { courses, therapists, advanced } from './ctegoriesArr.jsx'
 import { AiOutlineUnorderedList } from "react-icons/ai"
 import hero from "../../assets/images/categories.jpg"
 

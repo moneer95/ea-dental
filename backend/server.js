@@ -23,7 +23,7 @@ app.use(bodyParser.json()); // Middleware to parse JSON bodies
 
 
 
-const YOUR_DOMAIN = 'https://v2.ea-dental.com';
+const YOUR_DOMAIN = 'https://v1.ea-dental.com';
 
 let products = []
 let tickets = []

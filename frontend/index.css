@@ -69,6 +69,11 @@ a{
     text-align: center;
 }
 
+.text-underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .flex{
     display: flex;
 }
@@ -203,6 +208,10 @@ a{
     padding: 0;
 }
 
+.padding-0 {
+    padding: 0;
+}
+
 /* ###################### header ###################### */
 
 header {
@@ -318,7 +327,7 @@ header .logo {
         width: 60%;
         padding: 20px;
         padding-bottom: 0;
-        z-index: 20000;
+        z-index: 1000;
     }    
 
     header{
@@ -860,6 +869,7 @@ p {
     font-size: 1.2rem;
     color: #777;
     margin-bottom: 40px;
+    text-align: left;
 }
 
 .info-card {
@@ -901,10 +911,12 @@ p {
 
 .testimonials-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 50px;
+    padding: 20px;
     background-color: #F0F9FF;
+    align-items: center;
+    justify-content: center;
   }
   
   .testimonials-text {
@@ -926,7 +938,7 @@ p {
   
   .testimonials-text p {
     font-size: 1rem;
-    color: #555;
+    color: #4F4F4F;
     margin-bottom: 20px;
   }
   
@@ -943,9 +955,9 @@ p {
   }
   
   .testimonial-slider {
-    max-width: 60vw;
-    /* width: 100ch; */
-    height: 35ch;
+    max-width: 100%;
+    height: 400px;
+    overflow: scroll;
   }
 
   @media (min-width: 45em) and (max-width: 80em) {
@@ -960,12 +972,9 @@ p {
         margin-inline: 0px;
     }
     
-    .testimonials-container{
-        grid-template-columns: 1fr;
-    }
 
     .testimonial-slider {
-        max-width: 85vw;
+        max-width: 100%;
         height: fit-content;
       }
 
@@ -1017,15 +1026,11 @@ p {
     .products-grid{
         gap: 15px
     }
-    
-    .testimonials-container{
-        grid-template-columns: 1fr;
+    .ceo-image {
+        margin-right: 20px;
     }
 
-    .testimonial-slider {
-        max-width: 80vw;
-        height: auto;
-      }
+
 
     .testimonial-card{
         flex-direction: column;
@@ -1116,7 +1121,7 @@ p {
 
   /* FAQs */
   .faq-container {
-    max-width: 800px;
+    max-width: 85%;
     margin: 50px auto;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -2156,7 +2161,6 @@ p {
   .rental-card-title {
     font-size: 1.25rem;
     color: #333;
-    margin: 10px 0;
   }
   
   .rental-card-price {
@@ -2359,6 +2363,134 @@ p {
 
 }
 
+
+/* ^^^^^^^^^^^^^^^^^^ TEAM ^^^^^^^^^^^^^^^^^^^ */
+
+
+.team-container {
+    margin-top: 1rem;
+    padding: 1rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    row-gap: 2rem;
+}
+
+.team-card {
+    padding: 1px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 230px;
+    cursor: pointer;
+  }
+  
+  .team-card-image {
+    width: 100%;
+    border-radius: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    max-height: 240px;
+    /* width: auto; */
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  .team-card-content {
+    padding: 10px;
+  }
+  
+  .team-card-title {
+    font-size: 1.25rem;
+    color: #333;
+  }
+
+  .team-card-caption {
+    border: none;
+    padding: 0;
+  }
+
+  .team-detail-card-wrapper {
+    width: 100%;
+    height: 105%;
+    background-color: #dadadab0;
+    position: fixed;
+    margin: -8.5rem -5rem;
+    z-index: 30000;
+
+  }
+
+  @supports (backdrop-filter: blur(2.5rem)) {
+    .team-detail-card-wrapper {
+        background: hsl( var(white) / 0.05);
+        backdrop-filter: blur(.5rem);
+    }
+}
+
+  .team-detail-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;  
+    max-height: 90%;
+    overflow: scroll;
+  }
+
+  .team-detail-card-image {
+    max-width: 200px;
+    border-radius: 1.25rem;
+  }
+
+  .team-detail-card-content {
+    color: var(--Gray-modern-800, #202939);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;     
+  }
+
+  .team-detail-card-caption {
+    border: none;
+    padding: 0;
+  }
+
+  .team-detail-card-content > ul {
+    text-align: left; 
+  }
+
+  .close {
+    /* display: block; */
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+  }
+
+
+  @media (min-width: 35rem) {
+    .team-container {
+        margin-top: 1rem;
+        padding: 1rem 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 3rem;
+    }
+
+    .team-card-image {
+        width: 100%;
+        border-radius: 10px;
+        border-bottom: 1px solid #e0e0e0;
+        max-height: 240px;
+        width: auto;
+        object-fit: cover;
+        overflow: hidden;
+      }
+  }
 
 
 /* ----------------- footer ------------------ */

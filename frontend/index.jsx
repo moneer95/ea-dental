@@ -21,6 +21,7 @@ import Layout from "./components/Layout"
 import { CheckoutForm, Return } from "./pages/Stripe"
 import { Recruiment } from "./pages/Recruiment"
 import { Contact } from './pages/Contact';
+import Team from './pages/Team';
 import Error from "./components/Error"
 
 
@@ -84,6 +85,12 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route
       path='contact'
       element={<Contact />}
+      errorElement={<Error />}
+    />
+
+    <Route
+      path='team'
+      element={<Team />}
       errorElement={<Error />}
     />
 

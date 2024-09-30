@@ -106,6 +106,16 @@ export default function Header() {
                         Contact
                     </NavLink>
                 </li>
+                <li>
+                <NavLink 
+                    to="/team"
+                    className="nav-link"
+                    onClick={handleToggle}
+                    style={({ isActive }) => isActive ? activeStyles : null}
+                >
+                    Team
+                </NavLink>
+                </li>
                 <li
                     className="mobile-login-cart-btns"
                     onClick={handleToggle}

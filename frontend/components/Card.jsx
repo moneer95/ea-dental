@@ -5,7 +5,6 @@ import { getImageUrl } from '../utils'
 const Card = (props) => {
 
 
-
   return (
     <div key={props.name}>
       <Link

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
+import GoogleReviewsComponent from "../../hooks/googleReviews";
+import FAQ from "../../components/FAQs";
 
 
 import hero from "../../assets/images/logo.png"
@@ -59,7 +61,9 @@ export default function Home() {
 
         <Testimonials />
 
-        <FAQ />
+        <FAQ 
+          faqs={faqs}
+        />
 
     </div>
     )
@@ -220,15 +224,16 @@ const Testimonials = () => {
   return (
     <div className="testimonials-container">
       <div className="testimonials-text">
-        <h1>testimonials with we work<span className="dot">.</span></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid.</p>
+        <h1>Testimonials<span className="dot">.</span></h1>
+        <p>At EA Dental, we're proud of our high candidate success rate. Our goal is to ensure every candidate leaves confident and exam-ready. Over the years, we've received outstanding feedback from those who chose EA Dental for their exam preparation. But don’t just take our word for it—here's what our candidates have to say.</p>
         <a href="https://www.google.com/maps/place/EA+Dental+Academy/@51.5943662,-0.3860595,17z/data=!3m1!5s0x48766cabc297c70d:0x52d06ae18b14c9b5!4m14!1m5!8m4!1e1!2s103763502108805699057!3m1!1e1!3m7!1s0x48760fd58dfaaaab:0x50b5be7373bee3ec!8m2!3d51.5943662!4d-0.3834846!9m1!1b1!16s%2Fg%2F11hcym52mm?entry=ttu&g_ep=EgoyMDI0MDkwMi4xIKXMDSoASAFQAw%3D%3D" target="blank" className="view-all">
-          View all <span className="arrow">→</span>
+          View All Reviews
         </a>
       </div>
 
       <div className="testimonial-slider">
-        <Slider {...settings}>
+        <GoogleReviewsComponent />
+        {/* <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
               <img src={testimonial.image} alt="best dental courses in the UK" className="testimonial-image" />
@@ -243,37 +248,12 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
-        </Slider>
+        </Slider> */}
       </div>
     </div>
   );
 };
 
-const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  const toggleFAQ = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
-
-  return (
-    <div className="faq-container">
-      <h1>Frequently Asked Questions</h1>
-      {faqs.map((faq, index) => (
-        <div
-          key={index}
-          className={`faq-item ${activeIndex === index ? 'active' : ''}`}
-          onClick={() => toggleFAQ(index)}
-        >
-          <div className="faq-question">
-            <span>{faq.question}</span>
-            <span className="faq-toggle">{activeIndex === index ? '-' : '+'}</span>
-          </div>
-          {activeIndex === index && <div className="faq-answer">{faq.answer}</div>}
-        </div>
-      ))}
-    </div>
-  );
-};
 
 

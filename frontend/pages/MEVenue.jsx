@@ -78,7 +78,7 @@ export const MEVenue = () => {
         selectedPrevBookings = prevBookings[selectedRental.collectionName]
     
         return <div className='booking-div'>
-            <h3 className='fs-4'>Choose Your Date & Time to Start!</h3>
+            <h3 className='fs-4'>Select Your Start Date & Time!</h3>
                 <div className='picker-duration-div fs-5'>
                     <div className='date'>
                         <label >Date & Time:</label>
@@ -110,8 +110,7 @@ export const MEVenue = () => {
                     }   
 
                     <div className='light-info-div fs-7 flex'>
-                        <img src={info} alt="location" /><p className=' fs-7'>  Price doesn’t include consumables
-                        Exam’s dental supplies and equipment can be purchased from our course venue, refer to ORE-LDS dental supplies store for more information regarding pricing. </p>
+                        <img src={info} alt="location" /><p className=' fs-7'>  Price excludes consumables. Dental supplies and equipment can be purchased at our course venue. Visit the <a className='text-underline' onClick={ () => navigate('/products') }> ORE-LDS store</a> for pricing details. </p>
                     </div> 
 
                 </div>
@@ -131,9 +130,9 @@ export const MEVenue = () => {
                     Rent our manikin facility for ORE2- LDS2 dental manikin practice.<br />
                 </h3>
                 <div className='light-info-div fs-6 flex'>
-                    <img src={locationSvg} alt="location" /><h4>  <span className='light-text'>Venue Location:</span>  Westbury House, 23-25 Bridge St, Pinner, Middlesex, HA5 3HRx</h4>
+                    <img src={locationSvg} alt="location" /><h4>  <span className='light-text'>Venue Location: </span> England 177 Field End Road, HA5 1QR </h4>
                 </div>  
-                <h4 className='fs-4 navy'>We have the equipment and materials recommended by The Consortium published by the GDC.</h4>
+                <h4 className='fs-4 navy'>We Provide the Recommended Equipment and Materials Endorsed by the GDC.</h4>
                 <div className='rental-cards-div flex'>
                     <RentalCard 
                         image={room1}
@@ -303,11 +302,6 @@ export const MEVenue = () => {
             <div className="features-section">
             <h2 className="features-title">What’s included?</h2>
             <div className="features-grid">
-                <FeatureCard 
-                icon={facilityIcon} 
-                title="Access to the facility" 
-                description="Access to the facility"
-                />
                 <FeatureCard 
                 icon={dentalIcon} 
                 title="Exam dental Frasaco simulators with torso" 

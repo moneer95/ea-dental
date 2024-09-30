@@ -2,10 +2,12 @@ import React from "react"
 import { Link, useNavigate, useParams, useLocation, useLoaderData, Await, defer } from "react-router-dom"
 import { getDetail } from "../../api"
 import CartContext from "../../contexts/cartContext";
+import FAQ from "../../components/FAQs";
 
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
+import { faqs } from "./ctegoriesArr.jsx";
 import { FaZ } from "react-icons/fa6";
 
 let collectionName = ''
@@ -97,6 +99,11 @@ export default function CategoDetail() {
                 </Link>
     
                 {itemsList}
+                { ["ore", "lds"].some(word => collectionName.includes(word)) &&
+                    <FAQ 
+                        faqs={faqs}
+                    />
+                }
                 <div style={{margin: '3rem'}} dangerouslySetInnerHTML={{ __html: colloecData[0]?.details }} />              
             </div>
         )

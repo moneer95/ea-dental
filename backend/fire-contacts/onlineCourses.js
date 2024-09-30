@@ -173,45 +173,40 @@ async function ORE2Comperehensive() {
         {
           descrip: '<h3 style="text-align: center;">If you are looking to increase your dental manikin skills in preparation for ORE2, why not join our ORE2 comprehensive <span style="color: #ff0000;">Three days</span> dental manikin course with study plan and daily online feedback support on social media WhatsApp.</h3> <div style="border-color:#e7e4e2;"></div>  <p><strong><u>ORE2 Dental Manikin Training</u></strong><br>Three days comprehensive dental manikin course with daily online support until you pass your exam.</p> <p><strong><u>Who this course is for?</u></strong><br>This course is for overseas qualified dentists who have already completed their ORE Part 1 examination and are preparing for ORE2 practical examination.</p> <p><strong><u>What does the course include?</u></strong><br>• Three full days of dental manikin teaching<br>• Lectures and demonstrations of each exercise intraorally<br>• Detailed course notes<br>• Continuous online support until you pass your exam<br>• Lunch and refreshments<br>• Study plan<br>• 24 hours verifiable CPD</p> <p><strong><u>Course venue:</u></strong><br>• Frasaco dental manikin similar to the exam facility<br>• All provided dental instruments closely resemble the exam</p> <p><strong><u>Aims and objectives</u></strong></p> <p>The course will provide detailed lectures and practical hands-on training to allow participants to further develop their operative skills and knowledge to build their confidence in preparation for the ORE Part 2 Dental Manikin examination. Delegates will be under constant supervision of skilled staff who are on hand to answer questions, offer advice, and give individual demonstrations.</p> <p><strong><u>Learning outcomes</u></strong></p> <p>After attending this course, participants should be able to assess in which areas they need to improve and reinforce their practice at home before sitting the examination.</p> <p><strong><u>Quality controls</u></strong></p> <p>All participants are asked to partake in a mock exam and submit written feedback via a questionnaire at the end of the course, which is used to monitor the course’s teaching quality.</p>  <p><strong>Day 1:</strong></p> <p><strong><u>Morning session: 9 am to 1 pm</u></strong></p> <p>Anterior PFM crown preparations:</p> <ul>   <li>Central incisor PFM</li>   <li>Canine PFM</li>   <li>Labial Venner</li> </ul> <p>(GDC Consortium guidelines / Instruments and equipment/ Operator position/ Hands on practice)</p> <p><strong><u>Afternoon session: 2 pm to 6 pm</u></strong></p> <p>Operative preparations:</p> <ul>   <li>Class I cavity preparation</li>   <li>Class I with palatal extension</li>   <li>Class III cavity preparation</li>   <li>Class V cavity preparation</li>   <li>Impression (Two and Single stage)</li> </ul> <p>(GDC Consortium guidelines / Instruments and equipment/ Operator position/ Hands on practice)</p>  <p><strong><u>DAY 2:</u></strong></p> <p><strong><u>Morning session: 9 am to 1 pm</u></strong></p> <p>Posterior crown preparations:</p> <ul>   <li>FGC</li>   <li>Premolar PFM</li> </ul> <p>(GDC Consortium guidelines / Instruments and equipment/ Operator position/ Hands on practice)</p> <p><strong><u>Afternoon session: 2 pm to 6 pm</u></strong></p> <p>Operative preparations:</p> <ul>   <li>Class II (MO- DO- MOD)</li>   <li>Class IV + Composite build up</li>   <li>Temporary crown</li>   <li>Rest seat preparation</li>   <li>Amalgam filling</li> </ul> <p>(GDC Consortium guidelines / Instruments and equipment/ Operator position/ Hands on practice)</p>  <p><strong><u>Day 3:</u></strong></p> <p><strong><u>Morning session: 9 am to 1 pm</u></strong></p> <p><u>Restoration:</u></p> <ul>   <li>MOD Premolar</li>   <li>Class IV + Posterior cusp build up (Premolar)</li> </ul> <p>(GDC Consortium guidelines / Instruments and equipment/ Operator position/ Hands on practice)</p> <p><strong><u>Afternoon session: 2 pm to 6 pm</u></strong></p> <ul>   <li>Rubber dam</li>   <li>Root canal treatment</li>   <li>Access opening</li>   <li>Class IV + Posterior cusp build up (Molar)</li> </ul> <p>(GDC Consortium guidelines / Instruments and equipment/ Operator position/ Hands on practice)</p>',
           docID: 'oret',
-          name: '3-Days Manikin ORE2',
+          name: '3-Day ORE2 Manikin Mastery',
           choices: [
             {
               '0': {
                 price: 1500,
-                name: '21 September - 23 September | Dr Ahmed AlKhalily | 9:00am - 6:00pm',
-                inStock: 10
-              },
-              '1': {
-                price: 1500,
                 name: '28 September - 30 September | Dr Ahmed Shahla | 9:00am - 6:00pm',
                 inStock: 0
               },
-              '2': {
+              '1': {
                 price: 1500,
                 name: '5 October - 7 October | Dr Shahla | 9:00am - 6:00pm',
                 inStock: 10
               },
-              '3': {
+              '2': {
                 price: 1500,
                 name: '19 October - 21 October | Dr Shahla | 9:00am - 6:00pm',
                 inStock: 10
               },
-              '4': {
+              '3': {
                 price: 1500,
                 name: '16 November - 18 November',
                 inStock: 10
               },
-              '5': {
+              '4': {
                 price: 1500,
                 name: '7 December - 9 December',
                 inStock: 10
               },
-              '6': {
+              '5': {
                 price: 1500,
                 name: '14 December - 16 December',
                 inStock: 10
               },
-              '7': {
+              '6': {
                 price: 1500,
                 name: '21 December - 23 December',
                 inStock: 10
@@ -226,47 +221,28 @@ async function ORE2Comperehensive() {
           name: 'ORE2 Medical Emergencies',
           choices: [
             {
-              '0': { price: 300, name: '18 September | 9:00am - 1:00pm', inStock: 10 },
-              '1': { price: 300, name: '2 October | 9:00am - 1:00pm', inStock: 10 },
-              '2': { price: 300, name: '16 October | 9:00am - 1:00pm', inStock: 10 },
-              '3': { price: 300, name: '20 November | 9:00am - 1:00pm', inStock: 10 },
-              '4': { price: 300, name: '4 December | 9:00am - 1:00pm', inStock: 10 },
-              '5': { price: 300, name: '18 December | 9:00am - 1:00pm', inStock: 10 },
-              '6': { price: 300, name: '27 December | 9:00am - 1:00pm', inStock: 10 }
+              '0': { price: 300, name: '2 October | 9:00am - 1:00pm', inStock: 10 },
+              '1': { price: 300, name: '16 October | 9:00am - 1:00pm', inStock: 10 },
+              '2': { price: 300, name: '20 November | 9:00am - 1:00pm', inStock: 10 },
+              '3': { price: 300, name: '4 December | 9:00am - 1:00pm', inStock: 10 },
+              '4': { price: 300, name: '18 December | 9:00am - 1:00pm', inStock: 10 },
+              '5': { price: 300, name: '27 December | 9:00am - 1:00pm', inStock: 10 }
             }
           ],
           collectionName: 'ore'
         },
         {
-          descrip: '<h3 style="margin: 0; font-size: 24px; line-height: 1.4;">Why waste time trying to figure out what to do with DTP? Join our two-day intensive DTP course for an unbeatable price and it will definitely help put you on the right track.</h3> <div style="border-color:#e7e4e2;"></div>  <p><strong>Aims:</strong></p> <ol>     <li>Prepare the candidates for the DTP component of the ORE2 examination.</li>     <li>Familiarize participants with the DTP set-up, process, and content.</li>     <li>Help participants identify gaps in their skill and knowledge base as appropriate to the exam.</li> </ol>  <p><strong>Objectives:</strong></p> <p>In-depth discussion of various dental topics:</p> <ol>     <li>Pain history taking and management</li>     <li>Oral lesions history and management</li>     <li>TMJ disorders History and management</li>     <li>Paediatric dentistry (Nursing caries/fluoride/fissure sealant)</li>     <li>Dental traumatology</li>     <li>Orthodontics (Impacted canine/supernumerary teeth/removable appliance)</li> </ol>  <p><strong>Learning outcomes:</strong></p> <ol>     <li>Update the theoretical knowledge in restorative and paediatric dentistry.</li>     <li>Gain confidence in practice dental treatment, planning cases.</li>     <li>Gain skills in history taking and requesting special investigations</li>     <li>Improve dentist-patient communication skills</li>     <li>Gain skills in managing anxious, angry patients and breaking bad news</li> </ol>  <p>Upon successful completion of course attendance, a verifiable CPD certificate of 6 Hours will be issued to all candidates who post feedback on the website and on the FREE ORE feedback page.</p>  <h4 style="font-size: 18px; line-height: 1.67;"><strong>This three-day course covers:</strong></h4>  <p><strong>First day:</strong></p> <ul>     <li>Pain Cases</li>     <li>Periodontal diseases</li>     <li>Dentures</li>     <li>Restorative Dentistry</li> </ul>  <p><strong>Second day:</strong></p> <ul>     <li>Removable/fixed prosthodontics operative dentistry/Endodontics</li>     <li>Tooth Surface loss</li>     <li>Oral Medicine</li>     <li>All sections of DTP covered including history taking, investigations, X-ray report and presentation</li>     <li>Full DTP mock cases practice at the end of the session.</li> </ul>  <p><strong>Course timing: 9:00 am – 5:00 pm</strong></p> <p>The order in which topics are covered may vary.</p> <p>*Courses are non-refundable</p>  <div style="text-align: center; margin-top: 20px;">     <a href="#book-now" style="display: inline-block; padding: 10px 20px; background-color: #0355a6; color: #ffffff; text-transform: uppercase; text-decoration: none;">Book Now</a> </div>',
-          docID: 'oret',
-          name: 'ORE2 Two DTP Days',
-          choices: [
-            {
-                '0': { price: 600, name: '16 September - 17 September', inStock: 10 },
-                '1': { price: 600, name: '30 September - 1 October', inStock: 10 },
-                '2': { price: 600, name: '14 October - 15 October', inStock: 10 },
-                '3': { price: 600, name: '18 November - 19 November', inStock: 10 },
-                '4': { price: 600, name: '2 November - 3 November', inStock: 10 },
-                '5': { price: 600, name: '16 December 17 December', inStock: 10 },
-                '6': { price: 600, name: '25 December 26 December', inStock: 10 }
-            }
-          ],
-            collectionName: 'ore'
-        },
-        {
           descrip: '<p><strong><u>Join our two full day OSCE’s course and benefit from an in-depth explanation, one to one evaluation, and extended online resources to follow up your future progress until your exam.</u></strong></p>  <p><strong><u>ORE 2 – Objective Structured Clinical Reasoning</u></strong></p>  <p><strong>This full one day course includes:</strong></p> <ul>     <li>Written OSCE’s</li>     <li>Skilled OSCE’s</li>     <li>Actor OSCE’s</li> </ul>  <p>In a simulated exam condition, challenge yourself by completing:</p> <p><strong>70 OSCE’s</strong></p>  <p>Study material will be provided on completion.</p> <p>Challenge yourself on <strong>timing, efficiency, and accuracy</strong> and we’ll be there to guide you all the way.</p>  <p><strong>Course times: 9:00 am – 5:00 pm</strong></p>  <p><strong>Aims:</strong></p> <ol>     <li>Prepare the candidate for the OSCE’s component of the ORE2 examination.</li>     <li>Familiarize participants with the OSCE set-up, process, and content.</li>     <li>Help participants identify gaps in their skills and knowledge appropriate to the exam.</li> </ol>  <p><strong><u>Objectives:</u></strong></p> <p>In-depth discussion of fifteen actor stations:</p> <ol>     <li>Pain (history and management)</li>     <li>Oral lesions (history and management)</li>     <li>TMJ disorders (history and management)</li>     <li>Periodontal disease</li>     <li>Pediatric dentistry (nursing caries/fluoride/fissure sealants)</li>     <li>Dental traumatology</li>     <li>Orthodontics (impacted canines/supernumerary teeth/removable appliances)</li> </ol>  <p>In-depth discussion of multiple skilled/written OSCE’s:</p> <ol>     <li>Suturing</li>     <li>IOPA arrangement</li>     <li>Intramuscular injection</li>     <li>Radiographic film holders</li>     <li>Handwashing</li>     <li>Denture analysis</li>     <li>Splinting</li>     <li>Rubber dam placement</li>     <li>Surveying</li>     <li>Partial denture design</li> </ol>  <p><u><strong>Learning outcomes:</strong></u></p> <ol>     <li>Cover a total of 70 OSCE stations.</li>     <li>Gain confidence in performing essential skilled OSCE stations.</li>     <li>Gain confidence in handling challenging actor OSCE stations (management of angry patients, breaking bad news, and staff disciplinary procedures).</li>     <li>Discussion of recent updates in radiography, restorative, and pediatric dentistry guidelines.</li>     <li>Gain basic skills in history taking and clinical examination.</li> </ol>  <p>Please note that upon attendance and successful completion of the course, a certificate showing 16 verifiable hours of CPD will be issued to all candidates.</p> <p>*Courses are non-refundable.</p>  <p><strong>Course location: (TO BE CONFIRMED)</strong></p>',
           docID: 'oret',
-          name: 'ORE2 Two Days OSCE',
+          name: 'ORE2: 2-Day OSCE Bootcamp',
           choices: [
             {
-                '0': { price: 500, name: '19 September - 20 September', inStock: 10 },
-                '1': { price: 500, name: '3 October - 4 October', inStock: 10 },
-                '2': { price: 500, name: '17 October - 18 October', inStock: 10 },
-                '3': { price: 500, name: '21 November - 22 November', inStock: 10 },
-                '4': { price: 500, name: '5 November - 6 November', inStock: 10 },
-                '5': { price: 500, name: '19 December 20 December', inStock: 10 },
-                '6': { price: 500, name: '28 December 29 December', inStock: 10 }
+                '0': { price: 500, name: '3 October - 4 October', inStock: 10 },
+                '1': { price: 500, name: '17 October - 18 October', inStock: 10 },
+                '2': { price: 500, name: '21 November - 22 November', inStock: 10 },
+                '3': { price: 500, name: '5 November - 6 November', inStock: 10 },
+                '4': { price: 500, name: '19 December 20 December', inStock: 10 },
+                '5': { price: 500, name: '28 December 29 December', inStock: 10 }
             }
           ],
           collectionName: 'ore'
@@ -274,7 +250,7 @@ async function ORE2Comperehensive() {
         {
           descrip: '<div class="fusion-column-wrapper fusion-flex-column-wrapper-legacy">     <div class="fusion-text fusion-text-2" style="--awb-text-transform:none;">         <p><strong><span style="text-decoration: underline;">Join our 1-Day Medical Emergencies (ME) & Skilled OSCEs Course</span></strong></p>         <p><strong><span style="text-decoration: underline;">ORE 2 – Objective Structured Clinical Examinations (OSCE)</span></strong></p>         <p><strong>This full one day course includes:</strong></p>         <ul>             <li>Medical Emergencies (ME) scenarios</li>             <li>Skilled OSCE stations</li>             <li>Hands-on practice sessions</li>         </ul>         <p>In a simulated exam condition challenge yourself by completing:</p>         <p><strong>70 OSCE stations</strong></p>         <p>Study material will be provided on completion.</p>         <p>Challenge yourself on <strong>timing, efficiency, and accuracy</strong> and we’ll be there to guide you all the way.</p>         <p><strong>Course times: 9:00am – 5:00pm</strong></p>          <h4><strong>Aims:</strong></h4>         <ol>             <li>Prepare candidates for the Medical Emergencies (ME) and Skilled OSCE components of the ORE2 examination.</li>             <li>Familiarize participants with the ME and OSCE set-up, processes, and content.</li>             <li>Help participants identify and address gaps in their skills and knowledge.</li>         </ol>          <h4><strong>Objectives:</strong></h4>         <p>In-depth discussion of various medical emergency scenarios and skilled OSCE stations:</p>         <ol>             <li>Anaphylaxis management</li>             <li>Hypoglycemia management</li>             <li>Cardiac arrest response</li>             <li>Safe administration of emergency drugs</li>             <li>Use of oxygen cylinders and defibrillators</li>             <li>Suturing techniques</li>             <li>Intramuscular injection</li>             <li>Radiographic film holder usage</li>             <li>Rubber dam placement</li>         </ol>          <h4><strong>Learning outcomes:</strong></h4>         <ol>             <li>Master 70 OSCE stations, gaining confidence in performing essential skills and managing emergency situations.</li>             <li>Improve history-taking and clinical examination skills.</li>             <li>Learn to manage complex patient interactions and emergency scenarios effectively.</li>         </ol>          <p>Please note that upon attendance and successful completion of the course, a certificate showing 8 verifiable hours of CPD will be issued to all candidates.</p>         <p>*Courses are non-refundable.</p>         <p><strong>Course location: (TO BE CONFIRMED)</strong></p>     </div> </div>',
           docID: 'oret',
-          name: '1-Day ME & Skilled OSCEs',
+          name: '1-Day ME & OSCE Skills Boost',
           choices: [
             {
               '0': { price: 250, name: '14 September | 09:00 AM - 06:00 PM', inStock: 10 },
