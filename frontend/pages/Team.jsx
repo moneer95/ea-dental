@@ -54,9 +54,9 @@ export default function Team() {
             <TeamCard 
                 image={radwan}
                 name='Dr. Radwan Badran'
-                caption='CO Manager'
+                caption='ORE1 Course Leader'
                 details={[
-                    "CO Manager"
+                    "ORE1 Course Leader"
                 ]}
             />
 

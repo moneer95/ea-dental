@@ -119,23 +119,6 @@ export const courses = [
   ]
 
   export const faqs = [
-    {
-      question: 'What exactly does EA Dental do?',
-      answer:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    },
-    {
-      question: 'How long as EA Dental been in business?',
-      answer: '',
-    },
-    {
-      question: 'What are major courses EA Dental offers?',
-      answer: '',
-    },
-    {
-      question: 'Does EA Dental sell the product to wholesale dealers?',
-      answer: '',
-    },
     {question: <a>What’s is the structure of ORE 1?</a>, answer: <div className="faq-answer" data-tab="1" role="region">It consists of two computer-based exam papers:
       <ul>
       <li>Paper A covers clinically applied dental science and clinically applied human disease.</li>
@@ -192,5 +175,22 @@ export const courses = [
       
       Alternatively, if you prefer to have access to continuous updates and the convenience of an online platform, we recommend considering an online subscription for the course notes. This option will grant you uninterrupted access to all updates throughout your subscription duration.
       
-      Choose the option that suits your study style and preferences, and embark on your journey towards ORE1 success with confidence!</div>}
-  ];
+      Choose the option that suits your study style and preferences, and embark on your journey towards ORE1 success with confidence!</div>},
+      {
+        question: 'What exactly does EA Dental do?',
+        answer:
+          '',
+      },
+      {
+        question: 'How long as EA Dental been in business?',
+        answer: '',
+      },
+      {
+        question: 'What are major courses EA Dental offers?',
+        answer: '',
+      },
+      {
+        question: 'Does EA Dental sell the product to wholesale dealers?',
+        answer: '',
+      },  
+];

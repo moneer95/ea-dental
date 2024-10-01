@@ -8,7 +8,7 @@ import FAQ from "../../components/FAQs";
 
 
 import hero from "../../assets/images/logo.png"
-import { courses, products, testimonials, faqs } from "./HomeArrays"
+import { courses, products, testimonials, faqs } from "./HomeArrays.jsx"
 import star from "../../assets/images/homePage/star.svg"
 import vision from "../../assets/images/homePage/vision.png"
 import mission from "../../assets/images/homePage/mission.png"
@@ -184,14 +184,14 @@ const MissionVision = () => {
 const CompanyInfo = () => {
   return (
     <div className="company-info-container">
-      <h1>
+      {/* <h1>
         Company Information<span className="dot">.</span>
       </h1>
-      <p className="intro-text">
+      <h4 className="intro-text">
         We take immense pride in our successful track record having guided numerous students to attain their GDC registration and currently practicing dentistry in the UK.
-      </p>
+      </h4> */}
 
-      <div className="info-card">
+      {/* <div className="info-card">
         <img src={ceo} alt="CEO/President" className="ceo-image"/>
         <div className="info-text">
           <p>
@@ -202,7 +202,7 @@ const CompanyInfo = () => {
             CEO/President
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

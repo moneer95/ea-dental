@@ -201,17 +201,17 @@ let coursesInfo= {
   "ORE1 Silver Bundle": [14, 15],
   "ORE1 Gold Bundle": [14, 13],
   "ORE1 Diamond Bundle": [14, 13, 17, 5],
-  "ORE2 Comprehensive Online Course": [16],
+  "ORE2 Comprehensive Online Course": [12],
   "ORE2 Dental Treatment Planning Videos Subscription": [6],
   "ORE2 Theory course notes + Videos 10 DTP cases": [12],
   "ORE2 Dental Manikin Videos Subscription": [7],
-  "ORE2 (Five days comprehensive course)": [12],
-  "3-Days Manikin ORE2": [7, 8],
-  "ORE2 Medical Emergencies": [12],
-  "ORE2 Two DTP Days": [6],
-  "ORE2 Two Days OSCE": [12],
+  "ORE2: Five-Day Comprehensive Online Course + One In-Person Day": [12],
+  "3-Day ORE2 Manikin Mastery": [7, 8],
+  "ORE2 Medical Emergencies Masterclass": [12],
+  "ORE2: 2-Day OSCE Bootcamp": [12],
   "3-in-1 Mock Sessions": [7, 8],
-  "Revision / Mock Session: Dental Manikin": [7, 8]
+  "Revision / Mock Session: Dental Manikin": [7, 8],
+  "1-Day ME & OSCE Skills Boost": [12]
 }
   
 
