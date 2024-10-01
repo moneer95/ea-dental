@@ -111,13 +111,16 @@ export const Return = () => {
           Payment Successful!
         </h2>
         <h3>
-          Thank you for your order! We are processing your request and will reach out soon with further details (for products, and tickets) .
+          Thank you for your order!
+        </h3>
+        <h3>
+          An email with the receipt and enrollment details has been sent to you.
         </h3>
         <div>
           <h3>
-            for online courses students, you can login into your account on our moodle learning platform.
+            For online courses, log in to your account on our Moodle platform.
           </h3>
-          <button className="moodle-login" onClick={() => window.location.href = 'http://54.147.16.59/moodle/my/'}>
+          <button className="moodle-login" onClick={() => window.location.href = 'moodle.ea-dental.com/moodle/my/'}>
             login
           </button>
         </div>
