@@ -120,7 +120,7 @@ export const Return = () => {
           <h3>
             For online courses, log in to your account on our Moodle platform.
           </h3>
-          <button className="moodle-login" onClick={() => window.location.href = 'moodle.ea-dental.com/moodle/my/'}>
+          <button className="moodle-login" onClick={() => window.location.href = 'https://moodle.ea-dental.com/moodle/my/'}>
             login
           </button>
         </div>
