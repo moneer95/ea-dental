@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 
-const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice, saveClientArrays } = require('./firebaseConfig');
+const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice, saveClientArrays, getClientArrays } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
 const { transporter } = require('./utils')
@@ -179,7 +179,11 @@ app.get('/session-status', async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
   console.log(session.status)
 
-  
+  const arrays = getClientArrays(session.client_secret)
+  console.log(session.client_secret + ' -----  clientttt' )
+  console.log(arrays)
+
+
   if (session.payment_status === 'paid') {    
 
     //use courses array

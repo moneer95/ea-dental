@@ -180,6 +180,25 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
 
 
+  async function getClientArrays(client_secret) {
+
+    const itemRef = db.collection("clientsData").doc(client_secret)
+    // get choices arr value
+    const item = await itemRef.get();
+    
+    const {
+      products,
+      tickets, 
+      courses, 
+      bookings, 
+      weight
+    } = item.data()
+    
+    return { products, tickets, courses, bookings, weight };
+  }  
+
+
+
   function sendStockEmail(prodName, prodChoice, stockValue){
     let mailOptions = {
         from: '"Sender Name" <mnyrskyk@gmail>',  // Sender address
@@ -205,7 +224,8 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     updateStocTicketValue,
     getProductPrice,
     getCourseTicketPrice,
-    saveClientArrays
+    saveClientArrays,
+    getClientArrays
   };
 // module.exports = updateStocTicketValue
   
