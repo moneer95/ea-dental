@@ -162,7 +162,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
 
 
-  async function saveClientArrays( client_secret, products, tickets, courses, bookings, weight ) {
+  async function saveClientArrays( session_id, products, tickets, courses, bookings, weight ) {
     
     const data = {
       products,
@@ -172,7 +172,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
       weight
     }
 
-    const res = await db.collection('clientsData').doc(client_secret).set(data, { merge: true });
+    const res = await db.collection('clientsData').doc(session_id).set(data, { merge: true });
 
     console.log('Added document with ID: ', res);
 
@@ -180,9 +180,9 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
 
 
-  async function getClientArrays(client_secret) {
+  async function getClientArrays(session_id) {
 
-    const itemRef = db.collection("clientsData").doc(client_secret)
+    const itemRef = db.collection("clientsData").doc(session_id)
     // get choices arr value
     const item = await itemRef.get();
     
@@ -196,6 +196,13 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     
     return { products, tickets, courses, bookings, weight };
   }  
+
+
+  async function deleteSession(session_id) {
+    
+    const res = await db.collection('clientsData').doc(session_id).delete();
+
+  }
 
 
 
@@ -225,7 +232,8 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     getProductPrice,
     getCourseTicketPrice,
     saveClientArrays,
-    getClientArrays
+    getClientArrays,
+    deleteSession
   };
 // module.exports = updateStocTicketValue
   
