@@ -30,7 +30,6 @@ let tickets = []
 let courses = []
 let bookings = []
 let weight = 0
-let price = 0
 
 app.post(`/create-checkout-session`, async (req, res) => {
   const {choices, choices1, cartItems} = req.body; // This will contain the array of objects
@@ -43,7 +42,9 @@ app.post(`/create-checkout-session`, async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       ui_mode: 'embedded',
       line_items: cartItems.map((item, idx) => {
-       
+
+        let price = 0
+
         // add product to products arr
         if(item.quantity){
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
