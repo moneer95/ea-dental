@@ -118,8 +118,6 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
 
 
-
-
   async function addBookingTime(collectionName, startDate, choiceId) {
     
     const duration = parseInt(choiceId, 10) + 1;
@@ -161,7 +159,25 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
     return price
   }
-  
+
+
+
+  async function saveClientArrays( client_secret, products, tickets, courses, bookings, weight ) {
+    
+    const data = {
+      products,
+      tickets, 
+      courses, 
+      bookings, 
+      weight
+    }
+
+    const res = await db.collection('clientsData').doc(client_secret).set(data);
+
+    console.log('Added document with ID: ', res.id);
+
+  }
+
 
 
   function sendStockEmail(prodName, prodChoice, stockValue){
@@ -188,7 +204,8 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     addBookingTime,
     updateStocTicketValue,
     getProductPrice,
-    getCourseTicketPrice
+    getCourseTicketPrice,
+    saveClientArrays
   };
 // module.exports = updateStocTicketValue
   

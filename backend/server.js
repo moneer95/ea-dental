@@ -25,13 +25,16 @@ app.use(bodyParser.json()); // Middleware to parse JSON bodies
 
 const YOUR_DOMAIN = 'https://v1.ea-dental.com';
 
-let products = []
-let tickets = []
-let courses = []
-let bookings = []
-let weight = 0
+
 
 app.post(`/create-checkout-session`, async (req, res) => {
+
+  let products = []
+  let tickets = []
+  let courses = []
+  let bookings = []
+  let weight = 0
+
   const {choices, choices1, cartItems} = req.body; // This will contain the array of objects
 
   console.log(choices)
@@ -139,7 +142,14 @@ app.post(`/create-checkout-session`, async (req, res) => {
       return_url: `${YOUR_DOMAIN}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
       // console.log(JSON.stringify({products}))
-      res.send({clientSecret: session.client_secret});
+      res.send({
+        clientSecret: session.client_secret,
+        products: products,
+        tickets: tickets,
+        courses :courses,
+        bookings: bookings,
+        weight: weight
+      });
   }
   catch(e){
     console.log("somthing went error", console.log(e));

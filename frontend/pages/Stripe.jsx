@@ -3,6 +3,7 @@ import {loadStripe} from '@stripe/stripe-js';
 import { EmbeddedCheckoutProvider, EmbeddedCheckout } from '@stripe/react-stripe-js';
 import { Navigate } from "react-router-dom";
 import CartContext from '../contexts/cartContext';
+import ShimmerLoader from '../components/ShimmerLoader'
 
 const YOUR_DOMAIN = 'https://v1.ea-dental.com/'
 
@@ -16,6 +17,11 @@ export const CheckoutForm = () => {
   const { cartItems } = React.useContext(CartContext);
   const [loading, setLoading] = useState(true);
   const [clientSecret, setClientSecret] = useState(null);
+  const [products, setProducts] = useState(null);
+  const [tickets, setTickets] = useState(null);
+  const [courses, setCourses] = useState(null);
+  const [bookings, setBookings] = useState(null);
+  const [weight, setWeight] = useState(null);
   
   
 
@@ -35,6 +41,11 @@ export const CheckoutForm = () => {
       .then((res) => res.json())
       .then((data) => {
         setClientSecret(data.clientSecret);
+        setProducts(data.products)
+        setTickets(data.tickets)
+        setCourses(data.courses)
+        setBookings(data.bookings)
+        setWeight(data.weight)
         setLoading(false);  // Cart items and client secret have been loaded
       })
       .catch((error) => {
@@ -55,7 +66,7 @@ export const CheckoutForm = () => {
 
     // Conditional rendering based on loading state
     if (loading) {
-      return <div>Loading...</div>;
+      return < ShimmerLoader />
     }
   
     if (!clientSecret) {
