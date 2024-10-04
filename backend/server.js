@@ -78,7 +78,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
       price_data: {
         currency: 'GBP',
         product_data: {
-          name: item.optionName + " " + (choices[idx].name || ""), // Add option name to the displayed name in checkout
+          name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
         },
         unit_amount: prices[idx] * 100, // Amount in the smallest currency unit (e.g., pence for GBP)
       },
