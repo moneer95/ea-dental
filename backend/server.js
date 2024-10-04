@@ -59,14 +59,15 @@ app.post(`/create-checkout-session`, async (req, res) => {
         if(choices[idx].inStock && !item.quantity){
           console.log(choices[idx].inStock && !item.quantity)
           tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
-          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(price => price).catch(error => 1000)
+          price = getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(price => price).catch(error => 1000)
         }
 
         
         // add online courses to courses arr
         if(!choices[idx].inStock && !item.dateTime){
           courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
-          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(price => price).catch(error => 1000)
+          
+          price = getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(price => price).catch(error => 1000)
         }
         
         // Call addBookingTime here
