@@ -146,7 +146,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     const item = await itemRef.get();
     
     const price = item.data().choices[0][choiceId].price
-
+    
     return price
   }  
 
@@ -192,3 +192,5 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   };
 // module.exports = updateStocTicketValue
   
+
+getProductPrice(11, 0)
