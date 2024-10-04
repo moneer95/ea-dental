@@ -144,7 +144,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
     });
       // console.log(JSON.stringify({products}))
       res.send({
-        clientSecret: session.id
+        clientSecret: session.client_secret
       });
 
       saveClientArrays(        
