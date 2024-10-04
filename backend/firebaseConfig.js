@@ -172,9 +172,9 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
       weight
     }
 
-    const res = await db.collection('clientsData').doc(client_secret).set(data);
+    const res = await db.collection('clientsData').doc(client_secret).set(data, { merge: true });
 
-    console.log('Added document with ID: ', res.id);
+    console.log('Added document with ID: ', res);
 
   }
 
