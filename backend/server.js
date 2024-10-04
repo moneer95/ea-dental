@@ -144,11 +144,11 @@ app.post(`/create-checkout-session`, async (req, res) => {
     });
       // console.log(JSON.stringify({products}))
       res.send({
-        clientSecret: session.session_id
+        clientSecret: session.id
       });
 
       saveClientArrays(        
-        session.session_id,
+        session.id,
         products,
         tickets,
         courses,
@@ -179,8 +179,8 @@ app.get('/session-status', async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
   console.log(session.status)
 
-  const arrays = getClientArrays(session.client_secret)
-  console.log(session.client_secret + ' -----  clientttt' )
+  const arrays = getClientArrays(session.id)
+  console.log(session.id + ' -----  clientttt' )
   console.log(arrays)
 
 
