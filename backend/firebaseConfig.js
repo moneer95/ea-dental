@@ -136,7 +136,31 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     console.log('Added document with ID: ', res.id);
 
   }
+
+  async function getProductPrice(docID, choiceId) {
+
+    const itemRef = db.collection("products").doc(docID)
+    // get choices arr value
+    const item = await itemRef.get();
+    
+    const price = item.data().choices[0][choiceId].price
+
+    return price
+  }  
+
+
+  async function getCourseTicketPrice(collectionName, docID, shoppingOptionIdx, choiceId) {
+
+    const itemRef = db.collection(collectionName).doc(docID)
+    // get choices arr value
+    const item = await itemRef.get();
+    // console.log(item.data())
+    const price = item.data().shoppingOptions[shoppingOptionIdx].choices[0][choiceId].price
+
+    return price
+  }
   
+
 
   function sendStockEmail(prodName, prodChoice, stockValue){
     let mailOptions = {
@@ -160,7 +184,9 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   module.exports = {
     updateStockValue,
     addBookingTime,
-    updateStocTicketValue
+    updateStocTicketValue,
+    getProductPrice,
+    getCourseTicketPrice
   };
 // module.exports = updateStocTicketValue
   

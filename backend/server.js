@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 
-const { updateStockValue, updateStocTicketValue, addBookingTime } = require('./firebaseConfig');
+const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
 const { transporter } = require('./utils')
@@ -30,6 +30,7 @@ let tickets = []
 let courses = []
 let bookings = []
 let weight = 0
+let price = 0
 
 app.post(`/create-checkout-session`, async (req, res) => {
   const {choices, choices1, cartItems} = req.body; // This will contain the array of objects
@@ -47,6 +48,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         if(item.quantity){
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
           weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
+          price = getProductPrice( item.id, item.choiceId[0])
         }
                 
         // add option name for courses and tickets
@@ -56,18 +58,21 @@ app.post(`/create-checkout-session`, async (req, res) => {
         // add ticket to tickets arr
         if(choices[idx].inStock && !item.quantity){
           console.log(choices[idx].inStock && !item.quantity)
-          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
         }
 
         
         // add online courses to courses arr
         if(!choices[idx].inStock && !item.dateTime){
           courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
+          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
         }
         
         // Call addBookingTime here
         if (item.dateTime && item.choiceId[0]) {
           bookings.push({'collectionName': item.collectionName, 'optionName': item.optionName, 'dateTime': item.dateTime, 'choiceId': item.choiceId[0] })
+          price = choices[idx].price
         }
 
         return {
@@ -76,14 +81,14 @@ app.post(`/create-checkout-session`, async (req, res) => {
             product_data: {
               name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
             },
-            unit_amount: choices[idx].price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
+            unit_amount: price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
           },
           quantity: item?.quantity || 1,
         }
     }),
       mode: 'payment',
       shipping_address_collection: {
-        allowed_countries: ['GB'], // Collect shpping address for specified countries
+        allowed_countries: ['GB'], // Collect shipping address for specified countries
       },
       phone_number_collection: {
         enabled: true,
