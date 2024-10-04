@@ -199,7 +199,6 @@ app.get('/session-status', async (req, res) => {
       }
     
     }
-    courses = []
       
     if(products.length){
       console.log(222222)
@@ -214,8 +213,7 @@ app.get('/session-status', async (req, res) => {
       createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight)
       
     }
-    products = [] // delete the array after updating stock
-    weight = 0
+
 
     if(tickets.length){
       console.log(333333)
@@ -235,7 +233,6 @@ app.get('/session-status', async (req, res) => {
         updateStocTicketValue( ticket.collectionName, ticket.docID, ticket.shoppingOptionIdx, ticket.choiceId )
       }
     }
-    tickets = []
 
 
     if(bookings.length){
@@ -249,7 +246,6 @@ app.get('/session-status', async (req, res) => {
         .catch(err => console.error('Error adding booking time:', err));  
       }
     }
-    bookings = []
 
     // console.log(session.customer_details)
 
