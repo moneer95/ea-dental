@@ -179,7 +179,7 @@ app.get('/session-status', async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
   console.log(session.status)
 
-  const arrays = getClientArrays(session.id)
+  const arrays = await getClientArrays(session.id)
   console.log(session.id + ' -----  clientttt' )
   console.log(arrays)
 
