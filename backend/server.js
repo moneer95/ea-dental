@@ -6,10 +6,11 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 
-const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice } = require('./firebaseConfig');
+const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice, saveClientArrays } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
 const { transporter } = require('./utils')
+
 
     
 const { createPurchaseOrder, createCourseOrder, createTicketOrder, createBooking } = require('./interactions-frappe')
@@ -143,13 +144,17 @@ app.post(`/create-checkout-session`, async (req, res) => {
     });
       // console.log(JSON.stringify({products}))
       res.send({
-        clientSecret: session.client_secret,
-        products: products,
-        tickets: tickets,
-        courses :courses,
-        bookings: bookings,
-        weight: weight
+        clientSecret: session.client_secret
       });
+
+      saveClientArrays(        
+        session.client_secret,
+        products,
+        tickets,
+        courses,
+        bookings,
+        weight
+      )
   }
   catch(e){
     console.log("somthing went error", console.log(e));
