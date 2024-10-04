@@ -53,7 +53,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         }
                 
         // add option name for courses and tickets
-        const courseOrTicketChoice = choices[idx].name != "" ? choices[idx].name : ""
+        const courseOrTicketChoice = choices[idx].name != "default" ? choices[idx].name : ""
         const courseSecondChoice = choices1[idx] ? choices1[idx].name : ""
 
         // add ticket to tickets arr
