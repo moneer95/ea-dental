@@ -139,6 +139,8 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
   async function getProductPrice(docID, choiceId) {
 
+    docID = docID.toString()
+
     const itemRef = db.collection("products").doc(docID)
     // get choices arr value
     const item = await itemRef.get();
@@ -190,3 +192,4 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   };
 // module.exports = updateStocTicketValue
   
+console.log(getProductPrice(11, 0))
