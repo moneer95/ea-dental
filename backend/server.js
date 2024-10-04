@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 
-const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice, saveClientArrays, getClientArrays } = require('./firebaseConfig');
+const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice, getCourseTicketPrice, saveClientArrays, getClientArrays, deleteSession } = require('./firebaseConfig');
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
 const { transporter } = require('./utils')
@@ -180,7 +180,6 @@ app.get('/session-status', async (req, res) => {
   console.log(session.status)
 
   const { products, tickets, courses, bookings, weight } = await getClientArrays(session.id)
-  console.log(session.id + ' -----  clientttt' )
 
 
   if (session.payment_status === 'paid') {    
@@ -257,6 +256,8 @@ app.get('/session-status', async (req, res) => {
     customer_email: session.customer_details.email,
     payment_status: session.payment_status
   });
+
+  deleteSession(session.id)
 });
 
 
