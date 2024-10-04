@@ -251,13 +251,15 @@ app.get('/session-status', async (req, res) => {
 
   }
 
+  deleteSession(session.id) //delete the session data from firebase so no one can use it
+
+
   res.send({
     status: session.status,
     customer_email: session.customer_details.email,
     payment_status: session.payment_status
   });
 
-  deleteSession(session.id)
 });
 
 
