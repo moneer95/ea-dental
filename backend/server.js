@@ -41,53 +41,56 @@ app.post(`/create-checkout-session`, async (req, res) => {
   try{
     const session = await stripe.checkout.sessions.create({
       ui_mode: 'embedded',
-      line_items: await cartItems.map( async (item, idx) => {
-
-        let price = 0
-
-        // add product to products arr
-        if(item.quantity){
-          products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
-          weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
-          price = await getProductPrice( item.id, item.choiceId[0])
-        }
-                
-        // add option name for courses and tickets
-        const courseOrTicketChoice = choices[idx].name != "default" ? choices[idx].name : ""
-        const courseSecondChoice = choices1[idx] ? choices1[idx].name : ""
-
-        // add ticket to tickets arr
-        if(choices[idx].inStock && !item.quantity){
-          console.log(choices[idx].inStock && !item.quantity)
-          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
-          price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
-        }
-
-        
-        // add online courses to courses arr
-        if(!choices[idx].inStock && !item.dateTime){
-          courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
+      line_items: await Promise.all( 
           
-          price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
-        }
-        
-        // Call addBookingTime here
-        if (item.dateTime && item.choiceId[0]) {
-          bookings.push({'collectionName': item.collectionName, 'optionName': item.optionName, 'dateTime': item.dateTime, 'choiceId': item.choiceId[0] })
-          price = choices[idx].price
-        }
+          cartItems.map( async (item, idx) => {
 
-        return {
-          price_data: {
-            currency: 'GBP',
-            product_data: {
-              name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
+          let price = 0
+  
+          // add product to products arr
+          if(item.quantity){
+            products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
+            weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
+            price = await getProductPrice( item.id, item.choiceId[0])
+          }
+                  
+          // add option name for courses and tickets
+          const courseOrTicketChoice = choices[idx].name != "default" ? choices[idx].name : ""
+          const courseSecondChoice = choices1[idx] ? choices1[idx].name : ""
+  
+          // add ticket to tickets arr
+          if(choices[idx].inStock && !item.quantity){
+            console.log(choices[idx].inStock && !item.quantity)
+            tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+            price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
+          }
+  
+          
+          // add online courses to courses arr
+          if(!choices[idx].inStock && !item.dateTime){
+            courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
+            
+            price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
+          }
+          
+          // Call addBookingTime here
+          if (item.dateTime && item.choiceId[0]) {
+            bookings.push({'collectionName': item.collectionName, 'optionName': item.optionName, 'dateTime': item.dateTime, 'choiceId': item.choiceId[0] })
+            price = choices[idx].price
+          }
+  
+          return {
+            price_data: {
+              currency: 'GBP',
+              product_data: {
+                name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
+              },
+              unit_amount: price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
             },
-            unit_amount: price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
-          },
-          quantity: item?.quantity || 1,
-        }
-    }),
+            quantity: item?.quantity || 1,
+          }
+      })
+      ),
       mode: 'payment',
       shipping_address_collection: {
         allowed_countries: ['GB'], // Collect shipping address for specified countries
