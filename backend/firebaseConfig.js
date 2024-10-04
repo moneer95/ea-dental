@@ -192,4 +192,3 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
   };
 // module.exports = updateStocTicketValue
   
-console.log(getProductPrice(11, 0))
