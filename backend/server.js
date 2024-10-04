@@ -38,60 +38,59 @@ app.post(`/create-checkout-session`, async (req, res) => {
   console.log(choices1)
   console.log(cartItems)
 
-  try {
-    const products = [];
-    const tickets = [];
-    const courses = [];
-    const bookings = [];
-    let weight = 0;
-
-    // Get prices for all cart items
-    const prices = await Promise.all(cartItems.map(async (item, idx) => {
-      let price = 0;
-
-      if (item.quantity) {
-        products.push({ 'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName });
-        weight += (choices[idx].weight * 1000) * item.quantity; // converted to grams 
-        price = await getProductPrice(item.id, item.choiceId[0]);
-      }
-
-      if (choices[idx].inStock && !item.quantity) {
-        tickets.push({ 'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'choiceName': choices[idx].name + (choices1[idx] ? choices1[idx].name : ""), 'courseName': item.optionName });
-        price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]);
-      }
-
-      if (!choices[idx].inStock && !item.dateTime) {
-        courses.push({ courseName: item.optionName, choiceName: choices[idx].name + (choices1[idx] ? choices1[idx].name : "") });
-        price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]);
-      }
-
-      if (item.dateTime && item.choiceId[0]) {
-        bookings.push({ 'collectionName': item.collectionName, 'optionName': item.optionName, 'dateTime': item.dateTime, 'choiceId': item.choiceId[0] });
-        price = choices[idx].price;
-      }
-
-      return price;
-    }));
-
-    // Create line items for Stripe
-    const line_items = cartItems.map((item, idx) => ({
-      price_data: {
-        currency: 'GBP',
-        product_data: {
-          name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
-        },
-        unit_amount: prices[idx] * 100, // Amount in the smallest currency unit (e.g., pence for GBP)
-      },
-      quantity: item?.quantity || 1,
-    }));
-
-    // Create Stripe session
+  try{
     const session = await stripe.checkout.sessions.create({
       ui_mode: 'embedded',
-      line_items,
+      line_items: cartItems.map((item, idx) => {
+
+        let price = 0
+
+        // add product to products arr
+        if(item.quantity){
+          products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
+          weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
+          getProductPrice( item.id, item.choiceId[0]).then(p => {price = p}).catch(error => {price = 1000})
+        }
+                
+        // add option name for courses and tickets
+        const courseOrTicketChoice = choices[idx].name != "" ? choices[idx].name : ""
+        const courseSecondChoice = choices1[idx] ? choices1[idx].name : ""
+
+        // add ticket to tickets arr
+        if(choices[idx].inStock && !item.quantity){
+          console.log(choices[idx].inStock && !item.quantity)
+          tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(p => {price = p}).catch(error => {price = 1000})
+        }
+
+        
+        // add online courses to courses arr
+        if(!choices[idx].inStock && !item.dateTime){
+          courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
+          
+          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(p => {price = p}).catch(error => {price = 1000})
+        }
+        
+        // Call addBookingTime here
+        if (item.dateTime && item.choiceId[0]) {
+          bookings.push({'collectionName': item.collectionName, 'optionName': item.optionName, 'dateTime': item.dateTime, 'choiceId': item.choiceId[0] })
+          price = choices[idx].price
+        }
+
+        return {
+          price_data: {
+            currency: 'GBP',
+            product_data: {
+              name: item.optionName + " " + courseOrTicketChoice, //add option name to the displayed name in checkout
+            },
+            unit_amount: price * 100, // Amount in the smallest currency unit (e.g., cents for USD)
+          },
+          quantity: item?.quantity || 1,
+        }
+    }),
       mode: 'payment',
       shipping_address_collection: {
-        allowed_countries: ['GB'],
+        allowed_countries: ['GB'], // Collect shipping address for specified countries
       },
       phone_number_collection: {
         enabled: true,
@@ -102,7 +101,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
             shipping_rate_data: {
               type: 'fixed_amount',
               fixed_amount: { amount: getShippingPrice(weight)[0], currency: 'GBP' },
-              display_name: 'Royal Mail 1st Class',
+              display_name: 'Royal Mail 1nd Class',
               delivery_estimate: {
                 minimum: { unit: 'business_day', value: 1 },
                 maximum: { unit: 'business_day', value: 1 },
@@ -124,7 +123,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
             shipping_rate_data: {
               type: 'fixed_amount',
               fixed_amount: { amount: getShippingPrice(weight)[2], currency: 'GBP' },
-              display_name: 'Royal Mail Special Delivery Guaranteed by 1pm',
+              display_name: 'Royal Mail OLP	Royal Mail Special Delivery Guaranteed by 1pm - £750 Compensation',
               delivery_estimate: {
                 minimum: { unit: 'business_day', value: 1 },
                 maximum: { unit: 'business_day', value: 1 },
@@ -133,14 +132,15 @@ app.post(`/create-checkout-session`, async (req, res) => {
           },
         ]
       }),
+  
       return_url: `${YOUR_DOMAIN}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
-
-    res.send({ clientSecret: session.client_secret });
-  } catch (e) {
-    console.error("Something went wrong", e);
+      // console.log(JSON.stringify({products}))
+      res.send({clientSecret: session.client_secret});
   }
-
+  catch(e){
+    console.log("somthing went error", console.log(e));
+  }
 
 }
 

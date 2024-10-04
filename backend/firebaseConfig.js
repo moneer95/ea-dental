@@ -145,9 +145,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     // get choices arr value
     const item = await itemRef.get();
     
-    const price = item.data().choices[0][choiceId].price
-
-    console.log(price)
+    const price = await item.data().choices[0][choiceId].price
     
     return price
   }  
@@ -160,8 +158,6 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     const item = await itemRef.get();
     // console.log(item.data())
     const price = item.data().shoppingOptions[shoppingOptionIdx].choices[0][choiceId].price
-
-    console.log(price)
 
     return price
   }
@@ -197,4 +193,3 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 // module.exports = updateStocTicketValue
   
 
-getProductPrice(11, 0)
