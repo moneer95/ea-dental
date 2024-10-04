@@ -41,7 +41,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
   try{
     const session = await stripe.checkout.sessions.create({
       ui_mode: 'embedded',
-      line_items: cartItems.map( async (item, idx) => {
+      line_items: await cartItems.map( async (item, idx) => {
 
         let price = 0
 
