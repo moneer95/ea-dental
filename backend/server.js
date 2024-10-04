@@ -41,7 +41,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
   try{
     const session = await stripe.checkout.sessions.create({
       ui_mode: 'embedded',
-      line_items: cartItems.map((item, idx) => {
+      line_items: cartItems.map( async (item, idx) => {
 
         let price = 0
 
@@ -49,7 +49,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         if(item.quantity){
           products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
           weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
-          getProductPrice( item.id, item.choiceId[0]).then(p => {price = p}).catch(error => {price = 1000})
+          price = await getProductPrice( item.id, item.choiceId[0])
         }
                 
         // add option name for courses and tickets
@@ -60,7 +60,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         if(choices[idx].inStock && !item.quantity){
           console.log(choices[idx].inStock && !item.quantity)
           tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
-          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(p => {price = p}).catch(error => {price = 1000})
+          price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
         }
 
         
@@ -68,7 +68,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
         if(!choices[idx].inStock && !item.dateTime){
           courses.push({courseName: item.optionName, choiceName: (courseOrTicketChoice + courseSecondChoice) })
           
-          getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0]).then(p => {price = p}).catch(error => {price = 1000})
+          price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
         }
         
         // Call addBookingTime here
