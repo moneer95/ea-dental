@@ -21,7 +21,6 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Add this line to parse JSON body
 app.use(bodyParser.json()); // Middleware to parse JSON bodies
-app.disabled('x-powered-by')
 
 
 const YOUR_DOMAIN = 'https://v1.ea-dental.com';
