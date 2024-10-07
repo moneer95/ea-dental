@@ -74,7 +74,7 @@ function createTicketOrder(email, full_name, phone, tickets ){
         order_date: new Date().toISOString().split('T')[0],
         tickets: tickets.map( ticket => {
             const ticketDateParts = ticket.orderDate.split("-")
-            const jsTicketDate = null
+            let jsTicketDate = null
             if(ticketDateParts.length){
                 jsTicketDate = new Date(ticketDateParts[2], ticketDateParts[1] - 1, ticketDateParts[0]) // year, month (0-based), day
             }
