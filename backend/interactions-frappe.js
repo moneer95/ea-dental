@@ -71,7 +71,6 @@ function createTicketOrder(email, full_name, phone, tickets ){
         email: email,
         full_name: full_name,
         phone: phone,
-        order_date: new Date().toISOString().split('T')[0],
         tickets: tickets.map( ticket => {
             const ticketDateParts = ticket.orderDate.split("-")
             let jsTicketDate = null
