@@ -10,6 +10,165 @@ initializeApp({
 const db = getFirestore();
 
 
+
+
+
+
+async function ore2InPerson() {
+
+    const itemRef = db.collection('ore').doc('oret')
+
+      const item = await itemRef.get();
+      // console.log(item.data().shoppingOptions[5].choices)
+    
+      shoppingOptions = [
+        {
+          choices: [
+              {
+              "0": 
+                  {
+                      name: "14th-18th of October online",
+                      price: 1050,
+                      date: "14-10-2024"
+                  },
+              "1": 
+                  {
+                      name: "18-22 of November online",
+                      price: 1050,
+                      date: "18-11-2024"
+                  },
+              "2": 
+                  {
+                      name: "2-6 of December online",
+                      price: 1050,
+                      date: "2-12-2024"
+
+                  },
+              "3": 
+                  {
+                      name: "9-13 of December online",
+                      price: 1050,
+                      date: "13-9-2024"
+                  }    
+              },
+              {
+              "0": 
+                  {
+                      name: "23th October 2024 in-person",
+                      date: "23-10-2024"                             
+                  },
+              "1": 
+                  {
+                      name: "15th of November in-person",
+                      date: "15-11-2024"                             
+                  },
+              "2": 
+                  {
+                      name: "6th of December in-person",
+                      date: "6-12-2024"                                                           
+                  },
+              "3": 
+                  {
+                      name: "11th of December in-person",
+                      date: "11-12-2024"                                                           
+                  },
+              "4": 
+                  {
+                      name: "24th of January in-person",
+                      date: "24-1-2025"                                                           
+                  },
+              "5": 
+                  {
+                      name: "7th of February in-person",
+                      date: "7-2-2024"
+                  },  
+              "6":    
+                  {   
+                      name: "7th of March in-person",
+                      date: "7-3-2024"
+                  },
+              "7":    
+                  {   
+                      name: "To be confirmed after booking",
+                      date: ""
+                  }
+              } 
+            ],
+            descrip: "<div> <div> <div> <div> <div> <div> <div> <h3>ORE 2 COMPREHENSIVE ONLINE COURSE</h3> </div> </div> </div> <div> <div> <div> <h3>Introducing ORE 2 Online Course: Your Step-by-Step Path to Comprehensive ORE Preparation</h3> </div> </div> </div> <div> <div> <div> <h4>Designed for candidates with no prior ORE experience, our ORE 2 online course brings you the ultimate convenience of learning from the comfort of your own home. But that's not all – we offer unprecedented flexibility. You can choose to attend some of your sessions in person, allowing you to tailor your learning experience to your needs.</h4> </div> </div> </div> <div> <div> <div> <h3><u>Requirements:</u></h3> </div> </div> </div> <div> <div> <h4>1. Adequate internet speed 2. Speaker 3. Video camera</h4> </div> </div> <div> <div> <h3><strong><u>Course Schedule:</u></strong></h3> <h4><strong><span>Day One:</span><br><span>Dental Treatment Planning (9 am to 6 pm)</span></strong></h4> <ul> <li><h4><span>Pain cases</span></h4></li> <li><h4><span>Periodontal diseases</span></h4></li> </ul> <h4><strong><span>Day Two:</span><br><span>Dental Treatment Planning: (9 am to 6 pm)</span></strong></h4> <ul> <li><h4><span>Denture cases</span></h4></li> <li><h4><span>Tooth surface loss and oral medicine</span></h4></li> </ul> <h4><span>Day Three :<br>(9 am to 1 pm)</span></h4> <ul> <li><h4><span>Medical emergency</span></h4></li> </ul> <h4><span>Day Four:<br>(9 am to 6 pm)</span></h4> <ul> <li><h4><span>Actor OSCEs (Covering a total of 45 stations)</span></h4></li> </ul> <h4><span>Day Five</span><br><span>(9 am to 1 pm)</span></h4> <ul> <li><h4>Written OSCEs 2 pm to 4 pm: Skilled OSCEs demos</h4></li> </ul> </div> </div> <div> <div> <h4><span>In-person Sessions</span></h4> <ul> <li><h4><strong>Skilled OSCEs and Medical Emergency Practice</strong></h4></li> </ul> <h4>Choose your suitable date and embark on your journey to ORE success!</h4> </div> </div> <div> <div> <h4>At EA Dental, we are committed to your success. Our ORE 2 online course combines top-notch instruction, flexibility, and personalized support to ensure you are fully prepared for the ORE exam. Join us on this educational journey and take the first step towards a successful dental career in the UK.</h4> </div> </div> <div> <div> <h3>Join our ORE 2 online course today and unlock your path to success!</h3> </div> </div> </li> </ul> </div> </div> </div> </div> </div> </div>",
+            name: "ORE2: Five-Day Comprehensive Online Course + One In-Person Day"
+        },
+        {
+          descrip: '<div> <h3>ORE/LDS Manikin Exam Prep Platform</h3> <h4>Ace Your ORE/LDS Manikin Exam with Confidence!</h4> <p>Enroll Today with a One-Time Payment and Unlock Unlimited Access to Our Comprehensive Course Videos!</p> <h3>What’s Included:</h3> <ul> <li><strong>Extensive Video Library:</strong> Master every aspect of the ORE/LDS manikin exam with our expertly crafted instructional videos.</li> <li><strong>Exclusive Tutor Support:</strong> Join our private WhatsApp group for continuous guidance. A dedicated tutor will follow up on your progress every two days, and you can post unlimited practice exercises for personalized feedback.</li> <li><strong>Lifetime Access:</strong> Pay once and keep learning until you pass. No recurring fees, no expiration dates!</li> </ul> <h3>Manikin Exam Course Content</h3> <h4>Fixed Prosthodontics</h4> <ul> <li>Veneer (11 - 21)</li> <li>Central Incisor Index (11 - 21)</li> <li>PFM Central (11 - 21)</li> <li>Canine Index (13 - 23)</li> <li>Canine PFM (13 - 23)</li> <li>PFM Premolar (15 - 25)</li> <li>Molar Index (16 - 26)</li> <li>Full Gold Crown (16 - 26)</li> <li>Temporary Crown (36)</li> <li>Impression (Two Stage)</li> </ul> <h4>Endodontics</h4> <ul> <li>Access Opening (26)</li> <li>Endodontic Cleaning & Shaping + Obturation (21)</li> </ul> <h4>Operative Dentistry</h4> <ul> <li>Class I Cavity Preparation (14 - 24 - 15 - 25)</li> <li>Class II Cavity Preparation MO (16 - 26)</li> <li>Class II Cavity Preparation MOD (15 - 25)</li> <li>Class III Cavity Preparation</li> <li>Class IV Cavity Preparation – Composite Filling</li> <li>Class V Cavity Preparation</li> <li>Class VI Cavity Preparation (15 - 25) – Composite Filling</li> <li>Amalgam Filling (Mobile 45)</li> </ul> <h4>Removable Prosthodontics</h4> <ul> <li>Rest Seats</li> </ul> <h3>Why Choose Us?</h3> <ul> <li><strong>One-Time Payment:</strong> Get lifetime access with just one payment. No hidden costs, no monthly fees.</li> <li><strong>Unlimited Practice:</strong> Share and receive feedback on unlimited exercises every day.</li> <li><strong>Expert Support:</strong> Regular follow-ups by experienced tutors ensure you stay on track.</li> </ul> </div>',
+          docID: 'oret',
+          name: '3-Day ORE2 Manikin Mastery',
+          choices: [
+            {
+              '0': {
+                price: 1500,
+                name: '19 October - 21 October | Dr Ahmed | 9:00am - 7:00pm',
+                inStock: 10,
+                date: "19-10-2024"
+              },
+              '1': {
+                price: 1500,
+                name: '16 November - 18 November | Dr Ahmed | 9:00am - 7:00pm',
+                inStock: 10,
+                date: "16-11-2024"
+              },
+              '2': {
+                price: 1500,
+                name: '7 December - 9 December | Dr Ahmed | 9:00am - 7:00pm',
+                inStock: 10,
+                date: "7-12-2024"
+              },
+              '3': {
+                price: 1500,
+                name: '14 December - 16 December',
+                inStock: 10,
+                date: "14-12-2024"
+              },
+              '4': {
+                price: 1500,
+                name: '21 December - 23 December | Dr Ahmed | 9:00am - 7:00pm',
+                inStock: 10,
+                date: "21-12-2024"
+              },
+              '5': {
+                price: 1500,
+                name: '6 January - 8 January | Dr Ahmed | 9:00am - 7:00pm',
+                inStock: 10,
+                date: "6-1-2025"
+              },
+              '6': {
+                price: 1500,
+                name: '13 January - 15 January | Dr Shahla | 9:00am - 7:00pm',
+                inStock: 10,
+                date: "13-1-2025"
+              },
+              
+            }
+          ],
+          collectionName: 'ore'
+        }
+      ]
+    
+    
+    try {
+      const res = await itemRef.update({
+        shoppingOptions: shoppingOptions
+      });
+      console.log('Document successfully updated!', res);
+
+    } catch (error) {
+      console.error('Error updating document:', error);
+    }
+  }
+
+
+
+
+
+
 async function threeInOneMock() {
 
     const itemRef = db.collection('mocks').doc('ore3')
@@ -22,80 +181,80 @@ async function threeInOneMock() {
                     choices: [{
                         "0": 
                             {
-                                "name": "28 August 2024 | 8:00am - 5:30pm",
-                                "price": 564 ,
+                                name: "28 August 2024 | 8:00am - 5:30pm",
+                                price: 564 ,
                                 "inStock": 5                   
                             },
                         "1": 
                             {
-                                "name": "29 August 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "29 August 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "2": 
                             {
-                                "name": "30 August 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "30 August 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "3": 
                             {
-                                "name": "2 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "2 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "4": 
                             {
-                                "name": "3 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "3 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "5": 
                             {
-                                "name": "4 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "4 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "6": 
                             {
-                                "name": "5 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "5 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "7": 
                             {
-                                "name": "6 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "6 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "8": 
                             {
-                                "name": "9 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "9 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "9": 
                             {
-                                "name": "28 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "28 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "10": 
                             {
-                                "name": "29 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "29 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "11": 
                             {
-                                "name": "30 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "30 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "12": 
                             {
-                                "name": "31 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "31 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             }
                 }],
@@ -133,80 +292,80 @@ async function threeInOneMock() {
                     choices: [{
                         "0": 
                             {
-                                "name": "28 August 2024 | 8:00am - 5:30pm | Dr. Thomas Anderson",
-                                "price": 564 ,
+                                name: "28 August 2024 | 8:00am - 5:30pm | Dr. Thomas Anderson",
+                                price: 564 ,
                                 "inStock": 5                   
                             },
                         "1": 
                             {
-                                "name": "29 August 2024 | 8:00am - 5:30pm | Dr. Laura Martinez",
-                                "price": 564,
+                                name: "29 August 2024 | 8:00am - 5:30pm | Dr. Laura Martinez",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "2": 
                             {
-                                "name": "30 August 2024 | 8:00am - 5:30pm | Dr. David Lee",
-                                "price": 564,
+                                name: "30 August 2024 | 8:00am - 5:30pm | Dr. David Lee",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "3": 
                             {
-                                "name": "2 September 2024 | 8:00am - 5:30pm | Dr. Jennifer Taylor",
-                                "price": 564,
+                                name: "2 September 2024 | 8:00am - 5:30pm | Dr. Jennifer Taylor",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "4": 
                             {
-                                "name": "3 September 2024 | 8:00am - 5:30pm | Dr. Christopher Moore",
-                                "price": 564,
+                                name: "3 September 2024 | 8:00am - 5:30pm | Dr. Christopher Moore",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "5": 
                             {
-                                "name": "4 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "4 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "6": 
                             {
-                                "name": "5 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "5 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "7": 
                             {
-                                "name": "6 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "6 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "8": 
                             {
-                                "name": "9 September 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "9 September 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "9": 
                             {
-                                "name": "28 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "28 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "10": 
                             {
-                                "name": "29 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "29 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "11": 
                             {
-                                "name": "30 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "30 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             },
                         "12": 
                             {
-                                "name": "31 October 2024 | 8:00am - 5:30pm",
-                                "price": 564,
+                                name: "31 October 2024 | 8:00am - 5:30pm",
+                                price: 564,
                                 "inStock": 5                   
                             }
                 }],
@@ -263,12 +422,9 @@ async function threeInOneMock() {
           name: 'ORE2 Medical Emergencies Masterclass',
           choices: [
             {
-              '0': { price: 300, name: '2 October | 9:00am - 1:00pm', inStock: 10 },
-              '1': { price: 300, name: '16 October | 9:00am - 1:00pm', inStock: 10 },
-              '2': { price: 300, name: '20 November | 9:00am - 1:00pm', inStock: 10 },
-              '3': { price: 300, name: '4 December | 9:00am - 1:00pm', inStock: 10 },
-              '4': { price: 300, name: '18 December | 9:00am - 1:00pm', inStock: 10 },
-              '5': { price: 300, name: '27 December | 9:00am - 1:00pm', inStock: 10 }
+              '0': { price: 300, name: '16 October | 9:00am - 1:00pm', inStock: 10 },
+              '1': { price: 300, name: '20 November | 9:00am - 1:00pm', inStock: 10 },
+              '2': { price: 300, name: '4 December | 9:00am - 1:00pm', inStock: 10 }
             }
           ],
           collectionName: 'ore'
@@ -318,4 +474,4 @@ async function threeInOneMock() {
 
 
 
-  ore2Revisions()
+  ore2InPerson()

@@ -21,7 +21,7 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Add this line to parse JSON body
 app.use(bodyParser.json()); // Middleware to parse JSON bodies
-
+app.disabled('x-powered-by')
 
 
 const YOUR_DOMAIN = 'https://v1.ea-dental.com';
@@ -65,7 +65,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
           // add ticket to tickets arr
           if(choices[idx].inStock && !item.quantity){
             console.log(choices[idx].inStock && !item.quantity)
-            tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppi  ngOptionIdx': item.shoppingOption, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+            tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'orderDate': item.orderDate, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
             price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
           }
   
