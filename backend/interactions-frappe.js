@@ -79,7 +79,7 @@ function createTicketOrder(email, full_name, phone, tickets ){
             }
             return {
                 ticket_name: ticket.ticketName + ticket.choiceName,
-                ticket_date: jsTicketDate || undefined
+                ticket_date: jsTicketDate.toISOString().split('T')[0] || undefined
             }
         })
     };
