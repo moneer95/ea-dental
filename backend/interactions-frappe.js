@@ -64,7 +64,7 @@ function createCourseOrder(email, full_name, phone, address, courses){
 }
 
 
-function createTicketOrder(email, full_name, phone, tickets, ){
+function createTicketOrder(email, full_name, phone, tickets ){
 
     
     const data = {
