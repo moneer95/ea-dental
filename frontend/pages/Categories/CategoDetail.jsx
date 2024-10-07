@@ -185,7 +185,6 @@ export default function CategoDetail() {
                             category: collectionName,
                             docID: option.docID,
                             choices: option.choices,
-                            orderDate: option.date,
                             choiceId: [
                                 Object.keys(option.choices[0])[0],
                                 option.choices.length > 1 ? Object.keys(option.choices[1])[0] : null

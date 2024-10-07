@@ -17,7 +17,8 @@ function Cart() {
 
       let updatedChoiceId = [...updatedItems[iIndex].choiceId];
       updatedChoiceId[cIndex] = event.target.value;
-      
+
+
       updatedItems[iIndex] = { ...updatedItems[iIndex], choiceId: updatedChoiceId };
       return updatedItems
     } )

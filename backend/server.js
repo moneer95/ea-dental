@@ -64,7 +64,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
           // add ticket to tickets arr
           if(choices[idx].inStock && !item.quantity){
             console.log(choices[idx].inStock && !item.quantity)
-            tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'orderDate': item.orderDate, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
+            tickets.push({'ticketName': item.optionName, 'choiceId': item.choiceId[0], 'collectionName': item.category, 'docID': item.docID, 'shoppingOptionIdx': item.shoppingOption, 'orderDate': item.choiceId[0].date, 'choiceName': (courseOrTicketChoice + courseSecondChoice), 'courseName': item.optionName}) //category the same as collection name 
             price = await getCourseTicketPrice(item.category, item.docID, item.shoppingOption, item.choiceId[0])
           }
   
