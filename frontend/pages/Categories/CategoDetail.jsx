@@ -100,9 +100,16 @@ export default function CategoDetail() {
     
                 {itemsList}
                 { ["ore", "lds"].some(word => collectionName.includes(word)) &&
-                    <FAQ 
-                        faqs={faqs}
-                    />
+                    <>
+                        <br />         
+                        <br />         
+                        <br />         
+                        <br />         
+                        <FAQ
+                            faqs={faqs}
+                            isLarge={false}
+                        />
+                    </>
                 }
                 <div style={{margin: '3rem'}} dangerouslySetInnerHTML={{ __html: colloecData[0]?.details }} />              
             </div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-export default function FAQ({faqs}) {
+export default function FAQ({faqs, isLarge}) {
     const [activeIndex, setActiveIndex] = useState(0);
   
     const toggleFAQ = (index) => {
@@ -10,7 +10,7 @@ export default function FAQ({faqs}) {
   
     return (
       <div className="faq-container">
-        <h1>Frequently Asked Questions</h1>
+        <h1 className="fs-6 text-center">Frequently Asked Questions</h1>
         {faqs.map((faq, index) => (
           <div
             key={index}
