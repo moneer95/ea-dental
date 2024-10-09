@@ -24,11 +24,12 @@ async function ORE2Comperehensive() {
               name: 'ORE2 Comprehensive Online Course',
               choices: [
                 {
-                  '0': { price: 1050, name: '14 October - 18 October', inStock: 10 },
-                  '1': { price: 1050, name: '18 November - 22 November', inStock: 10 },
-                  '2': { price: 1050, name: '2 November - 6 November', inStock: 10 },
-                  '3': { price: 1050, name: '16 December 20 December', inStock: 10 },
-                  '4': { price: 1050, name: '25 December 29 December', inStock: 10 }
+                  '0': { price: 1050, name: '14 October - 18 October', inStock: 10, date: "14-10-2024" },
+                  '1': { price: 1050, name: '18 November - 22 November', inStock: 10, date: "18-11-2024" },
+                  '2': { price: 1050, name: '2 December - 6 December', inStock: 10, date: "2-12-2024" },
+                  '3': { price: 1050, name: '9 December - 13 December', inStock: 10, date: "9-12-2024" },
+                  '4': { price: 1050, name: '20 January - 24 January', inStock: 10, date: "20-1-2025" },
+                  '5': { price: 1050, name: '27 January - 31 January', inStock: 10, date: "27-1-2025" }
                 }
               ],
               collectionName: 'ore'
@@ -93,4 +94,4 @@ async function ORE2Comperehensive() {
 
 
 
-  ore2InPerson()
+  ORE2Comperehensive()

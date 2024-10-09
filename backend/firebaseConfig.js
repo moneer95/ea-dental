@@ -29,7 +29,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
         choices: updatedStock
       });
       
-      console.log('Document successfully updated!', res);
+      console.log('Ticket Stock successfully updated!', res);
     } catch (error) {
       console.error('Error updating document:', error);
     }
