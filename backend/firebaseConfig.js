@@ -19,14 +19,14 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
     // get choices arr value
     const item = await itemRef.get();
     // console.log(item.data())
-    const choices = item.data().shoppingOptions[shoppingOptionIdx].choices
+    const shoppingOptions = item.data().shoppingOptions
 
-      updatedStock = [...choices]
-      updatedStock[0][choiceId].inStock -= 1
+      shoppingOptions[shoppingOptionIdx].choices[0][choiceId].inStock -= 1
+
 
     try {
       const res = await itemRef.update({
-        [`shoppingOptions[${shoppingOptionIdx}].choices`]: updatedStock
+        shoppingOptions: shoppingOptions
       });
       
       console.log('Ticket Stock successfully updated!', res);
