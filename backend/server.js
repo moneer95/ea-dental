@@ -202,13 +202,13 @@ app.get('/session-status', async (req, res) => {
       console.log(222222)
       //create the order on frappe
       createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), session.total_details.amount_shipping, products)
+      .then(res => (createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight, res.data.name))
+    )
       
       //use products array
       for(i = 0; i < products.length; i++){
         updateStockValue(products[i].id, products[i].quantity, products[i].choiceId) //the func return weight of the product
       }
-
-      createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight)
       
     }
 

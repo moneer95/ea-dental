@@ -26,9 +26,10 @@ function createPurchaseOrder(email, full_name, phone, address, paidShipping, ite
         })
     };
 
-    axios.post('https://backend.ea-dental.com/api/resource/Product%20Orders', data, config)
+    return axios.post('https://backend.ea-dental.com/api/resource/Product%20Orders', data, config)
         .then(response => {
             console.log('Document created successfully:', response.data);
+            return response.data
         })
         .catch(error => {
             console.error('Error creating document:', error.response ? error.response.data : error.message);
@@ -65,7 +66,6 @@ function createCourseOrder(email, full_name, phone, address, courses){
 
 
 function createTicketOrder(email, full_name, phone, tickets ){
-
     
     const data = {
         email: email,
@@ -126,3 +126,6 @@ module.exports = {
     createBooking
   };
   
+
+let x = createTicketOrder('email', 'full_name', 'phone', 'tickets' )
+x.then(res => console.log(res.data.name))

@@ -107,13 +107,13 @@ async function enrollUser(userEmail, fName, lName, courses){
 const axios = require('axios');
 const { cursorTo } = require('readline');
 
-const createOrder = async (email, name, phone, country, city, line1, line2, postal_code, weight) => {
+const createOrder = async (email, name, phone, country, city, line1, line2, postal_code, weight, order_id) => {
   
   try {
     const response = await axios.post('https://api.parcel.royalmail.com/api/v1/Orders', {
       items: [
         {
-          orderReference: "ORDER123",
+          orderReference: order_id,
           recipient: {
             name: name,
             address: {
