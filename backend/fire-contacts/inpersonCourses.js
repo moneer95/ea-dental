@@ -29,26 +29,30 @@ async function ore2InPerson() {
                   {
                       name: "14th-18th of October online",
                       price: 1050,
-                      date: "14-10-2024"
+                      date: "14-10-2024",
+                      inStock: 15
                   },
               "1": 
                   {
                       name: "18-22 of November online",
                       price: 1050,
-                      date: "18-11-2024"
+                      date: "18-11-2024",
+                      inStock: 15
                   },
               "2": 
                   {
                       name: "2-6 of December online",
                       price: 1050,
-                      date: "2-12-2024"
+                      date: "2-12-2024",
+                      inStock: 15
 
                   },
               "3": 
                   {
                       name: "9-13 of December online",
                       price: 1050,
-                      date: "13-9-2024"
+                      date: "13-9-2024",
+                      inStock: 15
                   }    
               },
               {
@@ -433,6 +437,5 @@ async function threeInOneMock() {
   }
 
 
+  revisionMockSession()
 
-
-  ore2InPerson()

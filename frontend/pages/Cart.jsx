@@ -55,6 +55,7 @@ function Cart() {
                   
                   //check if the item has stock prob and check
                   let isEventFull = item.choices[0][oIndex]?.inStock > 0 ? false : true //check if the event is full
+                  
                   if(item.choices[0][oIndex]?.inStock === undefined){
                     isEventFull = false
                   }
@@ -64,7 +65,7 @@ function Cart() {
                           value={oIndex}
                           disabled={isEventFull}
                          >
-                          {option[1].name + (isEventFull ? " (Event Full)" : "")} 
+                          { (isEventFull ? <strong>( ** Event Full ** ) </strong>  : "") + option[1].name} 
                         </option>
                }               
                )}
