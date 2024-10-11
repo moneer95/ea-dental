@@ -26,7 +26,7 @@ async function updateStocTicketValue(collectionName, docID, shoppingOptionIdx, c
 
     try {
       const res = await itemRef.update({
-        [`shoppingOptions.${shoppingOptionIdx}.choices`]: updatedStock
+        [`shoppingOptions[${shoppingOptionIdx}].choices`]: updatedStock
       });
       
       console.log('Ticket Stock successfully updated!', res);

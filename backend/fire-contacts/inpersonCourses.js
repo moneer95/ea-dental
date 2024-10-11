@@ -404,7 +404,20 @@ async function threeInOneMock() {
             }
           ],
           collectionName: 'revisions'
-        }
+        },
+        {
+            descrip: '<p>Why waste time figuring out DTP? Join our two-day intensive DTP course for an unbeatable price. <strong>Aims:</strong> Prepare candidates for ORE2, familiarize with DTP, identify skill gaps. <strong>Objectives:</strong> Discuss pain management, oral lesions, TMJ disorders, paediatric dentistry, dental traumatology, orthodontics. <strong>Learning outcomes:</strong> Update knowledge in restorative and paediatric dentistry, gain confidence in dental treatment planning, improve communication skills. <strong>Day 1:</strong> Pain cases, periodontal diseases, dentures, restorative dentistry. <strong>Day 2:</strong> Prosthodontics, endodontics, oral medicine, full DTP mock cases. <strong>Course timing:</strong> 9am-5pm. Non-refundable.</p>',
+            docID: 'ore',
+            name: 'ORE2: 2-Day DTP Bootcamp',
+            choices: [
+                {
+                '0': { price: 600, name: '14 October | 09:00 AM - 05:00 PM', inStock: 10, date: "14-10-2024" },
+                '1': { price: 600, name: '18 November | 09:00 AM - 05:00 PM', inStock: 0, date: "18-11-2024" },
+                '2': { price: 600, name: '2 December | 09:00 AM - 05:00 PM', inStock: 10, date: "2-12-2024" },
+                }
+            ],
+            collectionName: 'revisions'
+          }
       ]
     
     
@@ -422,4 +435,4 @@ async function threeInOneMock() {
 
 
 
-  ore2Revisions()
+  ore2InPerson()
