@@ -41,6 +41,7 @@ export default function Products(){
                             price = {product.choices[0][0].price}
                             descrip = {product.description}
                             category = {product.category} //to pass to cart through card
+                            returnID = {ids[idx]}
                             choices = {product.choices}
                             // choiceId = {product.choiceId}
                         />

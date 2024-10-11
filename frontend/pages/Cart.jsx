@@ -65,7 +65,7 @@ function Cart() {
                           value={oIndex}
                           disabled={isEventFull}
                          >
-                          { (isEventFull ? <strong>( ** Event Full ** ) </strong>  : "") + option[1].name} 
+                          { (isEventFull ?<> <strong> ** Event Full ** </strong> {option[1].name} </> :  option[1].name) } 
                         </option>
                }               
                )}

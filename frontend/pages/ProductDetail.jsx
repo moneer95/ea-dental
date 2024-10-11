@@ -40,7 +40,7 @@ const ProductDetail = () => {
     return (
         <div className='product-detail'>
             <Link
-                    to={`..#${props.category}`}
+                    to={`..#${props.returnID}`}
                     relative="path"
                     className="back-button"
                 >
