@@ -125,7 +125,3 @@ module.exports = {
     createTicketOrder,
     createBooking
   };
-  
-
-let x = createTicketOrder('email', 'full_name', 'phone', 'tickets' )
-x.then(res => console.log(res.data.name))
