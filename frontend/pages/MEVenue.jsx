@@ -252,6 +252,9 @@ export const MEVenue = () => {
             
             for(let i=0; i<selectedPrevBookings.length; i++){
                 console.log(i)
+
+                overLapsCount = 0 //number of persons in this time
+
                 const duration = parseInt(choiceId, 10) + 1;
                 const startSelectedDate = startDate.getTime();
                 const endDate = startSelectedDate + ( duration * 60 * 60 * 1000 ) - ( 60 * 60 ) // add the duration in milleseconds the minutes the additional three seconds;
@@ -266,7 +269,13 @@ export const MEVenue = () => {
                      {start: new Date(startDate), end: new Date(endDate)}
                 );
                 console.log(isOverLap)
-                if(isOverLap) return true;
+                if(isOverLap){
+                    overLapsCount += 1
+                    
+                    if(overLapsCount > 11){
+                        return true
+                    }
+                }
             }
             return false;
         }
