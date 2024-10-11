@@ -253,7 +253,7 @@ export const MEVenue = () => {
             for(let i=0; i<selectedPrevBookings.length; i++){
                 console.log(i)
 
-                overLapsCount = 0 //number of persons in this time
+                let overLapsCount = 0 //number of persons in this time
 
                 const duration = parseInt(choiceId, 10) + 1;
                 const startSelectedDate = startDate.getTime();
