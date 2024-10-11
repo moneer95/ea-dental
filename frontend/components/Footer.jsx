@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="footer-content">
             <div className="footer-left">
               <img src={logoText} alt="EA Dental Logo, best dental courses in the UK" className="footer-logo" />
-              <p><i className="fas fa-map-marker-alt"></i> EA Dental, P.O. HA5 3HR, Pinner, England</p>
+              <p><i className="fas fa-map-marker-alt"></i> EA Dental, 177 Field End Road, HA5 1QR, England</p>
               <p><i className="fas fa-envelope"></i> Email: info@ea-dental.com</p>
               <p><i className="fas fa-phone-alt"></i> Phone: +44 (0)744 793 1179</p>
               <div className="footer-links">
