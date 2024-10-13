@@ -11,7 +11,7 @@ const arr = [
                     "price": 45.60,
                     "weight": 0.2,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 6                    
                 }
             }
         ],
@@ -49,7 +49,7 @@ const arr = [
                     "price": 16.80,
                     "weight": 0.001,
                     "dimensions": [12, 4, 4],
-                    "inStock": 100                    
+                    "inStock": 10                    
                 }
             }
         ],
@@ -68,7 +68,7 @@ const arr = [
                     "price": 27.00,
                     "weight": 0.0372,
                     "dimensions": [9, 7, 3],
-                    "inStock": 100                    
+                    "inStock": 10                    
                 }
             }
         ],
@@ -87,7 +87,7 @@ const arr = [
                     "price": 18.00,
                     "weight": 0.15,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 9                    
                 }
             }
         ],
@@ -106,7 +106,7 @@ const arr = [
                     "price": 12.00,
                     "weight": 0.030,
                     "dimensions": [6, 5, 6],
-                    "inStock": 100                    
+                    "inStock": 8                    
                 }
             }
         ],
@@ -125,7 +125,7 @@ const arr = [
                     "price": 16.80,
                     "weight": 0.0244,
                     "dimensions": [16, 3.5, 3],
-                    "inStock": 100                    
+                    "inStock": 40                   
                 }
             }
         ],
@@ -163,7 +163,7 @@ const arr = [
                     "price": 0.60 ,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 25                   
                 }
             }
         ],
@@ -239,7 +239,7 @@ const arr = [
                     "price": 10.80,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 2                    
                 }
             }
         ],
@@ -258,7 +258,7 @@ const arr = [
                     "price": 18.00,
                     "weight": 0.1853,
                     "dimensions": [16.5, 16.5, 2],
-                    "inStock": 100                    
+                    "inStock": 6                    
                 }
             }
         ],
@@ -364,7 +364,7 @@ const arr = [
     },
     {
         "id": 24,
-        "name": "K files ( 15-40)",
+        "name": "K files ( 15-40 )",
         "choices": [
             {"0": 
                 {
@@ -372,7 +372,7 @@ const arr = [
                     "price": 9.60 ,
                     "weight": 0.0065,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 0                   
                 }
             }
         ],
@@ -486,7 +486,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 2                   
                 }
             }
         ],
@@ -505,7 +505,7 @@ const arr = [
                     "price": 4.80 ,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 10                   
                 }
             }
         ],
@@ -524,7 +524,7 @@ const arr = [
                     "price": 4.80 ,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 10                   
                 }
             }
         ],
@@ -543,7 +543,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.001,
                     "dimensions": [1, 0.2, 0.5],
-                    "inStock": 100                   
+                    "inStock": 10                   
                 }
             }
         ],
@@ -562,7 +562,7 @@ const arr = [
                     "price": 8.40 ,
                     "weight": 0.001,
                     "dimensions": [2, 0.1, 2],
-                    "inStock": 100                   
+                    "inStock": 11                   
                 }
             }
         ],
@@ -600,7 +600,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.002,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 8                   
                 }
             }
         ],
@@ -619,7 +619,7 @@ const arr = [
                     "price": 54.00,
                     "weight": 0.73,
                     "dimensions": [25, 26, 6],
-                    "inStock": 100                    
+                    "inStock": 6                    
                 }
             }
         ],
@@ -638,7 +638,7 @@ const arr = [
                     "price": 2.40 ,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 14                   
                 }
             }
         ],
@@ -657,13 +657,13 @@ const arr = [
                     "price": 96.00,
                     "weight": 0.2,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 3                    
                 }
             }
         ],
         "url": "https://ea-dental.com/shop/rubber-face-mask-with-built-in-fixture-for-drainage-pipe/",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\">\n<p>Replacement of rubber face mask for the phantom head</p>\n</div> <div class=\"post-content\"><h3 class=\"fusion-woocommerce-tab-title fusion-responsive-typography-calculated\" data-fontsize=\"17\" style=\"--fontSize: 17; line-height: 1.4; --minFontSize: 17;\" data-lineheight=\"23.8px\">Description</h3><p>High quality replacement face mask with drainage and 1m pipe.</p></div>",
-        "image_path": ["../assets/products.svg"],
+        "image_path": ["https://v1.ea-dental.com/images/face-mask.webp"],
         "category": "Restorative"
     },
     {
@@ -695,7 +695,7 @@ const arr = [
                     "price": 16.80,
                     "weight": 0.437,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 10                    
                 }
             }
         ],
@@ -771,7 +771,7 @@ const arr = [
                     "price": 16.80,
                     "weight": 0.00328,
                     "dimensions": [12, 6, 6],
-                    "inStock": 100                    
+                    "inStock": 13                    
                 }
             }
         ],
@@ -790,7 +790,7 @@ const arr = [
                     "price": 50.40,
                     "weight": 1.8,
                     "dimensions": [18.5, 11, 11],
-                    "inStock": 100                    
+                    "inStock": 3                    
                 }
             }
         ],
@@ -809,7 +809,7 @@ const arr = [
                     "price": 40.00,
                     "weight": 0.9228,
                     "dimensions": [14, 11, 10],
-                    "inStock": 100                    
+                    "inStock": 1                    
                 }
             }
         ],
@@ -870,9 +870,9 @@ const arr = [
                 }
             }
         ],
-        "url": "https://ea-dental.com/shop/activator-for-c-silicon/",
+        "url": "images/activator.webp",
         "description": "<div class=\"post-content woocommerce-product-details__short-description\"> <p>Activator for putty and wash</p> <p>Contents: 40 ml tube</p> </div>",
-        "image_path": ["../assets/products.svg"],
+        "image_path": ["https://v1.ea-dental.com/images/activator.webp"],
         "category": "Impression Materials"
     },
     {
@@ -942,7 +942,7 @@ const arr = [
                     "price": 96.00,
                     "weight": 0.383,
                     "dimensions": [20, 15, 2.5],
-                    "inStock": 100             
+                    "inStock": 4             
                 }
             }
         ],
@@ -1037,7 +1037,7 @@ const arr = [
                     "price": 6.00 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 }
             }
         ],
@@ -1189,7 +1189,7 @@ const arr = [
                     "price": 6.00 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
-                    "inStock": 100                   
+                    "inStock": 50                   
                 }
             }
         ],
@@ -1207,7 +1207,7 @@ const arr = [
                 "price": 3.60 ,
                 "weight": 0.0082,
                 "dimensions": [],
-                "inStock": 100                   
+                "inStock": 5                   
             },
             "1": 
                 {
@@ -1215,7 +1215,7 @@ const arr = [
                     "price": 4.80 ,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 },         
             "2": 
                 {
@@ -1223,7 +1223,7 @@ const arr = [
                     "price": 7.80 ,
                     "weight": 0.04,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 },
             "3": 
                 {
@@ -1231,7 +1231,7 @@ const arr = [
                     "price": 7.80 ,
                     "weight": 0.01,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 },
             "4": 
                 {
@@ -1239,7 +1239,7 @@ const arr = [
                     "price": 7.80 ,
                     "weight": 0.01,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 },
             "5": 
                 {
@@ -1247,7 +1247,7 @@ const arr = [
                     "price": 24.00 ,
                     "weight": 0.0156,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 },
             "6": 
                 {
@@ -1255,7 +1255,7 @@ const arr = [
                     "price": 58.80 ,
                     "weight": 0.176,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 5                   
                 }
             }
             
@@ -1311,7 +1311,7 @@ const arr = [
                     "price": 10.80,
                     "weight": 0.005,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 1                    
                 },
             "1": 
                 {
@@ -1319,7 +1319,7 @@ const arr = [
                     "price": 60.00,
                     "weight": 0.015,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 1                    
                 }
             }
         ],
@@ -1338,7 +1338,7 @@ const arr = [
                     "price": 12.00,
                     "weight": 0.31,
                     "dimensions": [6, 3, 5],
-                    "inStock": 100                    
+                    "inStock": 40                    
                 },
             "1": 
                 {
@@ -1346,7 +1346,7 @@ const arr = [
                     "price": 12.00,
                     "weight": 0.31,
                     "dimensions": [6, 3, 5],
-                    "inStock": 100                    
+                    "inStock": 40                    
                 }
             }
         ],
@@ -1365,7 +1365,7 @@ const arr = [
                     "price": 12.00,
                     "weight": 0.35,
                     "dimensions": [8, 5, 2],
-                    "inStock": 100                    
+                    "inStock": 60                    
                 },
             "1": 
                 {
@@ -1373,7 +1373,7 @@ const arr = [
                     "price": 12.00,
                     "weight": 0.35,
                     "dimensions": [8, 5, 2],
-                    "inStock": 100                    
+                    "inStock": 60                    
                 }
             }
         ],
@@ -1427,7 +1427,7 @@ const arr = [
                     "price": 28.80,
                     "weight": 0.008,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 35                    
                 },
             "1": 
                 {
@@ -1435,7 +1435,7 @@ const arr = [
                     "price": 28.80,
                     "weight": 0.008,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 35                   
                 }
             }
         ],
@@ -1450,27 +1450,11 @@ const arr = [
         "choices": [
             {"0": 
                 {
-                    "name": "Upper Jaw",
-                    "price": 180.00,
-                    "weight": 0.001,
-                    "dimensions": [],
-                    "inStock": 100                    
-                },
-            "1": 
-                {
-                    "name": "Upper Jaw",
-                    "price": 132.00,
-                    "weight": 0.001,
-                    "dimensions": [],
-                    "inStock": 100                    
-                },
-            "2": 
-                {
                     "name": "Set of Upper & Lower Jaw",
                     "price": 312.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 30                   
                 }
             }
         ],
@@ -1489,7 +1473,7 @@ const arr = [
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 90
                 },
                 "1": {
                     "name": "UL1 (Operative/ crown preps) #21 - single tooth",
@@ -1503,14 +1487,14 @@ const arr = [
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 50
                 },
                 "3": {
                     "name": "UL2 (Contact) #22 - single tooth",
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 30
                 },
                 "4": {
                     "name": "UR3 (Operative/ crown preps) #13 - single tooth",
@@ -1566,14 +1550,14 @@ const arr = [
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 10
                 },
                 "12": {
                     "name": "UR7 (Contact) #17 - single tooth",
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 170
                 },
                 "13": {
                     "name": "UL7 (Contact) #27 - single tooth",
@@ -1601,28 +1585,28 @@ const arr = [
                     "price": 3.60,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 40
                 },
                 "17": {
                     "name": "LR2 (contact) #42 - single tooth",
                     "price": 3.60,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 10
                 },
                 "18": {
                     "name": "LL1 (contact) #31 - single tooth",
                     "price": 3.60,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 30
                 },
                 "19": {
                     "name": "LR1 (contact) #41 - single tooth",
                     "price": 3.60,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 20
                 },
                 "20": {
                     "name": "LR4 (Rest seat prep) #44 - single tooth",
@@ -1643,7 +1627,7 @@ const arr = [
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 20
                 },
                 "23": {
                     "name": "LL5 ( Rest seat prep) #35 - single tooth",
@@ -1657,28 +1641,28 @@ const arr = [
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 90
                 },
                 "25": {
                     "name": "LL6 (Rest seat prep, Temporary crown, Impression) #36 - single tooth",
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 60
                 },
                 "26": {
                     "name": "LL7 (Rest seat prep, Temporary crown, Impression) #37 - single tooth",
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 10
                 },
                 "27": {
                     "name": "LR7 (Rest seat prep, Temporary crown, Impression) #47 - single tooth",
                     "price": 2.40,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 10
                 },
                 
                 "28": {
@@ -1686,7 +1670,7 @@ const arr = [
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 9
                 },
                 "29": {
                     "name": "UL1 (Operative/ crown preps) #21 - pack of 10",
@@ -1700,14 +1684,14 @@ const arr = [
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 5
                 },
                 "31": {
                     "name": "UL2 (Contact) #22 - pack of 10",
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 3
                 },
                 "32": {
                     "name": "UR3 (Operative/ crown preps) #13 - pack of 10",
@@ -1763,21 +1747,21 @@ const arr = [
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 1
                 },
                 "40": {
                     "name": "UR7 (Contact) #17 - pack of 10",
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 15
                 },
                 "41": {
                     "name": "UL7 (Contact) #27 - pack of 10",
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 10
                 },
                 "42": {
                     "name": "LL3 (contact) #33 - pack of 10",
@@ -1798,28 +1782,28 @@ const arr = [
                     "price": 36.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 4
                 },
                 "45": {
                     "name": "LR2 (contact) #42 - pack of 10",
                     "price": 36.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 1
                 },
                 "46": {
                     "name": "LL1 (contact) #31 - pack of 10",
                     "price": 36.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 3
                 },
                 "47": {
                     "name": "LR1 (contact) #41 - pack of 10",
                     "price": 36.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 4
                 },
                 "48": {
                     "name": "LR4 (Rest seat prep) #44 - pack of 10",
@@ -1840,7 +1824,7 @@ const arr = [
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 2
                 },
                 "51": {
                     "name": "LL5 ( Rest seat prep) #35 - pack of 10",
@@ -1854,28 +1838,28 @@ const arr = [
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 9
                 },
                 "53": {
                     "name": "LL6 (Rest seat prep, Temporary crown, Impression) #36 - pack of 10",
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 6
                 },
                 "54": {
                     "name": "LL7 (Rest seat prep, Temporary crown, Impression) #37 - pack of 10",
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 1
                 },
                 "55": {
                     "name": "LR7 (Rest seat prep, Temporary crown, Impression) #47 - pack of 10",
                     "price": 24.00,
                     "weight": 0.001,
                     "dimensions": [],
-                    "inStock": 100
+                    "inStock": 1
                 }
             }
             
@@ -2057,7 +2041,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.2,
                     "dimensions": [5, 3, 1],
-                    "inStock": 100                   
+                    "inStock": 3                   
                 },
             "1": 
                 {
@@ -2084,7 +2068,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.001,
                     "dimensions": [8, 7, 0.5],
-                    "inStock": 100                   
+                    "inStock": 0                   
                 },
             "1": 
                 {
@@ -2092,7 +2076,7 @@ const arr = [
                     "price": 19.20 ,
                     "weight": 0.0089,
                     "dimensions": [8, 7, 0.5],
-                    "inStock": 100                   
+                    "inStock": 0                   
                 },
             "2": 
                 {
@@ -2100,7 +2084,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.001,
                     "dimensions": [8, 7, 0.5],
-                    "inStock": 100                   
+                    "inStock": 45                   
                 },
             "3": 
                 {
@@ -2108,7 +2092,7 @@ const arr = [
                     "price": 19.20 ,
                     "weight":0.009,
                     "dimensions": [8, 7, 0.5],
-                    "inStock": 100                   
+                    "inStock": 45                   
                 }
             }
         ],
@@ -2154,7 +2138,7 @@ const arr = [
                     "price": 4.20 ,
                     "weight": 0.0188,
                     "dimensions": [8, 7, 0.5],
-                    "inStock": 100                   
+                    "inStock": 11                   
                 },
             "1": 
                 {
@@ -2181,7 +2165,7 @@ const arr = [
                     "price": 18.00,
                     "weight": 0.05,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 4                    
                 },
             "1":
                 {
@@ -2189,7 +2173,7 @@ const arr = [
                     "price": 18.00,
                     "weight": 0.05,
                     "dimensions": [],
-                    "inStock": 100   
+                    "inStock": 4   
                 }
             }
         ],
@@ -2208,7 +2192,7 @@ const arr = [
                     "price": 96.00,
                     "weight": 5,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 4                    
                 },
             "1":
                 {
@@ -2222,7 +2206,7 @@ const arr = [
         ],
         "url": "https://ea-dental.com/shop/phantom-head/",
         "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>The dental simulator head model can be fixed on the desktop for oral simulation training and demonstration. It is easy to disassemble and easy to use. It is an ideal choice for dental school education and dentist training.</p> <p>FEATURES</p> <p>1. The advanced human body model is vivid and lifelike, and the simulation exercise effect will be better.<br/>\n2. The universal adjustment handle can freely adjust the position of the imitation head mold and the shoulder body.<br/>\n3. The detachable and drainable design makes installation and use more convenient.<br/>\n4. Magnetic jaw attachment for ease jaw attachment, suitable for multiple clinical operation simulation exercises</p> <p>5. Excellent material, exquisite workmanship, and more durable.</p> <p>Product name\u2014dental simulator head model Material\u2014resin; silica gel; stainless steel; aluminum alloy</p> <p>Please remember to clean the model after use to keep\u00a0it\u00a0hygienic.</p> <p>LIMITED STOCK AVAILABILITY!!</p> </div>",
-        "image_path": ["https://v1.ea-dental.com/images/phanthom1.jpg", "https://v1.ea-dental.com/images/phanthom2.jpg", "https://v1.ea-dental.com/images/phanthom3.jpg", "https://v1.ea-dental.com/images/phanthom4.jpg"],
+        "image_path": ["https://v1.ea-dental.com/images/phanthom1.jpg", "https://v1.ea-dental.com/images/phanthom2.jpg", "https://v1.ea-dental.com/images/phanthom3.jpg", "https://v1.ea-dental.com/images/phanthom4.jpeg", "https://v1.ea-dental.com/images/face-mask.webp"],
         "category": "Restorative"
     },
     {
@@ -2235,7 +2219,7 @@ const arr = [
                     "price": 228.00,
                     "weight": 5,
                     "dimensions": [],
-                    "inStock": 100                   
+                    "inStock": 1                   
                 }
             }
         ],
@@ -2254,7 +2238,7 @@ const arr = [
                     "price": 16.80,
                     "weight": 0.438,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 8                    
                 }
             }
         ],
@@ -2273,7 +2257,7 @@ const arr = [
                     "price": 132.00,
                     "weight": 0.127,
                     "dimensions": [16, 6, 3],
-                    "inStock": 100                    
+                    "inStock": 8                    
                 },
             "1": 
                 {
@@ -2281,7 +2265,7 @@ const arr = [
                     "price": 132.00,
                     "weight": 0.127,
                     "dimensions": [16, 6, 3],
-                    "inStock": 100                    
+                    "inStock": 8                    
                 }
             }
         ],
@@ -2300,7 +2284,7 @@ const arr = [
                     "price": 60.00,
                     "weight": 0.35,
                     "dimensions": [10.5, 6, 4],
-                    "inStock": 100                    
+                    "inStock": 11                    
                 },
                 "1": 
                 {
@@ -2308,7 +2292,7 @@ const arr = [
                     "price": 114.00,
                     "weight": 0.35,
                     "dimensions": [10.5, 6, 4],
-                    "inStock": 100                    
+                    "inStock": 5                    
                 },
                 "2": 
                 {
@@ -2316,7 +2300,7 @@ const arr = [
                     "price": 114.00,
                     "weight": 0.35,
                     "dimensions": [10.5, 6, 4],
-                    "inStock": 100                    
+                    "inStock": 5                    
                 },
                 "3": 
                 {
@@ -2324,7 +2308,7 @@ const arr = [
                     "price": 162.00,
                     "weight": 0.35,
                     "dimensions": [10.5, 6, 4],
-                    "inStock": 100                    
+                    "inStock": 5                   
                 },
                 "4": 
                 {
@@ -2332,7 +2316,7 @@ const arr = [
                     "price": 162.00,
                     "weight": 0.35,
                     "dimensions": [10.5, 6, 4],
-                    "inStock": 100                    
+                    "inStock": 5                    
                 }
             }
         ],
@@ -2378,7 +2362,7 @@ const arr = [
                     "price": 6.00 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
-                    "inStock": 100                   
+                    "inStock": 50                   
                 },
             "1": 
                 {
@@ -2386,7 +2370,7 @@ const arr = [
                     "price": 6.00 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
-                    "inStock": 100                   
+                    "inStock": 50                   
                 }
             }
         ],
@@ -2405,7 +2389,7 @@ const arr = [
                     "price": 4.80 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
-                    "inStock": 100                   
+                    "inStock": 50                   
                 },
             "1":
                 {
@@ -2413,7 +2397,7 @@ const arr = [
                     "price": 6.00 ,
                     "weight": 0.0267 ,
                     "dimensions": [17, 2],
-                    "inStock": 100  
+                    "inStock": 50  
                 }
             }
         ],
@@ -2432,7 +2416,7 @@ const arr = [
                     "price": 1874.40,
                     "weight": 8,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 1                    
                 }
             }
         ],
@@ -2533,7 +2517,7 @@ const arr = [
                     "price": 2184.00,
                     "weight": 14,
                     "dimensions": [],
-                    "inStock": 100                    
+                    "inStock": 2                    
                 }
             }
         ],
