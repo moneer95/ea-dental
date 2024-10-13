@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import CartContext from '../contexts/cartContext';
 import ShimmerLoader from '../components/ShimmerLoader'
 
-const YOUR_DOMAIN = 'https://ea-dental.com/'
+const YOUR_DOMAIN = 'https://v1.ea-dental.com'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
