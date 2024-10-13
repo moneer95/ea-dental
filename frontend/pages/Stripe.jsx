@@ -10,7 +10,7 @@ const YOUR_DOMAIN = 'https://ea-dental.com/'
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 // This is your test secret API key.
-const stripePromise = loadStripe("pk_test_51PVRD2K1xhAcvKUPeT1r8QlJpG8hrUXsClTWtFoymbO8ih5AVaZUbO0Vk8hZMeNjJc8Z4D37cD8JcNC3ol6tB2BE00iVv3cBYB");
+const stripePromise = loadStripe("pk_live_dMgTBYXS36w7PsYld4Zjf6EK");
 
 export const CheckoutForm = () => {
 
