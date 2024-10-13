@@ -101,6 +101,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
       phone_number_collection: {
         enabled: true,
       },
+      allow_promotion_codes: true,
       ...(weight && {
         shipping_options: [
           {
