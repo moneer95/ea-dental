@@ -98,9 +98,6 @@ app.post(`/create-checkout-session`, async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['GB'], // Collect shipping address for specified countries
       },
-      phone_number_collection: {
-        enabled: true,
-      },
       allow_promotion_codes: true,
       ...(weight && {
         shipping_options: [
