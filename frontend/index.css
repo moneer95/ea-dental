@@ -1642,6 +1642,10 @@ p {
     .products-list {
         grid-template-columns: repeat(auto-fit, minmax(120px, .5fr)); /* Ensure cards take up equal space */
     }
+
+    .products-list-container {
+        margin: 0;
+    }
 }
 
 
