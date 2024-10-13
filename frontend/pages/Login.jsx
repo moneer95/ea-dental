@@ -11,7 +11,7 @@ export default function Login() {
             image={old}
             title='The old Platform'
             selected={false}
-            dest='https://ea-dental.com/my-account/'
+            dest='https://v1.ea-dental.com/my-account/'
         />
         <LoginCard 
             image={moodle}
