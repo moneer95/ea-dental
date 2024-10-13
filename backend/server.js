@@ -23,7 +23,7 @@ app.use(express.json()); // Add this line to parse JSON body
 app.use(bodyParser.json()); // Middleware to parse JSON bodies
 
 
-const YOUR_DOMAIN = 'https://v1.ea-dental.com';
+const YOUR_DOMAIN = 'https://ea-dental.com';
 
 
 
