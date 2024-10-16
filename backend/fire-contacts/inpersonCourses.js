@@ -23,84 +23,20 @@ async function ore2InPerson() {
     
       shoppingOptions = [
         {
+          descrip: '<p>This course is a step by step guide towards your ORE2 preparation with continuous online support until you pass your exam. Boost your confidence and alleviate your stress.</p>  <p style="text-align: center;"><em><strong>We offer guided support for our ORE & LDS students <span style="font-size: 16px; color: #ff0000;">BEFORE, DURING </span><span style="font-size: 16px;">and </span><span style="font-size: 16px; color: #ff0000;">AFTER</span><span style="font-size: 16px;"> attending their ORE course sessions.</span></strong></em></p>  <p>All our instructors are professional dentists with years of experience teaching ORE and LDS courses in the United Kingdom.</p>  <p><strong><u>Course details:</u></strong></p>  <p><strong>Day 1&nbsp;</strong></p> <p><strong>Dental treatment planning:</strong> runs from 9:00am – 6:00pm</p> <ul>   <li>Pain cases</li>   <li>Periodontal disease</li>   <li>Relevant actor OSCE’s</li> </ul> <p>Covers all sections of DTP: (History taking/ Investigations/ X-ray report/ Presentation)</p>  <p><strong>Day 2</strong></p> <p><strong>Dental treatment planning </strong>runs from 9:00am – 6:00pm</p> <ul>   <li>Restorative dentistry</li>   <li>Dentures</li>   <li>Relevant actor OSCE’s</li> </ul> <p>All sections of DTP covered including: (History taking/ Investigations/ X-ray report/ Presentation)</p>  <p><strong>Day 3 </strong></p> <p><strong>Dental treatment planning</strong> runs from 9:00am – 1:00pm</p> <ul>   <li>Tooth Surface loss</li>   <li>Oral Medicine</li>   <li>Relevant actor OSCE’s</li> </ul> <p>Medical Emergencies: 2:00pm – 6:00pm</p> <p>(BLS/ All Possible Medical Emergencies: (Asthma/ Anaphylaxis/ Adrenocortical insufficiency/ Angina/ Myocardial infarction/ Epilepsy/ Stroke/ Choking/ Hypoglycemia/ Vasovagal syncope/ Bleeding/ Needlestick injury)</p> <p>Including training on all available equipment (BLS/ Oxygen cylinder/ Face mask/ Spacer/ Oropharyngeal airway/ Intramuscular injection/Epipen/Anapen)</p>  <p><strong>Day 4 </strong></p> <p>OSCE’s run from 9:00am – 6:00pm and cover:</p> <p>I. In-depth discussion of <strong>ALL</strong> skilled OSCE’s</p> <p>II. In-depth discussion of all written OSCE’s</p>  <p><strong>Day 5&nbsp;</strong></p> <p>Actor OSCE’s run from 9:00am – 6:00pm</p> <p><strong>Course times: 9:00am – 6:00pm</strong></p> <p><strong>Lunch and refreshments will be provided</strong></p> <p>Course materials will be provided at each session.</p> <p>*Courses are non-refundable</p>  <p><strong>Course location: 177 Field End Road, HA5 1QR, England</strong></p>',
+          docID: 'ore2',
+          name: 'ORE2 Comprehensive Online Course',
           choices: [
-              {
-              "0": 
-                  {
-                      name: "14th-18th of October online",
-                      price: 1050,
-                      date: "14-10-2024",
-                      inStock: 15
-                  },
-              "1": 
-                  {
-                      name: "18-22 of November online",
-                      price: 1050,
-                      date: "18-11-2024",
-                      inStock: 15
-                  },
-              "2": 
-                  {
-                      name: "2-6 of December online",
-                      price: 1050,
-                      date: "2-12-2024",
-                      inStock: 15
-
-                  },
-              "3": 
-                  {
-                      name: "9-13 of December online",
-                      price: 1050,
-                      date: "13-9-2024",
-                      inStock: 15
-                  }    
-              },
-              {
-              "0": 
-                  {
-                      name: "23th October 2024 in-person",
-                      date: "23-10-2024"                             
-                  },
-              "1": 
-                  {
-                      name: "15th of November in-person",
-                      date: "15-11-2024"                             
-                  },
-              "2": 
-                  {
-                      name: "6th of December in-person",
-                      date: "6-12-2024"                                                           
-                  },
-              "3": 
-                  {
-                      name: "11th of December in-person",
-                      date: "11-12-2024"                                                           
-                  },
-              "4": 
-                  {
-                      name: "24th of January in-person",
-                      date: "24-1-2025"                                                           
-                  },
-              "5": 
-                  {
-                      name: "7th of February in-person",
-                      date: "7-2-2024"
-                  },  
-              "6":    
-                  {   
-                      name: "7th of March in-person",
-                      date: "7-3-2024"
-                  },
-              "7":    
-                  {   
-                      name: "To be confirmed after booking",
-                      date: "1-1-2050"
-                  }
-              } 
-            ],
-            descrip: "<div> <div> <div> <div> <div> <div> <div> <h3>ORE 2 COMPREHENSIVE ONLINE COURSE</h3> </div> </div> </div> <div> <div> <div> <h3>Introducing ORE 2 Online Course: Your Step-by-Step Path to Comprehensive ORE Preparation</h3> </div> </div> </div> <div> <div> <div> <h4>Designed for candidates with no prior ORE experience, our ORE 2 online course brings you the ultimate convenience of learning from the comfort of your own home. But that's not all – we offer unprecedented flexibility. You can choose to attend some of your sessions in person, allowing you to tailor your learning experience to your needs.</h4> </div> </div> </div> <div> <div> <div> <h3><u>Requirements:</u></h3> </div> </div> </div> <div> <div> <h4>1. Adequate internet speed 2. Speaker 3. Video camera</h4> </div> </div> <div> <div> <h3><strong><u>Course Schedule:</u></strong></h3> <h4><strong><span>Day One:</span><br><span>Dental Treatment Planning (9 am to 6 pm)</span></strong></h4> <ul> <li><h4><span>Pain cases</span></h4></li> <li><h4><span>Periodontal diseases</span></h4></li> </ul> <h4><strong><span>Day Two:</span><br><span>Dental Treatment Planning: (9 am to 6 pm)</span></strong></h4> <ul> <li><h4><span>Denture cases</span></h4></li> <li><h4><span>Tooth surface loss and oral medicine</span></h4></li> </ul> <h4><span>Day Three :<br>(9 am to 1 pm)</span></h4> <ul> <li><h4><span>Medical emergency</span></h4></li> </ul> <h4><span>Day Four:<br>(9 am to 6 pm)</span></h4> <ul> <li><h4><span>Actor OSCEs (Covering a total of 45 stations)</span></h4></li> </ul> <h4><span>Day Five</span><br><span>(9 am to 1 pm)</span></h4> <ul> <li><h4>Written OSCEs 2 pm to 4 pm: Skilled OSCEs demos</h4></li> </ul> </div> </div> <div> <div> <h4><span>In-person Sessions</span></h4> <ul> <li><h4><strong>Skilled OSCEs and Medical Emergency Practice</strong></h4></li> </ul> <h4>Choose your suitable date and embark on your journey to ORE success!</h4> </div> </div> <div> <div> <h4>At EA Dental, we are committed to your success. Our ORE 2 online course combines top-notch instruction, flexibility, and personalized support to ensure you are fully prepared for the ORE exam. Join us on this educational journey and take the first step towards a successful dental career in the UK.</h4> </div> </div> <div> <div> <h3>Join our ORE 2 online course today and unlock your path to success!</h3> </div> </div> </li> </ul> </div> </div> </div> </div> </div> </div>",
-            name: "ORE2: Five-Day Comprehensive Online Course + One In-Person Day",
-            docID: 'oret',
+            {
+              '0': { price: 1050, name: '14 October - 18 October', inStock: 10, date: "14-10-2024" },
+              '1': { price: 1050, name: '18 November - 22 November', inStock: 10, date: "18-11-2024" },
+              '2': { price: 1050, name: '2 December - 6 December', inStock: 10, date: "2-12-2024" },
+              '3': { price: 1050, name: '9 December - 13 December', inStock: 10, date: "9-12-2024" },
+              '4': { price: 1050, name: '20 January - 24 January', inStock: 10, date: "20-1-2025" },
+              '5': { price: 1050, name: '27 January - 31 January', inStock: 10, date: "27-1-2025" }
+            }
+          ],
+          collectionName: 'ore'
         },
         {
           descrip: '<div> <h3>ORE/LDS Manikin Exam Prep Platform</h3> <h4>Ace Your ORE/LDS Manikin Exam with Confidence!</h4> <p>Enroll Today with a One-Time Payment and Unlock Unlimited Access to Our Comprehensive Course Videos!</p> <h3>What’s Included:</h3> <ul> <li><strong>Extensive Video Library:</strong> Master every aspect of the ORE/LDS manikin exam with our expertly crafted instructional videos.</li> <li><strong>Exclusive Tutor Support:</strong> Join our private WhatsApp group for continuous guidance. A dedicated tutor will follow up on your progress every two days, and you can post unlimited practice exercises for personalized feedback.</li> <li><strong>Lifetime Access:</strong> Pay once and keep learning until you pass. No recurring fees, no expiration dates!</li> </ul> <h3>Manikin Exam Course Content</h3> <h4>Fixed Prosthodontics</h4> <ul> <li>Veneer (11 - 21)</li> <li>Central Incisor Index (11 - 21)</li> <li>PFM Central (11 - 21)</li> <li>Canine Index (13 - 23)</li> <li>Canine PFM (13 - 23)</li> <li>PFM Premolar (15 - 25)</li> <li>Molar Index (16 - 26)</li> <li>Full Gold Crown (16 - 26)</li> <li>Temporary Crown (36)</li> <li>Impression (Two Stage)</li> </ul> <h4>Endodontics</h4> <ul> <li>Access Opening (26)</li> <li>Endodontic Cleaning & Shaping + Obturation (21)</li> </ul> <h4>Operative Dentistry</h4> <ul> <li>Class I Cavity Preparation (14 - 24 - 15 - 25)</li> <li>Class II Cavity Preparation MO (16 - 26)</li> <li>Class II Cavity Preparation MOD (15 - 25)</li> <li>Class III Cavity Preparation</li> <li>Class IV Cavity Preparation – Composite Filling</li> <li>Class V Cavity Preparation</li> <li>Class VI Cavity Preparation (15 - 25) – Composite Filling</li> <li>Amalgam Filling (Mobile 45)</li> </ul> <h4>Removable Prosthodontics</h4> <ul> <li>Rest Seats</li> </ul> <h3>Why Choose Us?</h3> <ul> <li><strong>One-Time Payment:</strong> Get lifetime access with just one payment. No hidden costs, no monthly fees.</li> <li><strong>Unlimited Practice:</strong> Share and receive feedback on unlimited exercises every day.</li> <li><strong>Expert Support:</strong> Regular follow-ups by experienced tutors ensure you stay on track.</li> </ul> </div>',
@@ -210,42 +146,49 @@ async function threeInOneMock() {
                             },
                         "4": 
                             {
-                                name: "1 November 2024 | 8:00am - 5:30pm",
+                                name: "1 November 2024 | 8:00am - 6:00pm",
                                 price: 564,
                                 inStock: 0                   
                             },
                         "5": 
                             {
-                                name: "4 November 2024 | 8:00am - 5:30pm",
+                                name: "4 November 2024 | 8:00am - 6:00pm",
                                 price: 564,
                                 inStock: 0                   
                             },
                         "6": 
                             {
-                                name: "6 November 2024 | 8:00am - 5:30pm",
+                                name: "6 November 2024 | 8:00am - 6:00pm",
                                 price: 564,
                                 inStock: 0                   
                             },
                         "7": 
                             {
-                                name: "7 November 2024 | 8:00am - 5:30pm",
+                                name: "7 November 2024 | 8:00am - 6:00pm",
                                 price: 564,
                                 inStock: 0                   
                             },
                         "8": 
                             {
-                                name: "8 November 2024 | 8:00am - 5:30pm",
+                                name: "8 November 2024 | 8:00am - 6:00pm",
                                 price: 564,
                                 inStock: 0                   
                             },
                         "9": 
                             {
-                                name: "11 November 2024 | 8:00am - 5:30pm",
+                                name: "11 November 2024 | 8:00am - 6:00pm",
                                 price: 564,
                                 inStock: 0                   
                             },
+                        "10": 
+                            {
+                                name: "12 November 2024 | 8:00am - 6:00pm",
+                                price: 564,
+                                inStock: 6,
+                                date: "12-11-2024"               
+                          },
                 }],
-                descrip: "<div><ul><li>One full DTP mock case.</li><li>All sections of DTP covered including:( History taking / Investigations / X-ray report / Presentation )</li><li>All medical emergency scenarios and BLS – equipment – Medical Emergency scenario medications.<ul><li>&nbsp;Basic life support</li><li>All medical emergencies</li><li>Asthma</li><li>Anaphylaxis</li><li>Adrenocortical insufficiency</li><li>Angina</li><li>Myocardial infarction</li><li>Epilepsy</li><li>Stroke</li><li>Choking</li><li>Hypoglycemia</li><li>Vasovagal syncope</li><li>Bleeding</li><li>Needlestick injury</li></ul></li><li>Training on all available equipment:<ul><li>BLS</li><li>Oxygen cylinder</li><li>Face mask</li><li>Spacer</li><li>Oropharyngeal airway</li><li>Intramuscular injection</li><li>Epipen/Anapen</li><li>All basic medication</li></ul></li><li>25 OSCE stations (actor, skilled and written stations).</li><li>All skilled OSCE’s included.</li></ul><p><strong>From: 1:30 pm to 6:00 pm</strong></p><p><strong>An Intense revision covering Treatment planning of 20 Important DTP cases – Medical Emergency scenarios and OSCE’s</strong></p><p>We accept a maximum of five students per session to ensure maximum benefit</p><p><strong>Lunch is provided</strong></p><p><strong>Course time:</strong> 8:30 am – 6:00 pm</p><p>*Courses are non-refundable</p><h4><span><b>How to Book:</b></span></h4><p><strong>You can easily and conveniently book online the course and date you would like to attend below.</strong></p><p><strong>If you prefer to speak to someone before you make your booking, please contact us&nbsp;</strong><strong><a href=\"https://ea-dental.com/contact-us/\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.&nbsp;</strong></p><p><strong>All our courses are very popular so please make your booking well in advance to avoid disappointment.&nbsp;</strong></p><h4><span><strong>Course Location: <a href=\"https://ea-dental.com/wp-admin/edit.php?post_type=class&wcs-room=23-25-bridge-street\">23-25 Bridge Street</a>,&nbsp;<a href=\"https://ea-dental.com/wp-admin/edit.php?post_type=class&wcs-room=pinner-ha5-3hr\">Pinner HA5 3HR</a>,&nbsp;<a href=\"https://ea-dental.com/wp-admin/edit.php?post_type=class&wcs-room=westbury-house\">Westbury House</a></strong></span></h4></div>",
+                descrip: "<div><ul><li>One full DTP mock case.</li><li>All sections of DTP covered including:( History taking / Investigations / X-ray report / Presentation )</li><li>All medical emergency scenarios and BLS – equipment – Medical Emergency scenario medications.<ul><li>&nbsp;Basic life support</li><li>All medical emergencies</li><li>Asthma</li><li>Anaphylaxis</li><li>Adrenocortical insufficiency</li><li>Angina</li><li>Myocardial infarction</li><li>Epilepsy</li><li>Stroke</li><li>Choking</li><li>Hypoglycemia</li><li>Vasovagal syncope</li><li>Bleeding</li><li>Needlestick injury</li></ul></li><li>Training on all available equipment:<ul><li>BLS</li><li>Oxygen cylinder</li><li>Face mask</li><li>Spacer</li><li>Oropharyngeal airway</li><li>Intramuscular injection</li><li>Epipen/Anapen</li><li>All basic medication</li></ul></li><li>25 OSCE stations (actor, skilled and written stations).</li><li>All skilled OSCE’s included.</li></ul><p><strong>From: 1:30 pm to 6:00 pm</strong></p><p><strong>An Intense revision covering Treatment planning of 20 Important DTP cases – Medical Emergency scenarios and OSCE’s</strong></p><p>We accept a maximum of five students per session to ensure maximum benefit</p><p><strong>Lunch is provided</strong></p><p><strong>Course time:</strong> 8:00 am – 6:00 pm</p><p>*Courses are non-refundable</p><h4><span><b>How to Book:</b></span></h4><p><strong>You can add the course to your cart and then select the date that suits you best.</strong></p><p><strong>If you prefer to speak to someone before you make your booking, please contact us&nbsp;</strong><strong><a href=\"https://ea-dental.com/contact-us/\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.&nbsp;</strong></p><p><strong>All our courses are very popular so please make your booking well in advance to avoid disappointment.&nbsp;</strong></p><h4><span><strong>Course location: 177 Field end road / HA5 1QR).</strong></span></h4></div>",
                 name: "ORE2 3-in-1 Mock Sessions",
                 collectionName: "mocks",
                 docID: "ore3"
@@ -318,7 +261,7 @@ async function threeInOneMock() {
                     },
                     
                     ],
-                descrip: "<div> <h4> <strong> <u>ORE 2 Dental Manikin Training</u></strong><br>One day comprehensive dental manikin mock and revision course with daily online support until you pass your exam.</h4>     <h4 data-fontsize=\"18\" style=\"--fontSize: 18; line-height: 1.67;\" data-lineheight=\"30.06px\" class=\"fusion-responsive-typography-calculated\"><strong><u>Who this course is for?</u></strong><br>This course is for dentists who have completed a comprehensive ORE 2 practical course and are looking to refine their dental skills weeks before their exams.</h4>     <h3 data-fontsize=\"24\" style=\"--fontSize: 24; line-height: 1.4;\" data-lineheight=\"33.6px\" class=\"fusion-responsive-typography-calculated\"><strong><u>What does the course include?</u></strong><br>• One full day of dental manikin teaching<br>• Up to four demonstrations of each exercise intra-orally<br>• Detailed course notes<br>• Continuous online support until you pass your exam<br>• 8 hours verifiable CPD</h3>     <h3 style=\"--fontSize: 24; line-height: 1.4;\" data-lineheight=\"33.6px\" class=\"fusion-responsive-typography-calculated\"><strong><u>Course venue:</u></strong><br>• Frasaco dental manikin similar to the exam facility<br>• All provided dental instruments closely resemble the exam</h3>     <h3 ><u>Aims and objectives</u></h3>     <p>One day intense revision course which allows participants the freedom to select dental manikin exercises they struggle with and practice them intensely under specialist supervision to refine their skills and build their confidence in preparation for the ORE Part 2 Dental Manikin examination. Demonstrations of up to four exercises can be provided upon request. A small group of students under the supervision of skilled staff who are on hand to answer questions, offer advice, and give individual demonstrations. The staff-to-participant ratio of 1:2 allows the course to be tailored to individual needs.</p>     <h3 ><u>Anticipated outcomes</u></h3>     <p>After attending this course, participants should be able to assess in which areas they need to improve and reinforce their practice at home before sitting the examination.</p>     <h3 ><u>Teaching and assessment</u></h3>     <p>This is a skills revision course with a demonstration component. Participants are under constant supervision with staff available to give advice and demonstrations.</p>     <p><strong>Please note that participants need to provide their own Endo teeth.</strong></p>     <h3 ><u>Content</u></h3>     <p>Participants can spend the full day practicing their choice of elements from the Dental Manikin exam.</p>     <h4 class=\"fusion-responsive-typography-calculated\" data-fontsize=\"18\" data-lineheight=\"30.06px\" style=\"--fontSize: 18; line-height: 1.67;\"><strong>Ideal for exam candidates</strong></h4>     <p><strong>Course timing: 8:30 am – 5:00 pm</strong></p>     <p><strong>Course location: 177 Field end road / HA5 1QR).</strong></p>     <p>CPD certificate will be accredited upon course completion</p>     <p>*Courses are non-refundable. A minimum of 3 candidates is required for the session to run. Where sessions don’t have the minimum numbers, we reserve the right to transfer candidates to other available session dates.</p> </div>",
+                descrip: "<div> <h4> <strong> <u>ORE 2 Dental Manikin Training</u></strong><br>One day comprehensive dental manikin mock and revision course with daily online support until you pass your exam.</h4>     <h4 data-fontsize=\"18\" style=\"--fontSize: 18; line-height: 1.67;\" data-lineheight=\"30.06px\" class=\"fusion-responsive-typography-calculated\"><strong><u>Who this course is for?</u></strong><br>This course is for dentists who have completed a comprehensive ORE 2 practical course and are looking to refine their dental skills weeks before their exams.</h4>     <h3 data-fontsize=\"24\" style=\"--fontSize: 24; line-height: 1.4;\" data-lineheight=\"33.6px\" class=\"fusion-responsive-typography-calculated\"><strong><u>What does the course include?</u></strong><br>• One full day of dental manikin teaching<br>• Up to four demonstrations of each exercise intra-orally<br>• Detailed course notes<br>• Continuous online support until you pass your exam<br>• 8 hours verifiable CPD</h3>     <h3 style=\"--fontSize: 24; line-height: 1.4;\" data-lineheight=\"33.6px\" class=\"fusion-responsive-typography-calculated\"><strong><u>Course venue:</u></strong><br>• Frasaco dental manikin similar to the exam facility<br>• All provided dental instruments closely resemble the exam</h3>     <h3 ><u>Aims and objectives</u></h3>     <p>One day intense revision course which allows participants the freedom to select dental manikin exercises they struggle with and practice them intensely under specialist supervision to refine their skills and build their confidence in preparation for the ORE Part 2 Dental Manikin examination. Demonstrations of up to four exercises can be provided upon request. A small group of students under the supervision of skilled staff who are on hand to answer questions, offer advice, and give individual demonstrations. The staff-to-participant ratio of 1:2 allows the course to be tailored to individual needs.</p>     <h3 ><u>Anticipated outcomes</u></h3>     <p>After attending this course, participants should be able to assess in which areas they need to improve and reinforce their practice at home before sitting the examination.</p>     <h3 ><u>Teaching and assessment</u></h3>     <p>This is a skills revision course with a demonstration component. Participants are under constant supervision with staff available to give advice and demonstrations.</p>     <p><strong>Please note that participants need to provide their own Endo teeth.</strong></p>     <h3 ><u>Content</u></h3>     <p>Participants can spend the full day practicing their choice of elements from the Dental Manikin exam.</p>     <h4 class=\"fusion-responsive-typography-calculated\" data-fontsize=\"18\" data-lineheight=\"30.06px\" style=\"--fontSize: 18; line-height: 1.67;\"><strong>Ideal for exam candidates</strong></h4>     <p><strong>Course timing: 8:30 am – 6:00 pm</strong></p>     <p><strong>Course location: 177 Field end road / HA5 1QR).</strong></p>     <p>CPD certificate will be accredited upon course completion</p>     <p>*Courses are non-refundable. A minimum of 5 candidates is required for the session to run. Where sessions don’t have the minimum numbers, we reserve the right to transfer candidates to other available session dates.</p> </div>",
                 name: "Revision / Mock Session: Dental Manikin",
                 collectionName: "mocks",
                 docID: "ore32"
@@ -355,7 +298,7 @@ async function threeInOneMock() {
       intro = [
         {
             className: "main-question fs-4",
-            introText: "Are you planning to take your ORE / LDS exam in 2024? Has it been a long time since you last did any revision and are you worried about how much you may have forgotten?"
+            introText: "Are you planning to take your ORE / LDS exam in 2025? Has it been a long time since you last did any revision and are you worried about how much you may have forgotten?"
 
         },
         {
@@ -437,5 +380,7 @@ async function threeInOneMock() {
   }
 
 
+  threeInOneMock()
+  ore2InPerson()
   revisionMockSession()
-
+  ore2Revisions()

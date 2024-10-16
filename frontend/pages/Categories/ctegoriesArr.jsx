@@ -8,12 +8,12 @@ export const courses = [
     {
         collection: 'ore',
         svg: oreSvg,
-        caption: ' ORE BASICS'
+        caption: ' ORE COURSES'
     },
     {
         collection: 'lds',
         svg: ldsSvg,
-        caption: 'LDS BASICS'
+        caption: 'LDS COURSES'
     },
     {
         collection: 'mocks',
@@ -48,7 +48,7 @@ export const advanced = [
     },
     {
         collection: 'periodontitis2',
-        svg: revisionsSvg,
+        svg: ldsSvg,
         caption: '2 Day Masterclass in Periodontics'
     },
     {
@@ -56,9 +56,10 @@ export const advanced = [
         svg: oreSvg,
         caption: 'Restorative Dentistry – 2 Day Class'
     },
+    
     {
         collection: 'prosthodontics',
-        svg: ldsSvg,
+        svg: revisionsSvg,
         caption: 'Removable Prosthodontics'
     },
     {

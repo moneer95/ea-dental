@@ -18,22 +18,87 @@ async function ORE2Comperehensive() {
       const item = await itemRef.get();
     
       shoppingOptions = [
-            {
-              descrip: '<p>This course is a step by step guide towards your ORE2 preparation with continuous online support until you pass your exam. Boost your confidence and alleviate your stress.</p>  <p style="text-align: center;"><em><strong>We offer guided support for our ORE & LDS students <span style="font-size: 16px; color: #ff0000;">BEFORE, DURING </span><span style="font-size: 16px;">and </span><span style="font-size: 16px; color: #ff0000;">AFTER</span><span style="font-size: 16px;"> attending their ORE course sessions.</span></strong></em></p>  <p>All our instructors are professional dentists with years of experience teaching ORE and LDS courses in the United Kingdom.</p>  <p><strong><u>Course details:</u></strong></p>  <p><strong>Day 1&nbsp;</strong></p> <p><strong>Dental treatment planning:</strong> runs from 9:00am – 6:00pm</p> <ul>   <li>Pain cases</li>   <li>Periodontal disease</li>   <li>Relevant actor OSCE’s</li> </ul> <p>Covers all sections of DTP: (History taking/ Investigations/ X-ray report/ Presentation)</p>  <p><strong>Day 2</strong></p> <p><strong>Dental treatment planning </strong>runs from 9:00am – 6:00pm</p> <ul>   <li>Restorative dentistry</li>   <li>Dentures</li>   <li>Relevant actor OSCE’s</li> </ul> <p>All sections of DTP covered including: (History taking/ Investigations/ X-ray report/ Presentation)</p>  <p><strong>Day 3 </strong></p> <p><strong>Dental treatment planning</strong> runs from 9:00am – 1:00pm</p> <ul>   <li>Tooth Surface loss</li>   <li>Oral Medicine</li>   <li>Relevant actor OSCE’s</li> </ul> <p>Medical Emergencies: 2:00pm – 6:00pm</p> <p>(BLS/ All Possible Medical Emergencies: (Asthma/ Anaphylaxis/ Adrenocortical insufficiency/ Angina/ Myocardial infarction/ Epilepsy/ Stroke/ Choking/ Hypoglycemia/ Vasovagal syncope/ Bleeding/ Needlestick injury)</p> <p>Including training on all available equipment (BLS/ Oxygen cylinder/ Face mask/ Spacer/ Oropharyngeal airway/ Intramuscular injection/Epipen/Anapen)</p>  <p><strong>Day 4 </strong></p> <p>OSCE’s run from 9:00am – 6:00pm and cover:</p> <p>I. In-depth discussion of <strong>ALL</strong> skilled OSCE’s</p> <p>II. In-depth discussion of all written OSCE’s</p>  <p><strong>Day 5&nbsp;</strong></p> <p>Actor OSCE’s run from 9:00am – 6:00pm</p> <p><strong>Course times: 9:00am – 6:00pm</strong></p> <p><strong>Lunch and refreshments will be provided</strong></p> <p>Course materials will be provided at each session.</p> <p>*Courses are non-refundable</p>  <p><strong>Course location: Westbury House, 23-25 Bridge Street, Pinner HA5 3HR</strong></p>',
-              docID: 'ore2',
-              name: 'ORE2 Comprehensive Online Course',
-              choices: [
-                {
-                  '0': { price: 1050, name: '14 October - 18 October', inStock: 10, date: "14-10-2024" },
-                  '1': { price: 1050, name: '18 November - 22 November', inStock: 10, date: "18-11-2024" },
-                  '2': { price: 1050, name: '2 December - 6 December', inStock: 10, date: "2-12-2024" },
-                  '3': { price: 1050, name: '9 December - 13 December', inStock: 10, date: "9-12-2024" },
-                  '4': { price: 1050, name: '20 January - 24 January', inStock: 10, date: "20-1-2025" },
-                  '5': { price: 1050, name: '27 January - 31 January', inStock: 10, date: "27-1-2025" }
-                }
-              ],
-              collectionName: 'ore'
-            },
+        {
+          choices: [
+              {
+              "0": 
+                  {
+                      name: "14th-18th of October online",
+                      price: 1050,
+                      date: "14-10-2024",
+                      inStock: 15
+                  },
+              "1": 
+                  {
+                      name: "18-22 of November online",
+                      price: 1050,
+                      date: "18-11-2024",
+                      inStock: 15
+                  },
+              "2": 
+                  {
+                      name: "2-6 of December online",
+                      price: 1050,
+                      date: "2-12-2024",
+                      inStock: 15
+
+                  },
+              "3": 
+                  {
+                      name: "9-13 of December online",
+                      price: 1050,
+                      date: "13-9-2024",
+                      inStock: 15
+                  }    
+              },
+              {
+              "0": 
+                  {
+                      name: "23th October 2024 in-person",
+                      date: "23-10-2024"                             
+                  },
+              "1": 
+                  {
+                      name: "15th of November in-person",
+                      date: "15-11-2024"                             
+                  },
+              "2": 
+                  {
+                      name: "6th of December in-person",
+                      date: "6-12-2024"                                                           
+                  },
+              "3": 
+                  {
+                      name: "11th of December in-person",
+                      date: "11-12-2024"                                                           
+                  },
+              "4": 
+                  {
+                      name: "24th of January in-person",
+                      date: "24-1-2025"                                                           
+                  },
+              "5": 
+                  {
+                      name: "7th of February in-person",
+                      date: "7-2-2024"
+                  },  
+              "6":    
+                  {   
+                      name: "7th of March in-person",
+                      date: "7-3-2024"
+                  },
+              "7":    
+                  {   
+                      name: "To be confirmed after booking",
+                      date: "1-1-2050"
+                  }
+              } 
+            ],
+            descrip: "<div> <div> <div> <div> <div> <div> <div> <h3>ORE 2 COMPREHENSIVE ONLINE COURSE</h3> </div> </div> </div> <div> <div> <div> <h3>Introducing ORE 2 Online Course: Your Step-by-Step Path to Comprehensive ORE Preparation</h3> </div> </div> </div> <div> <div> <div> <h4>Designed for candidates with no prior ORE experience, our ORE 2 online course brings you the ultimate convenience of learning from the comfort of your own home. But that's not all – we offer unprecedented flexibility. You can choose to attend some of your sessions in person, allowing you to tailor your learning experience to your needs.</h4> </div> </div> </div> <div> <div> <div> <h3><u>Requirements:</u></h3> </div> </div> </div> <div> <div> <h4>1. Adequate internet speed 2. Speaker 3. Video camera</h4> </div> </div> <div> <div> <h3><strong><u>Course Schedule:</u></strong></h3> <h4><strong><span>Day One:</span><br><span>Dental Treatment Planning (9 am to 6 pm)</span></strong></h4> <ul> <li><h4><span>Pain cases</span></h4></li> <li><h4><span>Periodontal diseases</span></h4></li> </ul> <h4><strong><span>Day Two:</span><br><span>Dental Treatment Planning: (9 am to 6 pm)</span></strong></h4> <ul> <li><h4><span>Denture cases</span></h4></li> <li><h4><span>Tooth surface loss and oral medicine</span></h4></li> </ul> <h4><span>Day Three :<br>(9 am to 1 pm)</span></h4> <ul> <li><h4><span>Medical emergency</span></h4></li> </ul> <h4><span>Day Four:<br>(9 am to 6 pm)</span></h4> <ul> <li><h4><span>Actor OSCEs (Covering a total of 45 stations)</span></h4></li> </ul> <h4><span>Day Five</span><br><span>(9 am to 1 pm)</span></h4> <ul> <li><h4>Written OSCEs 2 pm to 4 pm: Skilled OSCEs demos</h4></li> </ul> </div> </div> <div> <div> <h4><span>In-person Sessions</span></h4> <ul> <li><h4><strong>Skilled OSCEs and Medical Emergency Practice</strong></h4></li> </ul> <h4>Choose your suitable date and embark on your journey to ORE success!</h4> </div> </div> <div> <div> <h4>At EA Dental, we are committed to your success. Our ORE 2 online course combines top-notch instruction, flexibility, and personalized support to ensure you are fully prepared for the ORE exam. Join us on this educational journey and take the first step towards a successful dental career in the UK.</h4> </div> </div> <div> <div> <h3>Join our ORE 2 online course today and unlock your path to success!</h3> </div> </div> </li> </ul> </div> </div> </div> </div> </div> </div>",
+            name: "ORE2: Five-Day Comprehensive Online Course + One In-Person Day",
+            docID: 'oret',
+        },
+
             {
                 choices: [
                     {
