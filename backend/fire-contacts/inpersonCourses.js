@@ -86,6 +86,12 @@ async function ore2InPerson() {
                 inStock: 10,
                 date: "13-1-2025"
               },
+              '7': {
+                price: 1500,
+                name: '23 November - 25 November | 9:00am - 7:00pm',
+                inStock: 4,
+                date: "23-11-2024"
+              }
               
             }
           ],
@@ -380,7 +386,4 @@ async function threeInOneMock() {
   }
 
 
-  threeInOneMock()
   ore2InPerson()
-  revisionMockSession()
-  ore2Revisions()
