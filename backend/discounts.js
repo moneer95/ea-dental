@@ -18,9 +18,9 @@ function getDicountFromCompination(tickets){
         return 1;
     } else {
         console.log('One or both option names are missing');
-        console.log(tickets.some(ticket => {console.log(ticket.optionName)}))
-        console.log(tickets.some(ticket => {console.log(typeof(ticket.optionName))}))
-        console.log(tickets.some(ticket => ticket.optionName == option3))
+        tickets.some(ticket => {console.log(ticket.optionName)})
+        tickets.some(ticket => typeof(ticket.optionName))
+        tickets.some(ticket => ticket.optionName == option3)
         return 0;
     }
     
