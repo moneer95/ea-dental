@@ -107,7 +107,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
       }, 
       discounts: getDicountFromCompination(tickets) ? [
         {
-          coupon: "promo_1QAqvzJ0yskPfTEHBIP4Gvu3",
+          promotion_code: "promo_1QAqvzJ0yskPfTEHBIP4Gvu3",
         }
       ] : [],       
       ...(weight && {

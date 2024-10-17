@@ -15,7 +15,7 @@ function getDicountFromCompination(tickets){
 
     if (hasBothOptions) {
         console.log('Both option names exist in the tickets array');
-        return 0;
+        return 1;
     } else {
         console.log('One or both option names are missing');
         tickets.some(ticket => {console.log(ticket.ticketName)})
