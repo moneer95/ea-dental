@@ -11,7 +11,7 @@ function getDicountFromCompination(tickets){
 
 
     console.log('------------')                 
-    console.log(typeof(tickets))
+    console.log(tickets[0])
 
     if (hasBothOptions) {
         console.log('Both option names exist in the tickets array');
