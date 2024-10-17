@@ -201,7 +201,7 @@ let coursesInfo= {
   "ORE1 Silver Bundle": [14, 15],
   "ORE1 Gold Bundle": [14, 13],
   "ORE1 Diamond Bundle": [14, 13, 17, 5],
-  "ORE2 Comprehensive Online Course": [12],
+  "ORE2 Comprehensive In-Person Theory Course": [12],
   "ORE2 Dental Treatment Planning Videos Subscription": [6],
   "ORE2 Theory course notes + Videos 10 DTP cases": [12],
   "ORE2 Dental Manikin Videos Subscription": [7],
