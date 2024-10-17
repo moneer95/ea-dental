@@ -6,8 +6,8 @@ function getDicountFromCompination(tickets){
 
     
     
-    let hasBothOptions = (tickets.some(ticket => ticket.optionName == option1) || tickets.some(ticket => ticket.optionName == option2)) &&
-                     tickets.some(ticket => ticket.optionName == option3);
+    let hasBothOptions = (tickets.some(ticket => ticket.ticketName == option1) || tickets.some(ticket => ticket.ticketName == option2)) &&
+                     tickets.some(ticket => ticket.ticketName == option3);
 
 
     console.log('------------')                 
@@ -18,9 +18,9 @@ function getDicountFromCompination(tickets){
         return 1;
     } else {
         console.log('One or both option names are missing');
-        tickets.some(ticket => {console.log(ticket.optionName)})
-        tickets.some(ticket => typeof(ticket.optionName))
-        tickets.some(ticket => ticket.optionName == option3)
+        tickets.some(ticket => {console.log(ticket.ticketName)})
+        tickets.some(ticket => typeof(ticket.ticketName))
+        tickets.some(ticket => ticket.ticketName == option3)
         return 0;
     }
     
