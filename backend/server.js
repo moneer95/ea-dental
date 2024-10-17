@@ -103,14 +103,14 @@ app.post(`/create-checkout-session`, async (req, res) => {
       phone_number_collection: {
         enabled: true,  // <--- this enables phone number collection
       }, 
-      discounts: [{
-        discount_data: {
-          fixed_amount: {
-            amount: getDicountFromCompination(tickets),
-            currency: 'GBP',
-          },
-        },
-      }],   
+      // discounts: [{
+      //   discount_data: {
+      //     fixed_amount: {
+      //       amount: getDicountFromCompination(tickets),
+      //       currency: 'GBP',
+      //     },
+      //   },
+      // }],   
       ...(weight && {
         shipping_options: [
           {
