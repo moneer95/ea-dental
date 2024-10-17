@@ -10,6 +10,7 @@ const { updateStockValue, updateStocTicketValue, addBookingTime, getProductPrice
 const { enrollUser, createOrder } = require('./interactions')
 const  getShippingPrice = require('./shippingPricing')
 const { transporter } = require('./utils')
+const { getDicountFromCompination } = require('./discounts')
 
 
     
@@ -101,7 +102,15 @@ app.post(`/create-checkout-session`, async (req, res) => {
       allow_promotion_codes: true,
       phone_number_collection: {
         enabled: true,  // <--- this enables phone number collection
-      },    
+      }, 
+      discounts: [{
+        discount_data: {
+          fixed_amount: {
+            amount: getDicountFromCompination(tickets),
+            currency: 'GBP',
+          },
+        },
+      }],   
       ...(weight && {
         shipping_options: [
           {
