@@ -6,8 +6,8 @@ function getDicountFromCompination(tickets) {
     let option3 = '3-Day ORE2 Manikin Mastery';
 
     let hasBothOptions = (
-        tickets.some(ticket => ticket.optionName && (ticket.optionName.trim() === option1 || ticket.optionName.trim() === option2))
-    ) && tickets.some(ticket => ticket.optionName && ticket.optionName.trim() === option3);
+        tickets.some(ticket => ticket.optionName && (ticket.optionName.trim() == option1 || ticket.optionName.trim() == option2))
+    ) && tickets.some(ticket => ticket.optionName && ticket.optionName.trim() == option3);
 
     if (hasBothOptions) {
         console.log('Both option names exist in the tickets array');
