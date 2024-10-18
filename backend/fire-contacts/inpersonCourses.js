@@ -28,12 +28,11 @@ async function ore2InPerson() {
           name: 'ORE2 Comprehensive In-Person Theory Course',
           choices: [
             {
-              '0': { price: 1050, name: '14 October - 18 October', inStock: 10, date: "14-10-2024" },
-              '1': { price: 1050, name: '18 November - 22 November', inStock: 10, date: "18-11-2024" },
-              '2': { price: 1050, name: '2 December - 6 December', inStock: 10, date: "2-12-2024" },
-              '3': { price: 1050, name: '9 December - 13 December', inStock: 10, date: "9-12-2024" },
-              '4': { price: 1050, name: '20 January - 24 January', inStock: 10, date: "20-1-2025" },
-              '5': { price: 1050, name: '27 January - 31 January', inStock: 10, date: "27-1-2025" }
+              '0': { price: 1050, name: '14 October - 18 October', inStock: 0, date: "14-10-2024" },
+              '1': { price: 1050, name: '18 November - 22 November', inStock: 0, date: "18-11-2024" },
+              '2': { price: 1050, name: '2 December - 6 December', inStock: 3, date: "2-12-2024" },
+              '3': { price: 1050, name: '9 December - 13 December', inStock: 8, date: "9-12-2024" },
+              '4': { price: 1050, name: '20 January - 24 January', inStock: 9, date: "20-1-2025" }
             }
           ],
           collectionName: 'ore'
@@ -46,54 +45,46 @@ async function ore2InPerson() {
             {
               '0': {
                 price: 1500,
-                name: '19 October - 21 October | Dr Ahmed | 9:00am - 7:00pm',
-                inStock: 10,
+                name: '19 October - 21 October | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
+                inStock: 0,
                 date: "19-10-2024"
               },
               '1': {
                 price: 1500,
-                name: '16 November - 18 November | Dr Ahmed | 9:00am - 7:00pm',
-                inStock: 10,
+                name: '16 November - 18 November | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
+                inStock: 0,
                 date: "16-11-2024"
               },
               '2': {
                 price: 1500,
-                name: '23 November - 25 November | 9:00am - 7:00pm',
+                name: '23 November - 25 November | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
                 inStock: 4,
                 date: "23-11-2024"
               },
               '3': {
                 price: 1500,
-                name: '7 December - 9 December | Dr Ahmed | 9:00am - 7:00pm',
-                inStock: 10,
+                name: '7 December - 9 December | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
+                inStock: 7,
                 date: "7-12-2024"
               },
               '4': {
                 price: 1500,
-                name: '14 December - 16 December',
-                inStock: 10,
+                name: '14 December - 16 December | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
+                inStock: 7,
                 date: "14-12-2024"
               },
               '5': {
                 price: 1500,
-                name: '21 December - 23 December | Dr Ahmed | 9:00am - 7:00pm',
-                inStock: 10,
-                date: "21-12-2024"
+                name: '6 January - 8 January | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
+                inStock: 7,
+                date: "6-1-2025"
               },
               '6': {
                 price: 1500,
-                name: '6 January - 8 January | Dr Ahmed | 9:00am - 7:00pm',
-                inStock: 10,
-                date: "6-1-2025"
-              },
-              '7': {
-                price: 1500,
-                name: '13 January - 15 January | Dr Shahla | 9:00am - 7:00pm',
-                inStock: 10,
+                name: '13 January - 15 January | Dr. Shahla Shokrollahi | 9:00am - 7:00pm',
+                inStock: 7,
                 date: "13-1-2025"
-              },
-
-              
+              }
             }
           ],
           collectionName: 'ore'

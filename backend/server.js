@@ -220,6 +220,7 @@ app.get('/session-status', async (req, res) => {
       
     if(products.length){
       console.log(222222)
+      console.log(session.total_details)
       //create the order on frappe
       createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), session.total_details.amount_shipping, products)
       .then(res => (createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight, res.data.name))
