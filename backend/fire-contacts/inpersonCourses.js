@@ -58,32 +58,32 @@ async function ore2InPerson() {
               '2': {
                 price: 1500,
                 name: '23 November - 25 November | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
-                inStock: 4,
+                inStock: 3,
                 date: "23-11-2024"
               },
               '3': {
+                price: 1500,
+                name: '30 November - 2nd December | Dr. Shahla Shokrollahi | 9:00am - 7:00pm',
+                inStock: 7,
+                date: "30-11-2024"
+              },
+              '4': {
                 price: 1500,
                 name: '7 December - 9 December | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
                 inStock: 7,
                 date: "7-12-2024"
               },
-              '4': {
+              '5': {
                 price: 1500,
                 name: '14 December - 16 December | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
                 inStock: 7,
                 date: "14-12-2024"
               },
-              '5': {
+              '6': {
                 price: 1500,
                 name: '6 January - 8 January | Dr. Ahmed Alkhalily | 9:00am - 7:00pm',
                 inStock: 7,
                 date: "6-1-2025"
-              },
-              '6': {
-                price: 1500,
-                name: '13 January - 15 January | Dr. Shahla Shokrollahi | 9:00am - 7:00pm',
-                inStock: 7,
-                date: "13-1-2025"
               }
             }
           ],
