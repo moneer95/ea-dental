@@ -53,7 +53,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
   
           // add product to products arr
           if(item.quantity){
-            products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName});
+            products.push({'id': item.id, 'quantity': item.quantity, 'choiceId': item.choiceId[0], 'optionName': item.optionName, 'price': choices[idx].price});
             weight += (choices[idx].weight * 1000) * item.quantity // converted to grams 
             price = await getProductPrice( item.id, item.choiceId[0])
           }
@@ -99,7 +99,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['GB'], // Collect shipping address for specified countries
       },
-      ...(!getDicountFromCompination(tickets) &&
+      ...((!courses.length) && //if there is no courses close it, and if there a discount also close it
             {allow_promotion_codes: true}
          ),
       phone_number_collection: {

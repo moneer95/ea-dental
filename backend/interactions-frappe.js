@@ -21,7 +21,8 @@ function createPurchaseOrder(email, full_name, phone, address, paidShipping, ite
         items: items.map( item => {
             return {
                 item_name: item.optionName,
-                quantity: item.quantity
+                quantity: item.quantity,
+                price: item.price
             }
         })
     };
