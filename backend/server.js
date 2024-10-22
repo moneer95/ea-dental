@@ -99,7 +99,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['GB'], // Collect shipping address for specified countries
       },
-      ...((!courses.length) && //if there is no courses close it, and if there a discount also close it
+      ...( !courses.length && //if there is no courses close it, and if there a discount also close it
             {allow_promotion_codes: true}
          ),
       phone_number_collection: {
