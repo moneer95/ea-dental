@@ -79,7 +79,8 @@ const categos = [
     "Burs",
     "Equipment",
     "Impression Materials",
-    "Kits"
+    "Kits",
+    "Printed Papers"
 ]
 
 const ids = [
@@ -89,5 +90,6 @@ const ids = [
     "Burs",
     "Equipment",
     "ImpressionMaterials",
-    "Kits"
+    "Kits",
+    "PrintedPapers"
 ]

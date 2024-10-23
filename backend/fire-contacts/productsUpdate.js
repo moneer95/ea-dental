@@ -2622,6 +2622,39 @@ firebaseAdmin.initializeApp({
 });
 const firestore = firebaseAdmin.firestore();
 
+
+async function addDocumentWithCustomId() {
+    try {
+      // Specify the collection and document ID
+      const docRef = firestore.collection('products').doc('110');
+  
+      await docRef.set({
+        id: 108,
+        name: "ORE1 Course Notes Printout (Black & White)",
+        choices: [
+          {
+            0: {
+              name: "default",
+              price: 350,
+              weight: 0.7,
+              dimensions: [],
+              inStock: 100,
+            },
+          },
+        ],
+        description:
+          '<div class="post-content"> <h3 class="fusion-woocommerce-tab-title">Description</h3> <p>ORE1- LDS1 Hard copy course notes printout Covering all of the exam curriculum; basic dental sciences, clinical dental subjects and UpToDate guidelines</p> </div>',
+        image_path: ["https://ea-dental.com/images/logo.png"],
+        category: "Printed Papers",
+      });
+      console.log("Document successfully written!");
+    } catch (e) {
+      console.error("Error writing document: ", e);
+    }
+  }
+  
+  addDocumentWithCustomId();
+
 async function copyCollection(srcCollectionName, destCollectionName) {
     // const documents = await firestore.collection(srcCollectionName).get();
     let writeBatch = firebaseAdmin.firestore().batch();
@@ -2652,33 +2685,5 @@ async function copyCollection(srcCollectionName, destCollectionName) {
 
 
 
-async function addDocumentWithCustomId() {
-    try {
-      // Specify your document ID (for example, "user_123")
-      const docRef = doc(db, "Product", "108");
-      
-      await setDoc(docRef, {
-        "id": 104,
-        "name": "ORE1 Course Notes Printout (Coloured copy)",
-        "choices": [
-            {"0": 
-                {
-                    "name": "default",
-                    "price": 450,
-                    "weight": .7,
-                    "dimensions": [],
-                    "inStock": 100                   
-                }
-            }
-        ],
-        "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>ORE1- LDS1 Hard copy course notes printout Covering all of the exam curriculum; basic dental sciences, clinical dental subjects and UpToDate guidelines</p> </div>",
-        "image_path": ["https://ea-dental.com/images/logo.png"],
-        "category": "Printed Papers"
-      });
-      console.log("Document successfully written!");
-    } catch (e) {
-      console.error("Error writing document: ", e);
-    }
-  }
-  
-  addDocumentWithCustomId()
+
+
