@@ -99,15 +99,14 @@ app.post(`/create-checkout-session`, async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['GB'], // Collect shipping address for specified countries
       },
-      allow_promotion_codes: (courses.length || tickets.length) ? false : false, //if there is no courses close it.
+      ...(
+        !(courses.length || tickets.length) && {
+          allow_promotion_codes: true
+        }
+      ),
       phone_number_collection: {
         enabled: true,  // <--- this enables phone number collection
-      }, 
-      discounts: getDicountFromCompination(tickets) ? [
-        {
-          promotion_code: "promo_1QAqvzJ0yskPfTEHBIP4Gvu3",
-        }
-      ] : [],       
+      },       
       ...(weight && {
         shipping_options: [
           {
