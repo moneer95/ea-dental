@@ -101,7 +101,7 @@ app.post(`/create-checkout-session`, async (req, res) => {
       },
       ...(
         !(courses.length || tickets.length) && {
-          allow_promotion_codes: true
+          allow_promotion_codes: false
         }
       ),
       allow_promotion_codes: (courses.length || tickets.length) ? false : false, //if there is no courses close it.
