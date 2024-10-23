@@ -104,9 +104,15 @@ app.post(`/create-checkout-session`, async (req, res) => {
           allow_promotion_codes: true
         }
       ),
+      allow_promotion_codes: (courses.length || tickets.length) ? false : false, //if there is no courses close it.
       phone_number_collection: {
         enabled: true,  // <--- this enables phone number collection
-      },       
+      }, 
+      discounts: getDicountFromCompination(tickets) ? [
+        {
+          promotion_code: "promo_1QAqvzJ0yskPfTEHBIP4Gvu3",
+        }
+      ] : [],       
       ...(weight && {
         shipping_options: [
           {
