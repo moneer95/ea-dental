@@ -2630,7 +2630,7 @@ async function addDocumentWithCustomId() {
   
       await docRef.set({
         id: 108,
-        name: "ORE1 Course Notes Printout (Black & White)",
+        name: "Online ORE1 LDS 1 Session with Black & White Printed Notes by Post",
         choices: [
           {
             0: {
@@ -2644,7 +2644,7 @@ async function addDocumentWithCustomId() {
         ],
         description:
           '<div class="post-content"> <h3 class="fusion-woocommerce-tab-title">Description</h3> <p>ORE1- LDS1 Hard copy course notes printout Covering all of the exam curriculum; basic dental sciences, clinical dental subjects and UpToDate guidelines</p> </div>',
-        image_path: ["https://ea-dental.com/images/logo.png"],
+        image_path: ["https://ea-dental.com/images/default-product-image.png"],
         category: "Printed Papers",
       });
       console.log("Document successfully written!");
