@@ -109,10 +109,9 @@ app.post(`/create-checkout-session`, async (req, res) => {
               ]
             } 
           : {
-              allow_promotion_codes: !(courses.length || tickets.length)
+              allow_promotion_codes: (courses.length || tickets.length)
             }
       ),
-      allow_promotion_codes: (courses.length || tickets.length) ? false : false, //if there is no courses close it.
       phone_number_collection: {
         enabled: true,  // <--- this enables phone number collection
       }, 
