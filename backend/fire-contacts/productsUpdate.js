@@ -2646,6 +2646,39 @@ async function copyCollection(srcCollectionName, destCollectionName) {
     }
 }
 
-copyCollection('restorative', 'products').then(() => console.log('copy complete')).catch(error => console.log('copy failed. ' + error));
+// copyCollection('restorative', 'products').then(() => console.log('copy complete')).catch(error => console.log('copy failed. ' + error));
 
 // console.log(arr[91].ids.map(item => ({id: item[0], choiceId: item[1], quantity: item[2]})))
+
+
+
+async function addDocumentWithCustomId() {
+    try {
+      // Specify your document ID (for example, "user_123")
+      const docRef = doc(db, "Product", "108");
+      
+      await setDoc(docRef, {
+        "id": 104,
+        "name": "ORE1 Course Notes Printout (Coloured copy)",
+        "choices": [
+            {"0": 
+                {
+                    "name": "default",
+                    "price": 450,
+                    "weight": .7,
+                    "dimensions": [],
+                    "inStock": 100                   
+                }
+            }
+        ],
+        "description": "<div class=\"post-content\"> <h3 class=\"fusion-woocommerce-tab-title\">Description</h3> <p>ORE1- LDS1 Hard copy course notes printout Covering all of the exam curriculum; basic dental sciences, clinical dental subjects and UpToDate guidelines</p> </div>",
+        "image_path": ["https://ea-dental.com/images/logo.png"],
+        "category": "Printed Papers"
+      });
+      console.log("Document successfully written!");
+    } catch (e) {
+      console.error("Error writing document: ", e);
+    }
+  }
+  
+  addDocumentWithCustomId()
