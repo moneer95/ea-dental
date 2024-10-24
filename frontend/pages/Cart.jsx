@@ -75,7 +75,7 @@ function Cart() {
 
               }
               {/* {console.log(item)} */}
-            <h4 className='cart-item-price'> Quantity: {quantity} <span className='fw-5'> | </span> Price: £{price}</h4>
+            <h4 className='cart-item-price'> Quantity: {quantity} <span className='fw-5'> | </span> Price: £{price.toFixed(2)}</h4>
           </div>
         })
       ) : (
