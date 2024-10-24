@@ -206,11 +206,11 @@ let coursesInfo= {
   "ORE2 Theory course notes + Videos 10 DTP cases": [12],
   "ORE2 Dental Manikin Videos Subscription": [7],
   "ORE2: Five-Day Comprehensive Online Course + One In-Person Day": [12],
-  "3-Day ORE2 Manikin Mastery": [7, 8],
+  "3-Day ORE2 Manikin Mastery": [19, 8],
   "ORE2 Medical Emergencies Masterclass": [12],
   "ORE2: 2-Day OSCE Bootcamp": [12],
-  "3-in-1 Mock Sessions": [7, 8],
-  "Revision / Mock Session: Dental Manikin": [7, 8],
+  "3-in-1 Mock Sessions": [19, 8],
+  "Revision / Mock Session: Dental Manikin": [19, 8],
   "1-Day ME & OSCE Skills Boost": [12]
 }
   

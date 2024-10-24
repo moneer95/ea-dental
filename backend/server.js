@@ -221,10 +221,16 @@ app.get('/session-status', async (req, res) => {
     }
       
     if(products.length){
+
+      // Get shipping details
       console.log(222222)
+      
+      const shippingAmount = session.total_details.amount_shipping / 100;  // Convert from cents
+      const shippingType = session.shipping_rate ? session.shipping_rate : 'Not specified';  // Shipping type, if available
+
       console.log(session.total_details)
       //create the order on frappe
-      createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), session.total_details.amount_shipping, products)
+      createPurchaseOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, (session.customer_details.address.country + session.customer_details.address.city + session.customer_details.address.line1), shippingAmount, shippingType, products)
       .then(res => (createOrder(session.customer_details.email, session.customer_details.name, session.customer_details.phone, session.customer_details.address.country, session.customer_details.address.city, session.customer_details.address.line1, session.customer_details.address.line2, session.customer_details.address.postal_code, weight, res.data.name))
     )
       

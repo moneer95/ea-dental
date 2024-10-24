@@ -11,13 +11,14 @@ const config = {
 };
 
 
-function createPurchaseOrder(email, full_name, phone, address, paidShipping, items){
+function createPurchaseOrder(email, full_name, phone, address, paidShipping, shippingType, items){
     const data = {
         email: email,
         full_name: full_name,
         phone: phone,
         address: address,
-        shipping: paidShipping / 100,
+        shipping: shipping_price / 100,
+        shipping_type: shippingType,
         items: items.map( item => {
             return {
                 item_name: item.optionName,
